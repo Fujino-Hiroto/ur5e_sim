@@ -20,3 +20,7 @@ __pycache__/
 /src/*
 !/src/ur_slam_bringup/
 /src/ur_slam_bringup/**
+
+# tf2_tools outputs
+frames_*.gv
+frames_*.pdf
