@@ -17,5 +17,6 @@ __pycache__/
 *.db3
 
 # ignore upstream sources; keep only our custom package
-src/
-!src/ur_slam_bringup/
+/src/*
+!/src/ur_slam_bringup/
+/src/ur_slam_bringup/**
