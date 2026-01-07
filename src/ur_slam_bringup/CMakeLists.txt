@@ -29,15 +29,10 @@ endif()
 
 # launch ファイルをインストール
 install(
-  DIRECTORY launch
+  DIRECTORY launch urdf worlds scripts
   DESTINATION share/${PROJECT_NAME}
 )
 
-# urdf/xacro をインストール
-install(
-  DIRECTORY urdf
-  DESTINATION share/${PROJECT_NAME}
-)
 
 # Python ノードをインストール（これは既に書いてあるやつ）
 install(
@@ -46,9 +41,7 @@ install(
   DESTINATION lib/${PROJECT_NAME}
 )
 
-install(DIRECTORY worlds
-  DESTINATION share/${PROJECT_NAME}
-)
+
 
 
 
