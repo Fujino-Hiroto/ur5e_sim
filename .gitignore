@@ -16,11 +16,11 @@ __pycache__/
 *.bag
 *.db3
 
-# ignore upstream sources; keep only our custom package
-/src/*
-!/src/ur_slam_bringup/
-/src/ur_slam_bringup/**
-
 # tf2_tools outputs
 frames_*.gv
 frames_*.pdf
+
+# ignore everything under src, but keep our custom bringup
+/src/*
+!/src/ur_slam_bringup/
+/src/ur_slam_bringup/**
