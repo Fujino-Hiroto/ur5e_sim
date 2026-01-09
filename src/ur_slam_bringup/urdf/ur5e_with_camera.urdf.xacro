@@ -183,7 +183,7 @@
     <parent link="tool0"/>        <!-- UR5e 側の末端リンク名 -->
     <child  link="camera_link"/>
     <!-- ツール先から少し前に出すイメージ -->
-    <origin xyz="0.0 0.0 0.01" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.015" rpy="0 0 0"/>
   </joint>
 
  <!-- Optical frames (REP-103 / REP-105 camera optical convention) -->
@@ -228,8 +228,8 @@
           <namespace>camera</namespace>
         </ros>
         <camera_name>depth</camera_name>
-        <image_topic_name>depth/image_raw</image_topic_name>
-        <camera_info_topic_name>depth/camera_info</camera_info_topic_name>
+        <image_topic_name>visual/image_raw</image_topic_name>
+        <camera_info_topic_name>visual/camera_info</camera_info_topic_name>
         <frame_name>camera_depth_optical_frame</frame_name>
         <publishTF>true</publishTF>
       </plugin>
