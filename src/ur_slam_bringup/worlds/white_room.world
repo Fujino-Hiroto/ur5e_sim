@@ -39,7 +39,11 @@
       </link>
     </model>
 
-    <!-- 壁（4枚、薄いグレー） -->
+    <include>
+      <uri>model://cucumber</uri>
+      <!-- 位置調整（例）：ロボットから0.6m前、地面から0m、姿勢0 -->
+      <pose>0.6 0.0 0 0 0 0</pose>
+    </include>
 
 
   </world>
