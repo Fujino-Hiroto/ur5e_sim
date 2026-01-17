@@ -13,6 +13,30 @@ find_package(gazebo_ros REQUIRED)
 find_package(robot_state_publisher REQUIRED)
 find_package(xacro REQUIRED)
 
+find_package(rclcpp REQUIRED)
+find_package(moveit_msgs REQUIRED)
+find_package(shape_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(geometric_shapes REQUIRED)
+find_package(Eigen3 REQUIRED)
+
+
+add_executable(add_cucumber_to_scene src/add_cucumber_to_scene.cpp)
+
+target_link_libraries(add_cucumber_to_scene Eigen3::Eigen)
+
+ament_target_dependencies(add_cucumber_to_scene
+  rclcpp
+  moveit_msgs
+  shape_msgs
+  geometry_msgs
+  geometric_shapes
+)
+
+install(TARGETS add_cucumber_to_scene
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
@@ -29,7 +53,7 @@ endif()
 
 # launch ファイルをインストール
 install(
-  DIRECTORY launch urdf worlds scripts
+  DIRECTORY launch urdf worlds scripts config
   DESTINATION share/${PROJECT_NAME}
 )
 
@@ -38,6 +62,7 @@ install(
 install(
   PROGRAMS
     scripts/depth_convert.py
+    scripts/add_cucumber_to_scene.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

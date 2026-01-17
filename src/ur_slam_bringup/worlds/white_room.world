@@ -40,9 +40,9 @@
     </model>
 
     <include>
-      <uri>model://cucumber</uri>
-      <!-- 位置調整（例）：ロボットから0.6m前、地面から0m、姿勢0 -->
-      <pose>0.6 0.0 0 0 0 0</pose>
+      <uri>model://abstract_plant</uri>
+      <name>abstract_plant</name>
+      <pose>0.0 0.75 0 0 0 1.57079632679</pose>
     </include>
 
 

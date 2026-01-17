@@ -7,4 +7,7 @@ source /opt/ros/humble/setup.bash
 set -u
 colcon build --symlink-install
 
+set +u
+source install/setup.bash
+set -u
 echo "[OK] colcon build done"

@@ -166,14 +166,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <box size="0.09 0.025 0.025"/>
+        <box size="0.025 0.09 0.025"/>
       </geometry>
       <!-- 色を付けたいならここに material を追加してもOK -->
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <box size="0.09 0.025 0.025"/>
+        <box size="0.025 0.09 0.025"/>
       </geometry>
     </collision>
   </link>
@@ -183,7 +183,7 @@
     <parent link="tool0"/>        <!-- UR5e 側の末端リンク名 -->
     <child  link="camera_link"/>
     <!-- ツール先から少し前に出すイメージ -->
-    <origin xyz="0.0 0.0 0.015" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.015" rpy="0 -1.57079632679 1.57079632679"/>
   </joint>
 
  <!-- Optical frames (REP-103 / REP-105 camera optical convention) -->
@@ -219,7 +219,7 @@
           <height>480</height>
         </image>
         <clip>
-          <near>0.1</near>
+          <near>0.03</near>
           <far>5.0</far>
         </clip>
       </camera>
@@ -246,7 +246,7 @@
           <format>R8G8B8</format>
         </image>
         <clip>
-          <near>0.1</near>
+          <near>0.03</near>
           <far>5.0</far>
         </clip>
       </camera>

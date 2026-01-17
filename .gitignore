@@ -24,3 +24,5 @@ frames_*.pdf
 /src/*
 !/src/ur_slam_bringup/
 /src/ur_slam_bringup/**
+!/src/ur_slam_tools/
+/src/ur_slam_tools/**
