@@ -57,7 +57,7 @@ def launch_setup(context, *args, **kwargs):
             "prefix": prefix,
             "use_sim_time": "true",
             "launch_rviz": launch_rviz,
-            "use_fake_hardware": "true",
+            "use_fake_hardware": "false",
 
         }.items(),
     )

@@ -1,0 +1,1734 @@
+[INFO] [launch]: All log files can be found below /home/fujino/.ros/log/2026-01-19-14-05-02-223375-fh-874283
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [rgbd_sync-1]: process started with pid [874291]
+[INFO] [rtabmap-2]: process started with pid [874293]
+[rtabmap-2] [INFO] [1768799102.580662866] [rtabmap]: rtabmap(maps): latch                      = true
+[rtabmap-2] [INFO] [1768799102.580997679] [rtabmap]: rtabmap(maps): map_filter_radius          = 0.000000
+[rtabmap-2] [INFO] [1768799102.581111543] [rtabmap]: rtabmap(maps): map_filter_angle           = 30.000000
+[rtabmap-2] [INFO] [1768799102.581128233] [rtabmap]: rtabmap(maps): map_cleanup                = true
+[rtabmap-2] [INFO] [1768799102.581141186] [rtabmap]: rtabmap(maps): map_always_update          = false
+[rtabmap-2] [INFO] [1768799102.581158117] [rtabmap]: rtabmap(maps): map_empty_ray_tracing      = true
+[rtabmap-2] [INFO] [1768799102.581169648] [rtabmap]: rtabmap(maps): cloud_output_voxelized     = true
+[rtabmap-2] [INFO] [1768799102.581180966] [rtabmap]: rtabmap(maps): cloud_subtract_filtering   = false
+[rtabmap-2] [INFO] [1768799102.581192202] [rtabmap]: rtabmap(maps): cloud_subtract_filtering_min_neighbors = 2
+[rtabmap-2] [INFO] [1768799102.581239884] [rtabmap]: rtabmap(maps): octomap_tree_depth         = 16
+[rtabmap-2] [INFO] [1768799102.614471492] [rtabmap]: rtabmap: frame_id      = camera_color_optical_frame
+[rtabmap-2] [INFO] [1768799102.614523802] [rtabmap]: rtabmap: odom_frame_id = world
+[rtabmap-2] [INFO] [1768799102.614539824] [rtabmap]: rtabmap: map_frame_id  = world
+[rtabmap-2] [INFO] [1768799102.614551007] [rtabmap]: rtabmap: log_to_rosout_level  = 4
+[rtabmap-2] [INFO] [1768799102.614563280] [rtabmap]: rtabmap: initial_pose  = 
+[rtabmap-2] [INFO] [1768799102.614573849] [rtabmap]: rtabmap: use_action_for_goal  = false
+[rtabmap-2] [INFO] [1768799102.614584726] [rtabmap]: rtabmap: tf_delay      = 0.050000
+[rtabmap-2] [INFO] [1768799102.614606172] [rtabmap]: rtabmap: tf_tolerance  = 0.100000
+[rtabmap-2] [INFO] [1768799102.614619270] [rtabmap]: rtabmap: odom_sensor_sync   = false
+[rtabmap-2] [INFO] [1768799102.614630335] [rtabmap]: rtabmap: pub_loc_pose_only_when_localizing = false
+[rtabmap-2] [INFO] [1768799102.614640358] [rtabmap]: rtabmap: wait_for_transform = 0.200000
+[rtabmap-2] [INFO] [1768799102.614652612] [rtabmap]: rtabmap: gen_scan  = false
+[rtabmap-2] [INFO] [1768799102.614662560] [rtabmap]: rtabmap: gen_depth  = false
+[rtabmap-2] [INFO] [1768799102.652580452] [rtabmap]: Setting RTAB-Map parameter "Grid/3D"="true" (rosparam)
+[rtabmap-2] [INFO] [1768799102.653164912] [rtabmap]: Setting RTAB-Map parameter "Grid/RangeMax"="5.0" (rosparam)
+[rtabmap-2] [INFO] [1768799102.653249343] [rtabmap]: Setting RTAB-Map parameter "Grid/RayTracing"="true" (rosparam)
+[rtabmap-2] [INFO] [1768799102.653334291] [rtabmap]: Setting RTAB-Map parameter "Grid/Sensor"="1" (rosparam)
+[rtabmap-2] [INFO] [1768799102.656851007] [rtabmap]: Setting RTAB-Map parameter "RGBD/CreateOccupancyGrid"="true" (rosparam)
+[rtabmap-2] [INFO] [1768799102.658137390] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/DetectionRate"="2.0" (rosparam)
+[rgbd_sync-1] [INFO] [1768799102.715028317] [rgbd_sync]: rgbd_sync: approx_sync = true
+[rgbd_sync-1] [INFO] [1768799102.715414819] [rgbd_sync]: rgbd_sync: approx_sync_max_interval = 0.010000
+[rgbd_sync-1] [INFO] [1768799102.715448119] [rgbd_sync]: rgbd_sync: topic_queue_size  = 10
+[rgbd_sync-1] [INFO] [1768799102.715454085] [rgbd_sync]: rgbd_sync: sync_queue_size  = 30
+[rgbd_sync-1] [INFO] [1768799102.715458984] [rgbd_sync]: rgbd_sync: qos             = 2
+[rgbd_sync-1] [INFO] [1768799102.715463804] [rgbd_sync]: rgbd_sync: qos_camera_info = 2
+[rgbd_sync-1] [INFO] [1768799102.715469204] [rgbd_sync]: rgbd_sync: depth_scale = 1.000000
+[rgbd_sync-1] [INFO] [1768799102.715474667] [rgbd_sync]: rgbd_sync: decimation = 1
+[rgbd_sync-1] [INFO] [1768799102.715479289] [rgbd_sync]: rgbd_sync: compressed_rate = 0.000000
+[rgbd_sync-1] [INFO] [1768799102.729244750] [rgbd_sync]: 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [INFO] [1768799102.833624387] [rtabmap]: RTAB-Map detection rate = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799102.833763858] [rtabmap]: rtabmap: Using database from "/home/fujino/.ros/rtabmap_ur5e_20260119_140501.db" (0 MB).
+[rtabmap-2] [INFO] [1768799102.846640888] [rtabmap]: rtabmap: Database version = "0.22.1".
+[rtabmap-2] [INFO] [1768799102.847103281] [rtabmap]: rtabmap: SLAM mode (Mem/IncrementalMemory=true)
+[rtabmap-2] [INFO] [1768799102.900977321] [rtabmap]: Setup callbacks
+[rtabmap-2] [WARN] [1768799102.901759201] [rtabmap]: rtabmap: Parameters subscribe_depth and subscribe_rgbd cannot be true at the same time. Parameter subscribe_depth is set to false.
+[rtabmap-2] [INFO] [1768799102.901902255] [rtabmap]: rtabmap: subscribe_depth = false
+[rtabmap-2] [INFO] [1768799102.901915163] [rtabmap]: rtabmap: subscribe_rgb = false
+[rtabmap-2] [INFO] [1768799102.901920817] [rtabmap]: rtabmap: subscribe_stereo = false
+[rtabmap-2] [INFO] [1768799102.901925679] [rtabmap]: rtabmap: subscribe_rgbd = true (rgbd_cameras=1)
+[rtabmap-2] [INFO] [1768799102.901931656] [rtabmap]: rtabmap: subscribe_sensor_data = false
+[rtabmap-2] [INFO] [1768799102.901936835] [rtabmap]: rtabmap: subscribe_odom_info = false
+[rtabmap-2] [INFO] [1768799102.901941459] [rtabmap]: rtabmap: subscribe_user_data = false
+[rtabmap-2] [INFO] [1768799102.901945921] [rtabmap]: rtabmap: subscribe_scan = false
+[rtabmap-2] [INFO] [1768799102.901950554] [rtabmap]: rtabmap: subscribe_scan_cloud = false
+[rtabmap-2] [INFO] [1768799102.901954749] [rtabmap]: rtabmap: subscribe_scan_descriptor = false
+[rtabmap-2] [INFO] [1768799102.901959292] [rtabmap]: rtabmap: topic_queue_size = 10
+[rtabmap-2] [INFO] [1768799102.901964668] [rtabmap]: rtabmap: sync_queue_size  = 30
+[rtabmap-2] [INFO] [1768799102.901970013] [rtabmap]: rtabmap: qos_image       = 2
+[rtabmap-2] [INFO] [1768799102.902008577] [rtabmap]: rtabmap: qos_camera_info = 2
+[rtabmap-2] [INFO] [1768799102.902014587] [rtabmap]: rtabmap: qos_scan        = 2
+[rtabmap-2] [INFO] [1768799102.902019635] [rtabmap]: rtabmap: qos_odom        = 2
+[rtabmap-2] [INFO] [1768799102.902025107] [rtabmap]: rtabmap: qos_user_data   = 2
+[rtabmap-2] [INFO] [1768799102.902030399] [rtabmap]: rtabmap: approx_sync     = true
+[rtabmap-2] [INFO] [1768799102.902046245] [rtabmap]: Setup rgbd callback
+[rtabmap-2] [INFO] [1768799102.905169463] [rtabmap]: 
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rtabmap-2] [INFO] [1768799103.578573538] [rtabmap]: rtabmap (1): Rate=0.50s, Limit=0.000s, Conversion=0.0043s, RTAB-Map=0.4364s, Maps update=0.0080s pub=0.0004s delay=0.4260s (local map=1, WM=1)
+[rtabmap-2] [INFO] [1768799104.008112383] [rtabmap]: rtabmap (2): Rate=0.50s, Limit=0.000s, Conversion=0.0021s, RTAB-Map=0.3227s, Maps update=0.0063s pub=0.0000s delay=0.2620s (local map=1, WM=1)
+[rtabmap-2] [INFO] [1768799104.628425798] [rtabmap]: rtabmap (3): Rate=0.50s, Limit=0.000s, Conversion=0.0019s, RTAB-Map=0.4087s, Maps update=0.0035s pub=0.0000s delay=0.4500s (local map=1, WM=1)
+[rtabmap-2] [INFO] [1768799105.099665051] [rtabmap]: rtabmap (4): Rate=0.50s, Limit=0.000s, Conversion=0.0017s, RTAB-Map=0.3734s, Maps update=0.0091s pub=0.0000s delay=0.3430s (local map=1, WM=1)
+[rtabmap-2] [INFO] [1768799105.837668125] [rtabmap]: rtabmap (5): Rate=0.50s, Limit=0.000s, Conversion=0.0016s, RTAB-Map=0.3287s, Maps update=0.0082s pub=0.0000s delay=0.3660s (local map=1, WM=1)
+[rtabmap-2] [INFO] [1768799106.523660246] [rtabmap]: rtabmap (6): Rate=0.50s, Limit=0.000s, Conversion=0.0021s, RTAB-Map=0.4961s, Maps update=0.0056s pub=0.0000s delay=0.5550s (local map=1, WM=1)
+[rtabmap-2] [INFO] [1768799107.045289842] [rtabmap]: rtabmap (7): Rate=0.50s, Limit=0.000s, Conversion=0.0070s, RTAB-Map=0.4755s, Maps update=0.0061s pub=0.0000s delay=0.5220s (local map=1, WM=1)
+[rtabmap-2] [INFO] [1768799107.546102573] [rtabmap]: rtabmap (8): Rate=0.50s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.4361s, Maps update=0.0074s pub=0.0000s delay=0.4670s (local map=1, WM=1)
+[rtabmap-2] [INFO] [1768799108.010563315] [rtabmap]: rtabmap (9): Rate=0.50s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.3732s, Maps update=0.0068s pub=0.0000s delay=0.3430s (local map=1, WM=1)
+[rtabmap-2] [INFO] [1768799108.446991243] [rtabmap]: rtabmap (10): Rate=0.50s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.3179s, Maps update=0.0062s pub=0.0000s delay=0.3430s (local map=1, WM=1)
+[rtabmap-2] [INFO] [1768799109.010953649] [rtabmap]: rtabmap (11): Rate=0.50s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.3727s, Maps update=0.0082s pub=0.0000s delay=0.3430s (local map=1, WM=1)
+[rtabmap-2] [INFO] [1768799109.553089485] [rtabmap]: rtabmap (12): Rate=0.50s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.4177s, Maps update=0.0077s pub=0.0000s delay=0.4430s (local map=1, WM=1)
+[rtabmap-2] [INFO] [1768799110.100390274] [rtabmap]: rtabmap (13): Rate=0.50s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.3871s, Maps update=0.0087s pub=0.0000s delay=0.3630s (local map=1, WM=1)
+[rtabmap-2] [INFO] [1768799110.642971400] [rtabmap]: rtabmap (14): Rate=0.50s, Limit=0.000s, Conversion=0.0022s, RTAB-Map=0.3578s, Maps update=0.0048s pub=0.0000s delay=0.3900s (local map=1, WM=1)
+[rtabmap-2] [INFO] [1768799111.187765893] [rtabmap]: rtabmap (15): Rate=0.50s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.3602s, Maps update=0.0029s pub=0.0002s delay=0.3400s (local map=2, WM=2)
+[rtabmap-2] [INFO] [1768799111.722993099] [rtabmap]: rtabmap (16): Rate=0.50s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.3916s, Maps update=0.0074s pub=0.0000s delay=0.3330s (local map=2, WM=2)
+[rtabmap-2] [INFO] [1768799112.201214337] [rtabmap]: rtabmap (17): Rate=0.50s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.3397s, Maps update=0.0077s pub=0.0000s delay=0.3150s (local map=2, WM=2)
+[rtabmap-2] [INFO] [1768799112.810272375] [rtabmap]: rtabmap (18): Rate=0.50s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.3556s, Maps update=0.0044s pub=0.0004s delay=0.3100s (local map=3, WM=3)
+[rtabmap-2] [INFO] [1768799113.424585333] [rtabmap]: rtabmap (19): Rate=0.50s, Limit=0.000s, Conversion=0.0011s, RTAB-Map=0.4424s, Maps update=0.0066s pub=0.0000s delay=0.4070s (local map=3, WM=3)
+[rtabmap-2] [INFO] [1768799113.846814072] [rtabmap]: rtabmap (20): Rate=0.50s, Limit=0.000s, Conversion=0.0004s, RTAB-Map=0.3028s, Maps update=0.0070s pub=0.0000s delay=0.3410s (local map=3, WM=3)
+[rtabmap-2] [INFO] [1768799114.458634396] [rtabmap]: rtabmap (21): Rate=0.50s, Limit=0.000s, Conversion=0.0010s, RTAB-Map=0.4131s, Maps update=0.0056s pub=0.0004s delay=0.4370s (local map=4, WM=4)
+[rtabmap-2] [INFO] [1768799114.963939393] [rtabmap]: rtabmap (22): Rate=0.50s, Limit=0.000s, Conversion=0.0018s, RTAB-Map=0.3956s, Maps update=0.0073s pub=0.0000s delay=0.4280s (local map=4, WM=4)
+[rtabmap-2] [INFO] [1768799115.570036975] [rtabmap]: rtabmap (23): Rate=0.50s, Limit=0.000s, Conversion=0.0010s, RTAB-Map=0.4634s, Maps update=0.0036s pub=0.0000s delay=0.4790s (local map=4, WM=4)
+[rtabmap-2] [INFO] [1768799116.081550558] [rtabmap]: rtabmap (24): Rate=0.50s, Limit=0.000s, Conversion=0.0039s, RTAB-Map=0.4142s, Maps update=0.0074s pub=0.0005s delay=0.4350s (local map=5, WM=5)
+[rtabmap-2] [INFO] [1768799116.673598665] [rtabmap]: rtabmap (25): Rate=0.50s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.4297s, Maps update=0.0068s pub=0.0000s delay=0.4410s (local map=5, WM=5)
+[rtabmap-2] [INFO] [1768799117.187376796] [rtabmap]: rtabmap (26): Rate=0.50s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.4192s, Maps update=0.0064s pub=0.0000s delay=0.4200s (local map=5, WM=5)
+[rtabmap-2] [INFO] [1768799117.739322372] [rtabmap]: rtabmap (27): Rate=0.50s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.3442s, Maps update=0.0042s pub=0.0005s delay=0.2890s (local map=6, WM=6)
+[rtabmap-2] [INFO] [1768799118.366066549] [rtabmap]: rtabmap (28): Rate=0.50s, Limit=0.000s, Conversion=0.0004s, RTAB-Map=0.4132s, Maps update=0.0042s pub=0.0000s delay=0.4520s (local map=6, WM=6)
+[rtabmap-2] [INFO] [1768799118.860690934] [rtabmap]: rtabmap (29): Rate=0.50s, Limit=0.000s, Conversion=0.0004s, RTAB-Map=0.3634s, Maps update=0.0036s pub=0.0000s delay=0.4080s (local map=6, WM=6)
+[rtabmap-2] [INFO] [1768799119.435034600] [rtabmap]: rtabmap (30): Rate=0.50s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.4264s, Maps update=0.0036s pub=0.0005s delay=0.3990s (local map=7, WM=7)
+[rtabmap-2] [INFO] [1768799120.004394254] [rtabmap]: rtabmap (31): Rate=0.50s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.4051s, Maps update=0.0392s pub=0.0000s delay=0.4310s (local map=7, WM=7)
+[rtabmap-2] [INFO] [1768799120.535637671] [rtabmap]: rtabmap (32): Rate=0.50s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.4555s, Maps update=0.0043s pub=0.0000s delay=0.4180s (local map=7, WM=7)
+[rtabmap-2] [INFO] [1768799120.969931033] [rtabmap]: rtabmap (33): Rate=0.50s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.3493s, Maps update=0.0047s pub=0.0005s delay=0.3860s (local map=8, WM=8)
+[rtabmap-2] [INFO] [1768799121.611325556] [rtabmap]: rtabmap (34): Rate=0.50s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.4431s, Maps update=0.0043s pub=0.0000s delay=0.4460s (local map=8, WM=8)
+[rtabmap-2] [INFO] [1768799122.071141361] [rtabmap]: rtabmap (35): Rate=0.50s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.3835s, Maps update=0.0028s pub=0.0005s delay=0.4150s (local map=9, WM=9)
+[rtabmap-2] [INFO] [1768799122.686061086] [rtabmap]: rtabmap (36): Rate=0.50s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.3511s, Maps update=0.0046s pub=0.0006s delay=0.3700s (local map=10, WM=10)
+[rtabmap-2] [INFO] [1768799123.254987474] [rtabmap]: rtabmap (37): Rate=0.50s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.4035s, Maps update=0.0027s pub=0.0009s delay=0.3490s (local map=11, WM=11)
+[rtabmap-2] [INFO] [1768799123.822053716] [rtabmap]: rtabmap (38): Rate=0.50s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.4116s, Maps update=0.0060s pub=0.0000s delay=0.3930s (local map=11, WM=11)
+[rtabmap-2] [INFO] [1768799124.393475232] [rtabmap]: rtabmap (39): Rate=0.50s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.3808s, Maps update=0.0053s pub=0.0010s delay=0.4050s (local map=12, WM=12)
+[rtabmap-2] [INFO] [1768799124.954026088] [rtabmap]: rtabmap (40): Rate=0.50s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.3625s, Maps update=0.0034s pub=0.0000s delay=0.3270s (local map=12, WM=12)
+[rtabmap-2] [INFO] [1768799125.457082602] [rtabmap]: rtabmap (41): Rate=0.50s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.3228s, Maps update=0.0080s pub=0.0007s delay=0.2900s (local map=13, WM=13)
+[rtabmap-2] [INFO] [1768799126.207839180] [rtabmap]: rtabmap (42): Rate=0.50s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.4232s, Maps update=0.0055s pub=0.0008s delay=0.4250s (local map=14, WM=14)
+[rtabmap-2] [INFO] [1768799126.649383999] [rtabmap]: rtabmap (43): Rate=0.50s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.3256s, Maps update=0.0054s pub=0.0000s delay=0.2970s (local map=14, WM=14)
+[rtabmap-2] [INFO] [1768799127.196991108] [rtabmap]: rtabmap (44): Rate=0.50s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.3486s, Maps update=0.0029s pub=0.0006s delay=0.3740s (local map=15, WM=15)
+[rtabmap-2] [INFO] [1768799127.785767224] [rtabmap]: rtabmap (45): Rate=0.50s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.3890s, Maps update=0.0042s pub=0.0000s delay=0.4120s (local map=15, WM=15)
+[rtabmap-2] [INFO] [1768799128.279004127] [rtabmap]: rtabmap (46): Rate=0.50s, Limit=0.000s, Conversion=0.0004s, RTAB-Map=0.3540s, Maps update=0.0060s pub=0.0008s delay=0.3970s (local map=16, WM=16)
+[rtabmap-2] [INFO] [1768799128.984809327] [rtabmap]: rtabmap (47): Rate=0.50s, Limit=0.000s, Conversion=0.0012s, RTAB-Map=0.4515s, Maps update=0.0046s pub=0.0000s delay=0.4870s (local map=16, WM=16)
+[rtabmap-2] [INFO] [1768799129.601058258] [rtabmap]: rtabmap (48): Rate=0.50s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.3590s, Maps update=0.0024s pub=0.0009s delay=0.3750s (local map=17, WM=17)
+[rtabmap-2] [INFO] [1768799130.145761141] [rtabmap]: rtabmap (49): Rate=0.50s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.3663s, Maps update=0.0037s pub=0.0000s delay=0.3360s (local map=17, WM=17)
+[rtabmap-2] [INFO] [1768799130.792670395] [rtabmap]: rtabmap (50): Rate=0.50s, Limit=0.000s, Conversion=0.0004s, RTAB-Map=0.3723s, Maps update=0.0029s pub=0.0000s delay=0.4040s (local map=17, WM=17)
+[rtabmap-2] [INFO] [1768799131.331116398] [rtabmap]: rtabmap (51): Rate=0.50s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.3884s, Maps update=0.0026s pub=0.0010s delay=0.3720s (local map=18, WM=18)
+[rtabmap-2] [INFO] [1768799132.018456929] [rtabmap]: rtabmap (52): Rate=0.50s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.4425s, Maps update=0.0047s pub=0.0000s delay=0.4500s (local map=18, WM=18)
+[rtabmap-2] [INFO] [1768799132.409319373] [rtabmap]: rtabmap (53): Rate=0.50s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.3312s, Maps update=0.0051s pub=0.0000s delay=0.3450s (local map=18, WM=18)
+[rtabmap-2] [INFO] [1768799133.005690128] [rtabmap]: rtabmap (54): Rate=0.50s, Limit=0.000s, Conversion=0.0004s, RTAB-Map=0.3807s, Maps update=0.0028s pub=0.0005s delay=0.4090s (local map=19, WM=19)
+[rtabmap-2] [INFO] [1768799133.502209914] [rtabmap]: rtabmap (55): Rate=0.50s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.3646s, Maps update=0.0048s pub=0.0000s delay=0.3930s (local map=19, WM=19)
+[rtabmap-2] [INFO] [1768799134.077250430] [rtabmap]: rtabmap (56): Rate=0.50s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.3977s, Maps update=0.0033s pub=0.0000s delay=0.3600s (local map=19, WM=19)
+[rtabmap-2] [INFO] [1768799134.469330482] [rtabmap]: rtabmap (57): Rate=0.50s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.2801s, Maps update=0.0053s pub=0.0005s delay=0.2450s (local map=20, WM=20)
+[rtabmap-2] [INFO] [1768799135.104720727] [rtabmap]: rtabmap (58): Rate=0.50s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.3745s, Maps update=0.0027s pub=0.0000s delay=0.4080s (local map=20, WM=20)
+[rtabmap-2] [INFO] [1768799135.599015280] [rtabmap]: rtabmap (59): Rate=0.50s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.3514s, Maps update=0.0057s pub=0.0000s delay=0.3930s (local map=20, WM=20)
+[rtabmap-2] [INFO] [1768799136.249880672] [rtabmap]: rtabmap (60): Rate=0.50s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.3289s, Maps update=0.0064s pub=0.0009s delay=0.3210s (local map=21, WM=21)
+[rtabmap-2] [INFO] [1768799136.842810127] [rtabmap]: rtabmap (61): Rate=0.50s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.4030s, Maps update=0.0059s pub=0.0009s delay=0.4030s (local map=22, WM=22)
+[rtabmap-2] [INFO] [1768799137.285914189] [rtabmap]: rtabmap (62): Rate=0.50s, Limit=0.000s, Conversion=0.0003s, RTAB-Map=0.3299s, Maps update=0.0047s pub=0.0001s delay=0.2780s (local map=22, WM=22)
+[rtabmap-2] [INFO] [1768799137.813167587] [rtabmap]: rtabmap (63): Rate=0.50s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.2685s, Maps update=0.0033s pub=0.0000s delay=0.3020s (local map=22, WM=22)
+[rtabmap-2] [INFO] [1768799138.454603678] [rtabmap]: rtabmap (64): Rate=0.50s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.4060s, Maps update=0.0041s pub=0.0008s delay=0.3750s (local map=23, WM=23)
+[rtabmap-2] [INFO] [1768799138.947322889] [rtabmap]: rtabmap (65): Rate=0.50s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.3672s, Maps update=0.0049s pub=0.0000s delay=0.3650s (local map=23, WM=23)
+[rtabmap-2] [INFO] [1768799139.431892224] [rtabmap]: rtabmap (66): Rate=0.50s, Limit=0.000s, Conversion=0.0012s, RTAB-Map=0.3438s, Maps update=0.0032s pub=0.0000s delay=0.3590s (local map=23, WM=23)
+[rtabmap-2] [INFO] [1768799139.919367658] [rtabmap]: rtabmap (67): Rate=0.50s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.3152s, Maps update=0.0059s pub=0.0009s delay=0.3250s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799140.588773391] [rtabmap]: rtabmap (68): Rate=0.50s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.3606s, Maps update=0.0033s pub=0.0000s delay=0.3170s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799141.157561366] [rtabmap]: rtabmap (69): Rate=0.50s, Limit=0.000s, Conversion=0.0004s, RTAB-Map=0.3049s, Maps update=0.0052s pub=0.0000s delay=0.3000s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799141.647530168] [rtabmap]: rtabmap (70): Rate=0.50s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.3006s, Maps update=0.0053s pub=0.0000s delay=0.3000s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799142.129276226] [rtabmap]: rtabmap (71): Rate=0.50s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.2587s, Maps update=0.0029s pub=0.0000s delay=0.2660s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799142.695775646] [rtabmap]: rtabmap (72): Rate=0.50s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.2918s, Maps update=0.0039s pub=0.0001s delay=0.2430s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799143.265914117] [rtabmap]: rtabmap (73): Rate=0.50s, Limit=0.000s, Conversion=0.0004s, RTAB-Map=0.2792s, Maps update=0.0043s pub=0.0000s delay=0.2430s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799143.953089558] [rtabmap]: rtabmap (74): Rate=0.50s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.2535s, Maps update=0.0042s pub=0.0000s delay=0.2430s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799144.581693787] [rtabmap]: rtabmap (75): Rate=0.50s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.3457s, Maps update=0.0041s pub=0.0000s delay=0.3200s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799145.068198452] [rtabmap]: rtabmap (76): Rate=0.50s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.3210s, Maps update=0.0039s pub=0.0000s delay=0.3130s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799145.592108368] [rtabmap]: rtabmap (77): Rate=0.50s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.3143s, Maps update=0.0044s pub=0.0000s delay=0.2770s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799146.049032066] [rtabmap]: rtabmap (78): Rate=0.50s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.2715s, Maps update=0.0059s pub=0.0000s delay=0.2680s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799146.627740394] [rtabmap]: rtabmap (79): Rate=0.50s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.3479s, Maps update=0.0029s pub=0.0000s delay=0.3620s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799147.323418988] [rtabmap]: rtabmap (80): Rate=0.50s, Limit=0.000s, Conversion=0.0003s, RTAB-Map=0.3095s, Maps update=0.0048s pub=0.0000s delay=0.3310s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799147.907333692] [rtabmap]: rtabmap (81): Rate=0.50s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.3400s, Maps update=0.0042s pub=0.0000s delay=0.3020s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799147.983049233] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799147.983576118] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799147.987638868] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799147.988334585] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799147.989165319] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799147.989207291] [rtabmap]: Setting RTAB-Map parameter "BRIEF/Bytes"="32"
+[rtabmap-2] [INFO] [1768799147.989218627] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799147.989245879] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799147.995950521] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799147.997431880] [rtabmap]: Setting RTAB-Map parameter "BRISK/Octaves"="3"
+[rtabmap-2] [INFO] [1768799147.997482895] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799147.997595667] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.003461434] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.003559392] [rtabmap]: Setting RTAB-Map parameter "BRISK/PatternScale"="1"
+[rtabmap-2] [INFO] [1768799148.003574323] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.003595030] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.010805434] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.010867129] [rtabmap]: Setting RTAB-Map parameter "BRISK/Thresh"="30"
+[rtabmap-2] [INFO] [1768799148.010886180] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.010908599] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.016735640] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.016800076] [rtabmap]: Setting RTAB-Map parameter "Bayes/FullPredictionUpdate"="false"
+[rtabmap-2] [INFO] [1768799148.016812754] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.016896505] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.022781409] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.022842947] [rtabmap]: Setting RTAB-Map parameter "Bayes/PredictionLC"="0.1 0.36 0.30 0.16 0.062 0.0151 0.00255 0.000324 2.5e-05 1.3e-06 4.8e-08 1.2e-09 1.9e-11 2.2e-13 1.7e-15 8.5e-18 2.9e-20 6.9e-23"
+[rtabmap-2] [INFO] [1768799148.022857078] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.022876350] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.030926717] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.031038842] [rtabmap]: Setting RTAB-Map parameter "Bayes/VirtualPlacePriorThr"="0.9"
+[rtabmap-2] [INFO] [1768799148.031051196] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.031073149] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.039645173] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.039707703] [rtabmap]: Setting RTAB-Map parameter "Db/TargetVersion"=""
+[rtabmap-2] [INFO] [1768799148.039727568] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.039748889] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.047521779] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.047666682] [rtabmap]: Setting RTAB-Map parameter "DbSqlite3/CacheSize"="10000"
+[rtabmap-2] [INFO] [1768799148.047697046] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.047724640] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.052429185] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.052496004] [rtabmap]: Setting RTAB-Map parameter "DbSqlite3/InMemory"="false"
+[rtabmap-2] [INFO] [1768799148.052517560] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.052542186] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.056776632] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.056849861] [rtabmap]: Setting RTAB-Map parameter "DbSqlite3/JournalMode"="3"
+[rtabmap-2] [INFO] [1768799148.056868853] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.056893598] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.061878749] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.061925667] [rtabmap]: Setting RTAB-Map parameter "DbSqlite3/Synchronous"="0"
+[rtabmap-2] [INFO] [1768799148.061936566] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.061951576] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.067340947] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.067429088] [rtabmap]: Setting RTAB-Map parameter "DbSqlite3/TempStore"="2"
+[rtabmap-2] [INFO] [1768799148.067451981] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.067479957] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.072583465] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.072649594] [rtabmap]: Setting RTAB-Map parameter "FAST/CV"="0"
+[rtabmap-2] [INFO] [1768799148.072660217] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.072676406] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.077185060] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.077235648] [rtabmap]: Setting RTAB-Map parameter "FAST/Gpu"="false"
+[rtabmap-2] [INFO] [1768799148.077283873] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.077293848] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.080654693] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.080736412] [rtabmap]: Setting RTAB-Map parameter "FAST/GpuKeypointsRatio"="0.05"
+[rtabmap-2] [INFO] [1768799148.080750224] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.080768803] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.083937194] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.084007536] [rtabmap]: Setting RTAB-Map parameter "FAST/GridCols"="0"
+[rtabmap-2] [INFO] [1768799148.084019660] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.084036014] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.087746907] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.087808694] [rtabmap]: Setting RTAB-Map parameter "FAST/GridRows"="0"
+[rtabmap-2] [INFO] [1768799148.087830996] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.087857045] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.092402999] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.092456896] [rtabmap]: Setting RTAB-Map parameter "FAST/MaxThreshold"="200"
+[rtabmap-2] [INFO] [1768799148.092466953] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.092481456] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.095660709] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.095726307] [rtabmap]: Setting RTAB-Map parameter "FAST/MinThreshold"="7"
+[rtabmap-2] [INFO] [1768799148.095747184] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.095774072] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.100585976] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.100633453] [rtabmap]: Setting RTAB-Map parameter "FAST/NonmaxSuppression"="true"
+[rtabmap-2] [INFO] [1768799148.100645933] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.100660323] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.103995741] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.104060916] [rtabmap]: Setting RTAB-Map parameter "FAST/Threshold"="20"
+[rtabmap-2] [INFO] [1768799148.104080428] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.104105200] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.109103420] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.109170623] [rtabmap]: Setting RTAB-Map parameter "FREAK/NOctaves"="4"
+[rtabmap-2] [INFO] [1768799148.109191281] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.109216497] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.492785215] [rtabmap]: rtabmap (82): Rate=0.50s, Limit=0.000s, Conversion=0.0015s, RTAB-Map=0.3749s, Maps update=0.0040s pub=0.0000s delay=0.3570s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799148.493391193] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.493439540] [rtabmap]: Setting RTAB-Map parameter "FREAK/OrientationNormalized"="true"
+[rtabmap-2] [INFO] [1768799148.493463279] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.493494305] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.498211276] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.498270052] [rtabmap]: Setting RTAB-Map parameter "FREAK/PatternScale"="22"
+[rtabmap-2] [INFO] [1768799148.498292300] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.498316780] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.502340717] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.502441182] [rtabmap]: Setting RTAB-Map parameter "FREAK/ScaleNormalized"="true"
+[rtabmap-2] [INFO] [1768799148.502461863] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.502486197] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.506989151] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.507051665] [rtabmap]: Setting RTAB-Map parameter "GFTT/BlockSize"="3"
+[rtabmap-2] [INFO] [1768799148.507070304] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.507095009] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.511593709] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.511702919] [rtabmap]: Setting RTAB-Map parameter "GFTT/Gpu"="false"
+[rtabmap-2] [INFO] [1768799148.511725737] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.511757891] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.516383363] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.516453982] [rtabmap]: Setting RTAB-Map parameter "GFTT/K"="0.04"
+[rtabmap-2] [INFO] [1768799148.516474910] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.516501690] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.521117835] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.521200355] [rtabmap]: Setting RTAB-Map parameter "GFTT/MinDistance"="7"
+[rtabmap-2] [INFO] [1768799148.521211268] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.521228683] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.524490176] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.524551315] [rtabmap]: Setting RTAB-Map parameter "GFTT/QualityLevel"="0.001"
+[rtabmap-2] [INFO] [1768799148.524572130] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.524599129] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.528988177] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.529050439] [rtabmap]: Setting RTAB-Map parameter "GFTT/UseHarrisDetector"="false"
+[rtabmap-2] [INFO] [1768799148.529070723] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.529098311] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.533172660] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.533254016] [rtabmap]: Setting RTAB-Map parameter "GMS/ThresholdFactor"="6.0"
+[rtabmap-2] [INFO] [1768799148.533278082] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.533310949] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.537804713] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.537881804] [rtabmap]: Setting RTAB-Map parameter "GMS/WithRotation"="false"
+[rtabmap-2] [INFO] [1768799148.537903492] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.537932350] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.542762169] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.542830593] [rtabmap]: Setting RTAB-Map parameter "GMS/WithScale"="false"
+[rtabmap-2] [INFO] [1768799148.542849820] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.542878562] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.546078629] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.546130777] [rtabmap]: Setting RTAB-Map parameter "GTSAM/IncRelinearizeSkip"="1"
+[rtabmap-2] [INFO] [1768799148.546141216] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.546157234] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.550006181] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.550067909] [rtabmap]: Setting RTAB-Map parameter "GTSAM/IncRelinearizeThreshold"="0.01"
+[rtabmap-2] [INFO] [1768799148.550080588] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.550093655] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.554178302] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.554257009] [rtabmap]: Setting RTAB-Map parameter "GTSAM/Incremental"="false"
+[rtabmap-2] [INFO] [1768799148.554278393] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.554306111] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.558772748] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.558839844] [rtabmap]: Setting RTAB-Map parameter "GTSAM/Optimizer"="1"
+[rtabmap-2] [INFO] [1768799148.558861491] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.558887105] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.563427886] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.563510644] [rtabmap]: Setting RTAB-Map parameter "Grid/3D"="true"
+[rtabmap-2] [INFO] [1768799148.563521219] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.563539582] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.566878840] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.566983884] [rtabmap]: Setting RTAB-Map parameter "Grid/CellSize"="0.05"
+[rtabmap-2] [INFO] [1768799148.567007230] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.567034448] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.571564889] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.571655118] [rtabmap]: Setting RTAB-Map parameter "Grid/ClusterRadius"="0.1"
+[rtabmap-2] [INFO] [1768799148.571677723] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.571708834] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.577183980] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.577255856] [rtabmap]: Setting RTAB-Map parameter "Grid/DepthDecimation"="4"
+[rtabmap-2] [INFO] [1768799148.577277387] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.577305331] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.582225371] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.582289383] [rtabmap]: Setting RTAB-Map parameter "Grid/DepthRoiRatios"="0.0 0.0 0.0 0.0"
+[rtabmap-2] [INFO] [1768799148.582301056] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.582320392] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.585797672] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.585857835] [rtabmap]: Setting RTAB-Map parameter "Grid/FlatObstacleDetected"="true"
+[rtabmap-2] [INFO] [1768799148.585869508] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.585888274] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.590537627] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.590604333] [rtabmap]: Setting RTAB-Map parameter "Grid/FootprintHeight"="0.0"
+[rtabmap-2] [INFO] [1768799148.590623852] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.590651808] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.595135544] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.595198395] [rtabmap]: Setting RTAB-Map parameter "Grid/FootprintLength"="0.0"
+[rtabmap-2] [INFO] [1768799148.595216571] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.595239758] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.599433072] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.599493680] [rtabmap]: Setting RTAB-Map parameter "Grid/FootprintWidth"="0.0"
+[rtabmap-2] [INFO] [1768799148.599513645] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.599537618] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.602932224] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.603001844] [rtabmap]: Setting RTAB-Map parameter "Grid/GroundIsObstacle"="false"
+[rtabmap-2] [INFO] [1768799148.603023116] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.603050402] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.607178115] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.607244056] [rtabmap]: Setting RTAB-Map parameter "Grid/MapFrameProjection"="false"
+[rtabmap-2] [INFO] [1768799148.607264938] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.607290002] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.610486753] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.610564505] [rtabmap]: Setting RTAB-Map parameter "Grid/MaxGroundAngle"="45"
+[rtabmap-2] [INFO] [1768799148.610586288] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.610617425] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.614198682] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.614291429] [rtabmap]: Setting RTAB-Map parameter "Grid/MaxGroundHeight"="0.0"
+[rtabmap-2] [INFO] [1768799148.614328197] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.614363629] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.618573017] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.618638303] [rtabmap]: Setting RTAB-Map parameter "Grid/MaxObstacleHeight"="0.0"
+[rtabmap-2] [INFO] [1768799148.618656931] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.618684340] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.622096231] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.622206639] [rtabmap]: Setting RTAB-Map parameter "Grid/MinClusterSize"="10"
+[rtabmap-2] [INFO] [1768799148.622230295] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.622259884] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.625936950] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.626001366] [rtabmap]: Setting RTAB-Map parameter "Grid/MinGroundHeight"="0.0"
+[rtabmap-2] [INFO] [1768799148.626021771] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.626048603] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.630733943] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.630804975] [rtabmap]: Setting RTAB-Map parameter "Grid/NoiseFilteringMinNeighbors"="5"
+[rtabmap-2] [INFO] [1768799148.630827195] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.630854364] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.635732524] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.635801917] [rtabmap]: Setting RTAB-Map parameter "Grid/NoiseFilteringRadius"="0.0"
+[rtabmap-2] [INFO] [1768799148.635814885] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.635832666] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.640070237] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.640134349] [rtabmap]: Setting RTAB-Map parameter "Grid/NormalK"="20"
+[rtabmap-2] [INFO] [1768799148.640154891] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.640181777] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.644554923] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.644623732] [rtabmap]: Setting RTAB-Map parameter "Grid/NormalsSegmentation"="true"
+[rtabmap-2] [INFO] [1768799148.644644177] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.644672569] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.649088839] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.649150488] [rtabmap]: Setting RTAB-Map parameter "Grid/PreVoxelFiltering"="true"
+[rtabmap-2] [INFO] [1768799148.649170196] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.649205049] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.652742347] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.652807175] [rtabmap]: Setting RTAB-Map parameter "Grid/RangeMax"="5.0"
+[rtabmap-2] [INFO] [1768799148.652828940] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.652854205] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.656978339] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.657039458] [rtabmap]: Setting RTAB-Map parameter "Grid/RangeMin"="0.0"
+[rtabmap-2] [INFO] [1768799148.657059308] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.657082587] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.661600471] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.661675495] [rtabmap]: Setting RTAB-Map parameter "Grid/RayTracing"="true"
+[rtabmap-2] [INFO] [1768799148.661696025] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.661725254] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.666149163] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.666262962] [rtabmap]: Setting RTAB-Map parameter "Grid/Scan2dUnknownSpaceFilled"="false"
+[rtabmap-2] [INFO] [1768799148.666285379] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.666311511] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.669768044] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.669833215] [rtabmap]: Setting RTAB-Map parameter "Grid/ScanDecimation"="1"
+[rtabmap-2] [INFO] [1768799148.669853717] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.669878660] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.674118563] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.674187729] [rtabmap]: Setting RTAB-Map parameter "Grid/Sensor"="1"
+[rtabmap-2] [INFO] [1768799148.674208372] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.674232832] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.678739642] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.678813465] [rtabmap]: Setting RTAB-Map parameter "GridGlobal/AltitudeDelta"="0"
+[rtabmap-2] [INFO] [1768799148.678876866] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.678908597] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.684262728] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.684321444] [rtabmap]: Setting RTAB-Map parameter "GridGlobal/Eroded"="false"
+[rtabmap-2] [INFO] [1768799148.684331760] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.684356697] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.690121966] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.690190679] [rtabmap]: Setting RTAB-Map parameter "GridGlobal/FloodFillDepth"="0"
+[rtabmap-2] [INFO] [1768799148.690212298] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.690257338] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.697279703] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.697373803] [rtabmap]: Setting RTAB-Map parameter "GridGlobal/FootprintRadius"="0.0"
+[rtabmap-2] [INFO] [1768799148.697385887] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.697400731] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.701193616] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.701280458] [rtabmap]: Setting RTAB-Map parameter "GridGlobal/MaxNodes"="0"
+[rtabmap-2] [INFO] [1768799148.701314895] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.701360608] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.704843249] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.704888938] [rtabmap]: Setting RTAB-Map parameter "GridGlobal/MinSize"="0.0"
+[rtabmap-2] [INFO] [1768799148.704898433] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.704906597] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.708054759] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.708117435] [rtabmap]: Setting RTAB-Map parameter "GridGlobal/OccupancyThr"="0.5"
+[rtabmap-2] [INFO] [1768799148.708138934] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.708165773] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.712439154] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.712509461] [rtabmap]: Setting RTAB-Map parameter "GridGlobal/ProbClampingMax"="0.971"
+[rtabmap-2] [INFO] [1768799148.712531196] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.712556242] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.717261626] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.717335218] [rtabmap]: Setting RTAB-Map parameter "GridGlobal/ProbClampingMin"="0.1192"
+[rtabmap-2] [INFO] [1768799148.717370282] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.717396274] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.721394921] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.721441637] [rtabmap]: Setting RTAB-Map parameter "GridGlobal/ProbHit"="0.7"
+[rtabmap-2] [INFO] [1768799148.721449295] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.721462593] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.724413300] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.724461092] [rtabmap]: Setting RTAB-Map parameter "GridGlobal/ProbMiss"="0.4"
+[rtabmap-2] [INFO] [1768799148.724472225] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.724488903] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.728629591] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.728699038] [rtabmap]: Setting RTAB-Map parameter "GridGlobal/UpdateError"="0.01"
+[rtabmap-2] [INFO] [1768799148.728720612] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.728744428] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.733456040] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.733521838] [rtabmap]: Setting RTAB-Map parameter "Icp/CCFilterOutFarthestPoints"="false"
+[rtabmap-2] [INFO] [1768799148.733533512] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.733563731] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.737739795] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.737862445] [rtabmap]: Setting RTAB-Map parameter "Icp/CCMaxFinalRMS"="0.2"
+[rtabmap-2] [INFO] [1768799148.737890442] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.737926821] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.742925260] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.742981844] [rtabmap]: Setting RTAB-Map parameter "Icp/CCSamplingLimit"="50000"
+[rtabmap-2] [INFO] [1768799148.742990369] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.743003219] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.746222113] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.746270750] [rtabmap]: Setting RTAB-Map parameter "Icp/CorrespondenceRatio"="0.1"
+[rtabmap-2] [INFO] [1768799148.746279085] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.746289452] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.749569254] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.749649052] [rtabmap]: Setting RTAB-Map parameter "Icp/DebugExportFormat"=""
+[rtabmap-2] [INFO] [1768799148.749671562] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.749699683] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.754160505] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.754209347] [rtabmap]: Setting RTAB-Map parameter "Icp/DownsamplingStep"="1"
+[rtabmap-2] [INFO] [1768799148.754217669] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.754226189] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.758137237] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.758201801] [rtabmap]: Setting RTAB-Map parameter "Icp/Epsilon"="0"
+[rtabmap-2] [INFO] [1768799148.758221956] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.758247734] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.762395136] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.762446796] [rtabmap]: Setting RTAB-Map parameter "Icp/FiltersEnabled"="3"
+[rtabmap-2] [INFO] [1768799148.762454817] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.762466488] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.766647094] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.766725530] [rtabmap]: Setting RTAB-Map parameter "Icp/Force4DoF"="false"
+[rtabmap-2] [INFO] [1768799148.766747468] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.766775530] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.771223140] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.771293088] [rtabmap]: Setting RTAB-Map parameter "Icp/Iterations"="30"
+[rtabmap-2] [INFO] [1768799148.771311622] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.771337882] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.775773948] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.775840952] [rtabmap]: Setting RTAB-Map parameter "Icp/MaxCorrespondenceDistance"="0.1"
+[rtabmap-2] [INFO] [1768799148.775863344] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.775890807] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.780004572] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.780083890] [rtabmap]: Setting RTAB-Map parameter "Icp/MaxRotation"="0.78"
+[rtabmap-2] [INFO] [1768799148.780107959] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.780167658] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.784595000] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.784659550] [rtabmap]: Setting RTAB-Map parameter "Icp/MaxTranslation"="0.2"
+[rtabmap-2] [INFO] [1768799148.784671233] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.784680380] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.787903445] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.787985691] [rtabmap]: Setting RTAB-Map parameter "Icp/OutlierRatio"="0.85"
+[rtabmap-2] [INFO] [1768799148.788006688] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.788035747] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.792760123] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.792828406] [rtabmap]: Setting RTAB-Map parameter "Icp/PMConfig"=""
+[rtabmap-2] [INFO] [1768799148.792886978] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.792917453] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.797419038] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.797510711] [rtabmap]: Setting RTAB-Map parameter "Icp/PMMatcherEpsilon"="0.0"
+[rtabmap-2] [INFO] [1768799148.797531807] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.797559496] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.801006569] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.801087366] [rtabmap]: Setting RTAB-Map parameter "Icp/PMMatcherIntensity"="false"
+[rtabmap-2] [INFO] [1768799148.801117404] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.801148704] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.805280452] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.805330770] [rtabmap]: Setting RTAB-Map parameter "Icp/PMMatcherKnn"="1"
+[rtabmap-2] [INFO] [1768799148.805339045] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.805360392] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.809636475] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.809704320] [rtabmap]: Setting RTAB-Map parameter "Icp/PointToPlane"="true"
+[rtabmap-2] [INFO] [1768799148.809725089] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.809752694] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.814378857] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.814480027] [rtabmap]: Setting RTAB-Map parameter "Icp/PointToPlaneGroundNormalsUp"="0.0"
+[rtabmap-2] [INFO] [1768799148.814503544] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.814530074] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.818119502] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.818167116] [rtabmap]: Setting RTAB-Map parameter "Icp/PointToPlaneK"="5"
+[rtabmap-2] [INFO] [1768799148.818175944] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.818184073] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.821175117] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.821220825] [rtabmap]: Setting RTAB-Map parameter "Icp/PointToPlaneLowComplexityStrategy"="1"
+[rtabmap-2] [INFO] [1768799148.821229380] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.821242769] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.824562106] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.824649960] [rtabmap]: Setting RTAB-Map parameter "Icp/PointToPlaneMinComplexity"="0.02"
+[rtabmap-2] [INFO] [1768799148.824670999] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.824696824] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.828706550] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.828776770] [rtabmap]: Setting RTAB-Map parameter "Icp/PointToPlaneRadius"="0.0"
+[rtabmap-2] [INFO] [1768799148.828797474] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.828840720] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.833317484] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.833400172] [rtabmap]: Setting RTAB-Map parameter "Icp/RangeMax"="0"
+[rtabmap-2] [INFO] [1768799148.833421850] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.833450785] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.837828749] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.837894027] [rtabmap]: Setting RTAB-Map parameter "Icp/RangeMin"="0"
+[rtabmap-2] [INFO] [1768799148.837913792] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.837939250] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.842386976] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.842470401] [rtabmap]: Setting RTAB-Map parameter "Icp/ReciprocalCorrespondences"="true"
+[rtabmap-2] [INFO] [1768799148.842492322] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.842519705] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.845874828] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.845928125] [rtabmap]: Setting RTAB-Map parameter "Icp/Strategy"="1"
+[rtabmap-2] [INFO] [1768799148.845963274] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.845975880] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.849222511] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.849282452] [rtabmap]: Setting RTAB-Map parameter "Icp/VoxelSize"="0.05"
+[rtabmap-2] [INFO] [1768799148.849295925] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.849307361] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.854060562] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.854134483] [rtabmap]: Setting RTAB-Map parameter "ImuFilter/ComplementaryBiasAlpha"="0.01"
+[rtabmap-2] [INFO] [1768799148.854158466] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.854185117] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.859408606] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.859481225] [rtabmap]: Setting RTAB-Map parameter "ImuFilter/ComplementaryDoAdpativeGain"="true"
+[rtabmap-2] [INFO] [1768799148.859502496] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.859532488] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.865958379] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.866059175] [rtabmap]: Setting RTAB-Map parameter "ImuFilter/ComplementaryDoBiasEstimation"="true"
+[rtabmap-2] [INFO] [1768799148.866094381] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.866142636] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.870106878] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.870173155] [rtabmap]: Setting RTAB-Map parameter "ImuFilter/ComplementaryGainAcc"="0.01"
+[rtabmap-2] [INFO] [1768799148.870228552] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.870249118] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.874547376] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.874632731] [rtabmap]: Setting RTAB-Map parameter "ImuFilter/MadgwickGain"="0.1"
+[rtabmap-2] [INFO] [1768799148.874666317] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.874704829] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.879485619] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.879574396] [rtabmap]: Setting RTAB-Map parameter "ImuFilter/MadgwickZeta"="0.0"
+[rtabmap-2] [INFO] [1768799148.879608842] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.879648752] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.884738644] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.884795766] [rtabmap]: Setting RTAB-Map parameter "KAZE/Diffusivity"="1"
+[rtabmap-2] [INFO] [1768799148.884813899] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.884836552] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.887978300] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.888036109] [rtabmap]: Setting RTAB-Map parameter "KAZE/Extended"="false"
+[rtabmap-2] [INFO] [1768799148.888056115] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.888080395] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.892145849] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.892193501] [rtabmap]: Setting RTAB-Map parameter "KAZE/NOctaveLayers"="4"
+[rtabmap-2] [INFO] [1768799148.892201341] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.892209448] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.897717332] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.897788789] [rtabmap]: Setting RTAB-Map parameter "KAZE/NOctaves"="4"
+[rtabmap-2] [INFO] [1768799148.897810074] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.897835501] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.901604157] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.901666409] [rtabmap]: Setting RTAB-Map parameter "KAZE/Threshold"="0.001"
+[rtabmap-2] [INFO] [1768799148.901687490] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.901716352] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.908018376] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.908125900] [rtabmap]: Setting RTAB-Map parameter "KAZE/Upright"="false"
+[rtabmap-2] [INFO] [1768799148.908236887] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.908303378] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.914028182] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.914102539] [rtabmap]: Setting RTAB-Map parameter "Kp/BadSignRatio"="0.5"
+[rtabmap-2] [INFO] [1768799148.914112035] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.914121289] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.917070325] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.917126046] [rtabmap]: Setting RTAB-Map parameter "Kp/ByteToFloat"="false"
+[rtabmap-2] [INFO] [1768799148.917147238] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.917175375] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.921751924] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.921800157] [rtabmap]: Setting RTAB-Map parameter "Kp/DetectorStrategy"="8"
+[rtabmap-2] [INFO] [1768799148.921809789] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.921825014] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.926584847] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.926649674] [rtabmap]: Setting RTAB-Map parameter "Kp/DictionaryPath"=""
+[rtabmap-2] [INFO] [1768799148.926661480] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.926677507] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.933187329] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.933277139] [rtabmap]: Setting RTAB-Map parameter "Kp/FlannRebalancingFactor"="2.0"
+[rtabmap-2] [INFO] [1768799148.933310413] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.933369445] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.939308342] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.939376257] [rtabmap]: Setting RTAB-Map parameter "Kp/GridCols"="1"
+[rtabmap-2] [INFO] [1768799148.939386230] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.939405360] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.943828660] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.943898610] [rtabmap]: Setting RTAB-Map parameter "Kp/GridRows"="1"
+[rtabmap-2] [INFO] [1768799148.943918153] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.943943150] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.947985782] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.948047748] [rtabmap]: Setting RTAB-Map parameter "Kp/IncrementalDictionary"="true"
+[rtabmap-2] [INFO] [1768799148.948067485] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.948105622] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.952430818] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.952500530] [rtabmap]: Setting RTAB-Map parameter "Kp/IncrementalFlann"="true"
+[rtabmap-2] [INFO] [1768799148.952525537] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.952557369] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.956366708] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.956435351] [rtabmap]: Setting RTAB-Map parameter "Kp/MaxDepth"="0"
+[rtabmap-2] [INFO] [1768799148.956455333] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.956478865] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.960751847] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.960891400] [rtabmap]: Setting RTAB-Map parameter "Kp/MaxFeatures"="500"
+[rtabmap-2] [INFO] [1768799148.960927310] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.960958745] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.967285660] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.967377869] [rtabmap]: Setting RTAB-Map parameter "Kp/MinDepth"="0"
+[rtabmap-2] [INFO] [1768799148.967407916] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.967442431] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.973039497] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.973123770] [rtabmap]: Setting RTAB-Map parameter "Kp/NNStrategy"="1"
+[rtabmap-2] [INFO] [1768799148.973150449] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.973225584] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.979064168] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.979141278] [rtabmap]: Setting RTAB-Map parameter "Kp/NewWordsComparedTogether"="true"
+[rtabmap-2] [INFO] [1768799148.979164618] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.979196964] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.983281732] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.983338556] [rtabmap]: Setting RTAB-Map parameter "Kp/NndrRatio"="0.8"
+[rtabmap-2] [INFO] [1768799148.983356513] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.983370704] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.987211525] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.987294488] [rtabmap]: Setting RTAB-Map parameter "Kp/Parallelized"="true"
+[rtabmap-2] [INFO] [1768799148.987320025] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.987363349] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.993805020] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.993866369] [rtabmap]: Setting RTAB-Map parameter "Kp/RoiRatios"="0.0 0.0 0.0 0.0"
+[rtabmap-2] [INFO] [1768799148.993881985] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.993902210] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799148.998393677] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799148.998455568] [rtabmap]: Setting RTAB-Map parameter "Kp/SSC"="false"
+[rtabmap-2] [INFO] [1768799148.998473792] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799148.998497637] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.004467029] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.004540376] [rtabmap]: Setting RTAB-Map parameter "Kp/SubPixEps"="0.02"
+[rtabmap-2] [INFO] [1768799149.004553614] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.004569001] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.008595466] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.008643891] [rtabmap]: Setting RTAB-Map parameter "Kp/SubPixIterations"="0"
+[rtabmap-2] [INFO] [1768799149.008651553] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.008658930] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.011854065] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.011910136] [rtabmap]: Setting RTAB-Map parameter "Kp/SubPixWinSize"="3"
+[rtabmap-2] [INFO] [1768799149.011928820] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.011952102] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.016301670] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.016379332] [rtabmap]: Setting RTAB-Map parameter "Kp/TfIdfLikelihoodUsed"="true"
+[rtabmap-2] [INFO] [1768799149.016401746] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.016425288] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.020730491] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.020787763] [rtabmap]: Setting RTAB-Map parameter "Marker/CornerRefinementMethod"="0"
+[rtabmap-2] [INFO] [1768799149.020796867] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.020807787] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.025013711] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.025085510] [rtabmap]: Setting RTAB-Map parameter "Marker/Dictionary"="0"
+[rtabmap-2] [INFO] [1768799149.025110572] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.025140728] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.431451901] [rtabmap]: rtabmap (83): Rate=0.50s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.3979s, Maps update=0.0036s pub=0.0000s delay=0.4400s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799149.431914360] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.431971325] [rtabmap]: Setting RTAB-Map parameter "Marker/Length"="0"
+[rtabmap-2] [INFO] [1768799149.431990612] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.432021605] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.436193563] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.436285013] [rtabmap]: Setting RTAB-Map parameter "Marker/MaxDepthError"="0.01"
+[rtabmap-2] [INFO] [1768799149.436299063] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.436314272] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.440105476] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.440168571] [rtabmap]: Setting RTAB-Map parameter "Marker/MaxRange"="0.0"
+[rtabmap-2] [INFO] [1768799149.440179893] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.440194314] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.444739803] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.444788070] [rtabmap]: Setting RTAB-Map parameter "Marker/MinRange"="0.0"
+[rtabmap-2] [INFO] [1768799149.444795718] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.444804595] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.448843249] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.448908127] [rtabmap]: Setting RTAB-Map parameter "Marker/Priors"=""
+[rtabmap-2] [INFO] [1768799149.448929817] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.448954097] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.453138673] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.453219365] [rtabmap]: Setting RTAB-Map parameter "Marker/PriorsVarianceAngular"="0.001"
+[rtabmap-2] [INFO] [1768799149.453242633] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.453282531] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.457475560] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.457544055] [rtabmap]: Setting RTAB-Map parameter "Marker/PriorsVarianceLinear"="0.001"
+[rtabmap-2] [INFO] [1768799149.457567418] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.457596168] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.461614757] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.461661873] [rtabmap]: Setting RTAB-Map parameter "Marker/VarianceAngular"="0.01"
+[rtabmap-2] [INFO] [1768799149.461671021] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.461681852] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.465094424] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.465160327] [rtabmap]: Setting RTAB-Map parameter "Marker/VarianceLinear"="0.001"
+[rtabmap-2] [INFO] [1768799149.465181469] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.465207424] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.469499928] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.469568689] [rtabmap]: Setting RTAB-Map parameter "Marker/VarianceOrientationIgnored"="false"
+[rtabmap-2] [INFO] [1768799149.469588819] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.469615310] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.473803775] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.473869958] [rtabmap]: Setting RTAB-Map parameter "Mem/BadSignaturesIgnored"="false"
+[rtabmap-2] [INFO] [1768799149.473890088] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.473915777] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.477894721] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.477958080] [rtabmap]: Setting RTAB-Map parameter "Mem/BinDataKept"="true"
+[rtabmap-2] [INFO] [1768799149.477977897] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.478000681] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.481080181] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.481125523] [rtabmap]: Setting RTAB-Map parameter "Mem/CompressionParallelized"="true"
+[rtabmap-2] [INFO] [1768799149.481133221] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.481144769] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.484249448] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.484321459] [rtabmap]: Setting RTAB-Map parameter "Mem/CovOffDiagIgnored"="true"
+[rtabmap-2] [INFO] [1768799149.484378200] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.484400032] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.487210557] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.487305136] [rtabmap]: Setting RTAB-Map parameter "Mem/DepthAsMask"="true"
+[rtabmap-2] [INFO] [1768799149.487327577] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.487366520] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.491604280] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.491675087] [rtabmap]: Setting RTAB-Map parameter "Mem/DepthCompressionFormat"=".rvl"
+[rtabmap-2] [INFO] [1768799149.491696275] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.491722565] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.496609891] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.496730266] [rtabmap]: Setting RTAB-Map parameter "Mem/DepthMaskFloorThr"="0.0"
+[rtabmap-2] [INFO] [1768799149.496756223] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.496789251] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.502142522] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.502207499] [rtabmap]: Setting RTAB-Map parameter "Mem/GenerateIds"="true"
+[rtabmap-2] [INFO] [1768799149.502229023] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.502257006] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.506117307] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.506160437] [rtabmap]: Setting RTAB-Map parameter "Mem/GlobalDescriptorStrategy"="0"
+[rtabmap-2] [INFO] [1768799149.506167319] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.506177953] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.508876190] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.508917679] [rtabmap]: Setting RTAB-Map parameter "Mem/ImageCompressionFormat"=".jpg"
+[rtabmap-2] [INFO] [1768799149.508925713] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.508936223] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.514687180] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.514768315] [rtabmap]: Setting RTAB-Map parameter "Mem/ImageKept"="false"
+[rtabmap-2] [INFO] [1768799149.514794435] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.514849060] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.520078644] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.520160777] [rtabmap]: Setting RTAB-Map parameter "Mem/ImagePostDecimation"="1"
+[rtabmap-2] [INFO] [1768799149.520193164] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.520226540] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.525439147] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.525517585] [rtabmap]: Setting RTAB-Map parameter "Mem/ImagePreDecimation"="1"
+[rtabmap-2] [INFO] [1768799149.525543421] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.525578316] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.531153187] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.531223155] [rtabmap]: Setting RTAB-Map parameter "Mem/IncrementalMemory"="true"
+[rtabmap-2] [INFO] [1768799149.531239184] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.531276821] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.535416114] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.535481542] [rtabmap]: Setting RTAB-Map parameter "Mem/InitWMWithAllNodes"="false"
+[rtabmap-2] [INFO] [1768799149.535500816] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.535523652] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.538545497] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.538601375] [rtabmap]: Setting RTAB-Map parameter "Mem/IntermediateNodeDataKept"="false"
+[rtabmap-2] [INFO] [1768799149.538612395] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.538629119] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.541779206] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.541868576] [rtabmap]: Setting RTAB-Map parameter "Mem/LaserScanDownsampleStepSize"="1"
+[rtabmap-2] [INFO] [1768799149.541900683] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.541935052] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.966227154] [rtabmap]: rtabmap (84): Rate=0.50s, Limit=0.000s, Conversion=0.0011s, RTAB-Map=0.4113s, Maps update=0.0075s pub=0.0000s delay=0.4090s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799149.966668618] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.966708768] [rtabmap]: Setting RTAB-Map parameter "Mem/LaserScanNormalK"="0"
+[rtabmap-2] [INFO] [1768799149.966717073] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.966738447] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.971610322] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.971699116] [rtabmap]: Setting RTAB-Map parameter "Mem/LaserScanNormalRadius"="0.0"
+[rtabmap-2] [INFO] [1768799149.971721959] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.971748798] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.976439749] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.976512308] [rtabmap]: Setting RTAB-Map parameter "Mem/LaserScanVoxelSize"="0.0"
+[rtabmap-2] [INFO] [1768799149.976533368] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.976558660] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.981399428] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.981504966] [rtabmap]: Setting RTAB-Map parameter "Mem/LocalizationDataSaved"="false"
+[rtabmap-2] [INFO] [1768799149.981520935] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.981545023] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.986680162] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.986762453] [rtabmap]: Setting RTAB-Map parameter "Mem/MapLabelsAdded"="true"
+[rtabmap-2] [INFO] [1768799149.986784680] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.986810609] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.991101130] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.991183774] [rtabmap]: Setting RTAB-Map parameter "Mem/NotLinkedNodesKept"="true"
+[rtabmap-2] [INFO] [1768799149.991205281] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.991232584] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799149.995937079] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799149.996060253] [rtabmap]: Setting RTAB-Map parameter "Mem/RawDescriptorsKept"="true"
+[rtabmap-2] [INFO] [1768799149.996084118] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799149.996112808] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.001298109] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.001399801] [rtabmap]: Setting RTAB-Map parameter "Mem/RecentWmRatio"="0.2"
+[rtabmap-2] [INFO] [1768799150.001422431] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.001454267] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.005704797] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.005766240] [rtabmap]: Setting RTAB-Map parameter "Mem/ReduceGraph"="false"
+[rtabmap-2] [INFO] [1768799150.005785535] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.005810519] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.010405992] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.010481958] [rtabmap]: Setting RTAB-Map parameter "Mem/RehearsalIdUpdatedToNewOne"="false"
+[rtabmap-2] [INFO] [1768799150.010504156] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.010536389] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.017353196] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.017430810] [rtabmap]: Setting RTAB-Map parameter "Mem/RehearsalSimilarity"="0.6"
+[rtabmap-2] [INFO] [1768799150.017445112] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.017464495] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.022601417] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.022682390] [rtabmap]: Setting RTAB-Map parameter "Mem/RehearsalWeightIgnoredWhileMoving"="false"
+[rtabmap-2] [INFO] [1768799150.022697337] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.022717561] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.027303014] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.027393891] [rtabmap]: Setting RTAB-Map parameter "Mem/RotateImagesUpsideUp"="false"
+[rtabmap-2] [INFO] [1768799150.027442385] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.027466373] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.032503057] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.032573797] [rtabmap]: Setting RTAB-Map parameter "Mem/STMSize"="10"
+[rtabmap-2] [INFO] [1768799150.032586404] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.032601539] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.037076955] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.037150495] [rtabmap]: Setting RTAB-Map parameter "Mem/SaveDepth16Format"="false"
+[rtabmap-2] [INFO] [1768799150.037172366] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.037204194] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.041963948] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.042038933] [rtabmap]: Setting RTAB-Map parameter "Mem/StereoFromMotion"="false"
+[rtabmap-2] [INFO] [1768799150.042062216] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.042089953] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.050127554] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.050211761] [rtabmap]: Setting RTAB-Map parameter "Mem/TransferSortingByWeightId"="false"
+[rtabmap-2] [INFO] [1768799150.050233215] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.050260295] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.054702329] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.054767005] [rtabmap]: Setting RTAB-Map parameter "Mem/UseOdomFeatures"="true"
+[rtabmap-2] [INFO] [1768799150.054787427] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.054813423] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.059374813] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.059446917] [rtabmap]: Setting RTAB-Map parameter "Mem/UseOdomGravity"="false"
+[rtabmap-2] [INFO] [1768799150.059467570] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.059493966] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.063451234] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.063531142] [rtabmap]: Setting RTAB-Map parameter "ORB/EdgeThreshold"="19"
+[rtabmap-2] [INFO] [1768799150.063553013] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.063582053] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.069801135] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.069884634] [rtabmap]: Setting RTAB-Map parameter "ORB/FirstLevel"="0"
+[rtabmap-2] [INFO] [1768799150.069904781] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.069929487] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.075227419] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.075303062] [rtabmap]: Setting RTAB-Map parameter "ORB/Gpu"="false"
+[rtabmap-2] [INFO] [1768799150.075323954] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.075376506] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.080629204] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.080735460] [rtabmap]: Setting RTAB-Map parameter "ORB/NLevels"="3"
+[rtabmap-2] [INFO] [1768799150.080755707] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.080785096] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.084834342] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.084900490] [rtabmap]: Setting RTAB-Map parameter "ORB/PatchSize"="31"
+[rtabmap-2] [INFO] [1768799150.084911670] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.084931616] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.089540821] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.089597968] [rtabmap]: Setting RTAB-Map parameter "ORB/ScaleFactor"="2"
+[rtabmap-2] [INFO] [1768799150.089611674] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.089632634] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.093161968] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.093220482] [rtabmap]: Setting RTAB-Map parameter "ORB/ScoreType"="0"
+[rtabmap-2] [INFO] [1768799150.093229858] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.093282376] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.096638976] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.096693490] [rtabmap]: Setting RTAB-Map parameter "ORB/WTA_K"="2"
+[rtabmap-2] [INFO] [1768799150.096704648] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.096721294] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.100427415] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.100493638] [rtabmap]: Setting RTAB-Map parameter "Optimizer/Epsilon"="0.00001"
+[rtabmap-2] [INFO] [1768799150.100514858] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.100541903] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.105289943] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.105377254] [rtabmap]: Setting RTAB-Map parameter "Optimizer/GravitySigma"="0.3"
+[rtabmap-2] [INFO] [1768799150.105401556] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.105427627] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.110364524] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.110433479] [rtabmap]: Setting RTAB-Map parameter "Optimizer/Iterations"="20"
+[rtabmap-2] [INFO] [1768799150.110454018] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.110479595] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.115900768] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.115992307] [rtabmap]: Setting RTAB-Map parameter "Optimizer/LandmarksIgnored"="false"
+[rtabmap-2] [INFO] [1768799150.116018334] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.116053407] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.120706538] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.120799746] [rtabmap]: Setting RTAB-Map parameter "Optimizer/PriorsIgnored"="true"
+[rtabmap-2] [INFO] [1768799150.120827742] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.120861754] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.125868040] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.125935803] [rtabmap]: Setting RTAB-Map parameter "Optimizer/Robust"="false"
+[rtabmap-2] [INFO] [1768799150.125957442] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.125985067] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.130860741] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.130931244] [rtabmap]: Setting RTAB-Map parameter "Optimizer/Strategy"="2"
+[rtabmap-2] [INFO] [1768799150.130953934] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.130980174] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.135558413] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.135626259] [rtabmap]: Setting RTAB-Map parameter "Optimizer/VarianceIgnored"="false"
+[rtabmap-2] [INFO] [1768799150.135648975] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.135698105] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.583794349] [rtabmap]: rtabmap (85): Rate=0.50s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.4390s, Maps update=0.0045s pub=0.0000s delay=0.4450s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799150.584288615] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.584356833] [rtabmap]: Setting RTAB-Map parameter "PyDescriptor/Dim"="4096"
+[rtabmap-2] [INFO] [1768799150.584380823] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.584418967] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.588790658] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.588858135] [rtabmap]: Setting RTAB-Map parameter "PyDescriptor/Path"=""
+[rtabmap-2] [INFO] [1768799150.588879722] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.588908754] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.593448062] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.593528910] [rtabmap]: Setting RTAB-Map parameter "PyDetector/Cuda"="true"
+[rtabmap-2] [INFO] [1768799150.593549582] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.593578038] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.597772646] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.597934988] [rtabmap]: Setting RTAB-Map parameter "PyDetector/Path"=""
+[rtabmap-2] [INFO] [1768799150.597959446] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.597986306] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.602534949] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.602617414] [rtabmap]: Setting RTAB-Map parameter "PyMatcher/Cuda"="true"
+[rtabmap-2] [INFO] [1768799150.602639319] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.602664715] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.607483967] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.607582663] [rtabmap]: Setting RTAB-Map parameter "PyMatcher/Iterations"="20"
+[rtabmap-2] [INFO] [1768799150.607604015] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.607630403] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.612302016] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.612411397] [rtabmap]: Setting RTAB-Map parameter "PyMatcher/Model"="indoor"
+[rtabmap-2] [INFO] [1768799150.612431125] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.612444436] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.616978593] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.617045930] [rtabmap]: Setting RTAB-Map parameter "PyMatcher/Path"=""
+[rtabmap-2] [INFO] [1768799150.617066864] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.617090271] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.621549483] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.621642482] [rtabmap]: Setting RTAB-Map parameter "PyMatcher/Threshold"="0.2"
+[rtabmap-2] [INFO] [1768799150.621662640] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.621686273] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.626257366] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.626320234] [rtabmap]: Setting RTAB-Map parameter "RGBD/AggressiveLoopThr"="0.05"
+[rtabmap-2] [INFO] [1768799150.626340076] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.626381902] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.630852064] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.630933110] [rtabmap]: Setting RTAB-Map parameter "RGBD/AngularSpeedUpdate"="0.0"
+[rtabmap-2] [INFO] [1768799150.630942130] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.630955985] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.634217768] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.634275923] [rtabmap]: Setting RTAB-Map parameter "RGBD/AngularUpdate"="0.1"
+[rtabmap-2] [INFO] [1768799150.634286306] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.634298234] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.637904848] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.637975965] [rtabmap]: Setting RTAB-Map parameter "RGBD/CreateOccupancyGrid"="true"
+[rtabmap-2] [INFO] [1768799150.637997791] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.638029614] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.642188044] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.642240225] [rtabmap]: Setting RTAB-Map parameter "RGBD/Enabled"="true"
+[rtabmap-2] [INFO] [1768799150.642248699] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.642260704] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.645769322] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.645862386] [rtabmap]: Setting RTAB-Map parameter "RGBD/ForceOdom3DoF"="true"
+[rtabmap-2] [INFO] [1768799150.645884346] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.645912523] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.650671884] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.650745435] [rtabmap]: Setting RTAB-Map parameter "RGBD/GoalReachedRadius"="0.5"
+[rtabmap-2] [INFO] [1768799150.650768367] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.650797327] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.655058487] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.655157298] [rtabmap]: Setting RTAB-Map parameter "RGBD/GoalsSavedInUserData"="false"
+[rtabmap-2] [INFO] [1768799150.655169549] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.655194854] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.658631354] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.658705531] [rtabmap]: Setting RTAB-Map parameter "RGBD/InvertedReg"="false"
+[rtabmap-2] [INFO] [1768799150.658725432] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.658751676] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.663203417] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.663272328] [rtabmap]: Setting RTAB-Map parameter "RGBD/LinearSpeedUpdate"="0.0"
+[rtabmap-2] [INFO] [1768799150.663292948] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.663376740] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.668176075] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.668252517] [rtabmap]: Setting RTAB-Map parameter "RGBD/LinearUpdate"="0.1"
+[rtabmap-2] [INFO] [1768799150.668271053] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.668295394] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.673088696] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.673153695] [rtabmap]: Setting RTAB-Map parameter "RGBD/LocalBundleOnLoopClosure"="false"
+[rtabmap-2] [INFO] [1768799150.673163673] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.673176917] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.676878474] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.676943723] [rtabmap]: Setting RTAB-Map parameter "RGBD/LocalImmunizationRatio"="0.25"
+[rtabmap-2] [INFO] [1768799150.676964617] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.676990220] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.681695758] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.681797220] [rtabmap]: Setting RTAB-Map parameter "RGBD/LocalRadius"="10"
+[rtabmap-2] [INFO] [1768799150.681821206] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.681849852] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.686854592] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.686942664] [rtabmap]: Setting RTAB-Map parameter "RGBD/LocalizationPriorError"="0.001"
+[rtabmap-2] [INFO] [1768799150.686963985] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.686990705] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.691044980] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.691115567] [rtabmap]: Setting RTAB-Map parameter "RGBD/LocalizationSecondTryWithoutProximityLinks"="true"
+[rtabmap-2] [INFO] [1768799150.691138089] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.691165671] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.695933902] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.696014781] [rtabmap]: Setting RTAB-Map parameter "RGBD/LocalizationSmoothing"="true"
+[rtabmap-2] [INFO] [1768799150.696036616] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.696061108] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.700530311] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.700604807] [rtabmap]: Setting RTAB-Map parameter "RGBD/LoopClosureIdentityGuess"="false"
+[rtabmap-2] [INFO] [1768799150.700626988] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.700652162] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.704258457] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.704323142] [rtabmap]: Setting RTAB-Map parameter "RGBD/LoopClosureReextractFeatures"="false"
+[rtabmap-2] [INFO] [1768799150.704355024] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.704382657] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.709690945] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.709773176] [rtabmap]: Setting RTAB-Map parameter "RGBD/LoopCovLimited"="false"
+[rtabmap-2] [INFO] [1768799150.709800360] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.709826975] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.714416423] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.714491660] [rtabmap]: Setting RTAB-Map parameter "RGBD/MarkerDetection"="false"
+[rtabmap-2] [INFO] [1768799150.714512611] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.714537425] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.719701189] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.719799602] [rtabmap]: Setting RTAB-Map parameter "RGBD/MaxLocalRetrieved"="2"
+[rtabmap-2] [INFO] [1768799150.719821628] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.719856771] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.724311606] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.724389530] [rtabmap]: Setting RTAB-Map parameter "RGBD/MaxLoopClosureDistance"="0.0"
+[rtabmap-2] [INFO] [1768799150.724411945] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.724436835] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.729322310] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.729405017] [rtabmap]: Setting RTAB-Map parameter "RGBD/MaxOdomCacheSize"="10"
+[rtabmap-2] [INFO] [1768799150.729426859] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.729456639] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.733836046] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.733909094] [rtabmap]: Setting RTAB-Map parameter "RGBD/NeighborLinkRefining"="false"
+[rtabmap-2] [INFO] [1768799150.733928910] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.733954164] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.738466689] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.738527908] [rtabmap]: Setting RTAB-Map parameter "RGBD/NewMapOdomChangeDistance"="0"
+[rtabmap-2] [INFO] [1768799150.738548647] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.738572184] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.742588594] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.742642176] [rtabmap]: Setting RTAB-Map parameter "RGBD/OptimizeFromGraphEnd"="false"
+[rtabmap-2] [INFO] [1768799150.742650613] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.742660145] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.746489565] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.746591144] [rtabmap]: Setting RTAB-Map parameter "RGBD/OptimizeMaxError"="3.0"
+[rtabmap-2] [INFO] [1768799150.746601989] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.746620749] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.752162778] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.752250843] [rtabmap]: Setting RTAB-Map parameter "RGBD/PlanAngularVelocity"="0"
+[rtabmap-2] [INFO] [1768799150.752272300] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.752297750] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.756648825] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.756702918] [rtabmap]: Setting RTAB-Map parameter "RGBD/PlanLinearVelocity"="0"
+[rtabmap-2] [INFO] [1768799150.756711438] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.756724871] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.761581837] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.761712202] [rtabmap]: Setting RTAB-Map parameter "RGBD/PlanStuckIterations"="0"
+[rtabmap-2] [INFO] [1768799150.761723438] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.761737031] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.766226391] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.766301691] [rtabmap]: Setting RTAB-Map parameter "RGBD/ProximityAngle"="45"
+[rtabmap-2] [INFO] [1768799150.766326041] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.766366213] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.770425154] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.770504618] [rtabmap]: Setting RTAB-Map parameter "RGBD/ProximityBySpace"="true"
+[rtabmap-2] [INFO] [1768799150.770527655] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.770552997] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.775701866] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.775793157] [rtabmap]: Setting RTAB-Map parameter "RGBD/ProximityByTime"="false"
+[rtabmap-2] [INFO] [1768799150.775820520] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.775848815] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.780725194] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.780809854] [rtabmap]: Setting RTAB-Map parameter "RGBD/ProximityGlobalScanMap"="false"
+[rtabmap-2] [INFO] [1768799150.780825388] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.780845923] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.784435920] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.784541750] [rtabmap]: Setting RTAB-Map parameter "RGBD/ProximityMaxGraphDepth"="50"
+[rtabmap-2] [INFO] [1768799150.784576021] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.784604291] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.789189471] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.789268052] [rtabmap]: Setting RTAB-Map parameter "RGBD/ProximityMaxPaths"="3"
+[rtabmap-2] [INFO] [1768799150.789289728] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.789318792] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.793528577] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.793611014] [rtabmap]: Setting RTAB-Map parameter "RGBD/ProximityMergedScanCovFactor"="100.0"
+[rtabmap-2] [INFO] [1768799150.793633052] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.793663260] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.798957424] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.799051036] [rtabmap]: Setting RTAB-Map parameter "RGBD/ProximityOdomGuess"="false"
+[rtabmap-2] [INFO] [1768799150.799076684] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.799111427] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.803836661] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.803914522] [rtabmap]: Setting RTAB-Map parameter "RGBD/ProximityPathFilteringRadius"="1"
+[rtabmap-2] [INFO] [1768799150.803936991] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.803966102] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799150.809075556] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799150.809156834] [rtabmap]: Setting RTAB-Map parameter "RGBD/ProximityPathMaxNeighbors"="0"
+[rtabmap-2] [INFO] [1768799150.809179363] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799150.809209840] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.245129634] [rtabmap]: rtabmap (86): Rate=0.50s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.4255s, Maps update=0.0057s pub=0.0000s delay=0.4650s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799151.245558834] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.245600525] [rtabmap]: Setting RTAB-Map parameter "RGBD/ProximityPathRawPosesUsed"="true"
+[rtabmap-2] [INFO] [1768799151.245610973] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.245633595] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.250216023] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.250306093] [rtabmap]: Setting RTAB-Map parameter "RGBD/ScanMatchingIdsSavedInLinks"="true"
+[rtabmap-2] [INFO] [1768799151.250319927] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.250333383] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.254382383] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.254441749] [rtabmap]: Setting RTAB-Map parameter "RGBD/StartAtOrigin"="false"
+[rtabmap-2] [INFO] [1768799151.254457524] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.254471274] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.258395044] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.258480093] [rtabmap]: Setting RTAB-Map parameter "Reg/Force3DoF"="false"
+[rtabmap-2] [INFO] [1768799151.258505248] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.258540578] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.264204376] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.264298254] [rtabmap]: Setting RTAB-Map parameter "Reg/RepeatOnce"="true"
+[rtabmap-2] [INFO] [1768799151.264309494] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.264323650] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.268765792] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.268822207] [rtabmap]: Setting RTAB-Map parameter "Reg/Strategy"="0"
+[rtabmap-2] [INFO] [1768799151.268832921] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.268914125] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.273260224] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.273389035] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/ComputeRMSE"="true"
+[rtabmap-2] [INFO] [1768799151.273422555] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.273456058] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.278914668] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.278995246] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/CreateIntermediateNodes"="false"
+[rtabmap-2] [INFO] [1768799151.279022307] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.279053277] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.283863599] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.283932052] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/DetectionRate"="2.0"
+[rtabmap-2] [INFO] [1768799151.283947939] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.283962373] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.288876608] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.288950027] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/ImageBufferSize"="1"
+[rtabmap-2] [INFO] [1768799151.288975728] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.289003187] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.294230064] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.294326453] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/ImagesAlreadyRectified"="true"
+[rtabmap-2] [INFO] [1768799151.294365685] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.294402074] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.300652503] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.300736655] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/LoopGPS"="true"
+[rtabmap-2] [INFO] [1768799151.300765972] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.300799019] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.305110222] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.305179045] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/LoopRatio"="0"
+[rtabmap-2] [INFO] [1768799151.305202646] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.305230109] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.310591720] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.310669462] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/LoopThr"="0.11"
+[rtabmap-2] [INFO] [1768799151.310695863] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.310731197] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.316300528] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.316400181] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/MaxRepublished"="2"
+[rtabmap-2] [INFO] [1768799151.316425759] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.316454477] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.321624669] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.321740086] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/MaxRetrieved"="2"
+[rtabmap-2] [INFO] [1768799151.321803932] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.321840029] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.327298684] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.327399699] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/MemoryThr"="0"
+[rtabmap-2] [INFO] [1768799151.327432600] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.327467939] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.333056970] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.333167245] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/PublishLastSignature"="true"
+[rtabmap-2] [INFO] [1768799151.333201800] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.333233190] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.337498448] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.337580567] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/PublishLikelihood"="true"
+[rtabmap-2] [INFO] [1768799151.337619844] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.337650694] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.341605867] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.341666044] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/PublishPdf"="true"
+[rtabmap-2] [INFO] [1768799151.341677697] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.341691360] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.345934969] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.346012382] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/PublishRAMUsage"="false"
+[rtabmap-2] [INFO] [1768799151.346041602] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.346073130] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.350244200] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.350316841] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/PublishStats"="true"
+[rtabmap-2] [INFO] [1768799151.350351654] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.350383286] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.354154984] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.354234307] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/RectifyOnlyFeatures"="false"
+[rtabmap-2] [INFO] [1768799151.354259605] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.354292515] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.358813114] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.358891126] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/SaveWMState"="false"
+[rtabmap-2] [INFO] [1768799151.358916606] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.358949600] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.363935110] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.364056952] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/StartNewMapOnGoodSignature"="false"
+[rtabmap-2] [INFO] [1768799151.364104464] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.364143011] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.368027558] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.368102335] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/StartNewMapOnLoopClosure"="false"
+[rtabmap-2] [INFO] [1768799151.368131258] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.368166728] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.373287684] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.373373919] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/StatisticLogged"="false"
+[rtabmap-2] [INFO] [1768799151.373401665] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.373433217] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.379670882] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.379771758] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/StatisticLoggedHeaders"="true"
+[rtabmap-2] [INFO] [1768799151.379806012] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.379849119] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.385685398] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.385800569] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/StatisticLogsBufferedInRAM"="true"
+[rtabmap-2] [INFO] [1768799151.385836395] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.385880022] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.391197007] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.391267708] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/TimeThr"="0"
+[rtabmap-2] [INFO] [1768799151.391293464] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.391323999] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.395658074] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.395736285] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/VirtualPlaceLikelihoodRatio"="0"
+[rtabmap-2] [INFO] [1768799151.395763949] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.395794616] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.400982022] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.401053732] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/WorkingDirectory"="/home/fujino/.ros"
+[rtabmap-2] [INFO] [1768799151.401079944] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.401108115] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.406076543] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.406130700] [rtabmap]: Setting RTAB-Map parameter "SIFT/ContrastThreshold"="0.04"
+[rtabmap-2] [INFO] [1768799151.406143597] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.406158306] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.409733754] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.409795829] [rtabmap]: Setting RTAB-Map parameter "SIFT/EdgeThreshold"="10"
+[rtabmap-2] [INFO] [1768799151.409811137] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.409825634] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.413787401] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.413860695] [rtabmap]: Setting RTAB-Map parameter "SIFT/GaussianThreshold"="2.0"
+[rtabmap-2] [INFO] [1768799151.413887935] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.413919972] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.418905958] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.418978998] [rtabmap]: Setting RTAB-Map parameter "SIFT/Gpu"="false"
+[rtabmap-2] [INFO] [1768799151.419004992] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.419044332] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.422822024] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.422878339] [rtabmap]: Setting RTAB-Map parameter "SIFT/NOctaveLayers"="3"
+[rtabmap-2] [INFO] [1768799151.422899035] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.422908159] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.427955728] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.428030226] [rtabmap]: Setting RTAB-Map parameter "SIFT/PreciseUpscale"="false"
+[rtabmap-2] [INFO] [1768799151.428056617] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.428088278] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.433154900] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.433221511] [rtabmap]: Setting RTAB-Map parameter "SIFT/RootSIFT"="false"
+[rtabmap-2] [INFO] [1768799151.433236503] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.433256949] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.437031870] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.437120028] [rtabmap]: Setting RTAB-Map parameter "SIFT/Sigma"="1.6"
+[rtabmap-2] [INFO] [1768799151.437149727] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.437193936] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.443170364] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.443261711] [rtabmap]: Setting RTAB-Map parameter "SIFT/Upscale"="false"
+[rtabmap-2] [INFO] [1768799151.443292356] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.443327889] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.448684888] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.448755907] [rtabmap]: Setting RTAB-Map parameter "SURF/Extended"="false"
+[rtabmap-2] [INFO] [1768799151.448792587] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.448822333] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.454312594] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.454426729] [rtabmap]: Setting RTAB-Map parameter "SURF/GpuKeypointsRatio"="0.01"
+[rtabmap-2] [INFO] [1768799151.454454045] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.454485333] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.880596049] [rtabmap]: rtabmap (87): Rate=0.50s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.4135s, Maps update=0.0075s pub=0.0000s delay=0.4140s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799151.881124635] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.881202316] [rtabmap]: Setting RTAB-Map parameter "SURF/GpuVersion"="false"
+[rtabmap-2] [INFO] [1768799151.881232588] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.881284667] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.888410970] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.888506697] [rtabmap]: Setting RTAB-Map parameter "SURF/HessianThreshold"="500"
+[rtabmap-2] [INFO] [1768799151.888540650] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.888581194] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.895135024] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.895243970] [rtabmap]: Setting RTAB-Map parameter "SURF/OctaveLayers"="2"
+[rtabmap-2] [INFO] [1768799151.895279149] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.895321194] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.902024052] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.902138828] [rtabmap]: Setting RTAB-Map parameter "SURF/Octaves"="4"
+[rtabmap-2] [INFO] [1768799151.902169346] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.902210938] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.907290342] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.907372206] [rtabmap]: Setting RTAB-Map parameter "SURF/Upright"="false"
+[rtabmap-2] [INFO] [1768799151.907396853] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.907429473] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.912185660] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.912261944] [rtabmap]: Setting RTAB-Map parameter "Stereo/DenseStrategy"="0"
+[rtabmap-2] [INFO] [1768799151.912285189] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.912316333] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.917220446] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.917302690] [rtabmap]: Setting RTAB-Map parameter "Stereo/Eps"="0.01"
+[rtabmap-2] [INFO] [1768799151.917326055] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.917362242] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.922967706] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.923053972] [rtabmap]: Setting RTAB-Map parameter "Stereo/Gpu"="false"
+[rtabmap-2] [INFO] [1768799151.923075995] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.923101576] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.926202512] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.926280328] [rtabmap]: Setting RTAB-Map parameter "Stereo/Iterations"="30"
+[rtabmap-2] [INFO] [1768799151.926292468] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.926311263] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.931833393] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.931901881] [rtabmap]: Setting RTAB-Map parameter "Stereo/MaxDisparity"="128.0"
+[rtabmap-2] [INFO] [1768799151.931918091] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.931936444] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.935330687] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.935389561] [rtabmap]: Setting RTAB-Map parameter "Stereo/MaxLevel"="5"
+[rtabmap-2] [INFO] [1768799151.935397331] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.935406283] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.938650458] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.938700706] [rtabmap]: Setting RTAB-Map parameter "Stereo/MinDisparity"="0.5"
+[rtabmap-2] [INFO] [1768799151.938710285] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.938717802] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.942171795] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.942252422] [rtabmap]: Setting RTAB-Map parameter "Stereo/OpticalFlow"="true"
+[rtabmap-2] [INFO] [1768799151.942276620] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.942369027] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.946902074] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.946971941] [rtabmap]: Setting RTAB-Map parameter "Stereo/SSD"="true"
+[rtabmap-2] [INFO] [1768799151.946993907] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.947018471] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.952279406] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.952449391] [rtabmap]: Setting RTAB-Map parameter "Stereo/WinHeight"="3"
+[rtabmap-2] [INFO] [1768799151.952477239] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.952510469] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.956122396] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.956190611] [rtabmap]: Setting RTAB-Map parameter "Stereo/WinWidth"="15"
+[rtabmap-2] [INFO] [1768799151.956213906] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.956247853] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.960427865] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.960501073] [rtabmap]: Setting RTAB-Map parameter "StereoBM/BlockSize"="15"
+[rtabmap-2] [INFO] [1768799151.960523817] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.960552252] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799151.965423959] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799151.965504646] [rtabmap]: Setting RTAB-Map parameter "StereoBM/Disp12MaxDiff"="-1"
+[rtabmap-2] [INFO] [1768799151.965516882] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799151.965535016] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.447864230] [rtabmap]: rtabmap (88): Rate=0.50s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.4711s, Maps update=0.0064s pub=0.0001s delay=0.5080s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799152.448437572] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.448492964] [rtabmap]: Setting RTAB-Map parameter "StereoBM/MinDisparity"="0"
+[rtabmap-2] [INFO] [1768799152.448516501] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.448552359] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.452956650] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.453047714] [rtabmap]: Setting RTAB-Map parameter "StereoBM/NumDisparities"="128"
+[rtabmap-2] [INFO] [1768799152.453092563] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.453126613] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.458221627] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.458312887] [rtabmap]: Setting RTAB-Map parameter "StereoBM/PreFilterCap"="31"
+[rtabmap-2] [INFO] [1768799152.458355858] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.458388894] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.462738800] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.462805401] [rtabmap]: Setting RTAB-Map parameter "StereoBM/PreFilterSize"="9"
+[rtabmap-2] [INFO] [1768799152.462825541] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.462850078] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.467094608] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.467152845] [rtabmap]: Setting RTAB-Map parameter "StereoBM/SpeckleRange"="4"
+[rtabmap-2] [INFO] [1768799152.467166051] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.467177511] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.472383245] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.472479166] [rtabmap]: Setting RTAB-Map parameter "StereoBM/SpeckleWindowSize"="100"
+[rtabmap-2] [INFO] [1768799152.472522113] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.472552850] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.477441575] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.477515266] [rtabmap]: Setting RTAB-Map parameter "StereoBM/TextureThreshold"="10"
+[rtabmap-2] [INFO] [1768799152.477536958] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.477567121] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.481597935] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.481721677] [rtabmap]: Setting RTAB-Map parameter "StereoBM/UniquenessRatio"="15"
+[rtabmap-2] [INFO] [1768799152.481748059] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.481775748] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.486212852] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.486338785] [rtabmap]: Setting RTAB-Map parameter "StereoSGBM/BlockSize"="15"
+[rtabmap-2] [INFO] [1768799152.486385399] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.486416160] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.490978345] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.491030616] [rtabmap]: Setting RTAB-Map parameter "StereoSGBM/Disp12MaxDiff"="1"
+[rtabmap-2] [INFO] [1768799152.491039586] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.491048968] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.494769476] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.494915214] [rtabmap]: Setting RTAB-Map parameter "StereoSGBM/MinDisparity"="0"
+[rtabmap-2] [INFO] [1768799152.494945656] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.494986098] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.500170659] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.500257598] [rtabmap]: Setting RTAB-Map parameter "StereoSGBM/Mode"="2"
+[rtabmap-2] [INFO] [1768799152.500280797] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.500315696] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.505268606] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.505366295] [rtabmap]: Setting RTAB-Map parameter "StereoSGBM/NumDisparities"="128"
+[rtabmap-2] [INFO] [1768799152.505416541] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.505447554] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.510122783] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.510189501] [rtabmap]: Setting RTAB-Map parameter "StereoSGBM/P1"="2"
+[rtabmap-2] [INFO] [1768799152.510228924] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.510255873] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.514812651] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.514902399] [rtabmap]: Setting RTAB-Map parameter "StereoSGBM/P2"="5"
+[rtabmap-2] [INFO] [1768799152.514916393] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.514938216] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.519180069] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.519253505] [rtabmap]: Setting RTAB-Map parameter "StereoSGBM/PreFilterCap"="31"
+[rtabmap-2] [INFO] [1768799152.519292605] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.519319732] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.523922982] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.523994952] [rtabmap]: Setting RTAB-Map parameter "StereoSGBM/SpeckleRange"="4"
+[rtabmap-2] [INFO] [1768799152.524016784] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.524047200] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.528464638] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.528592953] [rtabmap]: Setting RTAB-Map parameter "StereoSGBM/SpeckleWindowSize"="100"
+[rtabmap-2] [INFO] [1768799152.528621808] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.528651228] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.533728102] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.533818362] [rtabmap]: Setting RTAB-Map parameter "StereoSGBM/UniquenessRatio"="20"
+[rtabmap-2] [INFO] [1768799152.533844188] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.533874512] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.539128082] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.539211691] [rtabmap]: Setting RTAB-Map parameter "SuperPoint/Cuda"="true"
+[rtabmap-2] [INFO] [1768799152.539235852] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.539263498] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.543822853] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.543945477] [rtabmap]: Setting RTAB-Map parameter "SuperPoint/ModelPath"=""
+[rtabmap-2] [INFO] [1768799152.543971532] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.544000072] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.548453772] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.548526249] [rtabmap]: Setting RTAB-Map parameter "SuperPoint/NMS"="true"
+[rtabmap-2] [INFO] [1768799152.548548930] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.548577911] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.552962803] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.553035671] [rtabmap]: Setting RTAB-Map parameter "SuperPoint/NMSRadius"="4"
+[rtabmap-2] [INFO] [1768799152.553057939] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.553086907] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.557532314] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.557583658] [rtabmap]: Setting RTAB-Map parameter "SuperPoint/Threshold"="0.010"
+[rtabmap-2] [INFO] [1768799152.557592449] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.557604703] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.561708348] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.561792082] [rtabmap]: Setting RTAB-Map parameter "VhEp/Enabled"="false"
+[rtabmap-2] [INFO] [1768799152.561836042] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.561863475] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.566194713] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.566284560] [rtabmap]: Setting RTAB-Map parameter "VhEp/MatchCountMin"="8"
+[rtabmap-2] [INFO] [1768799152.566317299] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.566360641] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.570941059] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.571008847] [rtabmap]: Setting RTAB-Map parameter "VhEp/RansacParam1"="3"
+[rtabmap-2] [INFO] [1768799152.571042326] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.571068162] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.575519220] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.575602782] [rtabmap]: Setting RTAB-Map parameter "VhEp/RansacParam2"="0.99"
+[rtabmap-2] [INFO] [1768799152.575615098] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.575634942] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.580185104] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.580265961] [rtabmap]: Setting RTAB-Map parameter "Vis/BundleAdjustment"="1"
+[rtabmap-2] [INFO] [1768799152.580292011] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.580325362] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.585655929] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.585744406] [rtabmap]: Setting RTAB-Map parameter "Vis/CorFlowEps"="0.01"
+[rtabmap-2] [INFO] [1768799152.585777542] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.585815647] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.591433686] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.591515917] [rtabmap]: Setting RTAB-Map parameter "Vis/CorFlowGpu"="false"
+[rtabmap-2] [INFO] [1768799152.591528346] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.591545584] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.595392929] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.595473115] [rtabmap]: Setting RTAB-Map parameter "Vis/CorFlowIterations"="30"
+[rtabmap-2] [INFO] [1768799152.595499731] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.595531971] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.600251902] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.600310512] [rtabmap]: Setting RTAB-Map parameter "Vis/CorFlowMaxLevel"="3"
+[rtabmap-2] [INFO] [1768799152.600321501] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.600332803] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.604695763] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.604754431] [rtabmap]: Setting RTAB-Map parameter "Vis/CorFlowWinSize"="16"
+[rtabmap-2] [INFO] [1768799152.604792905] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.604814372] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.608258313] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.608313247] [rtabmap]: Setting RTAB-Map parameter "Vis/CorGuessMatchToProjection"="false"
+[rtabmap-2] [INFO] [1768799152.608338842] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.608356956] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.611597201] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.611666080] [rtabmap]: Setting RTAB-Map parameter "Vis/CorGuessWinSize"="40"
+[rtabmap-2] [INFO] [1768799152.611690722] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.611721619] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.615043349] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.615112795] [rtabmap]: Setting RTAB-Map parameter "Vis/CorNNDR"="0.8"
+[rtabmap-2] [INFO] [1768799152.615163513] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.615189776] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.619436595] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.619510585] [rtabmap]: Setting RTAB-Map parameter "Vis/CorNNType"="1"
+[rtabmap-2] [INFO] [1768799152.619534399] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.619563483] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.624229908] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.624299643] [rtabmap]: Setting RTAB-Map parameter "Vis/CorType"="0"
+[rtabmap-2] [INFO] [1768799152.624335477] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.624371587] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.628257409] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.628318580] [rtabmap]: Setting RTAB-Map parameter "Vis/DepthAsMask"="true"
+[rtabmap-2] [INFO] [1768799152.628331966] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.628353020] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.632528214] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.632588184] [rtabmap]: Setting RTAB-Map parameter "Vis/DepthMaskFloorThr"="0.0"
+[rtabmap-2] [INFO] [1768799152.632599225] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.632617028] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.636787269] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.636866609] [rtabmap]: Setting RTAB-Map parameter "Vis/EpipolarGeometryVar"="0.1"
+[rtabmap-2] [INFO] [1768799152.636912271] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.636944978] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.641999011] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.642070090] [rtabmap]: Setting RTAB-Map parameter "Vis/EstimationType"="1"
+[rtabmap-2] [INFO] [1768799152.642091840] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.642120664] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.646695386] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.646784527] [rtabmap]: Setting RTAB-Map parameter "Vis/FeatureType"="8"
+[rtabmap-2] [INFO] [1768799152.646796827] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.646807905] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.651099253] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.651175245] [rtabmap]: Setting RTAB-Map parameter "Vis/GridCols"="1"
+[rtabmap-2] [INFO] [1768799152.651199704] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.651230053] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.655474410] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.655541314] [rtabmap]: Setting RTAB-Map parameter "Vis/GridRows"="1"
+[rtabmap-2] [INFO] [1768799152.655562186] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.655586338] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.659575547] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.659641858] [rtabmap]: Setting RTAB-Map parameter "Vis/InlierDistance"="0.1"
+[rtabmap-2] [INFO] [1768799152.659715525] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.659746169] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.663607068] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.663669203] [rtabmap]: Setting RTAB-Map parameter "Vis/Iterations"="300"
+[rtabmap-2] [INFO] [1768799152.663705348] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.663729954] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.667845356] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.667899556] [rtabmap]: Setting RTAB-Map parameter "Vis/MaxDepth"="0"
+[rtabmap-2] [INFO] [1768799152.667925561] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.667939375] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.670823191] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.670899207] [rtabmap]: Setting RTAB-Map parameter "Vis/MaxFeatures"="1000"
+[rtabmap-2] [INFO] [1768799152.670913908] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.670931635] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.675421332] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.675516054] [rtabmap]: Setting RTAB-Map parameter "Vis/MeanInliersDistance"="0.0"
+[rtabmap-2] [INFO] [1768799152.675544909] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.675579984] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.679366544] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.679434266] [rtabmap]: Setting RTAB-Map parameter "Vis/MinDepth"="0"
+[rtabmap-2] [INFO] [1768799152.679444731] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.679460104] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.684182647] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.684260882] [rtabmap]: Setting RTAB-Map parameter "Vis/MinInliers"="20"
+[rtabmap-2] [INFO] [1768799152.684284625] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.684314102] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.687771883] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.687824238] [rtabmap]: Setting RTAB-Map parameter "Vis/MinInliersDistribution"="0.0"
+[rtabmap-2] [INFO] [1768799152.687850315] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.687862175] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799152.691405905] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799152.691489578] [rtabmap]: Setting RTAB-Map parameter "Vis/PnPFlags"="0"
+[rtabmap-2] [INFO] [1768799152.691516939] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799152.691549973] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799153.009599976] [rtabmap]: rtabmap (89): Rate=0.50s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.3092s, Maps update=0.0055s pub=0.0000s delay=0.2940s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799153.010039456] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799153.010078717] [rtabmap]: Setting RTAB-Map parameter "Vis/PnPMaxVariance"="0.0"
+[rtabmap-2] [INFO] [1768799153.010099119] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799153.010132988] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799153.014355509] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799153.014462181] [rtabmap]: Setting RTAB-Map parameter "Vis/PnPRefineIterations"="0"
+[rtabmap-2] [INFO] [1768799153.014484860] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799153.014514815] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799153.018630266] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799153.018711546] [rtabmap]: Setting RTAB-Map parameter "Vis/PnPReprojError"="2"
+[rtabmap-2] [INFO] [1768799153.018732059] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799153.018756410] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799153.022536807] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799153.022583513] [rtabmap]: Setting RTAB-Map parameter "Vis/PnPSamplingPolicy"="1"
+[rtabmap-2] [INFO] [1768799153.022592796] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799153.022605393] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799153.025404437] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799153.025514339] [rtabmap]: Setting RTAB-Map parameter "Vis/PnPSplitLinearCovComponents"="false"
+[rtabmap-2] [INFO] [1768799153.025538816] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799153.025563226] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799153.029659773] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799153.029796250] [rtabmap]: Setting RTAB-Map parameter "Vis/PnPVarianceMedianRatio"="4"
+[rtabmap-2] [INFO] [1768799153.029817842] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799153.029846699] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799153.034115590] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799153.034193919] [rtabmap]: Setting RTAB-Map parameter "Vis/RefineIterations"="5"
+[rtabmap-2] [INFO] [1768799153.034219853] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799153.034271321] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799153.038760520] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799153.038818981] [rtabmap]: Setting RTAB-Map parameter "Vis/RoiRatios"="0.0 0.0 0.0 0.0"
+[rtabmap-2] [INFO] [1768799153.038828129] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799153.038836839] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799153.041774433] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799153.041853180] [rtabmap]: Setting RTAB-Map parameter "Vis/SSC"="false"
+[rtabmap-2] [INFO] [1768799153.041880332] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799153.041907399] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799153.045165250] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799153.045232777] [rtabmap]: Setting RTAB-Map parameter "Vis/SubPixEps"="0.02"
+[rtabmap-2] [INFO] [1768799153.045256479] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799153.045285829] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799153.049525090] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799153.049579990] [rtabmap]: Setting RTAB-Map parameter "Vis/SubPixIterations"="0"
+[rtabmap-2] [INFO] [1768799153.049588701] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799153.049601133] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799153.052984510] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799153.053057057] [rtabmap]: Setting RTAB-Map parameter "Vis/SubPixWinSize"="3"
+[rtabmap-2] [INFO] [1768799153.053105334] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799153.053151462] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799153.057134080] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799153.057197452] [rtabmap]: Setting RTAB-Map parameter "g2o/Baseline"="0.075"
+[rtabmap-2] [INFO] [1768799153.057217555] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799153.057240798] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799153.061110541] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799153.061172282] [rtabmap]: Setting RTAB-Map parameter "g2o/Optimizer"="0"
+[rtabmap-2] [INFO] [1768799153.061191375] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799153.061222488] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799153.065005403] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799153.065053388] [rtabmap]: Setting RTAB-Map parameter "g2o/PixelVariance"="1.0"
+[rtabmap-2] [INFO] [1768799153.065062491] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799153.065086620] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799153.068151868] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799153.068219406] [rtabmap]: Setting RTAB-Map parameter "g2o/RobustKernelDelta"="8"
+[rtabmap-2] [INFO] [1768799153.068230334] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799153.068246324] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799153.072610565] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799153.072677613] [rtabmap]: Setting RTAB-Map parameter "g2o/Solver"="0"
+[rtabmap-2] [INFO] [1768799153.072696679] [rtabmap]: rtabmap: Updating parameters
+[rtabmap-2] [INFO] [1768799153.072737951] [rtabmap]: RTAB-Map rate detection = 2.000000 Hz
+[rtabmap-2] [INFO] [1768799153.077052785] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799153.077335889] [rtabmap]: Parameters event received!
+[rtabmap-2] [INFO] [1768799153.514187028] [rclcpp]: signal_handler(signum=2)
+[rgbd_sync-1] [INFO] [1768799153.514196220] [rclcpp]: signal_handler(signum=2)
+[rtabmap-2] [INFO] [1768799153.590391644] [rtabmap]: rtabmap (90): Rate=0.50s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.3266s, Maps update=0.0001s pub=0.0001s delay=0.2080s (local map=24, WM=24)
+[rtabmap-2] [INFO] [1768799153.591967010] [rtabmap]: Parameters are not saved (No configuration file provided...)
+[INFO] [rgbd_sync-1]: process has finished cleanly [pid 874291]
+[rtabmap-2] [33m[ WARN] (2026-01-19 14:05:03.147) Memory.cpp:5917::createSignature() Mem/SaveDepth16Format is set to false to use 32bits format but this is not compatible with the compressed depth format chosen (Mem/DepthCompressionFormat=".rvl"), depth images will be compressed in ".png" format instead. Explicitly set Mem/SaveDepth16Format to true to keep using ".rvl" format and images will be converted to 16bits for convenience (warning: that would remove all depth values over 65 meters). Explicitly set Mem/DepthCompressionFormat=".png" to suppress this warning. This warning is only printed once.[0m
+[rtabmap-2] [33m[ WARN] (2026-01-19 14:05:03.578) MapsManager.cpp:863::publishMaps() Graph has changed! The whole cloud is regenerated.[0m
+[rtabmap-2] [33m[ WARN] (2026-01-19 14:05:31.326) Rtabmap.cpp:3069::process() Rejected loop closure 1 -> 51: Not enough inliers 7/20 (matches=24) between 1 and 51[0m
+[rtabmap-2] [33m[ WARN] (2026-01-19 14:05:34.073) Rtabmap.cpp:3069::process() Rejected loop closure 18 -> 56: Not enough inliers 15/20 (matches=43) between 18 and 56[0m
+[rtabmap-2] rtabmap: Saving database/long-term memory... (located at /home/fujino/.ros/rtabmap_ur5e_20260119_140501.db)
+[rtabmap-2] rtabmap: Saving database/long-term memory...done! (located at /home/fujino/.ros/rtabmap_ur5e_20260119_140501.db, 135 MB)
+[INFO] [rtabmap-2]: process has finished cleanly [pid 874293]

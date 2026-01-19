@@ -14,7 +14,7 @@ set -u
 
 # ---- Plant pose / leaf targets TF (tunable) ----
 PLANT_X=0.0
-PLANT_Y=0.75
+PLANT_Y=0.9
 PLANT_Z=0.0
 
 # Blenderの「正面が -X」なので、植物を x=+0.5 に置けば yaw=0 で正面がロボット側を向く
@@ -32,15 +32,14 @@ trap 'kill "${pids[@]}" 2>/dev/null || true' EXIT
 ros2 run tf2_ros static_transform_publisher \
   "$PLANT_X" "$PLANT_Y" "$PLANT_Z" \
   "$PLANT_QX" "$PLANT_QY" "$PLANT_QZ" "$PLANT_QW" \
-  world plant_base &
+  base_link plant_base &
 pids+=($!)
 
-# plant_base -> leaf_target（Blenderで作った leaf_target_marker：位置・姿勢）
+# plant_base -> leaf_target（+0.1505m 上げる）
 ros2 run tf2_ros static_transform_publisher \
-  -0.14212 0.032125 0.48545 \
+  -0.14212 0.032125 0.63595 \
   0.245305 -0.946771 0.031645 -0.206033 \
   plant_base leaf_target &
-pids+=($!)
 
 # leaf_target -> leaf_target_shot（めり込み回避：leaf_target +Z 方向にオフセット）
 ros2 run tf2_ros static_transform_publisher \

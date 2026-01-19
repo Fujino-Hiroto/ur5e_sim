@@ -57,7 +57,6 @@ def launch_setup(context, *args, **kwargs):
     initial_positions_file = LaunchConfiguration("initial_positions_file")
     description_package = LaunchConfiguration("description_package")
     description_file = LaunchConfiguration("description_file")
-    description_file = LaunchConfiguration("description_file")
     prefix = LaunchConfiguration("prefix")
     start_joint_controller = LaunchConfiguration("start_joint_controller")
     initial_joint_controller = LaunchConfiguration("initial_joint_controller")
@@ -195,19 +194,33 @@ def launch_setup(context, *args, **kwargs):
         actions=[gazebo_spawn_robot],
     )
 
+# -----------------------------
+# Spawnが終わってからcontrollerを起動する
+# -----------------------------
+
+# Spawnが終わったら controller spawner 群を起動
+    start_controllers_after_spawn = RegisterEventHandler(
+        event_handler=OnProcessExit(
+            target_action=gazebo_spawn_robot,
+            on_exit=[
+                joint_state_broadcaster_spawner,
+                initial_joint_controller_spawner_stopped,
+                initial_joint_controller_spawner_started,
+                delay_rviz_after_joint_state_broadcaster_spawner,
+            ],
+        ),
+    )
+
     nodes_to_start = [
-        robot_state_publisher_node,
-        joint_state_broadcaster_spawner,
-        delay_rviz_after_joint_state_broadcaster_spawner,
-        initial_joint_controller_spawner_stopped,
-        initial_joint_controller_spawner_started,
         gazebo_server,
         gazebo_client,
+        robot_state_publisher_node,
         gazebo_spawn_robot_delayed,
-
+        start_controllers_after_spawn,
     ]
 
     return nodes_to_start
+
 
 
 def generate_launch_description():

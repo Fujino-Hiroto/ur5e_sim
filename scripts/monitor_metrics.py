@@ -1,5 +1,25 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+monitor_metrics.py (貼り替え版)
+
+目的
+- MoveIt の /check_state_validity で「衝突（または無効状態）」を監視し、CSVへ記録する
+- TF から camera pose を取得し、leaf（PlanningScene上の collision object）の
+  「距離」「視線角」「裏面側にいるか」を評価してCSVへ記録する
+
+重要な修正点（あなたの環境向け）
+1) TF Buffer を Node の clock（sim time）で動かす
+   - Gazebo の use_sim_time=true では、tf2_ros.Buffer に node を渡さないと
+     TF が「システム時間」で解釈され、lookup が不安定になることがあります。
+2) leaf の pose を PlanningScene から取得するとき、co.header.frame_id を考慮し
+   必ず args.world_frame（デフォルト base_link）へ TF 変換して保持する
+   - これをしないと、leaf が world 基準で登録されている場合に評価が狂います。
+
+使い方例
+  ros2 run <your_pkg> monitor_metrics --csv trial.csv --leaf_id plant_leaf_0_3 \
+    --world_frame base_link --camera_frame camera_color_optical_frame
+"""
 
 import math
 import csv
@@ -9,8 +29,10 @@ from typing import Optional, Tuple
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import qos_profile_sensor_data
+from rclpy.duration import Duration
 
 from sensor_msgs.msg import JointState
+from geometry_msgs.msg import PoseStamped
 
 from moveit_msgs.srv import GetStateValidity, GetPlanningScene
 from moveit_msgs.msg import RobotState, PlanningSceneComponents
@@ -19,8 +41,11 @@ import tf2_ros
 from tf2_ros import TransformException
 
 
+# ------------------------------
+# Small math helpers
+# ------------------------------
 def quat_to_rot(qx, qy, qz, qw):
-    # Rotation matrix from quaternion (x,y,z,w)
+    """Rotation matrix from quaternion (x,y,z,w)."""
     xx = qx*qx; yy = qy*qy; zz = qz*qz
     xy = qx*qy; xz = qx*qz; yz = qy*qz
     wx = qw*qx; wy = qw*qy; wz = qw*qz
@@ -36,7 +61,7 @@ def quat_to_rot(qx, qy, qz, qw):
     r20 = 2*(xz - wy)
     r21 = 2*(yz + wx)
     r22 = 1 - 2*(xx+yy)
-    return ((r00,r01,r02),(r10,r11,r12),(r20,r21,r22))
+    return ((r00, r01, r02), (r10, r11, r12), (r20, r21, r22))
 
 
 def rot_vec(R, v):
@@ -62,16 +87,23 @@ def dot(a, b):
     return a[0]*b[0] + a[1]*b[1] + a[2]*b[2]
 
 
+# ------------------------------
+# Metrics monitor node
+# ------------------------------
 class MetricsMonitor(Node):
     def __init__(self, a):
         super().__init__("metrics_monitor")
         self.a = a
 
-        # joint states
+        # -------------------------
+        # Joint states
+        # -------------------------
         self.latest_js: Optional[JointState] = None
         self.create_subscription(JointState, "/joint_states", self._on_js, qos_profile_sensor_data)
 
-        # services
+        # -------------------------
+        # MoveIt services
+        # -------------------------
         self.valid_cli = self.create_client(GetStateValidity, "/check_state_validity")
         self.scene_cli = self.create_client(GetPlanningScene, "/get_planning_scene")
 
@@ -80,14 +112,23 @@ class MetricsMonitor(Node):
         if not self.scene_cli.wait_for_service(timeout_sec=5.0):
             raise RuntimeError("Service /get_planning_scene not available (move_group起動済み？)")
 
-        # tf
-        self.tf_buffer = tf2_ros.Buffer()
+        # -------------------------
+        # TF (重要：sim time の clock を使う)
+        # -------------------------
+        # Gazebo/use_sim_time の場合、Buffer に node を渡して clock を共有するのが安全。
+        # Humble で有効。
+        self.tf_buffer = tf2_ros.Buffer(node=self)
         self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
 
-        # cache leaf pose (static)
-        self.leaf_pose = None  # (pos(x,y,z), quat(x,y,z,w))
+        # -------------------------
+        # Leaf pose cache (in args.world_frame)
+        # -------------------------
+        # leaf_pose: ((x,y,z), (qx,qy,qz,qw)) in a.world_frame
+        self.leaf_pose = None
 
-        # counters
+        # -------------------------
+        # Counters
+        # -------------------------
         self.in_collision = False
         self.collision_events = 0
         self.collision_time = 0.0
@@ -101,6 +142,9 @@ class MetricsMonitor(Node):
     def _on_js(self, msg: JointState):
         self.latest_js = msg
 
+    # -------------------------
+    # PlanningScene から leaf pose を一度だけ取得し、world_frameに揃える
+    # -------------------------
     def fetch_leaf_pose_once(self):
         leaf_id = self.a.leaf_id
         if not leaf_id:
@@ -108,11 +152,11 @@ class MetricsMonitor(Node):
 
         req = GetPlanningScene.Request()
 
-        # request world object geometry
+        # request world object geometry/names（環境によりmaskが効かない場合もあるのでbest-effort）
         mask = 0
         for name in ["WORLD_OBJECT_GEOMETRY", "WORLD_OBJECT_NAMES"]:
             mask |= getattr(PlanningSceneComponents, name, 0)
-        req.components.components = mask  # fallback: 0でもだいたい返る
+        req.components.components = mask
 
         fut = self.scene_cli.call_async(req)
         rclpy.spin_until_future_complete(self, fut, timeout_sec=5.0)
@@ -122,25 +166,60 @@ class MetricsMonitor(Node):
 
         found = False
         for co in res.scene.world.collision_objects:
-            if co.id == leaf_id:
-                if len(co.primitive_poses) == 0:
-                    raise RuntimeError(f"leaf_id={leaf_id} has no primitive_poses")
-                p = co.primitive_poses[0]
-                pos = (p.position.x, p.position.y, p.position.z)
-                quat = (p.orientation.x, p.orientation.y, p.orientation.z, p.orientation.w)
-                self.leaf_pose = (pos, quat)
-                found = True
-                break
+            if co.id != leaf_id:
+                continue
+
+            if len(co.primitive_poses) == 0:
+                raise RuntimeError(f"leaf_id={leaf_id} has no primitive_poses")
+
+            # collision object pose is expressed in co.header.frame_id (may be 'world' etc.)
+            src_frame = co.header.frame_id if co.header.frame_id else self.a.world_frame
+            p = co.primitive_poses[0]
+
+            leaf_ps = PoseStamped()
+            leaf_ps.header.frame_id = src_frame
+            leaf_ps.pose = p
+
+            # Transform to args.world_frame (default: base_link)
+            dst_frame = self.a.world_frame
+            try:
+                leaf_tf = self.tf_buffer.transform(
+                    leaf_ps,
+                    dst_frame,
+                    timeout=Duration(seconds=1.0)
+                )
+            except TransformException as ex:
+                raise RuntimeError(f"TF transform leaf pose failed: {src_frame} -> {dst_frame}: {ex}")
+
+            pos = (leaf_tf.pose.position.x, leaf_tf.pose.position.y, leaf_tf.pose.position.z)
+            quat = (leaf_tf.pose.orientation.x, leaf_tf.pose.orientation.y, leaf_tf.pose.orientation.z, leaf_tf.pose.orientation.w)
+            self.leaf_pose = (pos, quat)
+
+            found = True
+            break
 
         if not found:
-            raise RuntimeError(f"leaf_id '{leaf_id}' not found in planning scene. RVizのScene GeometryでIDを確認してください。")
+            raise RuntimeError(
+                f"leaf_id '{leaf_id}' not found in planning scene. "
+                f"RVizのScene GeometryでIDを確認してください。"
+            )
 
-        self.get_logger().info(f"Loaded leaf pose: id={leaf_id} pos={self.leaf_pose[0]}")
+        self.get_logger().info(
+            f"Loaded leaf pose: id={leaf_id} (src_frame converted) -> {self.a.world_frame} pos={self.leaf_pose[0]}"
+        )
 
-    def get_camera_world_tf(self) -> Optional[Tuple[Tuple[float,float,float], Tuple[float,float,float,float]]]:
+    # -------------------------
+    # TF: camera pose in world_frame
+    # -------------------------
+    def get_camera_world_tf(self) -> Optional[Tuple[Tuple[float, float, float], Tuple[float, float, float, float]]]:
         try:
-            # lookup_transform(target=world, source=camera) => camera->world
-            tf = self.tf_buffer.lookup_transform(self.a.world_frame, self.a.camera_frame, rclpy.time.Time())
+            # lookup_transform(target, source) => target_T_source
+            # i.e., transform from source into target
+            tf = self.tf_buffer.lookup_transform(
+                self.a.world_frame,
+                self.a.camera_frame,
+                rclpy.time.Time()
+            )
             t = tf.transform.translation
             q = tf.transform.rotation
             pos = (t.x, t.y, t.z)
@@ -149,6 +228,9 @@ class MetricsMonitor(Node):
         except TransformException:
             return None
 
+    # -------------------------
+    # MoveIt: collision check via /check_state_validity
+    # -------------------------
     def check_collision(self) -> Tuple[bool, int, bool]:
         """returns: (in_collision, contact_count, valid_flag)"""
         if self.latest_js is None:
@@ -167,7 +249,7 @@ class MetricsMonitor(Node):
         if res is None:
             return (False, 0, True)
 
-        # できるだけ「衝突」だけを見る：contacts があればそれを優先
+        # contacts が返る環境なら contacts を優先（より「衝突」に近い）
         contact_count = 0
         if hasattr(res, "contacts") and res.contacts is not None:
             contact_count = len(res.contacts)
@@ -175,15 +257,20 @@ class MetricsMonitor(Node):
         if contact_count > 0:
             return (True, contact_count, bool(getattr(res, "valid", True)))
 
-        # contactsが無い場合のフォールバック（環境によっては contacts を返さない）
+        # contacts が無い場合のフォールバック
         valid_flag = bool(getattr(res, "valid", True))
         if not valid_flag:
             return (True, 0, valid_flag)
+
         return (False, 0, valid_flag)
 
-    def check_view_success(self, cam_pos, cam_quat, dt) -> Tuple[bool, float, float, bool]:
+    # -------------------------
+    # View success criteria
+    # -------------------------
+    def check_view_success(self, cam_pos, cam_quat) -> Tuple[bool, float, float, bool]:
         """
         returns: (success_now, dist, look_angle_deg, underside_ok)
+        * all computed in args.world_frame
         """
         if self.leaf_pose is None:
             return (False, float("nan"), float("nan"), False)
@@ -218,10 +305,11 @@ class MetricsMonitor(Node):
         ang_ok = (look_angle <= self.a.theta_deg)
 
         success_now = dist_ok and ang_ok and underside_ok
-
-        # hold logic handled outside
         return success_now, dist, look_angle, underside_ok
 
+    # -------------------------
+    # Main loop
+    # -------------------------
     def run(self):
         # open csv
         with open(self.a.csv, "w", newline="") as f:
@@ -233,7 +321,7 @@ class MetricsMonitor(Node):
                 "dist_to_leaf_m", "look_angle_deg", "underside_ok",
             ])
 
-            # preload leaf pose
+            # preload leaf pose (needs TF ready to transform into world_frame)
             if self.a.leaf_id:
                 self.fetch_leaf_pose_once()
 
@@ -244,6 +332,7 @@ class MetricsMonitor(Node):
             period = 1.0 / rate
 
             while rclpy.ok():
+                # keep callbacks flowing (/joint_states, /tf, etc.)
                 rclpy.spin_once(self, timeout_sec=0.01)
 
                 now = self.get_clock().now().nanoseconds / 1e9
@@ -252,7 +341,9 @@ class MetricsMonitor(Node):
                     continue
                 self.last_t = now
 
+                # -------------------------
                 # collision check
+                # -------------------------
                 in_col, contact_count, valid_flag = self.check_collision()
 
                 # collision events/time
@@ -262,12 +353,15 @@ class MetricsMonitor(Node):
                     self.collision_time += dt
                 self.in_collision = in_col
 
+                # -------------------------
                 # view success
+                # -------------------------
                 cam_tf = self.get_camera_world_tf()
                 if cam_tf is not None:
                     cam_pos, cam_quat = cam_tf
-                    success_now, dist, ang, underside_ok = self.check_view_success(cam_pos, cam_quat, dt)
+                    success_now, dist, ang, underside_ok = self.check_view_success(cam_pos, cam_quat)
 
+                    # hold logic: need success for hold_sec continuously
                     if success_now:
                         self.success_hold += dt
                         if (not self.success_latched) and (self.success_hold >= self.a.hold_sec):
@@ -281,6 +375,7 @@ class MetricsMonitor(Node):
                     self.success_hold = 0.0
                     self.success_latched = False
 
+                # write row
                 w.writerow([
                     now - start_t,
                     int(self.in_collision), int(contact_count), int(self.collision_events), self.collision_time,
@@ -304,7 +399,7 @@ def main():
     p.add_argument("--group", default="ur_manipulator")
 
     # TF frames
-    p.add_argument("--world_frame", default="world")
+    p.add_argument("--world_frame", default="base_link")
     p.add_argument("--camera_frame", default="camera_color_optical_frame")
 
     # leaf success

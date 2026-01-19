@@ -108,6 +108,7 @@ def generate_launch_description():
         parameters=[{
             "use_sim_time": use_sim_time,
             "approx_sync": True,
+            "approx_sync_max_interval": 0.01,
             "sync_queue_size": 30,
             "topic_queue_size": 10,
             "qos": qos,
