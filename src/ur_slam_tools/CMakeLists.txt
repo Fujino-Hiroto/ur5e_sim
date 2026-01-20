@@ -46,6 +46,11 @@ ament_target_dependencies(coarse_to_fine_go_to_leaf3
   rclcpp tf2 tf2_ros tf2_geometry_msgs geometry_msgs moveit_ros_planning_interface sensor_msgs
 )
 
+add_executable(coarse_to_fine_go_to_leaf4 src/coarse_to_fine_go_to_leaf4.cpp)
+ament_target_dependencies(coarse_to_fine_go_to_leaf4
+  rclcpp tf2 tf2_ros tf2_geometry_msgs geometry_msgs moveit_ros_planning_interface sensor_msgs
+)
+
 # ----------------------------
 # Install
 # ----------------------------
@@ -54,6 +59,8 @@ install(TARGETS
   coarse_to_fine_go_to_leaf
   coarse_to_fine_go_to_leaf2
   coarse_to_fine_go_to_leaf3
+  coarse_to_fine_go_to_leaf4
+
   DESTINATION lib/${PROJECT_NAME}
 )
 

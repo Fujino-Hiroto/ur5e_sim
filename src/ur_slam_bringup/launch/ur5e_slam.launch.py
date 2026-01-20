@@ -61,7 +61,7 @@ def generate_launch_description():
         # odom_frame_id を “空にしない” → TFからオドメトリ取得 :contentReference[oaicite:1]{index=1}
         DeclareLaunchArgument("odom_frame_id", default_value="world"),
         DeclareLaunchArgument("base_frame_id", default_value="camera_color_optical_frame"),
-        DeclareLaunchArgument("map_frame_id", default_value="map"),
+        DeclareLaunchArgument("map_frame_id", default_value="world"),
         # DB
         DeclareLaunchArgument(
             "db_path",
@@ -136,8 +136,8 @@ def generate_launch_description():
 
             # TF odom (TFからオドメトリ取得)
             "frame_id": base_frame_id,
-            "odom_frame_id": odom_frame_id,   # default=world
-            "map_frame_id": "world",          # まずは world 推奨
+            "odom_frame_id": odom_frame_id,   # default=odom
+            "map_frame_id": map_frame_id,          # default=map
 
             # Input: RGBDImage
             "subscribe_rgbd": True,

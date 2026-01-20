@@ -5,6 +5,9 @@ from launch.substitutions import LaunchConfiguration
 from launch.conditions import IfCondition
 from launch_ros.substitutions import FindPackageShare
 
+from launch.substitutions import PathJoinSubstitution   # 追加
+
+
 
 def launch_setup(context, *args, **kwargs):
     ur_type = LaunchConfiguration("ur_type")
@@ -52,6 +55,9 @@ def launch_setup(context, *args, **kwargs):
             "safety_limits": safety_limits,
             "description_package": description_package,
             "description_file": description_file,
+            "kinematics_params": PathJoinSubstitution(
+                [FindPackageShare("ur_description"), "config", ur_type, "default_kinematics.yaml"]
+            ),
             "moveit_config_package": moveit_config_package,
             "moveit_config_file": moveit_config_file,
             "prefix": prefix,

@@ -121,6 +121,21 @@ def launch_setup(context, *args, **kwargs):
         parameters=[{"use_sim_time": True}, robot_description],
     )
 
+    world_to_base = Node(
+        package="tf2_ros",
+        executable="static_transform_publisher",
+        name="world_to_base_tf",
+        output="screen",
+        arguments=[
+            "--x", "0", "--y", "0", "--z", "0",
+            "--qx", "0", "--qy", "0", "--qz", "0", "--qw", "1",
+            "--frame-id", "world",
+            "--child-frame-id", "base_link",
+        ],
+        parameters=[{"use_sim_time": True}],
+    )
+
+
     rviz_node = Node(
         package="rviz2",
         executable="rviz2",
@@ -212,6 +227,7 @@ def launch_setup(context, *args, **kwargs):
     )
 
     nodes_to_start = [
+        world_to_base,
         gazebo_server,
         gazebo_client,
         robot_state_publisher_node,

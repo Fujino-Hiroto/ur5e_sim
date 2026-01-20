@@ -22,7 +22,7 @@ PLANT_Z=0.0
 PLANT_QX=0; PLANT_QY=0; PLANT_QZ=0.7071068; PLANT_QW=0.7071068
 # PLANT_QX=0; PLANT_QY=0; PLANT_QZ=1; PLANT_QW=0   # yaw=180deg
 
-SHOT_OFFSET=0.05  # スタンドオフ距離 [m]（まずは5cm推奨）
+SHOT_OFFSET=0.10  # スタンドオフ距離 [m]（まずは5cm推奨）
 
 # background TF publishers
 pids=()
@@ -32,7 +32,7 @@ trap 'kill "${pids[@]}" 2>/dev/null || true' EXIT
 ros2 run tf2_ros static_transform_publisher \
   "$PLANT_X" "$PLANT_Y" "$PLANT_Z" \
   "$PLANT_QX" "$PLANT_QY" "$PLANT_QZ" "$PLANT_QW" \
-  base_link plant_base &
+  world plant_base &
 pids+=($!)
 
 # plant_base -> leaf_target（+0.1505m 上げる）
@@ -40,6 +40,7 @@ ros2 run tf2_ros static_transform_publisher \
   -0.14212 0.032125 0.63595 \
   0.245305 -0.946771 0.031645 -0.206033 \
   plant_base leaf_target &
+pids+=($!)
 
 # leaf_target -> leaf_target_shot（めり込み回避：leaf_target +Z 方向にオフセット）
 ros2 run tf2_ros static_transform_publisher \
