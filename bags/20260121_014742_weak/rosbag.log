@@ -1,0 +1,32 @@
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1768927664.722803018] [rosbag2_recorder]: Press SPACE for pausing/resuming
+[INFO] [1768927664.724638675] [rosbag2_storage]: Opened database 'bags/20260121_014742_weak/bag/bag_0.db3' for READ_WRITE.
+[INFO] [1768927664.741843068] [rosbag2_recorder]: Listening for topics...
+[INFO] [1768927664.744211296] [rosbag2_recorder]: Event publisher thread: Starting
+[INFO] [1768927664.758014717] [rosbag2_recorder]: Subscribed to topic '/camera/depth/points_noisy'
+[INFO] [1768927664.758489904] [rosbag2_recorder]: Recording...
+[INFO] [1768927664.883638103] [rosbag2_recorder]: Subscribed to topic '/camera/color/camera_info'
+[INFO] [1768927664.888106527] [rosbag2_recorder]: Subscribed to topic '/camera/depth/points'
+[INFO] [1768927664.912551731] [rosbag2_recorder]: Subscribed to topic '/camera/color/image_raw'
+[INFO] [1768927664.931489682] [rosbag2_recorder]: Subscribed to topic '/camera/depth/depth/image_raw'
+[INFO] [1768927664.944883143] [rosbag2_recorder]: Subscribed to topic '/camera/depth/depth/camera_info'
+[INFO] [1768927664.956768475] [rosbag2_recorder]: Subscribed to topic '/clock'
+[INFO] [1768927664.976393737] [rosbag2_recorder]: Subscribed to topic '/joint_states'
+[INFO] [1768927665.091780129] [rosbag2_recorder]: Subscribed to topic '/tf'
+[INFO] [1768927665.105135463] [rosbag2_recorder]: Subscribed to topic '/tf_static'
+[INFO] [1768927665.972849976] [rosbag2_recorder]: Subscribed to topic '/cloud_map'
+[INFO] [1768927665.972954556] [rosbag2_recorder]: All requested topics are subscribed. Stopping discovery...
+[INFO] [1768927724.547493574] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[WARN] [1768927727.008566932] [rosbag2_cpp]: Cache buffers lost messages per topic: 
+	/camera/depth/points_noisy: 33
+	/cloud_map: 14
+	/clock: 154
+	/tf: 968
+	/camera/depth/depth/camera_info: 283
+	/camera/depth/points: 272
+	/camera/color/camera_info: 285
+	/joint_states: 1561
+	/camera/depth/depth/image_raw: 289
+	/camera/color/image_raw: 284
+Total lost: 4143
+[INFO] [1768927727.010112088] [rosbag2_recorder]: Event publisher thread: Exiting
+[INFO] [1768927727.010277048] [rosbag2_recorder]: Recording stopped

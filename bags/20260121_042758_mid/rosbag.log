@@ -1,0 +1,32 @@
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1768937281.374585245] [rosbag2_recorder]: Press SPACE for pausing/resuming
+[INFO] [1768937281.437465968] [rosbag2_storage]: Opened database 'bags/20260121_042758_mid/bag/bag_0.db3' for READ_WRITE.
+[INFO] [1768937281.467200787] [rosbag2_recorder]: Listening for topics...
+[INFO] [1768937281.467221560] [rosbag2_recorder]: Event publisher thread: Starting
+[INFO] [1768937281.584276126] [rosbag2_recorder]: Subscribed to topic '/tf_static'
+[INFO] [1768937281.643329425] [rosbag2_recorder]: Subscribed to topic '/tf'
+[INFO] [1768937281.687601014] [rosbag2_recorder]: Subscribed to topic '/camera/depth/points_noisy'
+[INFO] [1768937281.687846257] [rosbag2_recorder]: Recording...
+[INFO] [1768937281.708224282] [rosbag2_recorder]: Subscribed to topic '/camera/color/camera_info'
+[INFO] [1768937281.717395051] [rosbag2_recorder]: Subscribed to topic '/camera/depth/points'
+[INFO] [1768937281.723686920] [rosbag2_recorder]: Subscribed to topic '/camera/color/image_raw'
+[INFO] [1768937281.752505242] [rosbag2_recorder]: Subscribed to topic '/camera/depth/depth/image_raw'
+[INFO] [1768937281.770826464] [rosbag2_recorder]: Subscribed to topic '/camera/depth/depth/camera_info'
+[INFO] [1768937281.789606753] [rosbag2_recorder]: Subscribed to topic '/clock'
+[INFO] [1768937281.940250623] [rosbag2_recorder]: Subscribed to topic '/joint_states'
+[INFO] [1768937282.809873869] [rosbag2_recorder]: Subscribed to topic '/cloud_map'
+[INFO] [1768937282.809986846] [rosbag2_recorder]: All requested topics are subscribed. Stopping discovery...
+[INFO] [1768937342.831916535] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[WARN] [1768937343.825383310] [rosbag2_cpp]: Cache buffers lost messages per topic: 
+	/camera/depth/points_noisy: 1
+	/camera/depth/depth/camera_info: 64
+	/cloud_map: 1
+	/clock: 43
+	/tf: 133
+	/camera/depth/depth/image_raw: 57
+	/camera/color/image_raw: 65
+	/camera/depth/points: 58
+	/camera/color/camera_info: 64
+	/joint_states: 377
+Total lost: 863
+[INFO] [1768937343.827908825] [rosbag2_recorder]: Event publisher thread: Exiting
+[INFO] [1768937343.828066183] [rosbag2_recorder]: Recording stopped

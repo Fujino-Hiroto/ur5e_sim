@@ -1,0 +1,69 @@
+[INFO] [1768929705.530671921] [coarse_to_fine_go_to_leaf4]: use_sim_time=true
+[INFO] [1768929707.181962822] [coarse_to_fine_go_to_leaf4]: Copied 43 MoveIt description parameters from /move_group.
+[INFO] [1768929707.207390985] [coarse_to_fine_go_to_leaf4]: Runtime monitor: ENABLED
+[INFO] [1768929707.207521121] [coarse_to_fine_go_to_leaf4]:   pc_topic=/camera/depth/points_noisy stop_dist=0.150 roi_x=0.120 roi_y=0.120 max_z=1.200 stale=0.250 rate=30.0
+[INFO] [1768929707.214044352] [moveit_rdf_loader.rdf_loader]: Loaded robot model in 0 seconds
+[INFO] [1768929707.214136215] [moveit_robot_model.robot_model]: Loading robot model 'ur'...
+[INFO] [1768929707.214147284] [moveit_robot_model.robot_model]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[INFO] [1768929707.290808317] [move_group_interface]: Ready to take commands for planning group ur_manipulator.
+[INFO] [1768929707.290911055] [coarse_to_fine_go_to_leaf4]: Planning group: ur_manipulator
+[INFO] [1768929707.290963993] [coarse_to_fine_go_to_leaf4]: Planning frame: world
+[INFO] [1768929707.290991066] [coarse_to_fine_go_to_leaf4]: Pose reference frame: world
+[INFO] [1768929707.291015487] [coarse_to_fine_go_to_leaf4]: End effector link: tool0
+[INFO] [1768929707.291040035] [coarse_to_fine_go_to_leaf4]: Wrist1 PathConstraint DISABLED
+[WARN] [1768929707.311401520] [coarse_to_fine_go_to_leaf4]: RTAB-Map param set FAILED: Rtabmap/DetectionRate (Wrong parameter type, parameter {Rtabmap/DetectionRate} is of type {string}, setting it to {double} is not allowed.)
+[INFO] [1768929707.311504230] [coarse_to_fine_go_to_leaf4]: === COARSE: pre approach (target leaf_target) ===
+[INFO] [1768929707.313615583] [moveit_ros.current_state_monitor]: Listening to joint states on topic 'joint_states'
+[INFO] [1768929707.319506034] [coarse_to_fine_go_to_leaf4]: [COARSE][attempt 1/3] cur=(0.133,0.086,0.671) leaf=(-0.032,0.758,0.636) pre=(0.004,0.612,0.486) d(cur->leaf)=0.693 d(pre->leaf)=0.212 d(cur->pre)=0.572
+[INFO] [1768929707.319653049] [coarse_to_fine_go_to_leaf4]: [COARSE] attempt 1/3: move to PRE (back=0.150 down=0.150) pos=(0.004,0.612,0.486)
+[INFO] [1768929707.319728176] [coarse_to_fine_go_to_leaf4]: Speed scaling by distance: dist=0.693[m], vel=0.020, acc=0.020
+[INFO] [1768929707.319786922] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] PLAN begin (snapshot)
+[INFO] [1768929707.319855201] [coarse_to_fine_go_to_leaf4]:   cur_pose: frame=world pos=(0.133,0.071,0.671) q=(-0.7064,0.0308,0.0308,0.7064)
+[INFO] [1768929707.319901905] [coarse_to_fine_go_to_leaf4]:   goal_pose: frame=world pos=(0.006,0.602,0.475) q=(-0.0461,0.3799,0.9172,-0.1113)
+[INFO] [1768929707.319948538] [coarse_to_fine_go_to_leaf4]:   Tw_leaf: parent=world child=leaf_target t=(-0.032,0.758,0.636) q=(0.8429,-0.4960,-0.1233,-0.1681)
+[INFO] [1768929707.319989297] [coarse_to_fine_go_to_leaf4]:   Tw_cam: parent=world child=tool0 t=(0.133,0.071,0.671) q=(-0.7064,0.0308,0.0308,0.7064)
+[INFO] [1768929707.320025632] [coarse_to_fine_go_to_leaf4]:   dist(cam,leaf)=0.707
+[INFO] [1768929707.320057370] [coarse_to_fine_go_to_leaf4]:   monitor: min_z=inf pc_age=inf stale=true
+[INFO] [1768929707.320096786] [coarse_to_fine_go_to_leaf4]:   joint[wrist_1_joint]=-0.524rad (-30.0deg)
+[INFO] [1768929707.320409164] [move_group_interface]: MoveGroup action client/server ready
+[INFO] [1768929707.417471468] [move_group_interface]: Planning request accepted
+[INFO] [1768929710.060747153] [move_group_interface]: Planning request aborted
+[ERROR] [1768929710.061086902] [move_group_interface]: MoveGroupInterface::plan() failed or timeout reached
+[ERROR] [1768929710.061183697] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] PLAN failed (2741.0ms) EE=tool0 goal_frame=world
+[WARN] [1768929710.061252838] [coarse_to_fine_go_to_leaf4]: [COARSE] pre approach failed (attempt 1). Wait 0.50s and retry.
+[INFO] [1768929710.561427090] [coarse_to_fine_go_to_leaf4]: [COARSE][attempt 2/3] cur=(0.133,0.086,0.671) leaf=(-0.032,0.758,0.636) pre=(0.004,0.612,0.486) d(cur->leaf)=0.693 d(pre->leaf)=0.212 d(cur->pre)=0.572
+[INFO] [1768929710.561550244] [coarse_to_fine_go_to_leaf4]: [COARSE] attempt 2/3: move to PRE (back=0.150 down=0.150) pos=(0.004,0.612,0.486)
+[INFO] [1768929710.561644268] [coarse_to_fine_go_to_leaf4]: Speed scaling by distance: dist=0.693[m], vel=0.020, acc=0.020
+[INFO] [1768929710.561682386] [coarse_to_fine_go_to_leaf4]: [COARSE][a=2][seg=-1][replan=0][pre] PLAN begin (snapshot)
+[INFO] [1768929710.561719356] [coarse_to_fine_go_to_leaf4]:   cur_pose: frame=world pos=(0.133,0.071,0.671) q=(-0.7064,0.0308,0.0308,0.7064)
+[INFO] [1768929710.561747217] [coarse_to_fine_go_to_leaf4]:   goal_pose: frame=world pos=(0.006,0.602,0.475) q=(-0.0461,0.3799,0.9172,-0.1113)
+[INFO] [1768929710.561775738] [coarse_to_fine_go_to_leaf4]:   Tw_leaf: parent=world child=leaf_target t=(-0.032,0.758,0.636) q=(0.8429,-0.4960,-0.1233,-0.1681)
+[INFO] [1768929710.561800337] [coarse_to_fine_go_to_leaf4]:   Tw_cam: parent=world child=tool0 t=(0.133,0.071,0.671) q=(-0.7064,0.0308,0.0308,0.7064)
+[INFO] [1768929710.561824063] [coarse_to_fine_go_to_leaf4]:   dist(cam,leaf)=0.707
+[INFO] [1768929710.561842481] [coarse_to_fine_go_to_leaf4]:   monitor: min_z=0.306 pc_age=1.002 stale=true
+[INFO] [1768929710.561876532] [coarse_to_fine_go_to_leaf4]:   joint[wrist_1_joint]=-0.524rad (-30.0deg)
+[INFO] [1768929710.562106124] [move_group_interface]: MoveGroup action client/server ready
+[INFO] [1768929710.562758680] [move_group_interface]: Planning request accepted
+[INFO] [1768929714.404041536] [move_group_interface]: Planning request aborted
+[ERROR] [1768929714.405119677] [move_group_interface]: MoveGroupInterface::plan() failed or timeout reached
+[ERROR] [1768929714.405219118] [coarse_to_fine_go_to_leaf4]: [COARSE][a=2][seg=-1][replan=0][pre] PLAN failed (3843.3ms) EE=tool0 goal_frame=world
+[WARN] [1768929714.405288678] [coarse_to_fine_go_to_leaf4]: [COARSE] pre approach failed (attempt 2). Wait 0.50s and retry.
+[INFO] [1768929714.905472142] [coarse_to_fine_go_to_leaf4]: [COARSE][attempt 3/3] cur=(0.133,0.086,0.671) leaf=(-0.032,0.758,0.636) pre=(0.004,0.612,0.486) d(cur->leaf)=0.693 d(pre->leaf)=0.212 d(cur->pre)=0.572
+[INFO] [1768929714.905586781] [coarse_to_fine_go_to_leaf4]: [COARSE] attempt 3/3: move to PRE (back=0.150 down=0.150) pos=(0.004,0.612,0.486)
+[INFO] [1768929714.905632936] [coarse_to_fine_go_to_leaf4]: Speed scaling by distance: dist=0.693[m], vel=0.020, acc=0.020
+[INFO] [1768929714.905670213] [coarse_to_fine_go_to_leaf4]: [COARSE][a=3][seg=-1][replan=0][pre] PLAN begin (snapshot)
+[INFO] [1768929714.905708348] [coarse_to_fine_go_to_leaf4]:   cur_pose: frame=world pos=(0.133,0.071,0.671) q=(-0.7064,0.0308,0.0308,0.7064)
+[INFO] [1768929714.905737276] [coarse_to_fine_go_to_leaf4]:   goal_pose: frame=world pos=(0.006,0.602,0.475) q=(-0.0461,0.3799,0.9172,-0.1113)
+[INFO] [1768929714.905766914] [coarse_to_fine_go_to_leaf4]:   Tw_leaf: parent=world child=leaf_target t=(-0.032,0.758,0.636) q=(0.8429,-0.4960,-0.1233,-0.1681)
+[INFO] [1768929714.905794697] [coarse_to_fine_go_to_leaf4]:   Tw_cam: parent=world child=tool0 t=(0.133,0.071,0.671) q=(-0.7064,0.0308,0.0308,0.7064)
+[INFO] [1768929714.905820440] [coarse_to_fine_go_to_leaf4]:   dist(cam,leaf)=0.707
+[INFO] [1768929714.905843460] [coarse_to_fine_go_to_leaf4]:   monitor: min_z=0.207 pc_age=1.256 stale=true
+[INFO] [1768929714.905872605] [coarse_to_fine_go_to_leaf4]:   joint[wrist_1_joint]=-0.524rad (-30.0deg)
+[INFO] [1768929714.906098188] [move_group_interface]: MoveGroup action client/server ready
+[INFO] [1768929714.906749765] [move_group_interface]: Planning request accepted
+[INFO] [1768929718.106007661] [move_group_interface]: Planning request aborted
+[ERROR] [1768929718.106728981] [move_group_interface]: MoveGroupInterface::plan() failed or timeout reached
+[ERROR] [1768929718.106799983] [coarse_to_fine_go_to_leaf4]: [COARSE][a=3][seg=-1][replan=0][pre] PLAN failed (3200.9ms) EE=tool0 goal_frame=world
+[WARN] [1768929718.106876778] [coarse_to_fine_go_to_leaf4]: [COARSE] pre approach failed (attempt 3). Wait 0.50s and retry.
+[ERROR] [1768929718.606984538] [coarse_to_fine_go_to_leaf4]: Failed to reach switch condition. Abort.
+[ros2run]: Process exited with failure 1

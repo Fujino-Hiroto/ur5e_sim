@@ -1,0 +1,122 @@
+[INFO] [launch]: All log files can be found below /home/fujino/.ros/log/2026-01-21-12-44-56-114773-fh-245591
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [rgbd_sync-1]: process started with pid [245596]
+[INFO] [rtabmap-2]: process started with pid [245598]
+[rtabmap-2] [INFO] [1768967097.103644167] [rtabmap]: rtabmap(maps): latch                      = true
+[rtabmap-2] [INFO] [1768967097.114039905] [rtabmap]: rtabmap(maps): map_filter_radius          = 0.000000
+[rtabmap-2] [INFO] [1768967097.128289366] [rtabmap]: rtabmap(maps): map_filter_angle           = 30.000000
+[rtabmap-2] [INFO] [1768967097.128338833] [rtabmap]: rtabmap(maps): map_cleanup                = true
+[rtabmap-2] [INFO] [1768967097.128356816] [rtabmap]: rtabmap(maps): map_always_update          = false
+[rtabmap-2] [INFO] [1768967097.128371294] [rtabmap]: rtabmap(maps): map_empty_ray_tracing      = true
+[rtabmap-2] [INFO] [1768967097.128386583] [rtabmap]: rtabmap(maps): cloud_output_voxelized     = true
+[rtabmap-2] [INFO] [1768967097.128401314] [rtabmap]: rtabmap(maps): cloud_subtract_filtering   = false
+[rtabmap-2] [INFO] [1768967097.128415732] [rtabmap]: rtabmap(maps): cloud_subtract_filtering_min_neighbors = 2
+[rtabmap-2] [INFO] [1768967097.134269553] [rtabmap]: rtabmap(maps): octomap_tree_depth         = 16
+[rtabmap-2] [INFO] [1768967097.359689648] [rtabmap]: rtabmap: frame_id      = camera_color_optical_frame
+[rtabmap-2] [INFO] [1768967097.359756945] [rtabmap]: rtabmap: odom_frame_id = world
+[rtabmap-2] [INFO] [1768967097.359777491] [rtabmap]: rtabmap: map_frame_id  = world
+[rtabmap-2] [INFO] [1768967097.359807212] [rtabmap]: rtabmap: log_to_rosout_level  = 4
+[rtabmap-2] [INFO] [1768967097.359823922] [rtabmap]: rtabmap: initial_pose  = 
+[rtabmap-2] [INFO] [1768967097.359838122] [rtabmap]: rtabmap: use_action_for_goal  = false
+[rtabmap-2] [INFO] [1768967097.359852327] [rtabmap]: rtabmap: tf_delay      = 0.050000
+[rtabmap-2] [INFO] [1768967097.359873351] [rtabmap]: rtabmap: tf_tolerance  = 0.100000
+[rtabmap-2] [INFO] [1768967097.359889247] [rtabmap]: rtabmap: odom_sensor_sync   = false
+[rtabmap-2] [INFO] [1768967097.359903387] [rtabmap]: rtabmap: pub_loc_pose_only_when_localizing = false
+[rtabmap-2] [INFO] [1768967097.359917108] [rtabmap]: rtabmap: wait_for_transform = 0.200000
+[rtabmap-2] [INFO] [1768967097.359932671] [rtabmap]: rtabmap: gen_scan  = false
+[rtabmap-2] [INFO] [1768967097.359946173] [rtabmap]: rtabmap: gen_depth  = false
+[rtabmap-2] [INFO] [1768967097.517637833] [rtabmap]: Setting RTAB-Map parameter "Grid/3D"="true" (rosparam)
+[rgbd_sync-1] [INFO] [1768967097.520774481] [rgbd_sync]: rgbd_sync: approx_sync = true
+[rgbd_sync-1] [INFO] [1768967097.521380044] [rgbd_sync]: rgbd_sync: approx_sync_max_interval = 0.010000
+[rgbd_sync-1] [INFO] [1768967097.521436186] [rgbd_sync]: rgbd_sync: topic_queue_size  = 10
+[rgbd_sync-1] [INFO] [1768967097.521455100] [rgbd_sync]: rgbd_sync: sync_queue_size  = 30
+[rgbd_sync-1] [INFO] [1768967097.521472232] [rgbd_sync]: rgbd_sync: qos             = 2
+[rgbd_sync-1] [INFO] [1768967097.521488112] [rgbd_sync]: rgbd_sync: qos_camera_info = 2
+[rgbd_sync-1] [INFO] [1768967097.521503921] [rgbd_sync]: rgbd_sync: depth_scale = 1.000000
+[rgbd_sync-1] [INFO] [1768967097.521521809] [rgbd_sync]: rgbd_sync: decimation = 1
+[rgbd_sync-1] [INFO] [1768967097.521537106] [rgbd_sync]: rgbd_sync: compressed_rate = 0.000000
+[rtabmap-2] [INFO] [1768967097.531809013] [rtabmap]: Setting RTAB-Map parameter "Grid/RangeMax"="5.0" (rosparam)
+[rtabmap-2] [INFO] [1768967097.531941091] [rtabmap]: Setting RTAB-Map parameter "Grid/RayTracing"="true" (rosparam)
+[rtabmap-2] [INFO] [1768967097.532090526] [rtabmap]: Setting RTAB-Map parameter "Grid/Sensor"="1" (rosparam)
+[rgbd_sync-1] [INFO] [1768967097.581502443] [rgbd_sync]: 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [INFO] [1768967097.989358022] [rtabmap]: Setting RTAB-Map parameter "RGBD/CreateOccupancyGrid"="true" (rosparam)
+[rtabmap-2] [INFO] [1768967098.014913983] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/DetectionRate"="2.0" (rosparam)
+[rtabmap-2] [INFO] [1768967098.425225893] [rtabmap]: RTAB-Map detection rate = 2.000000 Hz
+[rtabmap-2] [INFO] [1768967098.425412702] [rtabmap]: rtabmap: Using database from "/home/fujino/.ros/rtabmap_ur5e_20260121_124455.db" (0 MB).
+[rtabmap-2] [INFO] [1768967098.490758485] [rtabmap]: rtabmap: Database version = "0.22.1".
+[rtabmap-2] [INFO] [1768967098.490903414] [rtabmap]: rtabmap: SLAM mode (Mem/IncrementalMemory=true)
+[rtabmap-2] [INFO] [1768967098.605794745] [rtabmap]: Setup callbacks
+[rtabmap-2] [WARN] [1768967098.605896276] [rtabmap]: rtabmap: Parameters subscribe_depth and subscribe_rgbd cannot be true at the same time. Parameter subscribe_depth is set to false.
+[rtabmap-2] [INFO] [1768967098.606314645] [rtabmap]: rtabmap: subscribe_depth = false
+[rtabmap-2] [INFO] [1768967098.606355292] [rtabmap]: rtabmap: subscribe_rgb = false
+[rtabmap-2] [INFO] [1768967098.606371637] [rtabmap]: rtabmap: subscribe_stereo = false
+[rtabmap-2] [INFO] [1768967098.606386588] [rtabmap]: rtabmap: subscribe_rgbd = true (rgbd_cameras=1)
+[rtabmap-2] [INFO] [1768967098.606402980] [rtabmap]: rtabmap: subscribe_sensor_data = false
+[rtabmap-2] [INFO] [1768967098.606418311] [rtabmap]: rtabmap: subscribe_odom_info = false
+[rtabmap-2] [INFO] [1768967098.606833533] [rtabmap]: rtabmap: subscribe_user_data = false
+[rtabmap-2] [INFO] [1768967098.606869738] [rtabmap]: rtabmap: subscribe_scan = false
+[rtabmap-2] [INFO] [1768967098.606886511] [rtabmap]: rtabmap: subscribe_scan_cloud = false
+[rtabmap-2] [INFO] [1768967098.606900845] [rtabmap]: rtabmap: subscribe_scan_descriptor = false
+[rtabmap-2] [INFO] [1768967098.606915188] [rtabmap]: rtabmap: topic_queue_size = 10
+[rtabmap-2] [INFO] [1768967098.606929588] [rtabmap]: rtabmap: sync_queue_size  = 30
+[rtabmap-2] [INFO] [1768967098.606943904] [rtabmap]: rtabmap: qos_image       = 2
+[rtabmap-2] [INFO] [1768967098.607012544] [rtabmap]: rtabmap: qos_camera_info = 2
+[rtabmap-2] [INFO] [1768967098.607031638] [rtabmap]: rtabmap: qos_scan        = 2
+[rtabmap-2] [INFO] [1768967098.607045644] [rtabmap]: rtabmap: qos_odom        = 2
+[rtabmap-2] [INFO] [1768967098.607058664] [rtabmap]: rtabmap: qos_user_data   = 2
+[rtabmap-2] [INFO] [1768967098.607071773] [rtabmap]: rtabmap: approx_sync     = true
+[rtabmap-2] [INFO] [1768967098.607106203] [rtabmap]: Setup rgbd callback
+[rtabmap-2] [INFO] [1768967098.612563826] [rtabmap]: 
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rtabmap-2] [INFO] [1768967101.912397977] [rtabmap]: rtabmap (1): Rate=0.50s, Limit=0.000s, Conversion=0.0060s, RTAB-Map=0.5082s, Maps update=0.0001s pub=0.0000s delay=0.4750s (local map=1, WM=1)
+[rtabmap-2] [INFO] [1768967102.544194244] [rtabmap]: rtabmap (2): Rate=0.50s, Limit=0.000s, Conversion=0.0025s, RTAB-Map=0.4818s, Maps update=0.0001s pub=0.0000s delay=0.4830s (local map=1, WM=1)
+[rtabmap-2] [INFO] [1768967103.705356008] [rtabmap]: rtabmap (3): Rate=0.50s, Limit=0.000s, Conversion=0.0030s, RTAB-Map=0.4975s, Maps update=0.0001s pub=0.0000s delay=0.4280s (local map=1, WM=1)
+[rtabmap-2] [INFO] [1768967106.681908778] [rtabmap]: rtabmap (4): Rate=0.50s, Limit=0.000s, Conversion=0.0065s, RTAB-Map=0.6007s, Maps update=0.0001s pub=0.0000s delay=0.5500s (local map=1, WM=1)
+[rtabmap-2] [INFO] [1768967108.303301493] [rtabmap]: rtabmap (5): Rate=0.50s, Limit=0.000s, Conversion=0.0033s, RTAB-Map=0.4329s, Maps update=0.0001s pub=0.0000s delay=0.3650s (local map=1, WM=1)
+[rtabmap-2] [INFO] [1768967109.233187444] [rtabmap]: rtabmap (6): Rate=0.50s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.4340s, Maps update=0.0001s pub=0.0000s delay=0.3870s (local map=1, WM=1)
+[rtabmap-2] [INFO] [1768967111.726010502] [rtabmap]: rtabmap (7): Rate=0.50s, Limit=0.000s, Conversion=0.0021s, RTAB-Map=0.6076s, Maps update=0.0000s pub=0.0000s delay=0.5350s (local map=2, WM=2)
+[rtabmap-2] [INFO] [1768967112.412860742] [rtabmap]: rtabmap (8): Rate=0.50s, Limit=0.000s, Conversion=0.0017s, RTAB-Map=0.4635s, Maps update=0.0000s pub=0.0000s delay=0.4880s (local map=2, WM=2)
+[rtabmap-2] [INFO] [1768967113.106076698] [rtabmap]: rtabmap (9): Rate=0.50s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.5352s, Maps update=0.0000s pub=0.0000s delay=0.4400s (local map=3, WM=3)
+[rtabmap-2] [INFO] [1768967113.958642328] [rtabmap]: rtabmap (10): Rate=0.50s, Limit=0.000s, Conversion=0.0022s, RTAB-Map=0.4801s, Maps update=0.0000s pub=0.0000s delay=0.3550s (local map=3, WM=3)
+[rtabmap-2] [INFO] [1768967114.716458043] [rtabmap]: rtabmap (11): Rate=0.50s, Limit=0.000s, Conversion=0.0020s, RTAB-Map=0.5616s, Maps update=0.0000s pub=0.0000s delay=0.5290s (local map=4, WM=4)
+[rtabmap-2] [INFO] [1768967115.457002991] [rtabmap]: rtabmap (12): Rate=0.50s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.5744s, Maps update=0.0001s pub=0.0000s delay=0.5940s (local map=4, WM=4)
+[rtabmap-2] [INFO] [1768967116.692792340] [rtabmap]: rtabmap (13): Rate=0.50s, Limit=0.000s, Conversion=0.0004s, RTAB-Map=0.4496s, Maps update=0.0000s pub=0.0000s delay=0.4190s (local map=5, WM=5)
+[rtabmap-2] [INFO] [1768967117.936284224] [rtabmap]: rtabmap (14): Rate=0.50s, Limit=0.000s, Conversion=0.0007s, RTAB-Map=0.6513s, Maps update=0.0001s pub=0.0000s delay=0.5670s (local map=5, WM=5)
+[rtabmap-2] [INFO] [1768967118.725114705] [rtabmap]: rtabmap (15): Rate=0.50s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.7096s, Maps update=0.0000s pub=0.0000s delay=0.6010s (local map=6, WM=6)
+[rtabmap-2] [INFO] [1768967119.466413597] [rtabmap]: rtabmap (16): Rate=0.50s, Limit=0.000s, Conversion=0.0008s, RTAB-Map=0.4816s, Maps update=0.0000s pub=0.0000s delay=0.5450s (local map=6, WM=6)
+[rtabmap-2] [INFO] [1768967120.344272085] [rtabmap]: rtabmap (17): Rate=0.50s, Limit=0.000s, Conversion=0.0068s, RTAB-Map=0.5118s, Maps update=0.0000s pub=0.0000s delay=0.5160s (local map=7, WM=7)
+[rtabmap-2] [INFO] [1768967121.031255390] [rtabmap]: rtabmap (18): Rate=0.50s, Limit=0.000s, Conversion=0.0004s, RTAB-Map=0.4263s, Maps update=0.0000s pub=0.0000s delay=0.4200s (local map=8, WM=8)
+[rtabmap-2] [INFO] [1768967122.760777491] [rtabmap]: rtabmap (19): Rate=0.50s, Limit=0.000s, Conversion=0.0079s, RTAB-Map=0.5435s, Maps update=0.0000s pub=0.0000s delay=0.4680s (local map=9, WM=9)
+[rtabmap-2] [INFO] [1768967123.952267656] [rtabmap]: rtabmap (20): Rate=0.50s, Limit=0.000s, Conversion=0.0025s, RTAB-Map=0.5068s, Maps update=0.0000s pub=0.0000s delay=0.5010s (local map=10, WM=10)
+[rtabmap-2] [INFO] [1768967125.121515621] [rtabmap]: rtabmap (21): Rate=0.50s, Limit=0.000s, Conversion=0.0020s, RTAB-Map=0.6006s, Maps update=0.0000s pub=0.0000s delay=0.5810s (local map=11, WM=11)
+[rtabmap-2] [INFO] [1768967125.641689500] [rtabmap]: rtabmap (22): Rate=0.50s, Limit=0.000s, Conversion=0.0004s, RTAB-Map=0.4874s, Maps update=0.0001s pub=0.0000s delay=0.5050s (local map=11, WM=11)
+[rtabmap-2] [INFO] [1768967126.488248805] [rtabmap]: rtabmap (23): Rate=0.50s, Limit=0.000s, Conversion=0.0011s, RTAB-Map=0.3924s, Maps update=0.0000s pub=0.0000s delay=0.3810s (local map=12, WM=12)
+[rtabmap-2] [INFO] [1768967127.395292307] [rtabmap]: rtabmap (24): Rate=0.50s, Limit=0.000s, Conversion=0.0013s, RTAB-Map=0.5825s, Maps update=0.0000s pub=0.0000s delay=0.5030s (local map=13, WM=13)
+[rtabmap-2] [INFO] [1768967129.271682254] [rtabmap]: rtabmap (25): Rate=0.50s, Limit=0.000s, Conversion=0.0045s, RTAB-Map=0.5795s, Maps update=0.0000s pub=0.0000s delay=0.5070s (local map=14, WM=14)
+[rtabmap-2] [INFO] [1768967130.081879411] [rtabmap]: rtabmap (26): Rate=0.50s, Limit=0.000s, Conversion=0.0067s, RTAB-Map=0.4111s, Maps update=0.0000s pub=0.0000s delay=0.3350s (local map=15, WM=15)
+[rtabmap-2] [INFO] [1768967131.173297740] [rtabmap]: rtabmap (27): Rate=0.50s, Limit=0.000s, Conversion=0.0040s, RTAB-Map=0.5939s, Maps update=0.0001s pub=0.0000s delay=0.6120s (local map=15, WM=15)
+[rtabmap-2] [INFO] [1768967132.830338744] [rtabmap]: rtabmap (28): Rate=0.50s, Limit=0.000s, Conversion=0.0061s, RTAB-Map=0.6339s, Maps update=0.0000s pub=0.0000s delay=0.6370s (local map=16, WM=16)
+[rtabmap-2] [INFO] [1768967134.025969746] [rtabmap]: rtabmap (29): Rate=0.50s, Limit=0.000s, Conversion=0.0004s, RTAB-Map=0.4427s, Maps update=0.0000s pub=0.0000s delay=0.3690s (local map=16, WM=16)
+[rtabmap-2] [INFO] [1768967135.080136105] [rtabmap]: rtabmap (30): Rate=0.50s, Limit=0.000s, Conversion=0.0074s, RTAB-Map=0.6510s, Maps update=0.0000s pub=0.0000s delay=0.5260s (local map=17, WM=17)
+[rtabmap-2] [INFO] [1768967136.162042266] [rtabmap]: rtabmap (31): Rate=0.50s, Limit=0.000s, Conversion=0.0037s, RTAB-Map=0.7982s, Maps update=0.0001s pub=0.0000s delay=0.6490s (local map=17, WM=17)
+[rtabmap-2] [INFO] [1768967136.852292982] [rtabmap]: rtabmap (32): Rate=0.50s, Limit=0.000s, Conversion=0.0362s, RTAB-Map=0.6278s, Maps update=0.0000s pub=0.0000s delay=0.5630s (local map=18, WM=18)
+[rtabmap-2] [INFO] [1768967138.900111917] [rtabmap]: rtabmap (33): Rate=0.50s, Limit=0.000s, Conversion=0.0005s, RTAB-Map=0.5902s, Maps update=0.0000s pub=0.0000s delay=0.5020s (local map=19, WM=19)
+[rtabmap-2] [INFO] [1768967139.436297500] [rtabmap]: rtabmap (34): Rate=0.50s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.5026s, Maps update=0.0001s pub=0.0000s delay=0.4410s (local map=19, WM=19)
+[rtabmap-2] [INFO] [1768967139.920290113] [rtabmap]: rtabmap (35): Rate=0.50s, Limit=0.000s, Conversion=0.0006s, RTAB-Map=0.3714s, Maps update=0.0000s pub=0.0000s delay=0.3830s (local map=19, WM=19)
+[rtabmap-2] [INFO] [1768967140.969578442] [rtabmap]: rtabmap (36): Rate=0.50s, Limit=0.000s, Conversion=0.0103s, RTAB-Map=0.6136s, Maps update=0.0000s pub=0.0000s delay=0.6220s (local map=20, WM=20)
+[rtabmap-2] [INFO] [1768967141.888388429] [rtabmap]: rtabmap (37): Rate=0.50s, Limit=0.000s, Conversion=0.0027s, RTAB-Map=0.6434s, Maps update=0.0001s pub=0.0000s delay=0.6150s (local map=20, WM=20)
+[rtabmap-2] [INFO] [1768967142.772851702] [rtabmap]: rtabmap (38): Rate=0.50s, Limit=0.000s, Conversion=0.0019s, RTAB-Map=0.5424s, Maps update=0.0001s pub=0.0000s delay=0.5290s (local map=20, WM=20)
+[rtabmap-2] [INFO] [1768967143.549301693] [rtabmap]: rtabmap (39): Rate=0.50s, Limit=0.000s, Conversion=0.0009s, RTAB-Map=0.5349s, Maps update=0.0001s pub=0.0000s delay=0.5330s (local map=20, WM=20)
+[rtabmap-2] [INFO] [1768967144.761777118] [rclcpp]: signal_handler(signum=2)
+[rgbd_sync-1] [INFO] [1768967144.765618246] [rclcpp]: signal_handler(signum=2)
+[rtabmap-2] [INFO] [1768967144.801773309] [rtabmap]: Parameters are not saved (No configuration file provided...)
+[INFO] [rgbd_sync-1]: process has finished cleanly [pid 245596]
+[rtabmap-2] [33m[ WARN] (2026-01-21 12:45:01.435) Memory.cpp:5917::createSignature() Mem/SaveDepth16Format is set to false to use 32bits format but this is not compatible with the compressed depth format chosen (Mem/DepthCompressionFormat=".rvl"), depth images will be compressed in ".png" format instead. Explicitly set Mem/SaveDepth16Format to true to keep using ".rvl" format and images will be converted to 16bits for convenience (warning: that would remove all depth values over 65 meters). Explicitly set Mem/DepthCompressionFormat=".png" to suppress this warning. This warning is only printed once.[0m
+[rtabmap-2] rtabmap: Saving database/long-term memory... (located at /home/fujino/.ros/rtabmap_ur5e_20260121_124455.db)
+[rtabmap-2] rtabmap: Saving database/long-term memory...done! (located at /home/fujino/.ros/rtabmap_ur5e_20260121_124455.db, 57 MB)
+[INFO] [rtabmap-2]: process has finished cleanly [pid 245598]

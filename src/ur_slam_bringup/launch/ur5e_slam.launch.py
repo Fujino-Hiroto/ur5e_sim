@@ -43,7 +43,7 @@ def generate_launch_description():
 
     declared_arguments = [
         DeclareLaunchArgument("use_sim_time", default_value="true"),
-        DeclareLaunchArgument("with_gazebo", default_value="true"),
+        DeclareLaunchArgument("with_gazebo", default_value="false"),
         DeclareLaunchArgument("gazebo_gui", default_value="true"),
         DeclareLaunchArgument(
             "world",
@@ -55,7 +55,8 @@ def generate_launch_description():
         DeclareLaunchArgument("rgb_topic", default_value="/camera/color/image_raw"),
         DeclareLaunchArgument("rgb_info_topic", default_value="/camera/color/camera_info"),
         # Gazebo depth camera: 32FC1 は通常こちら
-        DeclareLaunchArgument("depth_topic", default_value="/camera/depth/depth/image_raw"),
+        
+        DeclareLaunchArgument("depth_topic", default_value="/camera/depth/depth/image_raw_noisy"),
         DeclareLaunchArgument("depth_info_topic", default_value="/camera/depth/depth/camera_info"),
         # Frames
         # odom_frame_id を “空にしない” → TFからオドメトリ取得 :contentReference[oaicite:1]{index=1}

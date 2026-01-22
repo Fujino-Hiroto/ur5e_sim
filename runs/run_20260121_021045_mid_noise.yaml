@@ -1,0 +1,35 @@
+pointcloud_noiser:
+  ros__parameters:
+    # 入出力トピック（必要ならここは固定しておくと運用が楽）
+    in_topic: "/camera/depth/points"
+    out_topic: "/camera/depth/points_noisy"
+
+    # 再現性（runごとにコマンドで上書きしてもOK）
+    seed: 42
+
+    # 欠損（ランダム + ブロック穴）
+    dropout_p: 0.03
+    block_dropout: true
+    block_count: 8
+    block_radius_px: 6
+
+    # 深度ノイズ（sigma = a + b*z^2）
+    gauss_a: 0.0030
+    gauss_b: 0.0012
+
+    # 近距離スパイク（z を縮めて偽の近距離点を作る）
+    spike_p: 0.004
+    spike_min_factor: 0.3
+    spike_max_factor: 0.8
+
+    # ちらつき（フレームごとに dropout/sigma を周期変動）
+    enable_flicker: true
+    flicker_hz: 1.0
+    flicker_amp: 0.6
+
+    # フレーム丸ごとドロップ（midでは基本0のまま推奨）
+    frame_drop_p: 0.0
+
+    # 点群として有効扱いするZ範囲
+    min_z: 0.0
+    max_z: 5.0

@@ -1,0 +1,12 @@
+[ERROR] [1768925874.090754305] [rcl]: Failed to parse global arguments
+Traceback (most recent call last):
+  File "/home/fujino/workspaces/ur_slam_ws/install/ur_slam_tools/lib/ur_slam_tools/pointcloud_noiser.py", line 225, in <module>
+    main()
+  File "/home/fujino/workspaces/ur_slam_ws/install/ur_slam_tools/lib/ur_slam_tools/pointcloud_noiser.py", line 215, in main
+    rclpy.init()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 88, in init
+    context.init(args, domain_id=domain_id)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/context.py", line 72, in init
+    self.__context = _rclpy.Context(
+rclpy._rclpy_pybind11.RCLError: failed to initialize rcl: Couldn't parse params file: '--params-file /home/fujino/workspaces/ur_slam_ws/install/ur_slam_tools/share/ur_slam_tools/config/noise_weak.yaml'. Error: Error opening YAML file, at ./src/parser.c:270, at ./src/rcl/arguments.c:406
+[ros2run]: Process exited with failure 1

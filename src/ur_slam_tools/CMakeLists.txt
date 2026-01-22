@@ -64,4 +64,18 @@ install(TARGETS
   DESTINATION lib/${PROJECT_NAME}
 )
 
+# Install python executable scripts
+install(PROGRAMS
+  src/pointcloud_noiser.py
+  src/pointcloud_metrics_csv.py
+  src/depth_image_noiser.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+install(DIRECTORY config
+  DESTINATION share/${PROJECT_NAME}
+)
+
+
+
 ament_package()

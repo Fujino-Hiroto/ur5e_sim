@@ -1,0 +1,29 @@
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1768924058.659261998] [rosbag2_recorder]: Press SPACE for pausing/resuming
+[INFO] [1768924058.667158460] [rosbag2_storage]: Opened database 'bags/20260121_004737_clean/bag/bag_0.db3' for READ_WRITE.
+[INFO] [1768924058.680744491] [rosbag2_recorder]: Listening for topics...
+[INFO] [1768924058.680782869] [rosbag2_recorder]: Event publisher thread: Starting
+[INFO] [1768924058.687625200] [rosbag2_recorder]: Subscribed to topic '/tf_static'
+[INFO] [1768924058.694522295] [rosbag2_recorder]: Subscribed to topic '/joint_states'
+[INFO] [1768924058.697227870] [rosbag2_recorder]: Subscribed to topic '/tf'
+[INFO] [1768924058.701587082] [rosbag2_recorder]: Subscribed to topic '/cloud_map'
+[INFO] [1768924058.707418411] [rosbag2_recorder]: Subscribed to topic '/clock'
+[INFO] [1768924058.709577775] [rosbag2_recorder]: Subscribed to topic '/camera/depth/depth/camera_info'
+[INFO] [1768924058.713119708] [rosbag2_recorder]: Subscribed to topic '/camera/depth/depth/image_raw'
+[INFO] [1768924058.719740289] [rosbag2_recorder]: Subscribed to topic '/camera/color/image_raw'
+[INFO] [1768924058.722369086] [rosbag2_recorder]: Subscribed to topic '/camera/depth/points'
+[INFO] [1768924058.728546364] [rosbag2_recorder]: Subscribed to topic '/camera/color/camera_info'
+[INFO] [1768924058.728743599] [rosbag2_recorder]: Recording...
+[INFO] [1768924109.058296907] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[WARN] [1768924111.276938524] [rosbag2_cpp]: Cache buffers lost messages per topic: 
+	/camera/depth/depth/camera_info: 312
+	/camera/depth/points: 294
+	/camera/color/camera_info: 301
+	/camera/depth/depth/image_raw: 308
+	/camera/color/image_raw: 306
+	/cloud_map: 9
+	/clock: 124
+	/tf: 748
+	/joint_states: 1238
+Total lost: 3640
+[INFO] [1768924111.278863992] [rosbag2_recorder]: Event publisher thread: Exiting
+[INFO] [1768924111.278985777] [rosbag2_recorder]: Recording stopped

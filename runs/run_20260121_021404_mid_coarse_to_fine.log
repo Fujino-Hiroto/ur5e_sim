@@ -1,0 +1,285 @@
+[INFO] [1768929244.910791261] [coarse_to_fine_go_to_leaf4]: use_sim_time=true
+[INFO] [1768929245.909765697] [coarse_to_fine_go_to_leaf4]: Copied 43 MoveIt description parameters from /move_group.
+[INFO] [1768929245.943697845] [coarse_to_fine_go_to_leaf4]: Runtime monitor: ENABLED
+[INFO] [1768929245.943786633] [coarse_to_fine_go_to_leaf4]:   pc_topic=/camera/depth/points_noisy stop_dist=0.150 roi_x=0.120 roi_y=0.120 max_z=1.200 stale=0.250 rate=30.0
+[INFO] [1768929245.949065291] [moveit_rdf_loader.rdf_loader]: Loaded robot model in 0 seconds
+[INFO] [1768929245.949152793] [moveit_robot_model.robot_model]: Loading robot model 'ur'...
+[INFO] [1768929245.949181070] [moveit_robot_model.robot_model]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[INFO] [1768929246.009084400] [move_group_interface]: Ready to take commands for planning group ur_manipulator.
+[INFO] [1768929246.009202283] [coarse_to_fine_go_to_leaf4]: Planning group: ur_manipulator
+[INFO] [1768929246.009252317] [coarse_to_fine_go_to_leaf4]: Planning frame: world
+[INFO] [1768929246.009297707] [coarse_to_fine_go_to_leaf4]: Pose reference frame: world
+[INFO] [1768929246.009317780] [coarse_to_fine_go_to_leaf4]: End effector link: tool0
+[INFO] [1768929246.009336696] [coarse_to_fine_go_to_leaf4]: Wrist1 PathConstraint DISABLED
+[WARN] [1768929246.021690090] [coarse_to_fine_go_to_leaf4]: RTAB-Map param set FAILED: Rtabmap/DetectionRate (Wrong parameter type, parameter {Rtabmap/DetectionRate} is of type {string}, setting it to {double} is not allowed.)
+[INFO] [1768929246.021791693] [coarse_to_fine_go_to_leaf4]: === COARSE: pre approach (target leaf_target) ===
+[INFO] [1768929246.023536889] [moveit_ros.current_state_monitor]: Listening to joint states on topic 'joint_states'
+[INFO] [1768929246.024026839] [coarse_to_fine_go_to_leaf4]: [COARSE][attempt 1/3] cur=(0.133,0.086,0.671) leaf=(-0.032,0.758,0.636) pre=(0.004,0.612,0.486) d(cur->leaf)=0.693 d(pre->leaf)=0.212 d(cur->pre)=0.572
+[INFO] [1768929246.024113400] [coarse_to_fine_go_to_leaf4]: [COARSE] attempt 1/3: move to PRE (back=0.150 down=0.150) pos=(0.004,0.612,0.486)
+[INFO] [1768929246.024167634] [coarse_to_fine_go_to_leaf4]: Speed scaling by distance: dist=0.693[m], vel=0.020, acc=0.020
+[INFO] [1768929246.024240014] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] PLAN begin (snapshot)
+[INFO] [1768929246.024279324] [coarse_to_fine_go_to_leaf4]:   cur_pose: frame=world pos=(0.133,0.071,0.671) q=(-0.7064,0.0308,0.0308,0.7064)
+[INFO] [1768929246.024310292] [coarse_to_fine_go_to_leaf4]:   goal_pose: frame=world pos=(0.006,0.602,0.475) q=(-0.0461,0.3799,0.9172,-0.1113)
+[INFO] [1768929246.024342827] [coarse_to_fine_go_to_leaf4]:   Tw_leaf: parent=world child=leaf_target t=(-0.032,0.758,0.636) q=(0.8429,-0.4960,-0.1233,-0.1681)
+[INFO] [1768929246.024371087] [coarse_to_fine_go_to_leaf4]:   Tw_cam: parent=world child=tool0 t=(0.133,0.071,0.671) q=(-0.7064,0.0308,0.0308,0.7064)
+[INFO] [1768929246.024397277] [coarse_to_fine_go_to_leaf4]:   dist(cam,leaf)=0.707
+[INFO] [1768929246.024419666] [coarse_to_fine_go_to_leaf4]:   monitor: min_z=inf pc_age=inf stale=true
+[INFO] [1768929246.024446476] [coarse_to_fine_go_to_leaf4]:   joint[wrist_1_joint]=-0.524rad (-30.0deg)
+[INFO] [1768929246.024694561] [move_group_interface]: MoveGroup action client/server ready
+[INFO] [1768929246.026100897] [move_group_interface]: Planning request accepted
+[INFO] [1768929246.308446976] [move_group_interface]: Planning request complete!
+[INFO] [1768929246.309009007] [move_group_interface]: time taken to generate plan: 0.124942 seconds
+[INFO] [1768929246.309190590] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] PLAN ok (284.7ms)
+[INFO] [1768929246.309408569] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] Executing plan...
+[INFO] [1768929246.313607972] [move_group_interface]: Execute request accepted
+[INFO] [1768929246.609489294] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=inf stale=true dist_to_leaf=0.707 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929246.942820532] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.181 age=1.144 stale=true dist_to_leaf=0.707 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929247.276145963] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.183 age=0.819 stale=true dist_to_leaf=0.707 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929247.609485929] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.245 age=0.605 stale=true dist_to_leaf=0.707 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929247.942845480] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.208 age=0.613 stale=true dist_to_leaf=0.707 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929248.276162112] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.208 age=0.913 stale=true dist_to_leaf=0.708 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929248.609502928] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.190 age=0.949 stale=true dist_to_leaf=0.709 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929248.942837345] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.212 age=0.924 stale=true dist_to_leaf=0.710 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929249.276210446] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.212 age=1.224 stale=true dist_to_leaf=0.711 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929249.611042418] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.196 age=0.847 stale=true dist_to_leaf=0.712 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929249.942822026] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.240 age=1.445 stale=true dist_to_leaf=0.714 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929250.276167359] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.173 age=0.808 stale=true dist_to_leaf=0.716 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929250.609498762] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.173 age=1.108 stale=true dist_to_leaf=0.718 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929250.942816907] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.167 age=1.030 stale=true dist_to_leaf=0.720 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929251.276158894] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.174 age=0.778 stale=true dist_to_leaf=0.723 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929251.609495435] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.162 age=0.998 stale=true dist_to_leaf=0.725 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929251.942814431] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.179 age=0.736 stale=true dist_to_leaf=0.728 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929252.276159847] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.184 age=1.036 stale=true dist_to_leaf=0.731 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929252.609488071] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.184 age=1.336 stale=true dist_to_leaf=0.735 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929252.942821443] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.190 age=1.131 stale=true dist_to_leaf=0.738 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929253.276149015] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.190 age=1.431 stale=true dist_to_leaf=0.741 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929253.609494426] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.193 age=0.933 stale=true dist_to_leaf=0.745 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929253.942822944] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.196 age=0.733 stale=true dist_to_leaf=0.749 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929254.276147493] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.211 age=1.059 stale=true dist_to_leaf=0.753 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929254.609501484] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.201 age=1.033 stale=true dist_to_leaf=0.757 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929254.942881711] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.265 age=1.079 stale=true dist_to_leaf=0.761 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929255.276149223] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.204 age=0.867 stale=true dist_to_leaf=0.766 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929255.609578646] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.357 age=1.120 stale=true dist_to_leaf=0.770 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929255.942839928] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.272 age=0.975 stale=true dist_to_leaf=0.775 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929256.276212091] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.272 age=1.375 stale=true dist_to_leaf=0.779 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929256.609493301] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.220 stale=true dist_to_leaf=0.784 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929256.942851289] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.324 stale=true dist_to_leaf=0.789 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929257.276153036] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.125 stale=true dist_to_leaf=0.794 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929257.609489112] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.719 stale=true dist_to_leaf=0.799 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929257.943001956] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.019 stale=true dist_to_leaf=0.804 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929258.276153148] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.990 stale=true dist_to_leaf=0.809 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929258.609475531] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.926 stale=true dist_to_leaf=0.815 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929258.942820307] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.226 stale=true dist_to_leaf=0.820 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929259.276153382] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.902 stale=true dist_to_leaf=0.825 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929259.609484714] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.202 stale=true dist_to_leaf=0.830 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929259.942826496] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.785 stale=true dist_to_leaf=0.836 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929260.276148952] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.185 stale=true dist_to_leaf=0.841 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929260.609488686] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.845 stale=true dist_to_leaf=0.846 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929260.942806644] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.145 stale=true dist_to_leaf=0.852 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929261.276155079] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.764 stale=true dist_to_leaf=0.857 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929261.609486932] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.656 stale=true dist_to_leaf=0.862 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929261.942836818] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.956 stale=true dist_to_leaf=0.868 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929262.276201151] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.875 stale=true dist_to_leaf=0.873 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929262.609520082] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.275 stale=true dist_to_leaf=0.878 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929262.942816974] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.956 stale=true dist_to_leaf=0.884 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929263.276161205] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.259 stale=true dist_to_leaf=0.889 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929263.609503060] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.459 stale=true dist_to_leaf=0.894 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929263.942828203] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.642 stale=true dist_to_leaf=0.900 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929264.276148182] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.942 stale=true dist_to_leaf=0.905 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929264.609502404] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.195 stale=true dist_to_leaf=0.909 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929264.942826917] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.818 stale=true dist_to_leaf=0.915 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929265.276210103] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.118 stale=true dist_to_leaf=0.920 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929265.609482704] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.106 stale=true dist_to_leaf=0.924 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929265.942831635] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.612 stale=true dist_to_leaf=0.930 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929266.276154019] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.877 stale=true dist_to_leaf=0.935 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929266.609511821] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.015 stale=true dist_to_leaf=0.939 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929266.942864071] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.762 stale=true dist_to_leaf=0.944 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929267.279226972] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.594 stale=true dist_to_leaf=0.948 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929267.609472037] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.994 stale=true dist_to_leaf=0.953 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929267.942880805] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.199 stale=true dist_to_leaf=0.957 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929268.276183602] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.499 stale=true dist_to_leaf=0.962 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929268.609498346] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.899 stale=true dist_to_leaf=0.966 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929268.942799107] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=2.199 stale=true dist_to_leaf=0.969 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929269.276151796] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.960 stale=true dist_to_leaf=0.974 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929269.609507062] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.275 stale=true dist_to_leaf=0.978 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929269.942840715] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.280 stale=true dist_to_leaf=0.981 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929270.276161067] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.580 stale=true dist_to_leaf=0.985 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929270.609493646] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.261 stale=true dist_to_leaf=0.989 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929270.942797192] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.561 stale=true dist_to_leaf=0.992 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929271.276146514] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.959 stale=true dist_to_leaf=0.995 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929271.609483521] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.359 stale=true dist_to_leaf=0.998 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929271.942794918] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.950 stale=true dist_to_leaf=1.001 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929272.276148131] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.690 stale=true dist_to_leaf=1.004 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929272.609473543] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.879 stale=true dist_to_leaf=1.007 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929272.942825066] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.279 stale=true dist_to_leaf=1.010 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929273.276160380] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.907 stale=true dist_to_leaf=1.012 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929273.609482363] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.801 stale=true dist_to_leaf=1.015 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929273.942816984] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.937 stale=true dist_to_leaf=1.017 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929274.276148845] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.237 stale=true dist_to_leaf=1.019 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929274.609495076] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.876 stale=true dist_to_leaf=1.021 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929274.942855188] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.276 stale=true dist_to_leaf=1.022 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929275.276321570] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.576 stale=true dist_to_leaf=1.024 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929275.609628885] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.876 stale=true dist_to_leaf=1.025 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929275.942886371] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=2.176 stale=true dist_to_leaf=1.027 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929276.276165546] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=2.476 stale=true dist_to_leaf=1.028 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929276.609513533] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.359 stale=true dist_to_leaf=1.029 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929276.942827906] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.759 stale=true dist_to_leaf=1.030 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929277.276217610] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.377 stale=true dist_to_leaf=1.031 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929277.609504304] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.670 stale=true dist_to_leaf=1.031 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929277.942849265] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.243 stale=true dist_to_leaf=1.031 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929278.276209743] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.188 stale=true dist_to_leaf=1.032 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929278.609499697] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.588 stale=true dist_to_leaf=1.032 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929278.942830035] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.888 stale=true dist_to_leaf=1.032 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929279.276130250] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.240 stale=true dist_to_leaf=1.031 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929279.609490559] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.640 stale=true dist_to_leaf=1.031 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929279.942823639] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.219 stale=true dist_to_leaf=1.030 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929280.276169473] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.385 stale=true dist_to_leaf=1.030 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929280.609492565] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.785 stale=true dist_to_leaf=1.029 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929280.942852035] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.197 stale=true dist_to_leaf=1.028 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929281.276153603] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.950 stale=true dist_to_leaf=1.026 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929281.609495846] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.175 stale=true dist_to_leaf=1.025 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929281.942842539] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.475 stale=true dist_to_leaf=1.023 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929282.276148562] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.315 stale=true dist_to_leaf=1.021 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929282.609519746] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.715 stale=true dist_to_leaf=1.019 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929282.942799325] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.303 stale=true dist_to_leaf=1.017 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929283.276140688] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.172 stale=true dist_to_leaf=1.015 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929283.609527810] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.572 stale=true dist_to_leaf=1.012 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929283.942833900] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.872 stale=true dist_to_leaf=1.010 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929284.276164031] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=2.172 stale=true dist_to_leaf=1.006 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929284.609500479] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.271 stale=true dist_to_leaf=1.004 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929284.942824063] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.111 stale=true dist_to_leaf=1.001 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929285.276167558] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.411 stale=true dist_to_leaf=0.997 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929285.609502857] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.540 stale=true dist_to_leaf=0.994 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929285.942816355] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.446 stale=true dist_to_leaf=0.990 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929286.276193297] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.229 stale=true dist_to_leaf=0.986 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929286.609498715] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.998 stale=true dist_to_leaf=0.982 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929286.942807821] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.054 stale=true dist_to_leaf=0.978 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929287.276155724] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.873 stale=true dist_to_leaf=0.973 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929287.609487114] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.273 stale=true dist_to_leaf=0.969 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929287.942863336] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.967 stale=true dist_to_leaf=0.964 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929288.276159094] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.014 stale=true dist_to_leaf=0.959 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929288.609504012] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.414 stale=true dist_to_leaf=0.954 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929288.942828882] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.027 stale=true dist_to_leaf=0.949 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929289.276169997] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.327 stale=true dist_to_leaf=0.943 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929289.609504333] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.272 stale=true dist_to_leaf=0.938 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929289.942830801] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.572 stale=true dist_to_leaf=0.933 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929290.276157018] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.872 stale=true dist_to_leaf=0.926 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929290.609500424] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.204 stale=true dist_to_leaf=0.919 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929290.942855530] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.504 stale=true dist_to_leaf=0.912 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929291.276213454] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.192 stale=true dist_to_leaf=0.904 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929291.609500781] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.368 stale=true dist_to_leaf=0.897 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929291.942835939] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.768 stale=true dist_to_leaf=0.889 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929292.276202841] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.280 stale=true dist_to_leaf=0.880 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929292.609503149] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.580 stale=true dist_to_leaf=0.872 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929292.942825832] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.165 stale=true dist_to_leaf=0.863 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929293.276159552] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.863 stale=true dist_to_leaf=0.854 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929293.609483206] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.163 stale=true dist_to_leaf=0.844 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929293.942818157] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.563 stale=true dist_to_leaf=0.835 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929294.276170149] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.056 stale=true dist_to_leaf=0.825 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929294.609486350] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.356 stale=true dist_to_leaf=0.815 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929294.942824167] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.203 stale=true dist_to_leaf=0.806 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929295.276161926] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.503 stale=true dist_to_leaf=0.795 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929295.609492134] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.922 stale=true dist_to_leaf=0.784 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929295.942818719] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.322 stale=true dist_to_leaf=0.774 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929296.276158108] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.622 stale=true dist_to_leaf=0.762 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929296.609493647] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.135 stale=true dist_to_leaf=0.751 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929296.942833860] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.535 stale=true dist_to_leaf=0.740 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929297.276170551] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.161 stale=true dist_to_leaf=0.730 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929297.609501487] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.314 stale=true dist_to_leaf=0.716 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929297.942821768] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.714 stale=true dist_to_leaf=0.705 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929298.276164996] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=2.014 stale=true dist_to_leaf=0.694 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929298.609498797] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=2.314 stale=true dist_to_leaf=0.680 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929298.942865995] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=2.714 stale=true dist_to_leaf=0.668 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929299.276182208] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.254 stale=true dist_to_leaf=0.657 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929299.609498493] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.554 stale=true dist_to_leaf=0.643 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929299.942839374] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.954 stale=true dist_to_leaf=0.630 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929300.276160721] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.382 stale=true dist_to_leaf=0.618 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929300.609496666] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.682 stale=true dist_to_leaf=0.604 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929300.942941555] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.137 stale=true dist_to_leaf=0.591 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929301.276162437] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.379 stale=true dist_to_leaf=0.579 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929301.609487869] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.931 stale=true dist_to_leaf=0.564 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929301.942830779] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.058 stale=true dist_to_leaf=0.551 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929302.276284376] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.172 stale=true dist_to_leaf=0.538 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929302.609503800] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.095 stale=true dist_to_leaf=0.524 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929302.942841330] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.395 stale=true dist_to_leaf=0.510 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929303.276150155] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.466 stale=true dist_to_leaf=0.497 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929303.609486657] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.766 stale=true dist_to_leaf=0.482 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929303.942815856] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.018 stale=true dist_to_leaf=0.469 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929304.277417987] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.318 stale=true dist_to_leaf=0.456 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929304.609484417] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.718 stale=true dist_to_leaf=0.443 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929304.942819642] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.995 stale=true dist_to_leaf=0.428 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929305.276154108] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.295 stale=true dist_to_leaf=0.415 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929305.609480669] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.043 stale=true dist_to_leaf=0.402 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929305.942820278] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.343 stale=true dist_to_leaf=0.390 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929306.276180289] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.788 stale=true dist_to_leaf=0.378 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929306.609486322] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=1.088 stale=true dist_to_leaf=0.370 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929306.942818719] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.645 stale=true dist_to_leaf=0.362 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929307.276147585] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.845 stale=true dist_to_leaf=0.354 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929307.609496184] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.609 stale=true dist_to_leaf=0.343 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929307.942815537] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.809 stale=true dist_to_leaf=0.336 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929308.276194276] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.630 stale=true dist_to_leaf=0.329 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929308.609481471] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.730 stale=true dist_to_leaf=0.325 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929308.942825481] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.363 stale=true dist_to_leaf=0.320 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929309.276151007] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.463 stale=true dist_to_leaf=0.318 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929309.609488837] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.335 stale=true dist_to_leaf=0.316 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929309.942816537] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.335 stale=true dist_to_leaf=0.311 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929310.276166780] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.435 stale=true dist_to_leaf=0.307 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929310.609512123] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.335 stale=true dist_to_leaf=0.307 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929310.942839154] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.335 stale=true dist_to_leaf=0.304 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929311.276165527] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.301 stale=true dist_to_leaf=0.303 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929311.609483917] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.397 age=0.368 stale=true dist_to_leaf=0.298 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929311.942832465] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.397 age=0.468 stale=true dist_to_leaf=0.294 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929312.276224186] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.468 stale=true dist_to_leaf=0.291 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929312.609560467] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.435 stale=true dist_to_leaf=0.287 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929312.942841267] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=inf age=0.635 stale=true dist_to_leaf=0.287 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929313.276159816] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.390 age=0.368 stale=true dist_to_leaf=0.277 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929313.609489217] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.218 age=0.301 stale=true dist_to_leaf=0.284 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929313.942842352] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.218 age=0.401 stale=true dist_to_leaf=0.280 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929314.276163954] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] MON: min_z=0.233 age=0.435 stale=true dist_to_leaf=0.270 stop_eff=0.150 ignore_leaf=false
+[INFO] [1768929314.467525726] [move_group_interface]: Execute request aborted
+[ERROR] [1768929314.468030592] [move_group_interface]: MoveGroupInterface::execute() failed or timeout reached
+[ERROR] [1768929314.476148452] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=0][pre] EXEC failed code=-4 (68166.9ms). retry 1/8 backoff=0.30s
+[INFO] [1768929314.776578638] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=1][pre] PLAN begin (snapshot)
+[INFO] [1768929314.776760715] [coarse_to_fine_go_to_leaf4]:   cur_pose: frame=world pos=(0.152,0.618,0.574) q=(0.0061,0.4834,0.8750,-0.0274)
+[INFO] [1768929314.776785146] [coarse_to_fine_go_to_leaf4]:   goal_pose: frame=world pos=(0.006,0.602,0.475) q=(-0.0461,0.3799,0.9172,-0.1113)
+[INFO] [1768929314.776818010] [coarse_to_fine_go_to_leaf4]:   Tw_leaf: parent=world child=leaf_target t=(-0.032,0.758,0.636) q=(0.8429,-0.4960,-0.1233,-0.1681)
+[INFO] [1768929314.776833715] [coarse_to_fine_go_to_leaf4]:   Tw_cam: parent=world child=tool0 t=(0.152,0.618,0.574) q=(0.0061,0.4834,0.8750,-0.0274)
+[INFO] [1768929314.776847404] [coarse_to_fine_go_to_leaf4]:   dist(cam,leaf)=0.239
+[INFO] [1768929314.776858748] [coarse_to_fine_go_to_leaf4]:   monitor: min_z=0.233 pc_age=0.635 stale=true
+[INFO] [1768929314.776872304] [coarse_to_fine_go_to_leaf4]:   joint[wrist_1_joint]=-4.001rad (-229.2deg)
+[INFO] [1768929314.777475907] [move_group_interface]: MoveGroup action client/server ready
+[INFO] [1768929314.780285743] [move_group_interface]: Planning request accepted
+[INFO] [1768929324.823105821] [move_group_interface]: Planning request aborted
+[ERROR] [1768929324.823269489] [move_group_interface]: MoveGroupInterface::plan() failed or timeout reached
+[ERROR] [1768929324.823444093] [coarse_to_fine_go_to_leaf4]: [COARSE][a=1][seg=-1][replan=1][pre] PLAN failed (10046.6ms) EE=tool0 goal_frame=world
+[WARN] [1768929324.823527044] [coarse_to_fine_go_to_leaf4]: [COARSE] pre approach failed (attempt 1). Wait 0.50s and retry.
+[INFO] [1768929325.323690707] [coarse_to_fine_go_to_leaf4]: [COARSE][attempt 2/3] cur=(0.152,0.631,0.582) leaf=(-0.032,0.758,0.636) pre=(0.091,0.672,0.486) d(cur->leaf)=0.230 d(pre->leaf)=0.212 d(cur->pre)=0.121
+[INFO] [1768929325.323823680] [coarse_to_fine_go_to_leaf4]: [COARSE] attempt 2/3: move to PRE (back=0.150 down=0.150) pos=(0.091,0.672,0.486)
+[INFO] [1768929325.323888470] [coarse_to_fine_go_to_leaf4]: Speed scaling by distance: dist=0.230[m], vel=0.008, acc=0.008
+[INFO] [1768929325.323936490] [coarse_to_fine_go_to_leaf4]: [COARSE][a=2][seg=-1][replan=0][pre] PLAN begin (snapshot)
+[INFO] [1768929325.323983662] [coarse_to_fine_go_to_leaf4]:   cur_pose: frame=world pos=(0.152,0.618,0.574) q=(0.0061,0.4834,0.8750,-0.0274)
+[INFO] [1768929325.324016573] [coarse_to_fine_go_to_leaf4]:   goal_pose: frame=world pos=(0.100,0.666,0.475) q=(-0.1775,0.3390,0.8184,-0.4286)
+[INFO] [1768929325.324049303] [coarse_to_fine_go_to_leaf4]:   Tw_leaf: parent=world child=leaf_target t=(-0.032,0.758,0.636) q=(0.8429,-0.4960,-0.1233,-0.1681)
+[INFO] [1768929325.324077278] [coarse_to_fine_go_to_leaf4]:   Tw_cam: parent=world child=tool0 t=(0.152,0.618,0.574) q=(0.0061,0.4834,0.8750,-0.0274)
+[INFO] [1768929325.324103697] [coarse_to_fine_go_to_leaf4]:   dist(cam,leaf)=0.239
+[INFO] [1768929325.324126883] [coarse_to_fine_go_to_leaf4]:   monitor: min_z=0.398 pc_age=0.570 stale=true
+[INFO] [1768929325.324223488] [coarse_to_fine_go_to_leaf4]:   joint[wrist_1_joint]=-4.001rad (-229.2deg)
+[INFO] [1768929325.324471386] [move_group_interface]: MoveGroup action client/server ready
+[INFO] [1768929325.326690592] [move_group_interface]: Planning request accepted
+[INFO] [1768929327.737444792] [move_group_interface]: Planning request aborted
+[ERROR] [1768929327.738371623] [move_group_interface]: MoveGroupInterface::plan() failed or timeout reached
+[ERROR] [1768929327.738793228] [coarse_to_fine_go_to_leaf4]: [COARSE][a=2][seg=-1][replan=0][pre] PLAN failed (2414.5ms) EE=tool0 goal_frame=world
+[WARN] [1768929327.738864755] [coarse_to_fine_go_to_leaf4]: [COARSE] pre approach failed (attempt 2). Wait 0.50s and retry.
+[INFO] [1768929328.239127829] [coarse_to_fine_go_to_leaf4]: [COARSE][attempt 3/3] cur=(0.152,0.631,0.582) leaf=(-0.032,0.758,0.636) pre=(0.091,0.672,0.486) d(cur->leaf)=0.230 d(pre->leaf)=0.212 d(cur->pre)=0.121
+[INFO] [1768929328.239294716] [coarse_to_fine_go_to_leaf4]: [COARSE] attempt 3/3: move to PRE (back=0.150 down=0.150) pos=(0.091,0.672,0.486)
+[INFO] [1768929328.239339448] [coarse_to_fine_go_to_leaf4]: Speed scaling by distance: dist=0.230[m], vel=0.008, acc=0.008
+[INFO] [1768929328.239375144] [coarse_to_fine_go_to_leaf4]: [COARSE][a=3][seg=-1][replan=0][pre] PLAN begin (snapshot)
+[INFO] [1768929328.239408398] [coarse_to_fine_go_to_leaf4]:   cur_pose: frame=world pos=(0.152,0.618,0.574) q=(0.0061,0.4834,0.8750,-0.0274)
+[INFO] [1768929328.239431719] [coarse_to_fine_go_to_leaf4]:   goal_pose: frame=world pos=(0.100,0.666,0.475) q=(-0.1775,0.3390,0.8184,-0.4286)
+[INFO] [1768929328.239455453] [coarse_to_fine_go_to_leaf4]:   Tw_leaf: parent=world child=leaf_target t=(-0.032,0.758,0.636) q=(0.8429,-0.4960,-0.1233,-0.1681)
+[INFO] [1768929328.239477539] [coarse_to_fine_go_to_leaf4]:   Tw_cam: parent=world child=tool0 t=(0.152,0.618,0.574) q=(0.0061,0.4834,0.8750,-0.0274)
+[INFO] [1768929328.239497357] [coarse_to_fine_go_to_leaf4]:   dist(cam,leaf)=0.239
+[INFO] [1768929328.239515739] [coarse_to_fine_go_to_leaf4]:   monitor: min_z=0.331 pc_age=0.537 stale=true
+[INFO] [1768929328.239539408] [coarse_to_fine_go_to_leaf4]:   joint[wrist_1_joint]=-4.001rad (-229.2deg)
+[INFO] [1768929328.239672544] [move_group_interface]: MoveGroup action client/server ready
+[INFO] [1768929328.835666316] [rclcpp]: signal_handler(signum=2)
