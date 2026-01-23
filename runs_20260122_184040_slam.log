@@ -1,0 +1,845 @@
+[INFO] [launch]: All log files can be found below /home/fujino/.ros/log/2026-01-22-18-40-40-518299-fh-180397
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [rgbd_sync-1]: process started with pid [180416]
+[INFO] [rtabmap-2]: process started with pid [180418]
+[rgbd_sync-1] [INFO] [1769074840.924234870] [rgbd_sync]: rgbd_sync: approx_sync = true
+[rgbd_sync-1] [INFO] [1769074840.924698628] [rgbd_sync]: rgbd_sync: approx_sync_max_interval = 0.010000
+[rgbd_sync-1] [INFO] [1769074840.924743367] [rgbd_sync]: rgbd_sync: topic_queue_size  = 10
+[rgbd_sync-1] [INFO] [1769074840.924757354] [rgbd_sync]: rgbd_sync: sync_queue_size  = 30
+[rgbd_sync-1] [INFO] [1769074840.924768687] [rgbd_sync]: rgbd_sync: qos             = 2
+[rgbd_sync-1] [INFO] [1769074840.924779771] [rgbd_sync]: rgbd_sync: qos_camera_info = 2
+[rgbd_sync-1] [INFO] [1769074840.924790364] [rgbd_sync]: rgbd_sync: depth_scale = 1.000000
+[rgbd_sync-1] [INFO] [1769074840.924802855] [rgbd_sync]: rgbd_sync: decimation = 1
+[rgbd_sync-1] [INFO] [1769074840.924814129] [rgbd_sync]: rgbd_sync: compressed_rate = 0.000000
+[rgbd_sync-1] [INFO] [1769074840.948839117] [rgbd_sync]: 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [INFO] [1769074841.035939670] [rtabmap]: rtabmap(maps): latch                      = true
+[rtabmap-2] [INFO] [1769074841.036159982] [rtabmap]: rtabmap(maps): map_filter_radius          = 0.000000
+[rtabmap-2] [INFO] [1769074841.036176912] [rtabmap]: rtabmap(maps): map_filter_angle           = 30.000000
+[rtabmap-2] [INFO] [1769074841.036184183] [rtabmap]: rtabmap(maps): map_cleanup                = true
+[rtabmap-2] [INFO] [1769074841.036189264] [rtabmap]: rtabmap(maps): map_always_update          = false
+[rtabmap-2] [INFO] [1769074841.036195881] [rtabmap]: rtabmap(maps): map_empty_ray_tracing      = true
+[rtabmap-2] [INFO] [1769074841.036200977] [rtabmap]: rtabmap(maps): cloud_output_voxelized     = true
+[rtabmap-2] [INFO] [1769074841.036205869] [rtabmap]: rtabmap(maps): cloud_subtract_filtering   = false
+[rtabmap-2] [INFO] [1769074841.036210811] [rtabmap]: rtabmap(maps): cloud_subtract_filtering_min_neighbors = 2
+[rtabmap-2] [INFO] [1769074841.036225432] [rtabmap]: rtabmap(maps): octomap_tree_depth         = 16
+[rtabmap-2] [INFO] [1769074841.055822690] [rtabmap]: rtabmap: frame_id      = camera_color_optical_frame
+[rtabmap-2] [INFO] [1769074841.055871301] [rtabmap]: rtabmap: odom_frame_id = world
+[rtabmap-2] [INFO] [1769074841.055885063] [rtabmap]: rtabmap: map_frame_id  = world
+[rtabmap-2] [INFO] [1769074841.055895736] [rtabmap]: rtabmap: log_to_rosout_level  = 4
+[rtabmap-2] [INFO] [1769074841.055906712] [rtabmap]: rtabmap: initial_pose  = 
+[rtabmap-2] [INFO] [1769074841.055916843] [rtabmap]: rtabmap: use_action_for_goal  = false
+[rtabmap-2] [INFO] [1769074841.055926621] [rtabmap]: rtabmap: tf_delay      = 0.050000
+[rtabmap-2] [INFO] [1769074841.055942148] [rtabmap]: rtabmap: tf_tolerance  = 0.100000
+[rtabmap-2] [INFO] [1769074841.055953832] [rtabmap]: rtabmap: odom_sensor_sync   = false
+[rtabmap-2] [INFO] [1769074841.055964011] [rtabmap]: rtabmap: pub_loc_pose_only_when_localizing = false
+[rtabmap-2] [INFO] [1769074841.055974281] [rtabmap]: rtabmap: wait_for_transform = 0.200000
+[rtabmap-2] [INFO] [1769074841.055985600] [rtabmap]: rtabmap: gen_scan  = false
+[rtabmap-2] [INFO] [1769074841.055996574] [rtabmap]: rtabmap: gen_depth  = false
+[rtabmap-2] [INFO] [1769074841.077266002] [rtabmap]: Setting RTAB-Map parameter "Grid/3D"="true" (rosparam)
+[rtabmap-2] [INFO] [1769074841.077987404] [rtabmap]: Setting RTAB-Map parameter "Grid/RangeMax"="5.0" (rosparam)
+[rtabmap-2] [INFO] [1769074841.078105013] [rtabmap]: Setting RTAB-Map parameter "Grid/RayTracing"="true" (rosparam)
+[rtabmap-2] [INFO] [1769074841.078248031] [rtabmap]: Setting RTAB-Map parameter "Grid/Sensor"="1" (rosparam)
+[rtabmap-2] [INFO] [1769074841.083229717] [rtabmap]: Setting RTAB-Map parameter "RGBD/CreateOccupancyGrid"="true" (rosparam)
+[rtabmap-2] [INFO] [1769074841.084748263] [rtabmap]: Setting RTAB-Map parameter "Rtabmap/DetectionRate"="2.0" (rosparam)
+[rtabmap-2] [INFO] [1769074841.318426161] [rtabmap]: RTAB-Map detection rate = 2.000000 Hz
+[rtabmap-2] [INFO] [1769074841.318595965] [rtabmap]: rtabmap: Using database from "/home/fujino/.ros/rtabmap_ur5e_20260122_184040.db" (0 MB).
+[rtabmap-2] [INFO] [1769074841.399880277] [rtabmap]: rtabmap: Database version = "0.22.1".
+[rtabmap-2] [INFO] [1769074841.400014426] [rtabmap]: rtabmap: SLAM mode (Mem/IncrementalMemory=true)
+[rtabmap-2] [INFO] [1769074841.427834609] [rtabmap]: Setup callbacks
+[rtabmap-2] [WARN] [1769074841.427899382] [rtabmap]: rtabmap: Parameters subscribe_depth and subscribe_rgbd cannot be true at the same time. Parameter subscribe_depth is set to false.
+[rtabmap-2] [INFO] [1769074841.427973800] [rtabmap]: rtabmap: subscribe_depth = false
+[rtabmap-2] [INFO] [1769074841.427991405] [rtabmap]: rtabmap: subscribe_rgb = false
+[rtabmap-2] [INFO] [1769074841.428003592] [rtabmap]: rtabmap: subscribe_stereo = false
+[rtabmap-2] [INFO] [1769074841.428014627] [rtabmap]: rtabmap: subscribe_rgbd = true (rgbd_cameras=1)
+[rtabmap-2] [INFO] [1769074841.428026859] [rtabmap]: rtabmap: subscribe_sensor_data = false
+[rtabmap-2] [INFO] [1769074841.428038272] [rtabmap]: rtabmap: subscribe_odom_info = false
+[rtabmap-2] [INFO] [1769074841.428047839] [rtabmap]: rtabmap: subscribe_user_data = false
+[rtabmap-2] [INFO] [1769074841.428057703] [rtabmap]: rtabmap: subscribe_scan = false
+[rtabmap-2] [INFO] [1769074841.428067984] [rtabmap]: rtabmap: subscribe_scan_cloud = false
+[rtabmap-2] [INFO] [1769074841.428077963] [rtabmap]: rtabmap: subscribe_scan_descriptor = false
+[rtabmap-2] [INFO] [1769074841.428088215] [rtabmap]: rtabmap: topic_queue_size = 10
+[rtabmap-2] [INFO] [1769074841.428098808] [rtabmap]: rtabmap: sync_queue_size  = 30
+[rtabmap-2] [INFO] [1769074841.428109971] [rtabmap]: rtabmap: qos_image       = 2
+[rtabmap-2] [INFO] [1769074841.428183445] [rtabmap]: rtabmap: qos_camera_info = 2
+[rtabmap-2] [INFO] [1769074841.428199058] [rtabmap]: rtabmap: qos_scan        = 2
+[rtabmap-2] [INFO] [1769074841.428210378] [rtabmap]: rtabmap: qos_odom        = 2
+[rtabmap-2] [INFO] [1769074841.428220415] [rtabmap]: rtabmap: qos_user_data   = 2
+[rtabmap-2] [INFO] [1769074841.428231429] [rtabmap]: rtabmap: approx_sync     = true
+[rtabmap-2] [INFO] [1769074841.428256651] [rtabmap]: Setup rgbd callback
+[rtabmap-2] [INFO] [1769074841.429905193] [rtabmap]: 
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074845.951548660] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074846.433177395] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074850.951651261] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074851.433151220] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074855.951724534] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074856.433258450] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074860.951829081] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074861.433342339] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074865.951920668] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074866.433595561] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074870.952022866] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074871.433568190] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074875.952092755] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074876.433746858] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074880.952233034] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074881.433790596] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074885.952309267] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074886.434577570] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074890.952404421] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074891.433912150] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074895.952500251] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074896.434046122] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074900.952608130] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074901.434230089] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074905.952696865] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074906.434277847] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074910.952809766] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074911.434432049] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074915.952945149] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074916.434503670] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074920.953008134] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074921.434584402] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074925.953113780] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074926.434769319] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074930.953264790] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074931.434794260] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074935.953315188] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074936.434862173] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074940.953391413] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074941.435032563] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074945.953523963] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074946.435086327] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074950.953592865] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074951.435232004] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074955.953755518] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074956.435250884] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074960.953800474] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074961.435357764] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074965.953981044] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074966.435417689] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074970.954080163] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074971.435567005] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074975.954217693] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074976.435720388] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074980.954255224] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074981.435825862] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074985.954357270] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074986.435861799] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074990.954441185] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074991.436007167] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769074995.954613019] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769074996.436079827] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075000.954694032] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075001.436206450] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075005.954793564] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075006.436309329] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075010.954792656] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075011.436398163] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075015.955022536] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075016.436535222] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075020.955099856] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075021.436685472] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075025.955226087] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075026.436708758] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075030.955285361] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075031.436839035] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075035.955395185] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075036.436942447] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075040.955518719] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075041.437079954] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075045.957694429] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075046.437176453] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075050.955785896] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075051.437239723] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075055.955887957] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075056.437379602] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075060.955967291] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075061.437471369] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075065.956073456] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075066.437646430] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075070.956152328] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075071.437711575] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075075.956288700] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075076.437822802] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075080.956404132] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075081.437965686] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075085.956519273] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075086.437996266] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075090.956661133] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075091.438182001] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075095.956689156] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075096.438291232] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075100.956848320] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075101.438422637] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075105.956943135] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075106.438490014] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075110.957037564] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075111.438616824] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075115.957164264] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075116.438757928] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075120.957257661] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075121.438818891] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075125.957411151] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075126.438906339] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075130.957492621] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075131.439114047] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075135.957601875] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075136.439155989] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075140.957709542] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075141.439263947] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075145.957855517] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075146.439389524] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075150.957972760] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075151.439526560] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075155.958094261] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075156.439605602] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075160.958187404] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075161.439743676] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075165.958286550] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075166.439812877] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075170.958428699] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075171.439952909] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075175.958553142] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075176.440052892] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075180.958673253] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075181.440200144] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075185.958782473] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075186.440293797] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075190.958905716] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075191.440453978] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075195.959005437] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075196.440547214] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075200.959121930] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075201.440705033] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075205.959246695] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075206.440781541] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075210.959358805] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075211.440902267] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075215.959486161] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075216.441028678] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075220.959607974] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075221.441168948] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075225.959718546] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075226.441240151] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075230.959822314] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075231.441377989] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075235.959962476] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075236.441538121] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075240.960108305] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075241.441641300] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075245.960220697] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075246.441735235] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075250.960404815] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075251.442149768] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075255.960551719] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075256.442272099] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075260.960836458] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075261.442483893] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075265.960737020] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075266.442611856] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075270.960814437] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075271.442701406] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075275.961042061] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075276.442892379] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075280.961123944] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075281.442898968] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075285.961191583] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075286.442817445] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075290.961357313] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075291.442724733] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075295.961402428] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075296.443022387] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075300.961707675] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075301.443174245] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rtabmap-2] [WARN] [1769075305.572311038] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[rgbd_sync-1] [WARN] [1769075309.562804066] []: Messages of type 2 arrived out of order (will print only once)
+[rgbd_sync-1] [WARN] [1769075309.662796984] []: Messages of type 0 arrived out of order (will print only once)
+[rgbd_sync-1] [WARN] [1769075310.961737698] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075311.443322506] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075315.961860858] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075316.443466680] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [WARN] [1769075320.961985558] [rgbd_sync]: rgbd_sync: Did not receive data since 5 seconds! Make sure the input topics are published ("$ rostopic hz my_topic") and the timestamps in their header are set. Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. 
+[rgbd_sync-1] rgbd_sync subscribed to (approx sync, max interval=0.010000s):
+[rgbd_sync-1]    /camera/color/image_raw,
+[rgbd_sync-1]    /camera/depth/depth/image_raw_noisy,
+[rgbd_sync-1]    /camera/color/camera_info
+[rtabmap-2] [WARN] [1769075321.443601230] [rtabmap]: rtabmap: Did not receive data since 5 seconds! Make sure the input topics are published ("$ ros2 topic hz my_topic") and the timestamps in their header are set. If topics are coming from different computers, make sure the clocks of the computers are synchronized ("ntpdate"). Ajusting topic_queue_size (10) and sync_queue_size (30) can also help for better synchronization if framerates and/or delays are different. If topics are not published at the same rate, you could increase "sync_queue_size" and/or "topic_queue_size" parameters (current=30 and 10 respectively).
+[rtabmap-2] rtabmap subscribed to:
+[rtabmap-2]    /rgbd_image
+[rgbd_sync-1] [INFO] [1769075325.447752464] [rclcpp]: signal_handler(signum=2)
+[rtabmap-2] [INFO] [1769075325.447754805] [rclcpp]: signal_handler(signum=2)
+[rtabmap-2] [INFO] [1769075325.451812948] [rtabmap]: Parameters are not saved (No configuration file provided...)
+[INFO] [rgbd_sync-1]: process has finished cleanly [pid 180416]
+[rtabmap-2] rtabmap: Saving database/long-term memory... (located at /home/fujino/.ros/rtabmap_ur5e_20260122_184040.db)
+[rtabmap-2] rtabmap: Saving database/long-term memory...done! (located at /home/fujino/.ros/rtabmap_ur5e_20260122_184040.db, 0 MB)
+[INFO] [rtabmap-2]: process has finished cleanly [pid 180418]

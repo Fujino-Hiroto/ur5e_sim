@@ -14,7 +14,7 @@ set -u
 
 # ---- Plant pose / leaf targets TF (tunable) ----
 PLANT_X=0.0
-PLANT_Y=0.9
+PLANT_Y=0.90
 PLANT_Z=0.0
 
 # Blenderの「正面が -X」なので、植物を x=+0.5 に置けば yaw=0 で正面がロボット側を向く
