@@ -76,6 +76,7 @@ install(PROGRAMS
   src/pointcloud_metrics_csv.py
   src/depth_image_noiser.py
   src/arc_sweep_jointtraj.py
+  src/cloud_gate.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
