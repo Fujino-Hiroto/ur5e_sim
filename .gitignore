@@ -60,3 +60,6 @@ src/ur_slam_tools/src/coarse_to_fine_go_to_leaf4 copy.cpp
 # large mesh files
 *.stl
 *.dae.bak
+
+# archive (moved junk/unused files)
+_archive/
