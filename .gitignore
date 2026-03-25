@@ -15,14 +15,44 @@ __pycache__/
 # rosbag
 *.bag
 *.db3
+bags/
 
 # tf2_tools outputs
 frames_*.gv
 frames_*.pdf
 
-# ignore upstream sources; keep only our custom package
-/src/*
-!/src/ur_slam_bringup/
-/src/ur_slam_bringup/**
-!/src/ur_slam_tools/
-/src/ur_slam_tools/**
+# upstream packages (cloned via vcstool / ur_slam_ws.repos)
+/src/Universal_Robots_ROS2_Description/
+/src/Universal_Robots_ROS2_Driver/
+/src/Universal_Robots_ROS2_Gazebo_Simulation/
+/src/README.md
+
+# experiment logs
+runs_*.log
+runs/
+
+# experiment results (kept locally, not in git)
+results/
+
+# generated artifacts
+depth_image_*.png
+*.scene
+
+# LibreOffice lock files
+.~lock.*
+
+# junk files from accidental shell redirects
+base_link:
+leaf_target:
+leaf_target_shot:
+leaf_target_view:
+tool0:
+fine-
+view
+leaf4_moveit_kinematics.yaml
+
+# ur_slam_tools junk files
+src/ur_slam_tools/Fine-
+src/ur_slam_tools/View
+src/ur_slam_tools/declare_parameter
+src/ur_slam_tools/src/coarse_to_fine_go_to_leaf4 copy.cpp
