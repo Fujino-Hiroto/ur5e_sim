@@ -1,0 +1,9 @@
+/PointCloudXyzNode:
+  ros__parameters:
+    qos_overrides:
+      /points_noisy:
+        publisher:
+          reliability: reliable
+          history: keep_last
+          depth: 5
+          durability: volatile
