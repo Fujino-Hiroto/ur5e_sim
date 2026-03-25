@@ -56,3 +56,7 @@ src/ur_slam_tools/Fine-
 src/ur_slam_tools/View
 src/ur_slam_tools/declare_parameter
 src/ur_slam_tools/src/coarse_to_fine_go_to_leaf4 copy.cpp
+
+# large mesh files
+*.stl
+*.dae.bak

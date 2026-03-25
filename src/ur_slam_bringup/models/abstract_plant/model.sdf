@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="abstract_plant">
+    <static>true</static>
+
+    <link name="plant_link">
+      <!-- collision -->
+      <collision name="collision">
+        <geometry>
+            <mesh>
+            <uri>model://abstract_plant/meshes/abstract_plant.dae</uri>
+            </mesh>
+            <scale>1 1 1</scale>
+        </geometry>
+      </collision>
+
+      <!-- visual -->
+    <visual name="visual">
+        <geometry>
+            <mesh>
+            <uri>model://abstract_plant/meshes/abstract_plant.dae</uri>
+            </mesh>
+            <scale>1 1 1</scale>
+        </geometry>
+
+        <material>
+            <ambient>0 0.7 0 1</ambient>
+            <diffuse>0 0.7 0 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+        </material>
+    </visual>
+
+    </link>
+  </model>
+</sdf>

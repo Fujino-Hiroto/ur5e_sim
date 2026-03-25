@@ -1,0 +1,25 @@
+pointcloud_noiser:
+  ros__parameters:
+    in_topic: /camera/depth/points
+    out_topic: /camera/depth/points_noisy
+
+    seed: 42
+    min_z: 0.0
+    max_z: 5.0
+
+    dropout_p: 0.01
+    block_dropout: true
+    block_count: 4
+    block_radius_px: 5
+
+    gauss_a: 0.001
+    gauss_b: 0.0005
+
+    spike_p: 0.00
+    spike_min_factor: 0.5
+    spike_max_factor: 0.9
+
+    enable_flicker: false
+    flicker_hz: 1.0
+    flicker_amp: 0.5
+    frame_drop_p: 0.0

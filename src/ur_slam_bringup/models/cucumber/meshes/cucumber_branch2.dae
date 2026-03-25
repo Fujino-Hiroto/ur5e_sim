@@ -1,0 +1,2172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.6.23 commit date:2025-06-16, commit time:11:52, hash:e467db79ca8c</authoring_tool>
+    </contributor>
+    <created>2026-01-26T05:21:55</created>
+    <modified>2026-01-26T05:21:55</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_cameras>
+    <camera id="Camera_012-camera" name="Camera.012">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">39.59775</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+    <camera id="Camera_010-camera" name="Camera.010">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">39.59775</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+    <camera id="Camera_008-camera" name="Camera.008">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">39.59775</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+    <camera id="Camera_006-camera" name="Camera.006">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">39.59775</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+    <camera id="Camera_004-camera" name="Camera.004">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">39.59775</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+    <camera id="Camera_002-camera" name="Camera.002">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">39.59775</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+    <camera id="Camera_001-camera" name="Camera.001">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">39.59775</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+    <camera id="Camera_003-camera" name="Camera.003">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">39.59775</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+    <camera id="Camera_005-camera" name="Camera.005">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">39.59775</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+    <camera id="Camera_007-camera" name="Camera.007">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">39.59775</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+    <camera id="Camera_009-camera" name="Camera.009">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">39.59775</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+    <camera id="Camera_011-camera" name="Camera.011">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">39.59775</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+    <camera id="Camera-camera" name="Camera">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">39.59775</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+  </library_cameras>
+  <library_lights>
+    <light id="Light_012-light" name="Light.012">
+      <technique_common>
+        <point>
+          <color sid="color">1000 1000 1000</color>
+          <constant_attenuation>1</constant_attenuation>
+          <linear_attenuation>0</linear_attenuation>
+          <quadratic_attenuation>0.00111109</quadratic_attenuation>
+        </point>
+      </technique_common>
+      <extra>
+        <technique profile="blender">
+          <type sid="type" type="int">0</type>
+          <flag sid="flag" type="int">0</flag>
+          <mode sid="mode" type="int">1</mode>
+          <gamma sid="blender_gamma" type="float">1</gamma>
+          <red sid="red" type="float">1</red>
+          <green sid="green" type="float">1</green>
+          <blue sid="blue" type="float">1</blue>
+          <shadow_r sid="blender_shadow_r" type="float">0</shadow_r>
+          <shadow_g sid="blender_shadow_g" type="float">0</shadow_g>
+          <shadow_b sid="blender_shadow_b" type="float">0</shadow_b>
+          <energy sid="blender_energy" type="float">1000</energy>
+          <dist sid="blender_dist" type="float">29.99998</dist>
+          <spotsize sid="spotsize" type="float">75</spotsize>
+          <spotblend sid="spotblend" type="float">0.15</spotblend>
+          <att1 sid="att1" type="float">0</att1>
+          <att2 sid="att2" type="float">1</att2>
+          <falloff_type sid="falloff_type" type="int">2</falloff_type>
+          <clipsta sid="clipsta" type="float">0.04999995</clipsta>
+          <clipend sid="clipend" type="float">30.002</clipend>
+          <bias sid="bias" type="float">1</bias>
+          <bufsize sid="bufsize" type="int">2880</bufsize>
+          <samp sid="samp" type="int">3</samp>
+          <buffers sid="buffers" type="int">1</buffers>
+          <radius sid="radius" type="float">0.1</radius>
+          <area_shape sid="area_shape" type="int">1</area_shape>
+          <area_size sid="area_size" type="float">0.1</area_size>
+          <area_sizey sid="area_sizey" type="float">0.1</area_sizey>
+          <area_sizez sid="area_sizez" type="float">1</area_sizez>
+        </technique>
+      </extra>
+    </light>
+    <light id="Light_010-light" name="Light.010">
+      <technique_common>
+        <point>
+          <color sid="color">1000 1000 1000</color>
+          <constant_attenuation>1</constant_attenuation>
+          <linear_attenuation>0</linear_attenuation>
+          <quadratic_attenuation>0.00111109</quadratic_attenuation>
+        </point>
+      </technique_common>
+      <extra>
+        <technique profile="blender">
+          <type sid="type" type="int">0</type>
+          <flag sid="flag" type="int">0</flag>
+          <mode sid="mode" type="int">1</mode>
+          <gamma sid="blender_gamma" type="float">1</gamma>
+          <red sid="red" type="float">1</red>
+          <green sid="green" type="float">1</green>
+          <blue sid="blue" type="float">1</blue>
+          <shadow_r sid="blender_shadow_r" type="float">0</shadow_r>
+          <shadow_g sid="blender_shadow_g" type="float">0</shadow_g>
+          <shadow_b sid="blender_shadow_b" type="float">0</shadow_b>
+          <energy sid="blender_energy" type="float">1000</energy>
+          <dist sid="blender_dist" type="float">29.99998</dist>
+          <spotsize sid="spotsize" type="float">75</spotsize>
+          <spotblend sid="spotblend" type="float">0.15</spotblend>
+          <att1 sid="att1" type="float">0</att1>
+          <att2 sid="att2" type="float">1</att2>
+          <falloff_type sid="falloff_type" type="int">2</falloff_type>
+          <clipsta sid="clipsta" type="float">0.04999995</clipsta>
+          <clipend sid="clipend" type="float">30.002</clipend>
+          <bias sid="bias" type="float">1</bias>
+          <bufsize sid="bufsize" type="int">2880</bufsize>
+          <samp sid="samp" type="int">3</samp>
+          <buffers sid="buffers" type="int">1</buffers>
+          <radius sid="radius" type="float">0.1</radius>
+          <area_shape sid="area_shape" type="int">1</area_shape>
+          <area_size sid="area_size" type="float">0.1</area_size>
+          <area_sizey sid="area_sizey" type="float">0.1</area_sizey>
+          <area_sizez sid="area_sizez" type="float">1</area_sizez>
+        </technique>
+      </extra>
+    </light>
+    <light id="Light_008-light" name="Light.008">
+      <technique_common>
+        <point>
+          <color sid="color">1000 1000 1000</color>
+          <constant_attenuation>1</constant_attenuation>
+          <linear_attenuation>0</linear_attenuation>
+          <quadratic_attenuation>0.00111109</quadratic_attenuation>
+        </point>
+      </technique_common>
+      <extra>
+        <technique profile="blender">
+          <type sid="type" type="int">0</type>
+          <flag sid="flag" type="int">0</flag>
+          <mode sid="mode" type="int">1</mode>
+          <gamma sid="blender_gamma" type="float">1</gamma>
+          <red sid="red" type="float">1</red>
+          <green sid="green" type="float">1</green>
+          <blue sid="blue" type="float">1</blue>
+          <shadow_r sid="blender_shadow_r" type="float">0</shadow_r>
+          <shadow_g sid="blender_shadow_g" type="float">0</shadow_g>
+          <shadow_b sid="blender_shadow_b" type="float">0</shadow_b>
+          <energy sid="blender_energy" type="float">1000</energy>
+          <dist sid="blender_dist" type="float">29.99998</dist>
+          <spotsize sid="spotsize" type="float">75</spotsize>
+          <spotblend sid="spotblend" type="float">0.15</spotblend>
+          <att1 sid="att1" type="float">0</att1>
+          <att2 sid="att2" type="float">1</att2>
+          <falloff_type sid="falloff_type" type="int">2</falloff_type>
+          <clipsta sid="clipsta" type="float">0.04999995</clipsta>
+          <clipend sid="clipend" type="float">30.002</clipend>
+          <bias sid="bias" type="float">1</bias>
+          <bufsize sid="bufsize" type="int">2880</bufsize>
+          <samp sid="samp" type="int">3</samp>
+          <buffers sid="buffers" type="int">1</buffers>
+          <radius sid="radius" type="float">0.1</radius>
+          <area_shape sid="area_shape" type="int">1</area_shape>
+          <area_size sid="area_size" type="float">0.1</area_size>
+          <area_sizey sid="area_sizey" type="float">0.1</area_sizey>
+          <area_sizez sid="area_sizez" type="float">1</area_sizez>
+        </technique>
+      </extra>
+    </light>
+    <light id="Light_006-light" name="Light.006">
+      <technique_common>
+        <point>
+          <color sid="color">1000 1000 1000</color>
+          <constant_attenuation>1</constant_attenuation>
+          <linear_attenuation>0</linear_attenuation>
+          <quadratic_attenuation>0.00111109</quadratic_attenuation>
+        </point>
+      </technique_common>
+      <extra>
+        <technique profile="blender">
+          <type sid="type" type="int">0</type>
+          <flag sid="flag" type="int">0</flag>
+          <mode sid="mode" type="int">1</mode>
+          <gamma sid="blender_gamma" type="float">1</gamma>
+          <red sid="red" type="float">1</red>
+          <green sid="green" type="float">1</green>
+          <blue sid="blue" type="float">1</blue>
+          <shadow_r sid="blender_shadow_r" type="float">0</shadow_r>
+          <shadow_g sid="blender_shadow_g" type="float">0</shadow_g>
+          <shadow_b sid="blender_shadow_b" type="float">0</shadow_b>
+          <energy sid="blender_energy" type="float">1000</energy>
+          <dist sid="blender_dist" type="float">29.99998</dist>
+          <spotsize sid="spotsize" type="float">75</spotsize>
+          <spotblend sid="spotblend" type="float">0.15</spotblend>
+          <att1 sid="att1" type="float">0</att1>
+          <att2 sid="att2" type="float">1</att2>
+          <falloff_type sid="falloff_type" type="int">2</falloff_type>
+          <clipsta sid="clipsta" type="float">0.04999995</clipsta>
+          <clipend sid="clipend" type="float">30.002</clipend>
+          <bias sid="bias" type="float">1</bias>
+          <bufsize sid="bufsize" type="int">2880</bufsize>
+          <samp sid="samp" type="int">3</samp>
+          <buffers sid="buffers" type="int">1</buffers>
+          <radius sid="radius" type="float">0.1</radius>
+          <area_shape sid="area_shape" type="int">1</area_shape>
+          <area_size sid="area_size" type="float">0.1</area_size>
+          <area_sizey sid="area_sizey" type="float">0.1</area_sizey>
+          <area_sizez sid="area_sizez" type="float">1</area_sizez>
+        </technique>
+      </extra>
+    </light>
+    <light id="Light_004-light" name="Light.004">
+      <technique_common>
+        <point>
+          <color sid="color">1000 1000 1000</color>
+          <constant_attenuation>1</constant_attenuation>
+          <linear_attenuation>0</linear_attenuation>
+          <quadratic_attenuation>0.00111109</quadratic_attenuation>
+        </point>
+      </technique_common>
+      <extra>
+        <technique profile="blender">
+          <type sid="type" type="int">0</type>
+          <flag sid="flag" type="int">0</flag>
+          <mode sid="mode" type="int">1</mode>
+          <gamma sid="blender_gamma" type="float">1</gamma>
+          <red sid="red" type="float">1</red>
+          <green sid="green" type="float">1</green>
+          <blue sid="blue" type="float">1</blue>
+          <shadow_r sid="blender_shadow_r" type="float">0</shadow_r>
+          <shadow_g sid="blender_shadow_g" type="float">0</shadow_g>
+          <shadow_b sid="blender_shadow_b" type="float">0</shadow_b>
+          <energy sid="blender_energy" type="float">1000</energy>
+          <dist sid="blender_dist" type="float">29.99998</dist>
+          <spotsize sid="spotsize" type="float">75</spotsize>
+          <spotblend sid="spotblend" type="float">0.15</spotblend>
+          <att1 sid="att1" type="float">0</att1>
+          <att2 sid="att2" type="float">1</att2>
+          <falloff_type sid="falloff_type" type="int">2</falloff_type>
+          <clipsta sid="clipsta" type="float">0.04999995</clipsta>
+          <clipend sid="clipend" type="float">30.002</clipend>
+          <bias sid="bias" type="float">1</bias>
+          <bufsize sid="bufsize" type="int">2880</bufsize>
+          <samp sid="samp" type="int">3</samp>
+          <buffers sid="buffers" type="int">1</buffers>
+          <radius sid="radius" type="float">0.1</radius>
+          <area_shape sid="area_shape" type="int">1</area_shape>
+          <area_size sid="area_size" type="float">0.1</area_size>
+          <area_sizey sid="area_sizey" type="float">0.1</area_sizey>
+          <area_sizez sid="area_sizez" type="float">1</area_sizez>
+        </technique>
+      </extra>
+    </light>
+    <light id="Light_002-light" name="Light.002">
+      <technique_common>
+        <point>
+          <color sid="color">1000 1000 1000</color>
+          <constant_attenuation>1</constant_attenuation>
+          <linear_attenuation>0</linear_attenuation>
+          <quadratic_attenuation>0.00111109</quadratic_attenuation>
+        </point>
+      </technique_common>
+      <extra>
+        <technique profile="blender">
+          <type sid="type" type="int">0</type>
+          <flag sid="flag" type="int">0</flag>
+          <mode sid="mode" type="int">1</mode>
+          <gamma sid="blender_gamma" type="float">1</gamma>
+          <red sid="red" type="float">1</red>
+          <green sid="green" type="float">1</green>
+          <blue sid="blue" type="float">1</blue>
+          <shadow_r sid="blender_shadow_r" type="float">0</shadow_r>
+          <shadow_g sid="blender_shadow_g" type="float">0</shadow_g>
+          <shadow_b sid="blender_shadow_b" type="float">0</shadow_b>
+          <energy sid="blender_energy" type="float">1000</energy>
+          <dist sid="blender_dist" type="float">29.99998</dist>
+          <spotsize sid="spotsize" type="float">75</spotsize>
+          <spotblend sid="spotblend" type="float">0.15</spotblend>
+          <att1 sid="att1" type="float">0</att1>
+          <att2 sid="att2" type="float">1</att2>
+          <falloff_type sid="falloff_type" type="int">2</falloff_type>
+          <clipsta sid="clipsta" type="float">0.04999995</clipsta>
+          <clipend sid="clipend" type="float">30.002</clipend>
+          <bias sid="bias" type="float">1</bias>
+          <bufsize sid="bufsize" type="int">2880</bufsize>
+          <samp sid="samp" type="int">3</samp>
+          <buffers sid="buffers" type="int">1</buffers>
+          <radius sid="radius" type="float">0.1</radius>
+          <area_shape sid="area_shape" type="int">1</area_shape>
+          <area_size sid="area_size" type="float">0.1</area_size>
+          <area_sizey sid="area_sizey" type="float">0.1</area_sizey>
+          <area_sizez sid="area_sizez" type="float">1</area_sizez>
+        </technique>
+      </extra>
+    </light>
+    <light id="Light_001-light" name="Light.001">
+      <technique_common>
+        <point>
+          <color sid="color">1000 1000 1000</color>
+          <constant_attenuation>1</constant_attenuation>
+          <linear_attenuation>0</linear_attenuation>
+          <quadratic_attenuation>0.00111109</quadratic_attenuation>
+        </point>
+      </technique_common>
+      <extra>
+        <technique profile="blender">
+          <type sid="type" type="int">0</type>
+          <flag sid="flag" type="int">0</flag>
+          <mode sid="mode" type="int">1</mode>
+          <gamma sid="blender_gamma" type="float">1</gamma>
+          <red sid="red" type="float">1</red>
+          <green sid="green" type="float">1</green>
+          <blue sid="blue" type="float">1</blue>
+          <shadow_r sid="blender_shadow_r" type="float">0</shadow_r>
+          <shadow_g sid="blender_shadow_g" type="float">0</shadow_g>
+          <shadow_b sid="blender_shadow_b" type="float">0</shadow_b>
+          <energy sid="blender_energy" type="float">1000</energy>
+          <dist sid="blender_dist" type="float">29.99998</dist>
+          <spotsize sid="spotsize" type="float">75</spotsize>
+          <spotblend sid="spotblend" type="float">0.15</spotblend>
+          <att1 sid="att1" type="float">0</att1>
+          <att2 sid="att2" type="float">1</att2>
+          <falloff_type sid="falloff_type" type="int">2</falloff_type>
+          <clipsta sid="clipsta" type="float">0.04999995</clipsta>
+          <clipend sid="clipend" type="float">30.002</clipend>
+          <bias sid="bias" type="float">1</bias>
+          <bufsize sid="bufsize" type="int">2880</bufsize>
+          <samp sid="samp" type="int">3</samp>
+          <buffers sid="buffers" type="int">1</buffers>
+          <radius sid="radius" type="float">0.1</radius>
+          <area_shape sid="area_shape" type="int">1</area_shape>
+          <area_size sid="area_size" type="float">0.1</area_size>
+          <area_sizey sid="area_sizey" type="float">0.1</area_sizey>
+          <area_sizez sid="area_sizez" type="float">1</area_sizez>
+        </technique>
+      </extra>
+    </light>
+    <light id="Light_003-light" name="Light.003">
+      <technique_common>
+        <point>
+          <color sid="color">1000 1000 1000</color>
+          <constant_attenuation>1</constant_attenuation>
+          <linear_attenuation>0</linear_attenuation>
+          <quadratic_attenuation>0.00111109</quadratic_attenuation>
+        </point>
+      </technique_common>
+      <extra>
+        <technique profile="blender">
+          <type sid="type" type="int">0</type>
+          <flag sid="flag" type="int">0</flag>
+          <mode sid="mode" type="int">1</mode>
+          <gamma sid="blender_gamma" type="float">1</gamma>
+          <red sid="red" type="float">1</red>
+          <green sid="green" type="float">1</green>
+          <blue sid="blue" type="float">1</blue>
+          <shadow_r sid="blender_shadow_r" type="float">0</shadow_r>
+          <shadow_g sid="blender_shadow_g" type="float">0</shadow_g>
+          <shadow_b sid="blender_shadow_b" type="float">0</shadow_b>
+          <energy sid="blender_energy" type="float">1000</energy>
+          <dist sid="blender_dist" type="float">29.99998</dist>
+          <spotsize sid="spotsize" type="float">75</spotsize>
+          <spotblend sid="spotblend" type="float">0.15</spotblend>
+          <att1 sid="att1" type="float">0</att1>
+          <att2 sid="att2" type="float">1</att2>
+          <falloff_type sid="falloff_type" type="int">2</falloff_type>
+          <clipsta sid="clipsta" type="float">0.04999995</clipsta>
+          <clipend sid="clipend" type="float">30.002</clipend>
+          <bias sid="bias" type="float">1</bias>
+          <bufsize sid="bufsize" type="int">2880</bufsize>
+          <samp sid="samp" type="int">3</samp>
+          <buffers sid="buffers" type="int">1</buffers>
+          <radius sid="radius" type="float">0.1</radius>
+          <area_shape sid="area_shape" type="int">1</area_shape>
+          <area_size sid="area_size" type="float">0.1</area_size>
+          <area_sizey sid="area_sizey" type="float">0.1</area_sizey>
+          <area_sizez sid="area_sizez" type="float">1</area_sizez>
+        </technique>
+      </extra>
+    </light>
+    <light id="Light_005-light" name="Light.005">
+      <technique_common>
+        <point>
+          <color sid="color">1000 1000 1000</color>
+          <constant_attenuation>1</constant_attenuation>
+          <linear_attenuation>0</linear_attenuation>
+          <quadratic_attenuation>0.00111109</quadratic_attenuation>
+        </point>
+      </technique_common>
+      <extra>
+        <technique profile="blender">
+          <type sid="type" type="int">0</type>
+          <flag sid="flag" type="int">0</flag>
+          <mode sid="mode" type="int">1</mode>
+          <gamma sid="blender_gamma" type="float">1</gamma>
+          <red sid="red" type="float">1</red>
+          <green sid="green" type="float">1</green>
+          <blue sid="blue" type="float">1</blue>
+          <shadow_r sid="blender_shadow_r" type="float">0</shadow_r>
+          <shadow_g sid="blender_shadow_g" type="float">0</shadow_g>
+          <shadow_b sid="blender_shadow_b" type="float">0</shadow_b>
+          <energy sid="blender_energy" type="float">1000</energy>
+          <dist sid="blender_dist" type="float">29.99998</dist>
+          <spotsize sid="spotsize" type="float">75</spotsize>
+          <spotblend sid="spotblend" type="float">0.15</spotblend>
+          <att1 sid="att1" type="float">0</att1>
+          <att2 sid="att2" type="float">1</att2>
+          <falloff_type sid="falloff_type" type="int">2</falloff_type>
+          <clipsta sid="clipsta" type="float">0.04999995</clipsta>
+          <clipend sid="clipend" type="float">30.002</clipend>
+          <bias sid="bias" type="float">1</bias>
+          <bufsize sid="bufsize" type="int">2880</bufsize>
+          <samp sid="samp" type="int">3</samp>
+          <buffers sid="buffers" type="int">1</buffers>
+          <radius sid="radius" type="float">0.1</radius>
+          <area_shape sid="area_shape" type="int">1</area_shape>
+          <area_size sid="area_size" type="float">0.1</area_size>
+          <area_sizey sid="area_sizey" type="float">0.1</area_sizey>
+          <area_sizez sid="area_sizez" type="float">1</area_sizez>
+        </technique>
+      </extra>
+    </light>
+    <light id="Light_007-light" name="Light.007">
+      <technique_common>
+        <point>
+          <color sid="color">1000 1000 1000</color>
+          <constant_attenuation>1</constant_attenuation>
+          <linear_attenuation>0</linear_attenuation>
+          <quadratic_attenuation>0.00111109</quadratic_attenuation>
+        </point>
+      </technique_common>
+      <extra>
+        <technique profile="blender">
+          <type sid="type" type="int">0</type>
+          <flag sid="flag" type="int">0</flag>
+          <mode sid="mode" type="int">1</mode>
+          <gamma sid="blender_gamma" type="float">1</gamma>
+          <red sid="red" type="float">1</red>
+          <green sid="green" type="float">1</green>
+          <blue sid="blue" type="float">1</blue>
+          <shadow_r sid="blender_shadow_r" type="float">0</shadow_r>
+          <shadow_g sid="blender_shadow_g" type="float">0</shadow_g>
+          <shadow_b sid="blender_shadow_b" type="float">0</shadow_b>
+          <energy sid="blender_energy" type="float">1000</energy>
+          <dist sid="blender_dist" type="float">29.99998</dist>
+          <spotsize sid="spotsize" type="float">75</spotsize>
+          <spotblend sid="spotblend" type="float">0.15</spotblend>
+          <att1 sid="att1" type="float">0</att1>
+          <att2 sid="att2" type="float">1</att2>
+          <falloff_type sid="falloff_type" type="int">2</falloff_type>
+          <clipsta sid="clipsta" type="float">0.04999995</clipsta>
+          <clipend sid="clipend" type="float">30.002</clipend>
+          <bias sid="bias" type="float">1</bias>
+          <bufsize sid="bufsize" type="int">2880</bufsize>
+          <samp sid="samp" type="int">3</samp>
+          <buffers sid="buffers" type="int">1</buffers>
+          <radius sid="radius" type="float">0.1</radius>
+          <area_shape sid="area_shape" type="int">1</area_shape>
+          <area_size sid="area_size" type="float">0.1</area_size>
+          <area_sizey sid="area_sizey" type="float">0.1</area_sizey>
+          <area_sizez sid="area_sizez" type="float">1</area_sizez>
+        </technique>
+      </extra>
+    </light>
+    <light id="Light_009-light" name="Light.009">
+      <technique_common>
+        <point>
+          <color sid="color">1000 1000 1000</color>
+          <constant_attenuation>1</constant_attenuation>
+          <linear_attenuation>0</linear_attenuation>
+          <quadratic_attenuation>0.00111109</quadratic_attenuation>
+        </point>
+      </technique_common>
+      <extra>
+        <technique profile="blender">
+          <type sid="type" type="int">0</type>
+          <flag sid="flag" type="int">0</flag>
+          <mode sid="mode" type="int">1</mode>
+          <gamma sid="blender_gamma" type="float">1</gamma>
+          <red sid="red" type="float">1</red>
+          <green sid="green" type="float">1</green>
+          <blue sid="blue" type="float">1</blue>
+          <shadow_r sid="blender_shadow_r" type="float">0</shadow_r>
+          <shadow_g sid="blender_shadow_g" type="float">0</shadow_g>
+          <shadow_b sid="blender_shadow_b" type="float">0</shadow_b>
+          <energy sid="blender_energy" type="float">1000</energy>
+          <dist sid="blender_dist" type="float">29.99998</dist>
+          <spotsize sid="spotsize" type="float">75</spotsize>
+          <spotblend sid="spotblend" type="float">0.15</spotblend>
+          <att1 sid="att1" type="float">0</att1>
+          <att2 sid="att2" type="float">1</att2>
+          <falloff_type sid="falloff_type" type="int">2</falloff_type>
+          <clipsta sid="clipsta" type="float">0.04999995</clipsta>
+          <clipend sid="clipend" type="float">30.002</clipend>
+          <bias sid="bias" type="float">1</bias>
+          <bufsize sid="bufsize" type="int">2880</bufsize>
+          <samp sid="samp" type="int">3</samp>
+          <buffers sid="buffers" type="int">1</buffers>
+          <radius sid="radius" type="float">0.1</radius>
+          <area_shape sid="area_shape" type="int">1</area_shape>
+          <area_size sid="area_size" type="float">0.1</area_size>
+          <area_sizey sid="area_sizey" type="float">0.1</area_sizey>
+          <area_sizez sid="area_sizez" type="float">1</area_sizez>
+        </technique>
+      </extra>
+    </light>
+    <light id="Light_011-light" name="Light.011">
+      <technique_common>
+        <point>
+          <color sid="color">1000 1000 1000</color>
+          <constant_attenuation>1</constant_attenuation>
+          <linear_attenuation>0</linear_attenuation>
+          <quadratic_attenuation>0.00111109</quadratic_attenuation>
+        </point>
+      </technique_common>
+      <extra>
+        <technique profile="blender">
+          <type sid="type" type="int">0</type>
+          <flag sid="flag" type="int">0</flag>
+          <mode sid="mode" type="int">1</mode>
+          <gamma sid="blender_gamma" type="float">1</gamma>
+          <red sid="red" type="float">1</red>
+          <green sid="green" type="float">1</green>
+          <blue sid="blue" type="float">1</blue>
+          <shadow_r sid="blender_shadow_r" type="float">0</shadow_r>
+          <shadow_g sid="blender_shadow_g" type="float">0</shadow_g>
+          <shadow_b sid="blender_shadow_b" type="float">0</shadow_b>
+          <energy sid="blender_energy" type="float">1000</energy>
+          <dist sid="blender_dist" type="float">29.99998</dist>
+          <spotsize sid="spotsize" type="float">75</spotsize>
+          <spotblend sid="spotblend" type="float">0.15</spotblend>
+          <att1 sid="att1" type="float">0</att1>
+          <att2 sid="att2" type="float">1</att2>
+          <falloff_type sid="falloff_type" type="int">2</falloff_type>
+          <clipsta sid="clipsta" type="float">0.04999995</clipsta>
+          <clipend sid="clipend" type="float">30.002</clipend>
+          <bias sid="bias" type="float">1</bias>
+          <bufsize sid="bufsize" type="int">2880</bufsize>
+          <samp sid="samp" type="int">3</samp>
+          <buffers sid="buffers" type="int">1</buffers>
+          <radius sid="radius" type="float">0.1</radius>
+          <area_shape sid="area_shape" type="int">1</area_shape>
+          <area_size sid="area_size" type="float">0.1</area_size>
+          <area_sizey sid="area_sizey" type="float">0.1</area_sizey>
+          <area_sizez sid="area_sizez" type="float">1</area_sizez>
+        </technique>
+      </extra>
+    </light>
+    <light id="Light-light" name="Light">
+      <technique_common>
+        <point>
+          <color sid="color">1000 1000 1000</color>
+          <constant_attenuation>1</constant_attenuation>
+          <linear_attenuation>0</linear_attenuation>
+          <quadratic_attenuation>0.00111109</quadratic_attenuation>
+        </point>
+      </technique_common>
+      <extra>
+        <technique profile="blender">
+          <type sid="type" type="int">0</type>
+          <flag sid="flag" type="int">0</flag>
+          <mode sid="mode" type="int">1</mode>
+          <gamma sid="blender_gamma" type="float">1</gamma>
+          <red sid="red" type="float">1</red>
+          <green sid="green" type="float">1</green>
+          <blue sid="blue" type="float">1</blue>
+          <shadow_r sid="blender_shadow_r" type="float">0</shadow_r>
+          <shadow_g sid="blender_shadow_g" type="float">0</shadow_g>
+          <shadow_b sid="blender_shadow_b" type="float">0</shadow_b>
+          <energy sid="blender_energy" type="float">1000</energy>
+          <dist sid="blender_dist" type="float">29.99998</dist>
+          <spotsize sid="spotsize" type="float">75</spotsize>
+          <spotblend sid="spotblend" type="float">0.15</spotblend>
+          <att1 sid="att1" type="float">0</att1>
+          <att2 sid="att2" type="float">1</att2>
+          <falloff_type sid="falloff_type" type="int">2</falloff_type>
+          <clipsta sid="clipsta" type="float">0.04999995</clipsta>
+          <clipend sid="clipend" type="float">30.002</clipend>
+          <bias sid="bias" type="float">1</bias>
+          <bufsize sid="bufsize" type="int">2880</bufsize>
+          <samp sid="samp" type="int">3</samp>
+          <buffers sid="buffers" type="int">1</buffers>
+          <radius sid="radius" type="float">0.1</radius>
+          <area_shape sid="area_shape" type="int">1</area_shape>
+          <area_size sid="area_size" type="float">0.1</area_size>
+          <area_sizey sid="area_sizey" type="float">0.1</area_sizey>
+          <area_sizez sid="area_sizez" type="float">1</area_sizez>
+        </technique>
+      </extra>
+    </light>
+  </library_lights>
+  <library_images/>
+  <library_geometries>
+    <geometry id="立方体_003-mesh" name="立方体.003">
+      <mesh>
+        <source id="立方体_003-mesh-positions">
+          <float_array id="立方体_003-mesh-positions-array" count="24">0.01052016 0.06460928 -0.02884835 -0.09231334 -0.009519875 -0.05508399 0.007975161 0.06666642 -0.02468341 -0.09485888 -0.00746268 -0.05091923 0.09485888 0.00746268 0.05091923 -0.007975161 -0.06666642 0.02468341 0.09231334 0.009519875 0.05508399 -0.01052016 -0.06460928 0.02884835</float_array>
+          <technique_common>
+            <accessor source="#立方体_003-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_003-mesh-normals">
+          <float_array id="立方体_003-mesh-normals-array" count="36">-0.3715617 0.7220038 -0.5836544 -0.4805482 0.3883415 0.7862979 0.3715299 -0.7219784 0.583706 0.4805471 -0.3883417 -0.7862985 0.5867215 0.8087534 -0.04093885 -0.5867202 -0.8087543 0.04094004 -0.3715282 0.7219799 -0.5837053 -0.4805471 0.3883417 0.7862985 0.3715596 -0.7220053 0.5836539 0.4805482 -0.3883415 -0.7862979 0.5866963 0.8087736 -0.04090148 -0.5866975 -0.8087727 0.04090029</float_array>
+          <technique_common>
+            <accessor source="#立方体_003-mesh-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_003-mesh-map-0">
+          <float_array id="立方体_003-mesh-map-0-array" count="72">0.625 0 0.375 0.25 0.375 0 0.375 0.25 0.625 0.5 0.375 0.5 0.625 0.5 0.375 0.75 0.375 0.5 0.625 0.75 0.375 1 0.375 0.75 0.375 0.5 0.125 0.75 0.125 0.5 0.8750001 0.5 0.625 0.75 0.625 0.5 0.625 0 0.625 0.25 0.375 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.625 0.5 0.625 0.75 0.375 0.75 0.625 0.75 0.625 1 0.375 1 0.375 0.5 0.375 0.75 0.125 0.75 0.8750001 0.5 0.8750001 0.75 0.625 0.75</float_array>
+          <technique_common>
+            <accessor source="#立方体_003-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="立方体_003-mesh-vertices">
+          <input semantic="POSITION" source="#立方体_003-mesh-positions"/>
+        </vertices>
+        <triangles count="12">
+          <input semantic="VERTEX" source="#立方体_003-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#立方体_003-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#立方体_003-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 2 1 3 7 1 4 6 1 5 7 2 6 4 2 7 6 2 8 5 3 9 0 3 10 4 3 11 6 4 12 0 4 13 2 4 14 3 5 15 5 5 16 7 5 17 1 6 18 3 6 19 2 6 20 2 7 21 3 7 22 7 7 23 7 8 24 5 8 25 4 8 26 5 9 27 1 9 28 0 9 29 6 10 30 4 10 31 0 10 32 3 11 33 1 11 34 5 11 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="円柱_008-mesh" name="円柱.008">
+      <mesh>
+        <source id="円柱_008-mesh-positions">
+          <float_array id="円柱_008-mesh-positions-array" count="96">-0.1109008 -0.07091355 -0.04825443 0.101127 0.08089506 0.05371755 -0.1104 -0.06982088 -0.05092287 0.1016278 0.08198773 0.05104947 -0.1092314 -0.06965434 -0.05360049 0.1027964 0.08215427 0.04837173 -0.107573 -0.07043927 -0.05588001 0.1044548 0.08136934 0.04609203 -0.1056773 -0.07205623 -0.05741477 0.1063506 0.07975238 0.04455739 -0.1038327 -0.07425898 -0.05797082 0.1081951 0.07754957 0.04400146 -0.1023203 -0.07671225 -0.05746299 0.1097075 0.0750963 0.04450893 -0.1013701 -0.07904255 -0.05596983 0.1106576 0.07276606 0.04600203 -0.101127 -0.08089506 -0.05371755 0.1109008 0.07091355 0.04825443 -0.1016278 -0.08198773 -0.05104947 0.1104 0.06982088 0.05092287 -0.1027964 -0.08215427 -0.04837173 0.1092314 0.06965434 0.05360049 -0.1044548 -0.08136934 -0.04609203 0.107573 0.07043927 0.05588001 -0.1063506 -0.07975238 -0.04455739 0.1056773 0.07205623 0.05741477 -0.1081951 -0.07754957 -0.04400146 0.1038327 0.07425898 0.05797082 -0.1097075 -0.0750963 -0.04450893 0.1023203 0.07671225 0.05746299 -0.1106576 -0.07276606 -0.04600203 0.1013701 0.07904255 0.05596983</float_array>
+          <technique_common>
+            <accessor source="#円柱_008-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="円柱_008-mesh-normals">
+          <float_array id="円柱_008-mesh-normals-array" count="180">-0.630308 0.7527511 0.1899415 -0.516833 0.8383376 -0.1734183 -0.3246652 0.7962949 -0.5103988 -0.08311778 0.6330592 -0.7696282 0.1711102 0.3734409 -0.9117364 0.3993923 0.05680972 -0.9150183 0.5666769 -0.2681414 -0.7790877 0.6478276 -0.5525564 -0.5244053 0.630312 -0.7527422 -0.1899632 0.5168351 -0.8383373 0.1734138 0.3246837 -0.7963041 0.5103728 0.08309417 -0.6330398 0.7696468 -0.1711422 -0.373404 0.9117455 -0.3993346 -0.05690342 0.9150378 0.7572449 0.5421717 0.3641842 -0.5666794 0.2681477 0.7790838 -0.6478276 0.5525573 0.5244044 -0.7572539 -0.542156 -0.364189 -0.6303122 0.7527422 0.1899631 -0.516835 0.8383372 -0.1734139 -0.3246837 0.7963041 -0.5103728 -0.08309417 0.6330398 -0.7696468 0.1711422 0.373404 -0.9117455 0.3993337 0.05690294 -0.9150381 0.5666794 -0.2681477 -0.7790838 0.6478278 -0.5525572 -0.5244042 0.6303083 -0.7527509 -0.1899414 0.516833 -0.8383376 0.1734183 0.3246652 -0.7962949 0.5103988 0.08311778 -0.6330592 0.7696282 -0.1711102 -0.3734409 0.9117364 -0.3993914 -0.05680918 0.9150187 0.7572565 0.5421503 0.3641921 0.7572807 0.5421359 0.3641629 0.7572748 0.5421396 0.3641698 0.7572508 0.5422002 0.3641297 0.7572683 0.5420711 0.3642854 0.7572191 0.5421983 0.3641983 0.7573218 0.5421107 0.3641151 0.7573867 0.5420667 0.3640458 0.7572439 0.5421675 0.3641926 0.7572478 0.5421547 0.3642036 0.7572342 0.5421839 0.3641882 0.7572218 0.5421888 0.3642067 0.7572464 0.5421708 0.3641824 -0.5666769 0.2681414 0.7790877 -0.6478277 0.5525564 0.5244052 -0.7572804 -0.5421656 -0.3641193 -0.7571889 -0.5422481 -0.3641869 -0.7572045 -0.5422341 -0.3641751 -0.7572609 -0.5421804 -0.3641381 -0.757235 -0.5421758 -0.3641987 -0.7571491 -0.5421931 -0.3643516 -0.7572769 -0.5421403 -0.3641644 -0.7572436 -0.5421722 -0.3641862 -0.7572368 -0.5421806 -0.3641879 -0.7572411 -0.54216 -0.3642093 -0.7572423 -0.5421637 -0.3642013 -0.7572336 -0.5421402 -0.3642546 -0.7572508 -0.5421687 -0.3641762</float_array>
+          <technique_common>
+            <accessor source="#円柱_008-mesh-normals-array" count="60" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="円柱_008-mesh-vertices">
+          <input semantic="POSITION" source="#円柱_008-mesh-positions"/>
+        </vertices>
+        <triangles count="60">
+          <input semantic="VERTEX" source="#円柱_008-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#円柱_008-mesh-normals" offset="1"/>
+          <p>1 0 2 0 0 0 3 1 4 1 2 1 4 2 7 2 6 2 7 3 8 3 6 3 9 4 10 4 8 4 11 5 12 5 10 5 12 6 15 6 14 6 15 7 16 7 14 7 17 8 18 8 16 8 19 9 20 9 18 9 21 10 22 10 20 10 22 11 25 11 24 11 24 12 27 12 26 12 27 13 28 13 26 13 21 14 13 14 5 14 29 15 30 15 28 15 31 16 0 16 30 16 14 17 22 17 30 17 1 18 3 18 2 18 3 19 5 19 4 19 4 20 5 20 7 20 7 21 9 21 8 21 9 22 11 22 10 22 11 23 13 23 12 23 12 24 13 24 15 24 15 25 17 25 16 25 17 26 19 26 18 26 19 27 21 27 20 27 21 28 23 28 22 28 22 29 23 29 25 29 24 30 25 30 27 30 27 31 29 31 28 31 5 32 3 32 29 32 3 33 1 33 29 33 1 34 31 34 29 34 29 35 27 35 25 35 25 36 23 36 21 36 21 37 19 37 13 37 19 38 17 38 13 38 17 39 15 39 13 39 13 40 11 40 5 40 11 41 9 41 5 41 9 42 7 42 5 42 29 43 25 43 5 43 25 44 21 44 5 44 29 45 31 45 30 45 31 46 1 46 0 46 30 47 0 47 2 47 2 48 4 48 30 48 4 49 6 49 30 49 6 50 8 50 14 50 8 51 10 51 14 51 10 52 12 52 14 52 14 53 16 53 18 53 18 54 20 54 14 54 20 55 22 55 14 55 22 56 24 56 26 56 26 57 28 57 22 57 28 58 30 58 22 58 30 59 6 59 14 59</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="円柱_010-mesh" name="円柱.010">
+      <mesh>
+        <source id="円柱_010-mesh-positions">
+          <float_array id="円柱_010-mesh-positions-array" count="96">-0.07191789 0.02422595 -0.02640354 0.07303881 -0.01030153 0.03186637 -0.07076466 0.02456516 -0.02907145 0.07419204 -0.009962618 0.02919811 -0.06987231 0.02379262 -0.03174901 0.07508438 -0.01073527 0.02652049 -0.0693767 0.022026 -0.03402853 0.07558 -0.01250118 0.02424079 -0.06935328 0.01953423 -0.03556329 0.07560342 -0.01499325 0.02270621 -0.06980562 0.01669687 -0.03611958 0.07515108 -0.01783061 0.02214998 -0.07066488 0.01394546 -0.03561151 0.07429182 -0.02058166 0.02265775 -0.07180023 0.01170039 -0.03411859 0.07315647 -0.0228275 0.02415126 -0.07303881 0.01030153 -0.03186637 0.07191789 -0.02422595 0.02640354 -0.07419204 0.009962618 -0.02919811 0.07076466 -0.02456516 0.02907145 -0.07508438 0.01073527 -0.02652049 0.06987231 -0.02379262 0.03174901 -0.07558 0.01250118 -0.02424079 0.0693767 -0.022026 0.03402853 -0.07560342 0.01499325 -0.02270621 0.06935328 -0.01953423 0.03556329 -0.07515108 0.01783061 -0.02214998 0.06980562 -0.01669687 0.03611958 -0.07429182 0.02058166 -0.02265775 0.07066488 -0.01394546 0.03561151 -0.07315647 0.0228275 -0.02415126 0.07180023 -0.01170039 0.03411859</float_array>
+          <technique_common>
+            <accessor source="#円柱_010-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="円柱_010-mesh-normals">
+          <float_array id="円柱_010-mesh-normals-array" count="180">0.1545327 0.9695326 0.1900691 0.2936137 0.9400694 -0.1733798 0.3879692 0.7674384 -0.51041 0.4232417 0.4780273 -0.769647 0.3941061 0.1159225 -0.9117251 0.3048905 -0.2641814 -0.9150136 0.1693605 -0.6036828 -0.7790278 0.008002758 -0.8514223 -0.5244199 -0.1545785 -0.969547 -0.1899579 -0.2936244 -0.9400604 0.1734105 -0.3879358 -0.7675697 0.5102379 -0.4232425 -0.4779451 0.7696976 -0.3941029 -0.1159046 0.9117286 -0.3049076 0.2641235 0.9150248 0.9059758 -0.2157788 0.3642079 -0.1693612 0.6036812 0.7790288 -0.007947564 0.8514846 0.5243194 -0.905988 0.2157877 -0.3641725 0.1545785 0.969547 0.1899579 0.2936244 0.9400604 -0.1734105 0.3879358 0.7675697 -0.5102379 0.4232442 0.4779449 -0.7696968 0.3941029 0.1159046 -0.9117286 0.3049076 -0.2641235 -0.9150248 0.1693612 -0.6036812 -0.7790288 0.007949769 -0.851485 -0.5243187 -0.1545327 -0.9695326 -0.1900691 -0.2936137 -0.9400694 0.1733798 -0.3879692 -0.7674384 0.51041 -0.4232434 -0.478027 0.7696462 -0.3941061 -0.1159225 0.9117251 -0.3048905 0.2641814 0.9150136 0.9059613 -0.2158462 0.3642041 0.9059633 -0.2159653 0.3641285 0.905982 -0.2160913 0.3640073 0.9061179 -0.2157911 0.3638467 0.9059489 -0.2158377 0.3642401 0.905974 -0.2158012 0.3641991 0.9059737 -0.215848 0.3641722 0.9059665 -0.2157815 0.3642296 0.9060462 -0.2158051 0.364017 0.9059569 -0.2157874 0.3642499 0.9060153 -0.2157733 0.3641128 0.9059938 -0.2157661 0.3641709 0.9059644 -0.2158067 0.3642196 -0.1693605 0.6036828 0.7790278 -0.008004963 0.8514227 0.5244191 -0.9059667 0.2158913 -0.3641638 -0.9059895 0.2157571 -0.3641867 -0.9059395 0.2158464 -0.3642583 -0.9060702 0.2157494 -0.3639906 -0.905894 0.2158007 -0.3643985 -0.9059776 0.2158787 -0.3641444 -0.9059345 0.215931 -0.3642203 -0.9059607 0.2157832 -0.3642427 -0.9060019 0.2158206 -0.3641182 -0.9059512 0.2157182 -0.3643051 -0.9059737 0.2158093 -0.3641951 -0.9059644 0.2158162 -0.364214 -0.9059818 0.2158136 -0.3641723</float_array>
+          <technique_common>
+            <accessor source="#円柱_010-mesh-normals-array" count="60" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="円柱_010-mesh-vertices">
+          <input semantic="POSITION" source="#円柱_010-mesh-positions"/>
+        </vertices>
+        <triangles count="60">
+          <input semantic="VERTEX" source="#円柱_010-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#円柱_010-mesh-normals" offset="1"/>
+          <p>0 0 3 0 2 0 3 1 4 1 2 1 4 2 7 2 6 2 7 3 8 3 6 3 8 4 11 4 10 4 11 5 12 5 10 5 12 6 15 6 14 6 15 7 16 7 14 7 17 8 18 8 16 8 18 9 21 9 20 9 21 10 22 10 20 10 23 11 24 11 22 11 25 12 26 12 24 12 26 13 29 13 28 13 29 14 21 14 13 14 29 15 30 15 28 15 31 16 0 16 30 16 14 17 22 17 30 17 0 18 1 18 3 18 3 19 5 19 4 19 4 20 5 20 7 20 7 21 9 21 8 21 8 22 9 22 11 22 11 23 13 23 12 23 12 24 13 24 15 24 15 25 17 25 16 25 17 26 19 26 18 26 18 27 19 27 21 27 21 28 23 28 22 28 23 29 25 29 24 29 25 30 27 30 26 30 26 31 27 31 29 31 5 32 3 32 29 32 3 33 1 33 29 33 1 34 31 34 29 34 29 35 27 35 25 35 25 36 23 36 21 36 21 37 19 37 13 37 19 38 17 38 13 38 17 39 15 39 13 39 13 40 11 40 9 40 9 41 7 41 13 41 7 42 5 42 13 42 29 43 25 43 21 43 5 44 29 44 13 44 29 45 31 45 30 45 31 46 1 46 0 46 30 47 0 47 2 47 2 48 4 48 6 48 6 49 8 49 10 49 10 50 12 50 6 50 12 51 14 51 6 51 14 52 16 52 18 52 18 53 20 53 22 53 22 54 24 54 30 54 24 55 26 55 30 55 26 56 28 56 30 56 30 57 2 57 14 57 2 58 6 58 14 58 14 59 18 59 22 59</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="円柱_009-mesh" name="円柱.009">
+      <mesh>
+        <source id="円柱_009-mesh-positions">
+          <float_array id="円柱_009-mesh-positions-array" count="96">-0.1109008 -0.07091355 -0.04825443 0.101127 0.08089506 0.05371755 -0.1104 -0.06982088 -0.05092287 0.1016278 0.08198773 0.05104947 -0.1092314 -0.06965434 -0.05360049 0.1027964 0.08215427 0.04837173 -0.107573 -0.07043927 -0.05588001 0.1044548 0.08136934 0.04609203 -0.1056773 -0.07205623 -0.05741477 0.1063506 0.07975238 0.04455739 -0.1038327 -0.07425898 -0.05797082 0.1081951 0.07754957 0.04400146 -0.1023203 -0.07671225 -0.05746299 0.1097075 0.0750963 0.04450893 -0.1013701 -0.07904255 -0.05596983 0.1106576 0.07276606 0.04600203 -0.101127 -0.08089506 -0.05371755 0.1109008 0.07091355 0.04825443 -0.1016278 -0.08198773 -0.05104947 0.1104 0.06982088 0.05092287 -0.1027964 -0.08215427 -0.04837173 0.1092314 0.06965434 0.05360049 -0.1044548 -0.08136934 -0.04609203 0.107573 0.07043927 0.05588001 -0.1063506 -0.07975238 -0.04455739 0.1056773 0.07205623 0.05741477 -0.1081951 -0.07754957 -0.04400146 0.1038327 0.07425898 0.05797082 -0.1097075 -0.0750963 -0.04450893 0.1023203 0.07671225 0.05746299 -0.1106576 -0.07276606 -0.04600203 0.1013701 0.07904255 0.05596983</float_array>
+          <technique_common>
+            <accessor source="#円柱_009-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="円柱_009-mesh-normals">
+          <float_array id="円柱_009-mesh-normals-array" count="180">-0.630308 0.7527511 0.1899415 -0.516833 0.8383376 -0.1734183 -0.3246652 0.7962949 -0.5103988 -0.08311778 0.6330592 -0.7696282 0.1711102 0.3734409 -0.9117364 0.3993923 0.05680972 -0.9150183 0.5666769 -0.2681414 -0.7790877 0.6478276 -0.5525564 -0.5244053 0.630312 -0.7527422 -0.1899632 0.5168351 -0.8383373 0.1734138 0.3246837 -0.7963041 0.5103728 0.08309417 -0.6330398 0.7696468 -0.1711422 -0.373404 0.9117455 -0.3993346 -0.05690342 0.9150378 0.7572449 0.5421717 0.3641842 -0.5666794 0.2681477 0.7790838 -0.6478276 0.5525573 0.5244044 -0.7572539 -0.542156 -0.364189 -0.6303122 0.7527422 0.1899631 -0.516835 0.8383372 -0.1734139 -0.3246837 0.7963041 -0.5103728 -0.08309417 0.6330398 -0.7696468 0.1711422 0.373404 -0.9117455 0.3993337 0.05690294 -0.9150381 0.5666794 -0.2681477 -0.7790838 0.6478278 -0.5525572 -0.5244042 0.6303083 -0.7527509 -0.1899414 0.516833 -0.8383376 0.1734183 0.3246652 -0.7962949 0.5103988 0.08311778 -0.6330592 0.7696282 -0.1711102 -0.3734409 0.9117364 -0.3993914 -0.05680918 0.9150187 0.7572565 0.5421503 0.3641921 0.7572807 0.5421359 0.3641629 0.7572748 0.5421396 0.3641698 0.7572508 0.5422002 0.3641297 0.7572683 0.5420711 0.3642854 0.7572191 0.5421983 0.3641983 0.7573218 0.5421107 0.3641151 0.7573867 0.5420667 0.3640458 0.7572439 0.5421675 0.3641926 0.7572478 0.5421547 0.3642036 0.7572342 0.5421839 0.3641882 0.7572218 0.5421888 0.3642067 0.7572464 0.5421708 0.3641824 -0.5666769 0.2681414 0.7790877 -0.6478277 0.5525564 0.5244052 -0.7572804 -0.5421656 -0.3641193 -0.7571889 -0.5422481 -0.3641869 -0.7572045 -0.5422341 -0.3641751 -0.7572609 -0.5421804 -0.3641381 -0.757235 -0.5421758 -0.3641987 -0.7571491 -0.5421931 -0.3643516 -0.7572769 -0.5421403 -0.3641644 -0.7572436 -0.5421722 -0.3641862 -0.7572368 -0.5421806 -0.3641879 -0.7572411 -0.54216 -0.3642093 -0.7572423 -0.5421637 -0.3642013 -0.7572336 -0.5421402 -0.3642546 -0.7572508 -0.5421687 -0.3641762</float_array>
+          <technique_common>
+            <accessor source="#円柱_009-mesh-normals-array" count="60" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="円柱_009-mesh-vertices">
+          <input semantic="POSITION" source="#円柱_009-mesh-positions"/>
+        </vertices>
+        <triangles count="60">
+          <input semantic="VERTEX" source="#円柱_009-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#円柱_009-mesh-normals" offset="1"/>
+          <p>1 0 2 0 0 0 3 1 4 1 2 1 4 2 7 2 6 2 7 3 8 3 6 3 9 4 10 4 8 4 11 5 12 5 10 5 12 6 15 6 14 6 15 7 16 7 14 7 17 8 18 8 16 8 19 9 20 9 18 9 21 10 22 10 20 10 22 11 25 11 24 11 24 12 27 12 26 12 27 13 28 13 26 13 21 14 13 14 5 14 29 15 30 15 28 15 31 16 0 16 30 16 14 17 22 17 30 17 1 18 3 18 2 18 3 19 5 19 4 19 4 20 5 20 7 20 7 21 9 21 8 21 9 22 11 22 10 22 11 23 13 23 12 23 12 24 13 24 15 24 15 25 17 25 16 25 17 26 19 26 18 26 19 27 21 27 20 27 21 28 23 28 22 28 22 29 23 29 25 29 24 30 25 30 27 30 27 31 29 31 28 31 5 32 3 32 29 32 3 33 1 33 29 33 1 34 31 34 29 34 29 35 27 35 25 35 25 36 23 36 21 36 21 37 19 37 13 37 19 38 17 38 13 38 17 39 15 39 13 39 13 40 11 40 5 40 11 41 9 41 5 41 9 42 7 42 5 42 29 43 25 43 5 43 25 44 21 44 5 44 29 45 31 45 30 45 31 46 1 46 0 46 30 47 0 47 2 47 2 48 4 48 30 48 4 49 6 49 30 49 6 50 8 50 14 50 8 51 10 51 14 51 10 52 12 52 14 52 14 53 16 53 18 53 18 54 20 54 14 54 20 55 22 55 14 55 22 56 24 56 26 56 26 57 28 57 22 57 28 58 30 58 22 58 30 59 6 59 14 59</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="円柱_006-mesh" name="円柱.006">
+      <mesh>
+        <source id="円柱_006-mesh-positions">
+          <float_array id="円柱_006-mesh-positions-array" count="96">-0.07191789 0.02422595 -0.02640354 0.07303881 -0.01030153 0.03186637 -0.07076466 0.02456516 -0.02907145 0.07419204 -0.009962618 0.02919811 -0.06987231 0.02379262 -0.03174901 0.07508438 -0.01073527 0.02652049 -0.0693767 0.022026 -0.03402853 0.07558 -0.01250118 0.02424079 -0.06935328 0.01953423 -0.03556329 0.07560342 -0.01499325 0.02270621 -0.06980562 0.01669687 -0.03611958 0.07515108 -0.01783061 0.02214998 -0.07066488 0.01394546 -0.03561151 0.07429182 -0.02058166 0.02265775 -0.07180023 0.01170039 -0.03411859 0.07315647 -0.0228275 0.02415126 -0.07303881 0.01030153 -0.03186637 0.07191789 -0.02422595 0.02640354 -0.07419204 0.009962618 -0.02919811 0.07076466 -0.02456516 0.02907145 -0.07508438 0.01073527 -0.02652049 0.06987231 -0.02379262 0.03174901 -0.07558 0.01250118 -0.02424079 0.0693767 -0.022026 0.03402853 -0.07560342 0.01499325 -0.02270621 0.06935328 -0.01953423 0.03556329 -0.07515108 0.01783061 -0.02214998 0.06980562 -0.01669687 0.03611958 -0.07429182 0.02058166 -0.02265775 0.07066488 -0.01394546 0.03561151 -0.07315647 0.0228275 -0.02415126 0.07180023 -0.01170039 0.03411859</float_array>
+          <technique_common>
+            <accessor source="#円柱_006-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="円柱_006-mesh-normals">
+          <float_array id="円柱_006-mesh-normals-array" count="180">0.1545327 0.9695326 0.1900691 0.2936137 0.9400694 -0.1733798 0.3879692 0.7674384 -0.51041 0.4232417 0.4780273 -0.769647 0.3941061 0.1159225 -0.9117251 0.3048905 -0.2641814 -0.9150136 0.1693605 -0.6036828 -0.7790278 0.008002758 -0.8514223 -0.5244199 -0.1545785 -0.969547 -0.1899579 -0.2936244 -0.9400604 0.1734105 -0.3879358 -0.7675697 0.5102379 -0.4232425 -0.4779451 0.7696976 -0.3941029 -0.1159046 0.9117286 -0.3049076 0.2641235 0.9150248 0.9059758 -0.2157788 0.3642079 -0.1693612 0.6036812 0.7790288 -0.007947564 0.8514846 0.5243194 -0.905988 0.2157877 -0.3641725 0.1545785 0.969547 0.1899579 0.2936244 0.9400604 -0.1734105 0.3879358 0.7675697 -0.5102379 0.4232442 0.4779449 -0.7696968 0.3941029 0.1159046 -0.9117286 0.3049076 -0.2641235 -0.9150248 0.1693612 -0.6036812 -0.7790288 0.007949769 -0.851485 -0.5243187 -0.1545327 -0.9695326 -0.1900691 -0.2936137 -0.9400694 0.1733798 -0.3879692 -0.7674384 0.51041 -0.4232434 -0.478027 0.7696462 -0.3941061 -0.1159225 0.9117251 -0.3048905 0.2641814 0.9150136 0.9059613 -0.2158462 0.3642041 0.9059633 -0.2159653 0.3641285 0.905982 -0.2160913 0.3640073 0.9061179 -0.2157911 0.3638467 0.9059489 -0.2158377 0.3642401 0.905974 -0.2158012 0.3641991 0.9059737 -0.215848 0.3641722 0.9059665 -0.2157815 0.3642296 0.9060462 -0.2158051 0.364017 0.9059569 -0.2157874 0.3642499 0.9060153 -0.2157733 0.3641128 0.9059938 -0.2157661 0.3641709 0.9059644 -0.2158067 0.3642196 -0.1693605 0.6036828 0.7790278 -0.008004963 0.8514227 0.5244191 -0.9059667 0.2158913 -0.3641638 -0.9059895 0.2157571 -0.3641867 -0.9059395 0.2158464 -0.3642583 -0.9060702 0.2157494 -0.3639906 -0.905894 0.2158007 -0.3643985 -0.9059776 0.2158787 -0.3641444 -0.9059345 0.215931 -0.3642203 -0.9059607 0.2157832 -0.3642427 -0.9060019 0.2158206 -0.3641182 -0.9059512 0.2157182 -0.3643051 -0.9059737 0.2158093 -0.3641951 -0.9059644 0.2158162 -0.364214 -0.9059818 0.2158136 -0.3641723</float_array>
+          <technique_common>
+            <accessor source="#円柱_006-mesh-normals-array" count="60" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="円柱_006-mesh-vertices">
+          <input semantic="POSITION" source="#円柱_006-mesh-positions"/>
+        </vertices>
+        <triangles count="60">
+          <input semantic="VERTEX" source="#円柱_006-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#円柱_006-mesh-normals" offset="1"/>
+          <p>0 0 3 0 2 0 3 1 4 1 2 1 4 2 7 2 6 2 7 3 8 3 6 3 8 4 11 4 10 4 11 5 12 5 10 5 12 6 15 6 14 6 15 7 16 7 14 7 17 8 18 8 16 8 18 9 21 9 20 9 21 10 22 10 20 10 23 11 24 11 22 11 25 12 26 12 24 12 26 13 29 13 28 13 29 14 21 14 13 14 29 15 30 15 28 15 31 16 0 16 30 16 14 17 22 17 30 17 0 18 1 18 3 18 3 19 5 19 4 19 4 20 5 20 7 20 7 21 9 21 8 21 8 22 9 22 11 22 11 23 13 23 12 23 12 24 13 24 15 24 15 25 17 25 16 25 17 26 19 26 18 26 18 27 19 27 21 27 21 28 23 28 22 28 23 29 25 29 24 29 25 30 27 30 26 30 26 31 27 31 29 31 5 32 3 32 29 32 3 33 1 33 29 33 1 34 31 34 29 34 29 35 27 35 25 35 25 36 23 36 21 36 21 37 19 37 13 37 19 38 17 38 13 38 17 39 15 39 13 39 13 40 11 40 9 40 9 41 7 41 13 41 7 42 5 42 13 42 29 43 25 43 21 43 5 44 29 44 13 44 29 45 31 45 30 45 31 46 1 46 0 46 30 47 0 47 2 47 2 48 4 48 6 48 6 49 8 49 10 49 10 50 12 50 6 50 12 51 14 51 6 51 14 52 16 52 18 52 18 53 20 53 22 53 22 54 24 54 30 54 24 55 26 55 30 55 26 56 28 56 30 56 30 57 2 57 14 57 2 58 6 58 14 58 14 59 18 59 22 59</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="円柱_001-mesh" name="円柱.001">
+      <mesh>
+        <source id="円柱_001-mesh-positions">
+          <float_array id="円柱_001-mesh-positions-array" count="96">-0.1109008 -0.07091355 -0.04825443 0.101127 0.08089506 0.05371755 -0.1104 -0.06982088 -0.05092287 0.1016278 0.08198773 0.05104947 -0.1092314 -0.06965434 -0.05360049 0.1027964 0.08215427 0.04837173 -0.107573 -0.07043927 -0.05588001 0.1044548 0.08136934 0.04609203 -0.1056773 -0.07205623 -0.05741477 0.1063506 0.07975238 0.04455739 -0.1038327 -0.07425898 -0.05797082 0.1081951 0.07754957 0.04400146 -0.1023203 -0.07671225 -0.05746299 0.1097075 0.0750963 0.04450893 -0.1013701 -0.07904255 -0.05596983 0.1106576 0.07276606 0.04600203 -0.101127 -0.08089506 -0.05371755 0.1109008 0.07091355 0.04825443 -0.1016278 -0.08198773 -0.05104947 0.1104 0.06982088 0.05092287 -0.1027964 -0.08215427 -0.04837173 0.1092314 0.06965434 0.05360049 -0.1044548 -0.08136934 -0.04609203 0.107573 0.07043927 0.05588001 -0.1063506 -0.07975238 -0.04455739 0.1056773 0.07205623 0.05741477 -0.1081951 -0.07754957 -0.04400146 0.1038327 0.07425898 0.05797082 -0.1097075 -0.0750963 -0.04450893 0.1023203 0.07671225 0.05746299 -0.1106576 -0.07276606 -0.04600203 0.1013701 0.07904255 0.05596983</float_array>
+          <technique_common>
+            <accessor source="#円柱_001-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="円柱_001-mesh-normals">
+          <float_array id="円柱_001-mesh-normals-array" count="180">-0.630308 0.7527511 0.1899415 -0.516833 0.8383376 -0.1734183 -0.3246652 0.7962949 -0.5103988 -0.08311778 0.6330592 -0.7696282 0.1711102 0.3734409 -0.9117364 0.3993923 0.05680972 -0.9150183 0.5666769 -0.2681414 -0.7790877 0.6478276 -0.5525564 -0.5244053 0.630312 -0.7527422 -0.1899632 0.5168351 -0.8383373 0.1734138 0.3246837 -0.7963041 0.5103728 0.08309417 -0.6330398 0.7696468 -0.1711422 -0.373404 0.9117455 -0.3993346 -0.05690342 0.9150378 0.7572449 0.5421717 0.3641842 -0.5666794 0.2681477 0.7790838 -0.6478276 0.5525573 0.5244044 -0.7572539 -0.542156 -0.364189 -0.6303122 0.7527422 0.1899631 -0.516835 0.8383372 -0.1734139 -0.3246837 0.7963041 -0.5103728 -0.08309417 0.6330398 -0.7696468 0.1711422 0.373404 -0.9117455 0.3993337 0.05690294 -0.9150381 0.5666794 -0.2681477 -0.7790838 0.6478278 -0.5525572 -0.5244042 0.6303083 -0.7527509 -0.1899414 0.516833 -0.8383376 0.1734183 0.3246652 -0.7962949 0.5103988 0.08311778 -0.6330592 0.7696282 -0.1711102 -0.3734409 0.9117364 -0.3993914 -0.05680918 0.9150187 0.7572565 0.5421503 0.3641921 0.7572807 0.5421359 0.3641629 0.7572748 0.5421396 0.3641698 0.7572508 0.5422002 0.3641297 0.7572683 0.5420711 0.3642854 0.7572191 0.5421983 0.3641983 0.7573218 0.5421107 0.3641151 0.7573867 0.5420667 0.3640458 0.7572439 0.5421675 0.3641926 0.7572478 0.5421547 0.3642036 0.7572342 0.5421839 0.3641882 0.7572218 0.5421888 0.3642067 0.7572464 0.5421708 0.3641824 -0.5666769 0.2681414 0.7790877 -0.6478277 0.5525564 0.5244052 -0.7572804 -0.5421656 -0.3641193 -0.7571889 -0.5422481 -0.3641869 -0.7572045 -0.5422341 -0.3641751 -0.7572609 -0.5421804 -0.3641381 -0.757235 -0.5421758 -0.3641987 -0.7571491 -0.5421931 -0.3643516 -0.7572769 -0.5421403 -0.3641644 -0.7572436 -0.5421722 -0.3641862 -0.7572368 -0.5421806 -0.3641879 -0.7572411 -0.54216 -0.3642093 -0.7572423 -0.5421637 -0.3642013 -0.7572336 -0.5421402 -0.3642546 -0.7572508 -0.5421687 -0.3641762</float_array>
+          <technique_common>
+            <accessor source="#円柱_001-mesh-normals-array" count="60" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="円柱_001-mesh-vertices">
+          <input semantic="POSITION" source="#円柱_001-mesh-positions"/>
+        </vertices>
+        <triangles count="60">
+          <input semantic="VERTEX" source="#円柱_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#円柱_001-mesh-normals" offset="1"/>
+          <p>1 0 2 0 0 0 3 1 4 1 2 1 4 2 7 2 6 2 7 3 8 3 6 3 9 4 10 4 8 4 11 5 12 5 10 5 12 6 15 6 14 6 15 7 16 7 14 7 17 8 18 8 16 8 19 9 20 9 18 9 21 10 22 10 20 10 22 11 25 11 24 11 24 12 27 12 26 12 27 13 28 13 26 13 21 14 13 14 5 14 29 15 30 15 28 15 31 16 0 16 30 16 14 17 22 17 30 17 1 18 3 18 2 18 3 19 5 19 4 19 4 20 5 20 7 20 7 21 9 21 8 21 9 22 11 22 10 22 11 23 13 23 12 23 12 24 13 24 15 24 15 25 17 25 16 25 17 26 19 26 18 26 19 27 21 27 20 27 21 28 23 28 22 28 22 29 23 29 25 29 24 30 25 30 27 30 27 31 29 31 28 31 5 32 3 32 29 32 3 33 1 33 29 33 1 34 31 34 29 34 29 35 27 35 25 35 25 36 23 36 21 36 21 37 19 37 13 37 19 38 17 38 13 38 17 39 15 39 13 39 13 40 11 40 5 40 11 41 9 41 5 41 9 42 7 42 5 42 29 43 25 43 5 43 25 44 21 44 5 44 29 45 31 45 30 45 31 46 1 46 0 46 30 47 0 47 2 47 2 48 4 48 30 48 4 49 6 49 30 49 6 50 8 50 14 50 8 51 10 51 14 51 10 52 12 52 14 52 14 53 16 53 18 53 18 54 20 54 14 54 20 55 22 55 14 55 22 56 24 56 26 56 26 57 28 57 22 57 28 58 30 58 22 58 30 59 6 59 14 59</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="円柱_002-mesh" name="円柱.002">
+      <mesh>
+        <source id="円柱_002-mesh-positions">
+          <float_array id="円柱_002-mesh-positions-array" count="96">-0.07191789 0.02422595 -0.02640354 0.07303881 -0.01030153 0.03186637 -0.07076466 0.02456516 -0.02907145 0.07419204 -0.009962618 0.02919811 -0.06987231 0.02379262 -0.03174901 0.07508438 -0.01073527 0.02652049 -0.0693767 0.022026 -0.03402853 0.07558 -0.01250118 0.02424079 -0.06935328 0.01953423 -0.03556329 0.07560342 -0.01499325 0.02270621 -0.06980562 0.01669687 -0.03611958 0.07515108 -0.01783061 0.02214998 -0.07066488 0.01394546 -0.03561151 0.07429182 -0.02058166 0.02265775 -0.07180023 0.01170039 -0.03411859 0.07315647 -0.0228275 0.02415126 -0.07303881 0.01030153 -0.03186637 0.07191789 -0.02422595 0.02640354 -0.07419204 0.009962618 -0.02919811 0.07076466 -0.02456516 0.02907145 -0.07508438 0.01073527 -0.02652049 0.06987231 -0.02379262 0.03174901 -0.07558 0.01250118 -0.02424079 0.0693767 -0.022026 0.03402853 -0.07560342 0.01499325 -0.02270621 0.06935328 -0.01953423 0.03556329 -0.07515108 0.01783061 -0.02214998 0.06980562 -0.01669687 0.03611958 -0.07429182 0.02058166 -0.02265775 0.07066488 -0.01394546 0.03561151 -0.07315647 0.0228275 -0.02415126 0.07180023 -0.01170039 0.03411859</float_array>
+          <technique_common>
+            <accessor source="#円柱_002-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="円柱_002-mesh-normals">
+          <float_array id="円柱_002-mesh-normals-array" count="180">0.1545327 0.9695326 0.1900691 0.2936137 0.9400694 -0.1733798 0.3879692 0.7674384 -0.51041 0.4232417 0.4780273 -0.769647 0.3941061 0.1159225 -0.9117251 0.3048905 -0.2641814 -0.9150136 0.1693605 -0.6036828 -0.7790278 0.008002758 -0.8514223 -0.5244199 -0.1545785 -0.969547 -0.1899579 -0.2936244 -0.9400604 0.1734105 -0.3879358 -0.7675697 0.5102379 -0.4232425 -0.4779451 0.7696976 -0.3941029 -0.1159046 0.9117286 -0.3049076 0.2641235 0.9150248 0.9059758 -0.2157788 0.3642079 -0.1693612 0.6036812 0.7790288 -0.007947564 0.8514846 0.5243194 -0.905988 0.2157877 -0.3641725 0.1545785 0.969547 0.1899579 0.2936244 0.9400604 -0.1734105 0.3879358 0.7675697 -0.5102379 0.4232442 0.4779449 -0.7696968 0.3941029 0.1159046 -0.9117286 0.3049076 -0.2641235 -0.9150248 0.1693612 -0.6036812 -0.7790288 0.007949769 -0.851485 -0.5243187 -0.1545327 -0.9695326 -0.1900691 -0.2936137 -0.9400694 0.1733798 -0.3879692 -0.7674384 0.51041 -0.4232434 -0.478027 0.7696462 -0.3941061 -0.1159225 0.9117251 -0.3048905 0.2641814 0.9150136 0.9059613 -0.2158462 0.3642041 0.9059633 -0.2159653 0.3641285 0.905982 -0.2160913 0.3640073 0.9061179 -0.2157911 0.3638467 0.9059489 -0.2158377 0.3642401 0.905974 -0.2158012 0.3641991 0.9059737 -0.215848 0.3641722 0.9059665 -0.2157815 0.3642296 0.9060462 -0.2158051 0.364017 0.9059569 -0.2157874 0.3642499 0.9060153 -0.2157733 0.3641128 0.9059938 -0.2157661 0.3641709 0.9059644 -0.2158067 0.3642196 -0.1693605 0.6036828 0.7790278 -0.008004963 0.8514227 0.5244191 -0.9059667 0.2158913 -0.3641638 -0.9059895 0.2157571 -0.3641867 -0.9059395 0.2158464 -0.3642583 -0.9060702 0.2157494 -0.3639906 -0.905894 0.2158007 -0.3643985 -0.9059776 0.2158787 -0.3641444 -0.9059345 0.215931 -0.3642203 -0.9059607 0.2157832 -0.3642427 -0.9060019 0.2158206 -0.3641182 -0.9059512 0.2157182 -0.3643051 -0.9059737 0.2158093 -0.3641951 -0.9059644 0.2158162 -0.364214 -0.9059818 0.2158136 -0.3641723</float_array>
+          <technique_common>
+            <accessor source="#円柱_002-mesh-normals-array" count="60" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="円柱_002-mesh-vertices">
+          <input semantic="POSITION" source="#円柱_002-mesh-positions"/>
+        </vertices>
+        <triangles count="60">
+          <input semantic="VERTEX" source="#円柱_002-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#円柱_002-mesh-normals" offset="1"/>
+          <p>0 0 3 0 2 0 3 1 4 1 2 1 4 2 7 2 6 2 7 3 8 3 6 3 8 4 11 4 10 4 11 5 12 5 10 5 12 6 15 6 14 6 15 7 16 7 14 7 17 8 18 8 16 8 18 9 21 9 20 9 21 10 22 10 20 10 23 11 24 11 22 11 25 12 26 12 24 12 26 13 29 13 28 13 29 14 21 14 13 14 29 15 30 15 28 15 31 16 0 16 30 16 14 17 22 17 30 17 0 18 1 18 3 18 3 19 5 19 4 19 4 20 5 20 7 20 7 21 9 21 8 21 8 22 9 22 11 22 11 23 13 23 12 23 12 24 13 24 15 24 15 25 17 25 16 25 17 26 19 26 18 26 18 27 19 27 21 27 21 28 23 28 22 28 23 29 25 29 24 29 25 30 27 30 26 30 26 31 27 31 29 31 5 32 3 32 29 32 3 33 1 33 29 33 1 34 31 34 29 34 29 35 27 35 25 35 25 36 23 36 21 36 21 37 19 37 13 37 19 38 17 38 13 38 17 39 15 39 13 39 13 40 11 40 9 40 9 41 7 41 13 41 7 42 5 42 13 42 29 43 25 43 21 43 5 44 29 44 13 44 29 45 31 45 30 45 31 46 1 46 0 46 30 47 0 47 2 47 2 48 4 48 6 48 6 49 8 49 10 49 10 50 12 50 6 50 12 51 14 51 6 51 14 52 16 52 18 52 18 53 20 53 22 53 22 54 24 54 30 54 24 55 26 55 30 55 26 56 28 56 30 56 30 57 2 57 14 57 2 58 6 58 14 58 14 59 18 59 22 59</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="円柱_004-mesh" name="円柱.004">
+      <mesh>
+        <source id="円柱_004-mesh-positions">
+          <float_array id="円柱_004-mesh-positions-array" count="96">0 0.00999999 -0.6 0 0.00999999 0.6 0.003826797 0.009238779 -0.6 0.003826797 0.009238779 0.6 0.007071018 0.007071018 -0.6 0.007071018 0.007071018 0.6 0.009238779 0.003826797 -0.6 0.009238779 0.003826797 0.6 0.00999999 0 -0.6 0.00999999 0 0.6 0.009238779 -0.003826797 -0.6 0.009238779 -0.003826797 0.6 0.007071018 -0.007071018 -0.6 0.007071018 -0.007071018 0.6 0.003826797 -0.009238779 -0.6 0.003826797 -0.009238779 0.6 0 -0.00999999 -0.6 0 -0.00999999 0.6 -0.003826797 -0.009238779 -0.6 -0.003826797 -0.009238779 0.6 -0.007071018 -0.007071018 -0.6 -0.007071018 -0.007071018 0.6 -0.009238779 -0.003826797 -0.6 -0.009238779 -0.003826797 0.6 -0.00999999 0 -0.6 -0.00999999 0 0.6 -0.009238779 0.003826797 -0.6 -0.009238779 0.003826797 0.6 -0.007071018 0.007071018 -0.6 -0.007071018 0.007071018 0.6 -0.003826797 0.009238779 -0.6 -0.003826797 0.009238779 0.6</float_array>
+          <technique_common>
+            <accessor source="#円柱_004-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="円柱_004-mesh-normals">
+          <float_array id="円柱_004-mesh-normals-array" count="117">0.1950937 0.9807847 0 0.5555778 0.8314647 0 0.8314648 0.5555776 0 0.9807847 0.1950935 0 0.9807846 -0.1950939 0 0.8314647 -0.5555779 0 0.5555776 -0.8314647 0 0.1950937 -0.9807847 0 -0.1950937 -0.9807847 0 -0.5555778 -0.8314647 0 -0.8314648 -0.5555776 0 -0.9807847 -0.1950935 0 -0.9807846 0.1950939 0 -0.8314647 0.5555779 0 0 0 1 -0.5555776 0.8314647 0 -0.1950937 0.9807847 0 1.12421e-5 0 -1 0.5555776 0.8314647 0 0.8314647 0.5555779 0 0.9807846 0.1950939 0 0.9807847 -0.1950935 0 0.8314648 -0.5555776 0 0.5555778 -0.8314647 0 -0.5555776 -0.8314647 0 -0.8314647 -0.5555779 0 -0.9807846 -0.1950939 0 -0.9807847 0.1950935 0 -0.8314648 0.5555776 0 -9.99095e-6 0 1 5.61338e-5 0 1 7.99275e-5 0 1 -7.99275e-5 0 1 -5.61338e-5 0 1 -0.5555778 0.8314647 0 0 0 -1 -3.99655e-5 0 -1 3.99655e-5 0 -1 -1.12421e-5 0 -1</float_array>
+          <technique_common>
+            <accessor source="#円柱_004-mesh-normals-array" count="39" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="円柱_004-mesh-vertices">
+          <input semantic="POSITION" source="#円柱_004-mesh-positions"/>
+        </vertices>
+        <triangles count="60">
+          <input semantic="VERTEX" source="#円柱_004-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#円柱_004-mesh-normals" offset="1"/>
+          <p>1 0 2 0 0 0 3 1 4 1 2 1 5 2 6 2 4 2 7 3 8 3 6 3 9 4 10 4 8 4 11 5 12 5 10 5 13 6 14 6 12 6 15 7 16 7 14 7 17 8 18 8 16 8 19 9 20 9 18 9 21 10 22 10 20 10 23 11 24 11 22 11 25 12 26 12 24 12 27 13 28 13 26 13 21 14 13 14 5 14 29 15 30 15 28 15 31 16 0 16 30 16 22 17 26 17 30 17 1 0 3 0 2 0 3 18 5 18 4 18 5 19 7 19 6 19 7 20 9 20 8 20 9 21 11 21 10 21 11 22 13 22 12 22 13 23 15 23 14 23 15 7 17 7 16 7 17 8 19 8 18 8 19 24 21 24 20 24 21 25 23 25 22 25 23 26 25 26 24 26 25 27 27 27 26 27 27 28 29 28 28 28 5 29 3 29 1 29 1 14 31 14 5 14 31 14 29 14 5 14 29 14 27 14 21 14 27 30 25 30 21 30 25 31 23 31 21 31 21 14 19 14 13 14 19 14 17 14 13 14 17 14 15 14 13 14 13 32 11 32 9 32 9 33 7 33 13 33 7 14 5 14 13 14 5 14 29 14 21 14 29 34 31 34 30 34 31 16 1 16 0 16 30 35 0 35 2 35 2 36 4 36 6 36 6 35 8 35 10 35 10 36 12 36 14 36 14 35 16 35 18 35 18 37 20 37 22 37 22 35 24 35 26 35 26 37 28 37 30 37 30 35 2 35 14 35 2 35 6 35 14 35 6 38 10 38 14 38 14 35 18 35 30 35 18 35 22 35 30 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="円柱_005-mesh" name="円柱.005">
+      <mesh>
+        <source id="円柱_005-mesh-positions">
+          <float_array id="円柱_005-mesh-positions-array" count="96">0 0.00999999 -0.6 0 0.00999999 0.6 0.003826797 0.009238779 -0.6 0.003826797 0.009238779 0.6 0.007071018 0.007071018 -0.6 0.007071018 0.007071018 0.6 0.009238779 0.003826797 -0.6 0.009238779 0.003826797 0.6 0.00999999 0 -0.6 0.00999999 0 0.6 0.009238779 -0.003826797 -0.6 0.009238779 -0.003826797 0.6 0.007071018 -0.007071018 -0.6 0.007071018 -0.007071018 0.6 0.003826797 -0.009238779 -0.6 0.003826797 -0.009238779 0.6 0 -0.00999999 -0.6 0 -0.00999999 0.6 -0.003826797 -0.009238779 -0.6 -0.003826797 -0.009238779 0.6 -0.007071018 -0.007071018 -0.6 -0.007071018 -0.007071018 0.6 -0.009238779 -0.003826797 -0.6 -0.009238779 -0.003826797 0.6 -0.00999999 0 -0.6 -0.00999999 0 0.6 -0.009238779 0.003826797 -0.6 -0.009238779 0.003826797 0.6 -0.007071018 0.007071018 -0.6 -0.007071018 0.007071018 0.6 -0.003826797 0.009238779 -0.6 -0.003826797 0.009238779 0.6</float_array>
+          <technique_common>
+            <accessor source="#円柱_005-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="円柱_005-mesh-normals">
+          <float_array id="円柱_005-mesh-normals-array" count="117">0.1950937 0.9807847 0 0.5555778 0.8314647 0 0.8314648 0.5555776 0 0.9807847 0.1950935 0 0.9807846 -0.1950939 0 0.8314647 -0.5555779 0 0.5555776 -0.8314647 0 0.1950937 -0.9807847 0 -0.1950937 -0.9807847 0 -0.5555778 -0.8314647 0 -0.8314648 -0.5555776 0 -0.9807847 -0.1950935 0 -0.9807846 0.1950939 0 -0.8314647 0.5555779 0 0 0 1 -0.5555776 0.8314647 0 -0.1950937 0.9807847 0 1.12421e-5 0 -1 0.5555776 0.8314647 0 0.8314647 0.5555779 0 0.9807846 0.1950939 0 0.9807847 -0.1950935 0 0.8314648 -0.5555776 0 0.5555778 -0.8314647 0 -0.5555776 -0.8314647 0 -0.8314647 -0.5555779 0 -0.9807846 -0.1950939 0 -0.9807847 0.1950935 0 -0.8314648 0.5555776 0 -9.99095e-6 0 1 5.61338e-5 0 1 7.99275e-5 0 1 -7.99275e-5 0 1 -5.61338e-5 0 1 -0.5555778 0.8314647 0 0 0 -1 -3.99655e-5 0 -1 3.99655e-5 0 -1 -1.12421e-5 0 -1</float_array>
+          <technique_common>
+            <accessor source="#円柱_005-mesh-normals-array" count="39" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="円柱_005-mesh-vertices">
+          <input semantic="POSITION" source="#円柱_005-mesh-positions"/>
+        </vertices>
+        <triangles count="60">
+          <input semantic="VERTEX" source="#円柱_005-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#円柱_005-mesh-normals" offset="1"/>
+          <p>1 0 2 0 0 0 3 1 4 1 2 1 5 2 6 2 4 2 7 3 8 3 6 3 9 4 10 4 8 4 11 5 12 5 10 5 13 6 14 6 12 6 15 7 16 7 14 7 17 8 18 8 16 8 19 9 20 9 18 9 21 10 22 10 20 10 23 11 24 11 22 11 25 12 26 12 24 12 27 13 28 13 26 13 21 14 13 14 5 14 29 15 30 15 28 15 31 16 0 16 30 16 22 17 26 17 30 17 1 0 3 0 2 0 3 18 5 18 4 18 5 19 7 19 6 19 7 20 9 20 8 20 9 21 11 21 10 21 11 22 13 22 12 22 13 23 15 23 14 23 15 7 17 7 16 7 17 8 19 8 18 8 19 24 21 24 20 24 21 25 23 25 22 25 23 26 25 26 24 26 25 27 27 27 26 27 27 28 29 28 28 28 5 29 3 29 1 29 1 14 31 14 5 14 31 14 29 14 5 14 29 14 27 14 21 14 27 30 25 30 21 30 25 31 23 31 21 31 21 14 19 14 13 14 19 14 17 14 13 14 17 14 15 14 13 14 13 32 11 32 9 32 9 33 7 33 13 33 7 14 5 14 13 14 5 14 29 14 21 14 29 34 31 34 30 34 31 16 1 16 0 16 30 35 0 35 2 35 2 36 4 36 6 36 6 35 8 35 10 35 10 36 12 36 14 36 14 35 16 35 18 35 18 37 20 37 22 37 22 35 24 35 26 35 26 37 28 37 30 37 30 35 2 35 14 35 2 35 6 35 14 35 6 38 10 38 14 38 14 35 18 35 30 35 18 35 22 35 30 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="円柱_007-mesh" name="円柱.007">
+      <mesh>
+        <source id="円柱_007-mesh-positions">
+          <float_array id="円柱_007-mesh-positions-array" count="96">0 0.00999999 -0.6 0 0.00999999 0.6 0.003826797 0.009238779 -0.6 0.003826797 0.009238779 0.6 0.007071018 0.007071018 -0.6 0.007071018 0.007071018 0.6 0.009238779 0.003826797 -0.6 0.009238779 0.003826797 0.6 0.00999999 0 -0.6 0.00999999 0 0.6 0.009238779 -0.003826797 -0.6 0.009238779 -0.003826797 0.6 0.007071018 -0.007071018 -0.6 0.007071018 -0.007071018 0.6 0.003826797 -0.009238779 -0.6 0.003826797 -0.009238779 0.6 0 -0.00999999 -0.6 0 -0.00999999 0.6 -0.003826797 -0.009238779 -0.6 -0.003826797 -0.009238779 0.6 -0.007071018 -0.007071018 -0.6 -0.007071018 -0.007071018 0.6 -0.009238779 -0.003826797 -0.6 -0.009238779 -0.003826797 0.6 -0.00999999 0 -0.6 -0.00999999 0 0.6 -0.009238779 0.003826797 -0.6 -0.009238779 0.003826797 0.6 -0.007071018 0.007071018 -0.6 -0.007071018 0.007071018 0.6 -0.003826797 0.009238779 -0.6 -0.003826797 0.009238779 0.6</float_array>
+          <technique_common>
+            <accessor source="#円柱_007-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="円柱_007-mesh-normals">
+          <float_array id="円柱_007-mesh-normals-array" count="117">0.1950937 0.9807847 0 0.5555778 0.8314647 0 0.8314648 0.5555776 0 0.9807847 0.1950935 0 0.9807846 -0.1950939 0 0.8314647 -0.5555779 0 0.5555776 -0.8314647 0 0.1950937 -0.9807847 0 -0.1950937 -0.9807847 0 -0.5555778 -0.8314647 0 -0.8314648 -0.5555776 0 -0.9807847 -0.1950935 0 -0.9807846 0.1950939 0 -0.8314647 0.5555779 0 0 0 1 -0.5555776 0.8314647 0 -0.1950937 0.9807847 0 1.12421e-5 0 -1 0.5555776 0.8314647 0 0.8314647 0.5555779 0 0.9807846 0.1950939 0 0.9807847 -0.1950935 0 0.8314648 -0.5555776 0 0.5555778 -0.8314647 0 -0.5555776 -0.8314647 0 -0.8314647 -0.5555779 0 -0.9807846 -0.1950939 0 -0.9807847 0.1950935 0 -0.8314648 0.5555776 0 -9.99095e-6 0 1 5.61338e-5 0 1 7.99275e-5 0 1 -7.99275e-5 0 1 -5.61338e-5 0 1 -0.5555778 0.8314647 0 0 0 -1 -3.99655e-5 0 -1 3.99655e-5 0 -1 -1.12421e-5 0 -1</float_array>
+          <technique_common>
+            <accessor source="#円柱_007-mesh-normals-array" count="39" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="円柱_007-mesh-vertices">
+          <input semantic="POSITION" source="#円柱_007-mesh-positions"/>
+        </vertices>
+        <triangles count="60">
+          <input semantic="VERTEX" source="#円柱_007-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#円柱_007-mesh-normals" offset="1"/>
+          <p>1 0 2 0 0 0 3 1 4 1 2 1 5 2 6 2 4 2 7 3 8 3 6 3 9 4 10 4 8 4 11 5 12 5 10 5 13 6 14 6 12 6 15 7 16 7 14 7 17 8 18 8 16 8 19 9 20 9 18 9 21 10 22 10 20 10 23 11 24 11 22 11 25 12 26 12 24 12 27 13 28 13 26 13 21 14 13 14 5 14 29 15 30 15 28 15 31 16 0 16 30 16 22 17 26 17 30 17 1 0 3 0 2 0 3 18 5 18 4 18 5 19 7 19 6 19 7 20 9 20 8 20 9 21 11 21 10 21 11 22 13 22 12 22 13 23 15 23 14 23 15 7 17 7 16 7 17 8 19 8 18 8 19 24 21 24 20 24 21 25 23 25 22 25 23 26 25 26 24 26 25 27 27 27 26 27 27 28 29 28 28 28 5 29 3 29 1 29 1 14 31 14 5 14 31 14 29 14 5 14 29 14 27 14 21 14 27 30 25 30 21 30 25 31 23 31 21 31 21 14 19 14 13 14 19 14 17 14 13 14 17 14 15 14 13 14 13 32 11 32 9 32 9 33 7 33 13 33 7 14 5 14 13 14 5 14 29 14 21 14 29 34 31 34 30 34 31 16 1 16 0 16 30 35 0 35 2 35 2 36 4 36 6 36 6 35 8 35 10 35 10 36 12 36 14 36 14 35 16 35 18 35 18 37 20 37 22 37 22 35 24 35 26 35 26 37 28 37 30 37 30 35 2 35 14 35 2 35 6 35 14 35 6 38 10 38 14 38 14 35 18 35 30 35 18 35 22 35 30 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="円柱_020-mesh" name="円柱.020">
+      <mesh>
+        <source id="円柱_020-mesh-positions">
+          <float_array id="円柱_020-mesh-positions-array" count="96">-0.0142076 -0.08440023 0.03456825 -7.13495e-4 0.08581966 -0.03398132 -0.01384449 -0.08550965 0.03188467 -3.50744e-4 0.08471024 -0.03666478 -0.01240152 -0.08655828 0.02956551 0.001092553 0.08366161 -0.03898406 -0.01009738 -0.08738636 0.0279628 0.00339663 0.08283352 -0.04058665 -0.007283151 -0.08786785 0.0273211 0.006210923 0.08235204 -0.04122889 -0.004387259 -0.08792954 0.02773803 0.009106814 0.08229035 -0.0408113 -0.001850724 -0.0875619 0.02914983 0.01164335 0.08265793 -0.0393998 -5.9559e-5 -0.08682101 0.03134191 0.01343441 0.08339887 -0.03720742 7.13495e-4 -0.08581966 0.03398132 0.0142076 0.08440023 -0.03456825 3.50744e-4 -0.08471024 0.03666478 0.01384449 0.08550965 -0.03188467 -0.001092553 -0.08366161 0.03898406 0.01240152 0.08655828 -0.02956551 -0.00339663 -0.08283352 0.04058665 0.01009738 0.08738636 -0.0279628 -0.006210923 -0.08235204 0.04122889 0.007283151 0.08786785 -0.0273211 -0.009106814 -0.08229035 0.0408113 0.004387259 0.08792954 -0.02773803 -0.01164335 -0.08265793 0.0393998 0.001850724 0.0875619 -0.02914983 -0.01343441 -0.08339887 0.03720742 5.9559e-5 0.08682101 -0.03134191</float_array>
+          <technique_common>
+            <accessor source="#円柱_020-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="円柱_020-mesh-normals">
+          <float_array id="円柱_020-mesh-normals-array" count="180">-0.9895589 0.02102518 -0.1425875 -0.8668221 -0.1256067 -0.4825376 -0.6120903 -0.2531746 -0.749165 -0.2641591 -0.3421968 -0.9017324 0.1239484 -0.3791156 -0.9170105 0.4931516 -0.3583312 -0.7927171 0.7873573 -0.2829858 -0.5477112 0.961696 -0.1645322 -0.2192492 0.9895732 -0.02106928 0.1424813 0.8667839 0.1256358 0.4825985 0.6120773 0.2531793 0.7491739 0.2643133 0.3421728 0.9016964 -0.1241529 0.379123 0.9169797 -0.4930739 0.3583412 0.7927609 0.07332038 0.9251081 -0.3725577 -0.7874121 0.2829644 0.5476434 -0.9616795 0.1645526 0.2193057 -0.07330608 -0.9251019 0.3725759 -0.9895734 0.02106732 -0.1424806 -0.8667839 -0.1256358 -0.4825985 -0.6120774 -0.2531791 -0.7491741 -0.2643133 -0.3421728 -0.9016964 0.1241529 -0.379123 -0.9169797 0.4930739 -0.3583412 -0.7927609 0.7874121 -0.2829644 -0.5476434 0.9616795 -0.1645526 -0.2193057 0.9895591 -0.02102321 0.1425868 0.8668221 0.1256067 0.4825376 0.6120903 0.2531743 0.7491651 0.2641591 0.3421968 0.9017324 -0.1239484 0.3791156 0.9170105 -0.4931516 0.3583312 0.7927171 0.07345432 0.9250967 -0.3725596 0.07339233 0.9251083 -0.3725431 0.07306867 0.9251891 -0.3724058 0.07336479 0.9250526 -0.3726865 0.07332426 0.9251086 -0.3725557 0.0734899 0.9250915 -0.3725654 0.07334125 0.9251181 -0.3725287 0.07319998 0.9251521 -0.3724721 0.07331651 0.9250727 -0.372646 0.07340395 0.9251831 -0.3723549 0.07319152 0.9250409 -0.3727497 0.07331889 0.9251 -0.3725782 0.0733242 0.9251089 -0.3725548 -0.7873573 0.2829858 0.5477112 -0.961696 0.1645322 0.2192492 -0.07342147 -0.9251162 0.3725177 -0.07356256 -0.9251023 0.3725244 -0.07332968 -0.9251067 0.3725591 -0.07334029 -0.9251297 0.3724999 -0.07326602 -0.925121 0.3725363 -0.07357496 -0.9251034 0.3725191 -0.07326155 -0.9250655 0.372675 -0.07337373 -0.9252742 0.3721344 -0.07320487 -0.9251528 0.3724696 -0.07333612 -0.9251068 0.3725579 -0.07330459 -0.9251 0.3725807 -0.07344716 -0.9251158 0.3725137 -0.07334226 -0.925109 0.3725512</float_array>
+          <technique_common>
+            <accessor source="#円柱_020-mesh-normals-array" count="60" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="円柱_020-mesh-vertices">
+          <input semantic="POSITION" source="#円柱_020-mesh-positions"/>
+        </vertices>
+        <triangles count="60">
+          <input semantic="VERTEX" source="#円柱_020-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#円柱_020-mesh-normals" offset="1"/>
+          <p>1 0 2 0 0 0 2 1 5 1 4 1 5 2 6 2 4 2 7 3 8 3 6 3 8 4 11 4 10 4 10 5 13 5 12 5 12 6 15 6 14 6 14 7 17 7 16 7 17 8 18 8 16 8 19 9 20 9 18 9 21 10 22 10 20 10 22 11 25 11 24 11 25 12 26 12 24 12 27 13 28 13 26 13 29 14 21 14 13 14 29 15 30 15 28 15 31 16 0 16 30 16 26 17 30 17 14 17 1 18 3 18 2 18 2 19 3 19 5 19 5 20 7 20 6 20 7 21 9 21 8 21 8 22 9 22 11 22 10 23 11 23 13 23 12 24 13 24 15 24 14 25 15 25 17 25 17 26 19 26 18 26 19 27 21 27 20 27 21 28 23 28 22 28 22 29 23 29 25 29 25 30 27 30 26 30 27 31 29 31 28 31 5 32 3 32 29 32 3 33 1 33 29 33 1 34 31 34 29 34 29 35 27 35 25 35 25 36 23 36 21 36 21 37 19 37 13 37 19 38 17 38 13 38 17 39 15 39 13 39 13 40 11 40 5 40 11 41 9 41 5 41 9 42 7 42 5 42 29 43 25 43 21 43 5 44 29 44 13 44 29 45 31 45 30 45 31 46 1 46 0 46 30 47 0 47 2 47 2 48 4 48 30 48 4 49 6 49 30 49 6 50 8 50 10 50 10 51 12 51 14 51 14 52 16 52 18 52 18 53 20 53 22 53 22 54 24 54 26 54 26 55 28 55 30 55 6 56 10 56 30 56 10 57 14 57 30 57 14 58 18 58 22 58 22 59 26 59 14 59</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="立方体_005-mesh" name="立方体.005">
+      <mesh>
+        <source id="立方体_005-mesh-positions">
+          <float_array id="立方体_005-mesh-positions-array" count="24">-0.08217704 -0.04574275 -0.0343436 0.02051043 -0.1003814 0.08409339 -0.08731132 -0.04056251 -0.02750289 0.01537615 -0.09520113 0.09093475 -0.01537615 0.09520113 -0.09093475 0.08731132 0.04056251 0.02750289 -0.02051043 0.1003814 -0.08409339 0.08217704 0.04574275 0.0343436</float_array>
+          <technique_common>
+            <accessor source="#立方体_005-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_005-mesh-normals">
+          <float_array id="立方体_005-mesh-normals-array" count="36">-0.5947698 -0.7894993 0.1514585 -0.5134268 0.518028 0.6841346 0.5947666 0.7895029 -0.151453 0.5134273 -0.5180305 -0.6841323 -0.7578077 0.100299 -0.644723 0.7578079 -0.1002989 0.6447228 -0.5947671 -0.7895026 0.1514522 -0.5134273 0.5180305 0.6841323 0.5947704 0.7894991 -0.1514574 0.5134268 -0.518028 -0.6841346 -0.7578269 0.1003227 -0.6446967 0.7578271 -0.1003226 0.6446965</float_array>
+          <technique_common>
+            <accessor source="#立方体_005-mesh-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_005-mesh-map-0">
+          <float_array id="立方体_005-mesh-map-0-array" count="72">0.625 0 0.375 0.25 0.375 0 0.375 0.25 0.625 0.5 0.375 0.5 0.625 0.5 0.375 0.75 0.375 0.5 0.625 0.75 0.375 1 0.375 0.75 0.125 0.5 0.375 0.75 0.125 0.75 0.8750001 0.5 0.625 0.75 0.625 0.5 0.625 0 0.625 0.25 0.375 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.625 0.5 0.625 0.75 0.375 0.75 0.625 0.75 0.625 1 0.375 1 0.125 0.5 0.375 0.5 0.375 0.75 0.8750001 0.5 0.8750001 0.75 0.625 0.75</float_array>
+          <technique_common>
+            <accessor source="#立方体_005-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="立方体_005-mesh-vertices">
+          <input semantic="POSITION" source="#立方体_005-mesh-positions"/>
+        </vertices>
+        <triangles count="12">
+          <input semantic="VERTEX" source="#立方体_005-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#立方体_005-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#立方体_005-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 2 1 3 7 1 4 6 1 5 7 2 6 4 2 7 6 2 8 5 3 9 0 3 10 4 3 11 2 4 12 4 4 13 0 4 14 3 5 15 5 5 16 7 5 17 1 6 18 3 6 19 2 6 20 2 7 21 3 7 22 7 7 23 7 8 24 5 8 25 4 8 26 5 9 27 1 9 28 0 9 29 2 10 30 6 10 31 4 10 32 3 11 33 1 11 34 5 11 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="立方体_006-mesh" name="立方体.006">
+      <mesh>
+        <source id="立方体_006-mesh-positions">
+          <float_array id="立方体_006-mesh-positions-array" count="24">-0.03152108 0.06393671 0.005983412 -0.05712527 -0.01975214 -0.08940464 -0.03520298 0.06161916 0.009005069 -0.06080776 -0.02206963 -0.08638298 0.06080776 0.02206963 0.08638298 0.03520298 -0.06161916 -0.009005069 0.05712527 0.01975214 0.08940464 0.03152108 -0.06393671 -0.005983412</float_array>
+          <technique_common>
+            <accessor source="#立方体_006-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_006-mesh-normals">
+          <float_array id="立方体_006-mesh-normals-array" count="36">-0.6911724 0.6250099 -0.3628271 -0.6951234 -0.4375054 0.570432 0.6911145 -0.6250462 0.3628749 0.6951214 0.4375047 -0.5704349 -0.08728468 0.8389763 0.5371222 0.0872845 -0.8389763 -0.5371223 -0.6911144 0.6250478 -0.3628723 -0.6951214 -0.4375047 0.5704349 0.6911721 -0.6250117 0.3628246 0.6951234 0.4375054 -0.570432 -0.08727109 0.8389856 0.5371099 0.08727079 -0.8389856 -0.53711</float_array>
+          <technique_common>
+            <accessor source="#立方体_006-mesh-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_006-mesh-map-0">
+          <float_array id="立方体_006-mesh-map-0-array" count="72">0.625 0 0.375 0.25 0.375 0 0.375 0.25 0.625 0.5 0.375 0.5 0.625 0.5 0.375 0.75 0.375 0.5 0.625 0.75 0.375 1 0.375 0.75 0.125 0.5 0.375 0.75 0.125 0.75 0.8750001 0.5 0.625 0.75 0.625 0.5 0.625 0 0.625 0.25 0.375 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.625 0.5 0.625 0.75 0.375 0.75 0.625 0.75 0.625 1 0.375 1 0.125 0.5 0.375 0.5 0.375 0.75 0.8750001 0.5 0.8750001 0.75 0.625 0.75</float_array>
+          <technique_common>
+            <accessor source="#立方体_006-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="立方体_006-mesh-vertices">
+          <input semantic="POSITION" source="#立方体_006-mesh-positions"/>
+        </vertices>
+        <triangles count="12">
+          <input semantic="VERTEX" source="#立方体_006-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#立方体_006-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#立方体_006-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 2 1 3 7 1 4 6 1 5 7 2 6 4 2 7 6 2 8 5 3 9 0 3 10 4 3 11 2 4 12 4 4 13 0 4 14 3 5 15 5 5 16 7 5 17 1 6 18 3 6 19 2 6 20 2 7 21 3 7 22 7 7 23 7 8 24 5 8 25 4 8 26 5 9 27 1 9 28 0 9 29 2 10 30 6 10 31 4 10 32 3 11 33 1 11 34 5 11 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="円柱_021-mesh" name="円柱.021">
+      <mesh>
+        <source id="円柱_021-mesh-positions">
+          <float_array id="円柱_021-mesh-positions-array" count="96">-0.08594441 -0.06401354 -0.0219351 0.07693952 0.07112681 0.0314098 -0.0863915 -0.06251019 -0.02437824 0.07649236 0.07263016 0.02896714 -0.08608514 -0.06177711 -0.02717036 0.07679873 0.07336318 0.02617466 -0.08507192 -0.06192559 -0.02988708 0.07781201 0.07321429 0.02345806 -0.08350598 -0.06293421 -0.03211462 0.07937788 0.07220607 0.02123034 -0.08162587 -0.06464821 -0.03351289 0.08125799 0.07049214 0.01983201 -0.07971775 -0.06680697 -0.03387022 0.08316612 0.06833332 0.01947468 -0.07807213 -0.06908196 -0.03313148 0.0848118 0.06605833 0.02021265 -0.07693952 -0.07112681 -0.0314098 0.08594441 0.06401354 0.0219351 -0.07649236 -0.07263016 -0.02896714 0.0863915 0.06251019 0.02437824 -0.07679873 -0.07336318 -0.02617466 0.08608514 0.06177711 0.02717036 -0.07781201 -0.07321429 -0.02345806 0.08507192 0.06192559 0.02988708 -0.07937788 -0.07220607 -0.02123034 0.08350598 0.06293421 0.03211462 -0.08125799 -0.07049214 -0.01983201 0.08162587 0.06464821 0.03351289 -0.08316612 -0.06833332 -0.01947468 0.07971775 0.06680697 0.03387022 -0.0848118 -0.06605833 -0.02021265 0.07807213 0.06908196 0.03313148</float_array>
+          <technique_common>
+            <accessor source="#円柱_021-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="円柱_021-mesh-normals">
+          <float_array id="円柱_021-mesh-normals-array" count="180">-0.647588 0.5903574 0.4817759 -0.6572339 0.7435638 0.1231117 -0.5668644 0.7835978 -0.2542425 -0.3900828 0.7042974 -0.5931279 -0.1539197 0.517725 -0.8415876 0.1055251 0.252481 -0.9618304 0.3490482 -0.05135709 -0.9356964 0.5393252 -0.3472144 -0.7671836 0.6475724 -0.5903092 -0.4818558 0.6572309 -0.7435719 -0.1230795 0.5668184 -0.7835911 0.2543658 0.39016 -0.7043471 0.5930181 0.1539393 -0.5177423 0.8415734 -0.1055285 -0.2524774 0.9618311 0.7462736 0.6191528 0.244388 -0.348906 0.05115503 0.9357606 -0.5394072 0.3473626 0.7670588 -0.7462754 -0.6191383 -0.2444194 -0.6475724 0.5903092 0.4818558 -0.6572309 0.7435719 0.1230795 -0.566817 0.7835922 -0.2543653 -0.3901612 0.7043461 -0.5930184 -0.1539393 0.5177423 -0.8415734 0.1055285 0.2524774 -0.9618311 0.348906 -0.05115503 -0.9357606 0.5394093 -0.3473609 -0.7670581 0.647588 -0.5903574 -0.4817759 0.6572339 -0.7435638 -0.1231117 0.5668631 -0.783599 0.254242 0.390084 -0.7042964 0.5931283 0.1539197 -0.517725 0.8415876 -0.1055251 -0.252481 0.9618304 0.74633 0.6190851 0.2443874 0.7462808 0.6191335 0.2444151 0.7462443 0.6191654 0.2444458 0.7462545 0.6191463 0.244463 0.7465032 0.6187973 0.2445874 0.7462269 0.6191859 0.2444469 0.7461732 0.6192405 0.2444727 0.7462979 0.6191265 0.2443805 0.7462571 0.6191281 0.2445012 0.7463622 0.6190154 0.244466 0.7462539 0.6191608 0.2444278 0.7462728 0.6191528 0.2443907 0.7462536 0.6191619 0.2444264 -0.3490482 0.05135709 0.9356964 -0.5393271 0.3472127 0.7671828 -0.7461845 -0.6192301 -0.2444641 -0.7462111 -0.6192016 -0.2444553 -0.7461979 -0.6192187 -0.2444526 -0.7462716 -0.6192122 -0.2442437 -0.7462489 -0.6191627 -0.2444386 -0.7462606 -0.6191694 -0.244386 -0.7462498 -0.6191573 -0.2444496 -0.7463032 -0.619116 -0.2443913 -0.7462667 -0.619148 -0.2444217 -0.7462075 -0.6192936 -0.244233 -0.7462584 -0.6191349 -0.2444801 -0.7462775 -0.6191362 -0.2444182 -0.7462739 -0.6191409 -0.2444172</float_array>
+          <technique_common>
+            <accessor source="#円柱_021-mesh-normals-array" count="60" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="円柱_021-mesh-vertices">
+          <input semantic="POSITION" source="#円柱_021-mesh-positions"/>
+        </vertices>
+        <triangles count="60">
+          <input semantic="VERTEX" source="#円柱_021-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#円柱_021-mesh-normals" offset="1"/>
+          <p>0 0 3 0 2 0 2 1 5 1 4 1 5 2 6 2 4 2 7 3 8 3 6 3 9 4 10 4 8 4 10 5 13 5 12 5 12 6 15 6 14 6 15 7 16 7 14 7 17 8 18 8 16 8 19 9 20 9 18 9 21 10 22 10 20 10 23 11 24 11 22 11 24 12 27 12 26 12 27 13 28 13 26 13 9 14 5 14 21 14 29 15 30 15 28 15 31 16 0 16 30 16 30 17 6 17 14 17 0 18 1 18 3 18 2 19 3 19 5 19 5 20 7 20 6 20 7 21 9 21 8 21 9 22 11 22 10 22 10 23 11 23 13 23 12 24 13 24 15 24 15 25 17 25 16 25 17 26 19 26 18 26 19 27 21 27 20 27 21 28 23 28 22 28 23 29 25 29 24 29 24 30 25 30 27 30 27 31 29 31 28 31 5 32 3 32 1 32 1 33 31 33 5 33 31 34 29 34 5 34 29 35 27 35 25 35 25 36 23 36 21 36 21 37 19 37 17 37 17 38 15 38 21 38 15 39 13 39 21 39 13 40 11 40 9 40 9 41 7 41 5 41 29 42 25 42 5 42 25 43 21 43 5 43 13 44 9 44 21 44 29 45 31 45 30 45 31 46 1 46 0 46 30 47 0 47 6 47 0 48 2 48 6 48 2 49 4 49 6 49 6 50 8 50 14 50 8 51 10 51 14 51 10 52 12 52 14 52 14 53 16 53 18 53 18 54 20 54 14 54 20 55 22 55 14 55 22 56 24 56 26 56 26 57 28 57 30 57 22 58 26 58 14 58 26 59 30 59 14 59</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="立方体_008-mesh" name="立方体.008">
+      <mesh>
+        <source id="立方体_008-mesh-positions">
+          <float_array id="立方体_008-mesh-positions-array" count="24">0.06182456 -0.03568089 0.004671156 -0.01386404 -0.03723824 -0.1003382 0.06424552 -0.03133064 0.002861917 -0.01144391 -0.03288722 -0.1021475 0.01144391 0.03288722 0.1021475 -0.06424552 0.03133064 -0.002861917 0.01386404 0.03723824 0.1003382 -0.06182456 0.03568089 -0.004671156</float_array>
+          <technique_common>
+            <accessor source="#立方体_008-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_008-mesh-normals">
+          <float_array id="立方体_008-mesh-normals-array" count="36">0.6702904 -0.5704366 -0.4746714 0.4569626 0.8212972 -0.3415496 -0.6703737 0.5702869 0.4747337 -0.4569628 -0.8212981 0.3415472 0.7997028 -0.2113223 0.5619773 -0.799703 0.2113219 -0.5619772 0.6703691 -0.5702871 -0.4747399 0.4569628 0.8212981 -0.3415472 -0.6702861 0.5704367 0.4746774 -0.4569626 -0.8212972 0.3415496 0.7997754 -0.211183 0.5619264 -0.7997755 0.211183 -0.5619263</float_array>
+          <technique_common>
+            <accessor source="#立方体_008-mesh-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_008-mesh-map-0">
+          <float_array id="立方体_008-mesh-map-0-array" count="72">0.625 0 0.375 0.25 0.375 0 0.375 0.25 0.625 0.5 0.375 0.5 0.625 0.5 0.375 0.75 0.375 0.5 0.625 0.75 0.375 1 0.375 0.75 0.125 0.5 0.375 0.75 0.125 0.75 0.8750001 0.5 0.625 0.75 0.625 0.5 0.625 0 0.625 0.25 0.375 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.625 0.5 0.625 0.75 0.375 0.75 0.625 0.75 0.625 1 0.375 1 0.125 0.5 0.375 0.5 0.375 0.75 0.8750001 0.5 0.8750001 0.75 0.625 0.75</float_array>
+          <technique_common>
+            <accessor source="#立方体_008-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="立方体_008-mesh-vertices">
+          <input semantic="POSITION" source="#立方体_008-mesh-positions"/>
+        </vertices>
+        <triangles count="12">
+          <input semantic="VERTEX" source="#立方体_008-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#立方体_008-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#立方体_008-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 2 1 3 7 1 4 6 1 5 7 2 6 4 2 7 6 2 8 5 3 9 0 3 10 4 3 11 2 4 12 4 4 13 0 4 14 3 5 15 5 5 16 7 5 17 1 6 18 3 6 19 2 6 20 2 7 21 3 7 22 7 7 23 7 8 24 5 8 25 4 8 26 5 9 27 1 9 28 0 9 29 2 10 30 6 10 31 4 10 32 3 11 33 1 11 34 5 11 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="円柱_023-mesh" name="円柱.023">
+      <mesh>
+        <source id="円柱_023-mesh-positions">
+          <float_array id="円柱_023-mesh-positions-array" count="96">0 0.00999999 -0.6 0 0.00999999 0.6 0.003826797 0.009238779 -0.6 0.003826797 0.009238779 0.6 0.007071018 0.007071018 -0.6 0.007071018 0.007071018 0.6 0.009238779 0.003826797 -0.6 0.009238779 0.003826797 0.6 0.00999999 0 -0.6 0.00999999 0 0.6 0.009238779 -0.003826797 -0.6 0.009238779 -0.003826797 0.6 0.007071018 -0.007071018 -0.6 0.007071018 -0.007071018 0.6 0.003826797 -0.009238779 -0.6 0.003826797 -0.009238779 0.6 0 -0.00999999 -0.6 0 -0.00999999 0.6 -0.003826797 -0.009238779 -0.6 -0.003826797 -0.009238779 0.6 -0.007071018 -0.007071018 -0.6 -0.007071018 -0.007071018 0.6 -0.009238779 -0.003826797 -0.6 -0.009238779 -0.003826797 0.6 -0.00999999 0 -0.6 -0.00999999 0 0.6 -0.009238779 0.003826797 -0.6 -0.009238779 0.003826797 0.6 -0.007071018 0.007071018 -0.6 -0.007071018 0.007071018 0.6 -0.003826797 0.009238779 -0.6 -0.003826797 0.009238779 0.6</float_array>
+          <technique_common>
+            <accessor source="#円柱_023-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="円柱_023-mesh-normals">
+          <float_array id="円柱_023-mesh-normals-array" count="117">0.1950937 0.9807847 0 0.5555778 0.8314647 0 0.8314648 0.5555776 0 0.9807847 0.1950935 0 0.9807846 -0.1950939 0 0.8314647 -0.5555779 0 0.5555776 -0.8314647 0 0.1950937 -0.9807847 0 -0.1950937 -0.9807847 0 -0.5555778 -0.8314647 0 -0.8314648 -0.5555776 0 -0.9807847 -0.1950935 0 -0.9807846 0.1950939 0 -0.8314647 0.5555779 0 0 0 1 -0.5555776 0.8314647 0 -0.1950937 0.9807847 0 1.12421e-5 0 -1 0.5555776 0.8314647 0 0.8314647 0.5555779 0 0.9807846 0.1950939 0 0.9807847 -0.1950935 0 0.8314648 -0.5555776 0 0.5555778 -0.8314647 0 -0.5555776 -0.8314647 0 -0.8314647 -0.5555779 0 -0.9807846 -0.1950939 0 -0.9807847 0.1950935 0 -0.8314648 0.5555776 0 -9.99095e-6 0 1 5.61338e-5 0 1 7.99275e-5 0 1 -7.99275e-5 0 1 -5.61338e-5 0 1 -0.5555778 0.8314647 0 0 0 -1 -3.99655e-5 0 -1 3.99655e-5 0 -1 -1.12421e-5 0 -1</float_array>
+          <technique_common>
+            <accessor source="#円柱_023-mesh-normals-array" count="39" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="円柱_023-mesh-vertices">
+          <input semantic="POSITION" source="#円柱_023-mesh-positions"/>
+        </vertices>
+        <triangles count="60">
+          <input semantic="VERTEX" source="#円柱_023-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#円柱_023-mesh-normals" offset="1"/>
+          <p>1 0 2 0 0 0 3 1 4 1 2 1 5 2 6 2 4 2 7 3 8 3 6 3 9 4 10 4 8 4 11 5 12 5 10 5 13 6 14 6 12 6 15 7 16 7 14 7 17 8 18 8 16 8 19 9 20 9 18 9 21 10 22 10 20 10 23 11 24 11 22 11 25 12 26 12 24 12 27 13 28 13 26 13 21 14 13 14 5 14 29 15 30 15 28 15 31 16 0 16 30 16 22 17 26 17 30 17 1 0 3 0 2 0 3 18 5 18 4 18 5 19 7 19 6 19 7 20 9 20 8 20 9 21 11 21 10 21 11 22 13 22 12 22 13 23 15 23 14 23 15 7 17 7 16 7 17 8 19 8 18 8 19 24 21 24 20 24 21 25 23 25 22 25 23 26 25 26 24 26 25 27 27 27 26 27 27 28 29 28 28 28 5 29 3 29 1 29 1 14 31 14 5 14 31 14 29 14 5 14 29 14 27 14 21 14 27 30 25 30 21 30 25 31 23 31 21 31 21 14 19 14 13 14 19 14 17 14 13 14 17 14 15 14 13 14 13 32 11 32 9 32 9 33 7 33 13 33 7 14 5 14 13 14 5 14 29 14 21 14 29 34 31 34 30 34 31 16 1 16 0 16 30 35 0 35 2 35 2 36 4 36 6 36 6 35 8 35 10 35 10 36 12 36 14 36 14 35 16 35 18 35 18 37 20 37 22 37 22 35 24 35 26 35 26 37 28 37 30 37 30 35 2 35 14 35 2 35 6 35 14 35 6 38 10 38 14 38 14 35 18 35 30 35 18 35 22 35 30 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="立方体_009-mesh" name="立方体.009">
+      <mesh>
+        <source id="立方体_009-mesh-positions">
+          <float_array id="立方体_009-mesh-positions-array" count="24">-0.0289244 0.05905312 -0.02816689 -0.03690505 -0.0577811 -0.08334267 -0.03328979 0.05802083 -0.02535015 -0.04127073 -0.05881345 -0.08052563 0.04127073 0.05881345 0.08052563 0.03328979 -0.05802083 0.02535015 0.03690505 0.0577811 0.08334267 0.0289244 -0.05905312 0.02816689</float_array>
+          <technique_common>
+            <accessor source="#立方体_009-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_009-mesh-normals">
+          <float_array id="立方体_009-mesh-normals-array" count="36">-0.5630056 0.3840537 -0.7317975 -0.8241423 -0.1948555 0.531809 0.5630177 -0.384051 0.7317895 0.8241409 0.1948534 -0.531812 -0.1627303 0.9808237 0.107256 0.1627302 -0.9808238 -0.1072554 -0.5630177 0.384051 -0.7317895 -0.8241409 -0.1948534 0.531812 0.5630056 -0.3840537 0.7317975 0.8241423 0.1948555 -0.531809 -0.1627269 0.9808243 0.1072552 0.162727 -0.9808244 -0.1072552</float_array>
+          <technique_common>
+            <accessor source="#立方体_009-mesh-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_009-mesh-map-0">
+          <float_array id="立方体_009-mesh-map-0-array" count="72">0.625 0 0.375 0.25 0.375 0 0.375 0.25 0.625 0.5 0.375 0.5 0.375 0.5 0.625 0.75 0.375 0.75 0.625 0.75 0.375 1 0.375 0.75 0.375 0.5 0.125 0.75 0.125 0.5 0.8750001 0.5 0.625 0.75 0.625 0.5 0.625 0 0.625 0.25 0.375 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.375 0.5 0.625 0.5 0.625 0.75 0.625 0.75 0.625 1 0.375 1 0.375 0.5 0.375 0.75 0.125 0.75 0.8750001 0.5 0.8750001 0.75 0.625 0.75</float_array>
+          <technique_common>
+            <accessor source="#立方体_009-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="立方体_009-mesh-vertices">
+          <input semantic="POSITION" source="#立方体_009-mesh-positions"/>
+        </vertices>
+        <triangles count="12">
+          <input semantic="VERTEX" source="#立方体_009-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#立方体_009-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#立方体_009-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 2 1 3 7 1 4 6 1 5 6 2 6 5 2 7 4 2 8 5 3 9 0 3 10 4 3 11 6 4 12 0 4 13 2 4 14 3 5 15 5 5 16 7 5 17 1 6 18 3 6 19 2 6 20 2 7 21 3 7 22 7 7 23 6 8 24 7 8 25 5 8 26 5 9 27 1 9 28 0 9 29 6 10 30 4 10 31 0 10 32 3 11 33 1 11 34 5 11 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="円柱_024-mesh" name="円柱.024">
+      <mesh>
+        <source id="円柱_024-mesh-positions">
+          <float_array id="円柱_024-mesh-positions-array" count="96">0.0855605 0.002157688 0.03456825 -0.08410674 -0.0170753 -0.03398132 0.08658033 0.002725422 0.03188467 -0.0830869 -0.01650774 -0.03666478 0.08733427 0.004342377 0.02956551 -0.08233302 -0.01489073 -0.03898406 0.08770745 0.006762087 0.02796286 -0.08195978 -0.01247102 -0.04058665 0.0876432 0.009616613 0.0273211 -0.08202409 -0.009616613 -0.04122889 0.08715116 0.01247102 0.02773809 -0.08251613 -0.006762087 -0.0408113 0.08630633 0.01489073 0.02914983 -0.08336097 -0.004342377 -0.0393998 0.08523726 0.01650774 0.03134191 -0.08443003 -0.002725422 -0.03720748 0.08410674 0.0170753 0.03398132 -0.0855605 -0.002157688 -0.03456825 0.0830869 0.01650774 0.03666478 -0.08658033 -0.002725422 -0.03188467 0.08233302 0.01489073 0.03898406 -0.08733427 -0.004342377 -0.02956551 0.08195978 0.01247102 0.04058665 -0.08770745 -0.006762087 -0.02796286 0.08202409 0.009616613 0.04122889 -0.0876432 -0.009616613 -0.0273211 0.08251613 0.006762087 0.0408113 -0.08715116 -0.01247102 -0.02773809 0.08336097 0.004342377 0.0393998 -0.08630633 -0.01489073 -0.02914983 0.08443003 0.002725422 0.03720748 -0.08523726 -0.01650774 -0.03134191</float_array>
+          <technique_common>
+            <accessor source="#円柱_024-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="円柱_024-mesh-normals">
+          <float_array id="円柱_024-mesh-normals-array" count="180">0.1681292 -0.975416 -0.1424645 0.2887277 -0.8268602 -0.4826371 0.3653146 -0.5525369 -0.7491651 0.3863142 -0.1940323 -0.9017278 0.3484985 0.1940354 -0.9170055 0.2576522 0.5524581 -0.7927202 0.127566 0.8268697 -0.5477349 -0.02201783 0.9754356 -0.2191819 -0.1681118 0.9754262 0.1424159 -0.2887282 0.8268596 0.4826378 -0.3653154 0.5525305 0.7491694 -0.3863195 0.1941764 0.9016944 -0.3484655 -0.1942108 0.9169809 -0.25767 -0.5524052 0.7927514 -0.9221036 -0.104544 -0.3725528 -0.1275441 -0.8269026 0.5476901 0.02199161 -0.9754216 0.2192466 0.9220898 0.1045598 0.3725826 0.1681118 -0.9754262 -0.1424159 0.2887282 -0.8268596 -0.4826378 0.3653154 -0.5525305 -0.7491694 0.3863195 -0.1941764 -0.9016944 0.3484655 0.1942108 -0.9169809 0.25767 0.5524052 -0.7927514 0.1275432 0.8269026 -0.5476905 -0.02199161 0.9754216 -0.2192466 -0.1681292 0.975416 0.1424645 -0.2887277 0.8268602 0.4826371 -0.3653146 0.5525369 0.7491651 -0.3863142 0.1940323 0.9017278 -0.3484985 -0.1940354 0.9170055 -0.2576522 -0.5524581 0.7927202 -0.9221116 -0.1044516 -0.3725587 -0.9221093 -0.1045109 -0.3725479 -0.9221246 -0.1047644 -0.3724388 -0.9220558 -0.1044946 -0.372685 -0.9221287 -0.1045013 -0.3725026 -0.9221182 -0.1043944 -0.3725587 -0.9221161 -0.1044942 -0.3725358 -0.9221253 -0.1046907 -0.3724579 -0.9220547 -0.1045458 -0.3726733 -0.9221801 -0.1044777 -0.372382 -0.9220204 -0.1046401 -0.3727317 -0.922102 -0.1045508 -0.3725549 -0.9221003 -0.1045315 -0.3725643 -0.1275651 -0.8268696 0.5477354 0.02201783 -0.9754356 0.2191819 0.9221315 0.1044127 0.3725205 0.9220258 0.1046625 0.3727119 0.9220957 0.1045189 0.3725794 0.9220994 0.1045788 0.3725532 0.9221323 0.1043814 0.3725274 0.9220756 0.1045609 0.3726174 0.9222528 0.1045228 0.3721893 0.92213 0.1047058 0.372442 0.9221287 0.1044425 0.3725193 0.9221086 0.1045215 0.3725468 0.9220904 0.1045593 0.3725813 0.9221258 0.1044521 0.3725239 0.922108 0.104521 0.3725485</float_array>
+          <technique_common>
+            <accessor source="#円柱_024-mesh-normals-array" count="60" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="円柱_024-mesh-vertices">
+          <input semantic="POSITION" source="#円柱_024-mesh-positions"/>
+        </vertices>
+        <triangles count="60">
+          <input semantic="VERTEX" source="#円柱_024-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#円柱_024-mesh-normals" offset="1"/>
+          <p>1 0 2 0 0 0 3 1 4 1 2 1 5 2 6 2 4 2 7 3 8 3 6 3 9 4 10 4 8 4 10 5 13 5 12 5 13 6 14 6 12 6 14 7 17 7 16 7 16 8 19 8 18 8 18 9 21 9 20 9 20 10 23 10 22 10 22 11 25 11 24 11 24 12 27 12 26 12 27 13 28 13 26 13 21 14 13 14 5 14 29 15 30 15 28 15 31 16 0 16 30 16 26 17 30 17 14 17 1 18 3 18 2 18 3 19 5 19 4 19 5 20 7 20 6 20 7 21 9 21 8 21 9 22 11 22 10 22 10 23 11 23 13 23 13 24 15 24 14 24 14 25 15 25 17 25 16 26 17 26 19 26 18 27 19 27 21 27 20 28 21 28 23 28 22 29 23 29 25 29 24 30 25 30 27 30 27 31 29 31 28 31 5 32 3 32 29 32 3 33 1 33 29 33 1 34 31 34 29 34 29 35 27 35 25 35 25 36 23 36 21 36 21 37 19 37 13 37 19 38 17 38 13 38 17 39 15 39 13 39 13 40 11 40 5 40 11 41 9 41 5 41 9 42 7 42 5 42 29 43 25 43 5 43 25 44 21 44 5 44 29 45 31 45 30 45 31 46 1 46 0 46 30 47 0 47 2 47 2 48 4 48 6 48 6 49 8 49 10 49 10 50 12 50 14 50 14 51 16 51 18 51 18 52 20 52 22 52 22 53 24 53 26 53 26 54 28 54 30 54 30 55 2 55 6 55 6 56 10 56 30 56 10 57 14 57 30 57 14 58 18 58 22 58 22 59 26 59 14 59</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="立方体_010-mesh" name="立方体.010">
+      <mesh>
+        <source id="立方体_010-mesh-positions">
+          <float_array id="立方体_010-mesh-positions-array" count="24">-0.06816118 0.07324963 -0.003679156 -0.07566583 -0.06580847 0.08667594 -0.06301409 0.07772392 0.003634095 -0.07051873 -0.06133419 0.09398949 0.07051873 0.06133419 -0.09398949 0.06301409 -0.07772392 -0.003634095 0.07566583 0.06580847 -0.08667594 0.06816118 -0.07324963 0.003679156</float_array>
+          <technique_common>
+            <accessor source="#立方体_010-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_010-mesh-normals">
+          <float_array id="立方体_010-mesh-normals-array" count="36">-0.8561656 0.3132214 0.4109417 0.5147102 0.4474308 0.7313544 0.8561712 -0.3132165 -0.4109334 -0.5147112 -0.4474315 -0.7313532 -0.1910178 0.8914262 -0.41094 0.1910183 -0.8914258 0.4109405 -0.8561712 0.3132165 0.4109334 0.5147112 0.4474315 0.7313532 0.8561656 -0.3132214 -0.4109417 -0.5147102 -0.4474308 -0.7313544 -0.1910114 0.8914318 -0.4109307 0.1910108 -0.8914322 0.4109302</float_array>
+          <technique_common>
+            <accessor source="#立方体_010-mesh-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_010-mesh-map-0">
+          <float_array id="立方体_010-mesh-map-0-array" count="72">0.625 0 0.375 0.25 0.375 0 0.375 0.25 0.625 0.5 0.375 0.5 0.375 0.5 0.625 0.75 0.375 0.75 0.625 0.75 0.375 1 0.375 0.75 0.375 0.5 0.125 0.75 0.125 0.5 0.8750001 0.5 0.625 0.75 0.625 0.5 0.625 0 0.625 0.25 0.375 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.375 0.5 0.625 0.5 0.625 0.75 0.625 0.75 0.625 1 0.375 1 0.375 0.5 0.375 0.75 0.125 0.75 0.8750001 0.5 0.8750001 0.75 0.625 0.75</float_array>
+          <technique_common>
+            <accessor source="#立方体_010-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="立方体_010-mesh-vertices">
+          <input semantic="POSITION" source="#立方体_010-mesh-positions"/>
+        </vertices>
+        <triangles count="12">
+          <input semantic="VERTEX" source="#立方体_010-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#立方体_010-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#立方体_010-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 2 1 3 7 1 4 6 1 5 6 2 6 5 2 7 4 2 8 5 3 9 0 3 10 4 3 11 6 4 12 0 4 13 2 4 14 3 5 15 5 5 16 7 5 17 1 6 18 3 6 19 2 6 20 2 7 21 3 7 22 7 7 23 6 8 24 7 8 25 5 8 26 5 9 27 1 9 28 0 9 29 6 10 30 4 10 31 0 10 32 3 11 33 1 11 34 5 11 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="立方体_021-mesh" name="立方体.021">
+      <mesh>
+        <source id="立方体_021-mesh-positions">
+          <float_array id="立方体_021-mesh-positions-array" count="24">-0.03227216 0.06286239 -0.01113933 -0.08498519 -0.05112481 -0.04254925 -0.03430557 0.06245929 -0.006264567 -0.08701825 -0.0515275 -0.03767395 0.08701825 0.0515275 0.03767395 0.03430557 -0.06245929 0.006264567 0.08498519 0.05112481 0.04254925 0.03227216 -0.06286239 0.01113933</float_array>
+          <technique_common>
+            <accessor source="#立方体_021-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_021-mesh-normals">
+          <float_array id="立方体_021-mesh-normals-array" count="36">-0.8287642 0.467859 -0.3070146 -0.3838063 -0.07609713 0.9202728 0.8287834 -0.4678543 0.3069699 0.3838039 0.07609564 -0.920274 0.05190533 0.9932445 0.1037846 -0.05190539 -0.9932445 -0.1037848 -0.8287834 0.4678543 -0.3069699 -0.3838039 -0.07609564 0.920274 0.8287642 -0.467859 0.3070146 0.3838063 0.07609713 -0.9202728 0.05194365 0.9932512 0.1037027 -0.0519436 -0.9932511 -0.1037022</float_array>
+          <technique_common>
+            <accessor source="#立方体_021-mesh-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_021-mesh-map-0">
+          <float_array id="立方体_021-mesh-map-0-array" count="72">0.625 0 0.375 0.25 0.375 0 0.375 0.25 0.625 0.5 0.375 0.5 0.375 0.5 0.625 0.75 0.375 0.75 0.625 0.75 0.375 1 0.375 0.75 0.375 0.5 0.125 0.75 0.125 0.5 0.625 0.5 0.8750001 0.75 0.625 0.75 0.625 0 0.625 0.25 0.375 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.375 0.5 0.625 0.5 0.625 0.75 0.625 0.75 0.625 1 0.375 1 0.375 0.5 0.375 0.75 0.125 0.75 0.625 0.5 0.8750001 0.5 0.8750001 0.75</float_array>
+          <technique_common>
+            <accessor source="#立方体_021-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="立方体_021-mesh-vertices">
+          <input semantic="POSITION" source="#立方体_021-mesh-positions"/>
+        </vertices>
+        <triangles count="12">
+          <input semantic="VERTEX" source="#立方体_021-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#立方体_021-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#立方体_021-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 2 1 3 7 1 4 6 1 5 6 2 6 5 2 7 4 2 8 5 3 9 0 3 10 4 3 11 6 4 12 0 4 13 2 4 14 7 5 15 1 5 16 5 5 17 1 6 18 3 6 19 2 6 20 2 7 21 3 7 22 7 7 23 6 8 24 7 8 25 5 8 26 5 9 27 1 9 28 0 9 29 6 10 30 4 10 31 0 10 32 7 11 33 3 11 34 1 11 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="円柱_025-mesh" name="円柱.025">
+      <mesh>
+        <source id="円柱_025-mesh-positions">
+          <float_array id="円柱_025-mesh-positions-array" count="96">-0.08662736 -0.06452226 -0.02210927 0.07755094 0.07169204 0.0316599 -0.08707809 -0.06300693 -0.02457201 0.07710027 0.07320737 0.02919733 -0.08676928 -0.06226778 -0.02738666 0.07740908 0.07394617 0.02638268 -0.08574795 -0.06241816 -0.0301249 0.07843041 0.07379609 0.02364403 -0.08416962 -0.06343436 -0.03236979 0.08000874 0.07277989 0.02139914 -0.08227455 -0.06516194 -0.03377968 0.08190381 0.07105237 0.01998955 -0.08035129 -0.06733793 -0.03413987 0.08382707 0.06887638 0.01962924 -0.07869255 -0.06963098 -0.03339529 0.08548581 0.06658333 0.02037382 -0.07755094 -0.07169204 -0.0316599 0.08662736 0.06452226 0.02210927 -0.07710027 -0.07320737 -0.02919733 0.08707809 0.06300693 0.02457201 -0.07740908 -0.07394617 -0.02638268 0.08676928 0.06226778 0.02738666 -0.07843041 -0.07379609 -0.02364403 0.08574795 0.06241816 0.0301249 -0.08000874 -0.07277989 -0.02139914 0.08416962 0.06343436 0.03236979 -0.08190381 -0.07105237 -0.01998955 0.08227455 0.06516194 0.03377968 -0.08382707 -0.06887638 -0.01962924 0.08035129 0.06733793 0.03413987 -0.08548581 -0.06658333 -0.02037382 0.07869255 0.06963098 0.03339529</float_array>
+          <technique_common>
+            <accessor source="#円柱_025-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="円柱_025-mesh-normals">
+          <float_array id="円柱_025-mesh-normals-array" count="180">-0.6475887 0.5903602 0.4817715 -0.6572389 0.7435522 0.1231552 -0.5667907 0.783587 -0.2544398 -0.3901056 0.7043102 -0.5930976 -0.1540191 0.5178161 -0.8415133 0.1055268 0.2524811 -0.9618303 0.3490428 -0.05134248 -0.9356992 0.5393329 -0.34722 -0.7671757 0.6475862 -0.5903529 -0.4817837 0.6572285 -0.7435759 -0.123068 0.56683 -0.783594 0.2543309 0.3901061 -0.7043107 0.5930967 0.1539696 -0.5177716 0.8415498 -0.1055015 -0.2525108 0.9618253 0.7462611 0.6191699 0.244383 -0.3490433 0.0513426 0.9356992 -0.5393427 0.3472387 0.7671602 -0.7462631 -0.6191596 -0.2444028 -0.6475862 0.5903529 0.4817837 -0.6572285 0.7435759 0.123068 -0.56683 0.783594 -0.2543309 -0.3901061 0.7043106 -0.5930968 -0.1539696 0.5177716 -0.8415498 0.1055015 0.2525108 -0.9618253 0.3490433 -0.0513426 -0.9356992 0.5393427 -0.3472387 -0.7671602 0.6475887 -0.5903602 -0.4817715 0.6572389 -0.7435522 -0.1231552 0.5667907 -0.783587 0.2544398 0.3901056 -0.7043102 0.5930977 0.1540191 -0.5178161 0.8415133 -0.1055268 -0.2524811 0.9618303 0.7463058 0.6191134 0.2443897 0.7462131 0.6191815 0.2445002 0.746276 0.6191296 0.2444396 0.7462711 0.6191445 0.2444168 0.7462567 0.6191933 0.2443373 0.7461339 0.6192817 0.2444881 0.7462011 0.6191861 0.2445254 0.7462658 0.6190906 0.2445695 0.746229 0.6192194 0.2443556 0.7462726 0.619148 0.2444034 0.7462728 0.6191567 0.2443809 0.7462681 0.6191451 0.2444246 0.7462664 0.6191569 0.2443999 -0.3490428 0.05134248 0.9356992 -0.5393329 0.34722 0.7671757 -0.7462922 -0.6191264 -0.244398 -0.7462448 -0.6191804 -0.2444062 -0.7464498 -0.6189261 -0.2444244 -0.7462629 -0.6191594 -0.2444043 -0.7462636 -0.6191633 -0.2443919 -0.7462916 -0.6191697 -0.2442902 -0.7462859 -0.6191362 -0.2443929 -0.7463032 -0.6191167 -0.2443895 -0.7463022 -0.6191172 -0.2443911 -0.7462283 -0.6192225 -0.24435 -0.7462727 -0.6191196 -0.2444751 -0.7462547 -0.6191789 -0.2443799 -0.7462577 -0.6191625 -0.2444124</float_array>
+          <technique_common>
+            <accessor source="#円柱_025-mesh-normals-array" count="60" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="円柱_025-mesh-vertices">
+          <input semantic="POSITION" source="#円柱_025-mesh-positions"/>
+        </vertices>
+        <triangles count="60">
+          <input semantic="VERTEX" source="#円柱_025-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#円柱_025-mesh-normals" offset="1"/>
+          <p>0 0 3 0 2 0 3 1 4 1 2 1 4 2 7 2 6 2 7 3 8 3 6 3 9 4 10 4 8 4 10 5 13 5 12 5 13 6 14 6 12 6 14 7 17 7 16 7 17 8 18 8 16 8 18 9 21 9 20 9 21 10 22 10 20 10 23 11 24 11 22 11 24 12 27 12 26 12 27 13 28 13 26 13 13 14 9 14 5 14 28 15 31 15 30 15 31 16 0 16 30 16 6 17 14 17 22 17 0 18 1 18 3 18 3 19 5 19 4 19 4 20 5 20 7 20 7 21 9 21 8 21 9 22 11 22 10 22 10 23 11 23 13 23 13 24 15 24 14 24 14 25 15 25 17 25 17 26 19 26 18 26 18 27 19 27 21 27 21 28 23 28 22 28 23 29 25 29 24 29 24 30 25 30 27 30 27 31 29 31 28 31 5 32 3 32 1 32 1 33 31 33 29 33 29 34 27 34 25 34 25 35 23 35 29 35 23 36 21 36 29 36 21 37 19 37 17 37 17 38 15 38 13 38 13 39 11 39 9 39 9 40 7 40 5 40 5 41 1 41 21 41 1 42 29 42 21 42 21 43 17 43 5 43 17 44 13 44 5 44 28 45 29 45 31 45 31 46 1 46 0 46 30 47 0 47 6 47 0 48 2 48 6 48 2 49 4 49 6 49 6 50 8 50 14 50 8 51 10 51 14 51 10 52 12 52 14 52 14 53 16 53 22 53 16 54 18 54 22 54 18 55 20 55 22 55 22 56 24 56 26 56 26 57 28 57 22 57 28 58 30 58 22 58 30 59 6 59 22 59</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="円柱_026-mesh" name="円柱.026">
+      <mesh>
+        <source id="円柱_026-mesh-positions">
+          <float_array id="円柱_026-mesh-positions-array" count="96">-0.08030939 0.1042982 -0.04825443 0.08940106 -0.09369164 0.05371755 -0.0791772 0.1038945 -0.05092287 0.09053325 -0.09409534 0.05104947 -0.07890945 0.1027449 -0.05360049 0.090801 -0.09524494 0.04837173 -0.07954686 0.1010245 -0.05588001 0.09016358 -0.09696549 0.04609203 -0.08099246 0.09899497 -0.05741477 0.08871799 -0.09899497 0.04455739 -0.08302611 0.09696549 -0.05797082 0.08668434 -0.1010245 0.04400146 -0.08533817 0.09524494 -0.05746299 0.08437222 -0.1027449 0.04450893 -0.0875768 0.09409534 -0.05596983 0.08213365 -0.1038945 0.04600203 -0.08940106 0.09369164 -0.05371755 0.08030939 -0.1042982 0.04825443 -0.09053325 0.09409534 -0.05104947 0.0791772 -0.1038945 0.05092287 -0.090801 0.09524494 -0.04837173 0.07890945 -0.1027449 0.05360049 -0.09016358 0.09696549 -0.04609203 0.07954686 -0.1010245 0.05588001 -0.08871799 0.09899497 -0.04455739 0.08099246 -0.09899497 0.05741477 -0.08668434 0.1010245 -0.04400146 0.08302611 -0.09696549 0.05797082 -0.08437222 0.1027449 -0.04450893 0.08533817 -0.09524494 0.05746299 -0.08213365 0.1038945 -0.04600203 0.0875768 -0.09409534 0.05596983</float_array>
+          <technique_common>
+            <accessor source="#円柱_026-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="円柱_026-mesh-normals">
+          <float_array id="円柱_026-mesh-normals-array" count="180">0.694952 0.6935162 0.18994 0.7901017 0.5879341 -0.173415 0.7649711 0.392839 -0.5103888 0.6234013 0.1379698 -0.7696332 0.3869261 -0.1379186 -0.9117383 0.09141391 -0.3929121 -0.9150211 -0.2177435 -0.5878968 -0.7790798 -0.4939837 -0.6935192 -0.5244151 -0.6949429 -0.6935194 -0.1899615 -0.7901009 -0.5879376 0.173407 -0.7649729 -0.3928437 0.5103824 -0.6233879 -0.1379508 0.7696475 -0.3869023 0.1379426 0.9117448 -0.09148454 0.3928605 0.9150362 0.6061059 -0.7071097 0.3641862 0.2177336 0.5878917 0.7790864 0.493997 0.6935222 0.5243987 -0.6061074 0.7071145 -0.3641744 0.6949427 0.6935196 0.1899613 0.7901008 0.5879377 -0.1734068 0.7649729 0.3928437 -0.5103824 0.6233881 0.1379506 -0.7696473 0.3869025 -0.1379427 -0.9117447 0.09148454 -0.3928605 -0.9150362 -0.2177336 -0.5878916 -0.7790863 -0.493997 -0.6935224 -0.5243985 -0.6949517 -0.6935164 -0.1899399 -0.7901018 -0.5879343 0.173415 -0.7649711 -0.392839 0.5103888 -0.6234014 -0.1379696 0.7696331 -0.3869265 0.1379188 0.9117382 -0.09141391 0.3929121 0.9150211 0.606086 -0.7071254 0.3641889 0.6060245 -0.7072246 0.3640986 0.6061836 -0.7071543 0.3639702 0.6060841 -0.7071262 0.3641905 0.6062042 -0.7070378 0.3641623 0.6060267 -0.7072398 0.3640653 0.6060855 -0.7071099 0.3642197 0.6061156 -0.7071032 0.3641827 0.6060773 -0.7071168 0.3642201 0.6060769 -0.7071357 0.364184 0.6061367 -0.7070991 0.3641557 0.6060814 -0.7071373 0.3641732 0.6061071 -0.7071005 0.3642022 0.2177436 0.5878968 0.7790798 0.4939836 0.6935194 0.5244149 -0.6061227 0.7071018 -0.3641735 -0.6061678 0.7070716 -0.3641572 -0.6060856 0.7071198 -0.3642002 -0.6060839 0.7071238 -0.3641956 -0.6061784 0.7071177 -0.36405 -0.6060763 0.7070875 -0.3642784 -0.6061165 0.7070984 -0.3641903 -0.6061019 0.7071116 -0.3641893 -0.6061469 0.7070841 -0.3641677 -0.6061342 0.7071062 -0.3641459 -0.6060787 0.7070903 -0.3642691 -0.6061076 0.7071076 -0.3641873 -0.606076 0.7071279 -0.3642005</float_array>
+          <technique_common>
+            <accessor source="#円柱_026-mesh-normals-array" count="60" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="円柱_026-mesh-vertices">
+          <input semantic="POSITION" source="#円柱_026-mesh-positions"/>
+        </vertices>
+        <triangles count="60">
+          <input semantic="VERTEX" source="#円柱_026-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#円柱_026-mesh-normals" offset="1"/>
+          <p>1 0 2 0 0 0 3 1 4 1 2 1 4 2 7 2 6 2 7 3 8 3 6 3 9 4 10 4 8 4 10 5 13 5 12 5 13 6 14 6 12 6 15 7 16 7 14 7 17 8 18 8 16 8 19 9 20 9 18 9 21 10 22 10 20 10 23 11 24 11 22 11 25 12 26 12 24 12 27 13 28 13 26 13 21 14 13 14 5 14 29 15 30 15 28 15 31 16 0 16 30 16 30 17 6 17 14 17 1 18 3 18 2 18 3 19 5 19 4 19 4 20 5 20 7 20 7 21 9 21 8 21 9 22 11 22 10 22 10 23 11 23 13 23 13 24 15 24 14 24 15 25 17 25 16 25 17 26 19 26 18 26 19 27 21 27 20 27 21 28 23 28 22 28 23 29 25 29 24 29 25 30 27 30 26 30 27 31 29 31 28 31 5 32 3 32 1 32 1 33 31 33 29 33 29 34 27 34 25 34 25 35 23 35 21 35 21 36 19 36 17 36 17 37 15 37 13 37 13 38 11 38 5 38 11 39 9 39 5 39 9 40 7 40 5 40 5 41 1 41 29 41 29 42 25 42 21 42 21 43 17 43 13 43 5 44 29 44 21 44 29 45 31 45 30 45 31 46 1 46 0 46 30 47 0 47 6 47 0 48 2 48 6 48 2 49 4 49 6 49 6 50 8 50 10 50 10 51 12 51 6 51 12 52 14 52 6 52 14 53 16 53 22 53 16 54 18 54 22 54 18 55 20 55 22 55 22 56 24 56 26 56 26 57 28 57 30 57 22 58 26 58 14 58 26 59 30 59 14 59</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="立方体_022-mesh" name="立方体.022">
+      <mesh>
+        <source id="立方体_022-mesh-positions">
+          <float_array id="立方体_022-mesh-positions-array" count="24">0.05153352 -0.0442155 -0.01031488 -0.05833292 -0.05263638 -0.06606584 0.0497455 -0.04692322 -0.006381869 -0.06012094 -0.0553441 -0.06213289 0.06012094 0.0553441 0.06213289 -0.0497455 0.04692322 0.006381869 0.05833292 0.05263638 0.06606584 -0.05153352 0.0442155 0.01031488</float_array>
+          <technique_common>
+            <accessor source="#立方体_022-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_022-mesh-normals">
+          <float_array id="立方体_022-mesh-normals-array" count="36">-0.2923514 0.8445876 0.448556 0.3507148 0.5310492 -0.7713534 0.2923536 -0.8445851 -0.4485593 -0.3507151 -0.5310494 0.7713531 -0.9339082 0.2595021 -0.2459153 0.9339081 -0.2595024 0.2459153 -0.2923536 0.8445851 0.4485593 0.3507151 0.5310494 -0.7713531 0.2923514 -0.8445876 -0.448556 -0.3507148 -0.5310492 0.7713534 -0.9339073 0.2595023 -0.245918 0.9339073 -0.2595028 0.245918</float_array>
+          <technique_common>
+            <accessor source="#立方体_022-mesh-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_022-mesh-map-0">
+          <float_array id="立方体_022-mesh-map-0-array" count="72">0.625 0 0.375 0.25 0.375 0 0.375 0.25 0.625 0.5 0.375 0.5 0.375 0.5 0.625 0.75 0.375 0.75 0.625 0.75 0.375 1 0.375 0.75 0.375 0.5 0.125 0.75 0.125 0.5 0.625 0.5 0.8750001 0.75 0.625 0.75 0.625 0 0.625 0.25 0.375 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.375 0.5 0.625 0.5 0.625 0.75 0.625 0.75 0.625 1 0.375 1 0.375 0.5 0.375 0.75 0.125 0.75 0.625 0.5 0.8750001 0.5 0.8750001 0.75</float_array>
+          <technique_common>
+            <accessor source="#立方体_022-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="立方体_022-mesh-vertices">
+          <input semantic="POSITION" source="#立方体_022-mesh-positions"/>
+        </vertices>
+        <triangles count="12">
+          <input semantic="VERTEX" source="#立方体_022-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#立方体_022-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#立方体_022-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 2 1 3 7 1 4 6 1 5 6 2 6 5 2 7 4 2 8 5 3 9 0 3 10 4 3 11 6 4 12 0 4 13 2 4 14 7 5 15 1 5 16 5 5 17 1 6 18 3 6 19 2 6 20 2 7 21 3 7 22 7 7 23 6 8 24 7 8 25 5 8 26 5 9 27 1 9 28 0 9 29 6 10 30 4 10 31 0 10 32 7 11 33 3 11 34 1 11 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="立方体_023-mesh" name="立方体.023">
+      <mesh>
+        <source id="立方体_023-mesh-positions">
+          <float_array id="立方体_023-mesh-positions-array" count="24">0.03762573 0.05985105 -0.01092714 -0.08096086 0.04017764 -0.05897212 0.03550148 0.06176573 -0.006468415 -0.08308506 0.04209262 -0.05451381 0.08308506 -0.04209262 0.05451381 -0.03550148 -0.06176573 0.006468415 0.08096086 -0.04017764 0.05897212 -0.03762573 -0.05985105 0.01092714</float_array>
+          <technique_common>
+            <accessor source="#立方体_023-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_023-mesh-normals">
+          <float_array id="立方体_023-mesh-normals-array" count="36">0.006230533 0.9199163 -0.3920655 -0.4009987 0.3615147 0.8417287 -0.006266891 -0.9198871 0.3921334 0.4010005 -0.3615155 -0.8417276 0.8460087 0.4985592 0.1889662 -0.8460086 -0.4985593 -0.1889662 0.006266891 0.9198871 -0.3921334 -0.4010005 0.3615155 0.8417276 -0.006230533 -0.9199163 0.3920655 0.4009987 -0.3615147 -0.8417287 0.8460164 0.498553 0.1889472 -0.8460165 -0.4985532 -0.1889472</float_array>
+          <technique_common>
+            <accessor source="#立方体_023-mesh-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_023-mesh-map-0">
+          <float_array id="立方体_023-mesh-map-0-array" count="72">0.625 0 0.375 0.25 0.375 0 0.375 0.25 0.625 0.5 0.375 0.5 0.375 0.5 0.625 0.75 0.375 0.75 0.625 0.75 0.375 1 0.375 0.75 0.125 0.5 0.375 0.75 0.125 0.75 0.8750001 0.5 0.625 0.75 0.625 0.5 0.625 0 0.625 0.25 0.375 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.375 0.5 0.625 0.5 0.625 0.75 0.625 0.75 0.625 1 0.375 1 0.125 0.5 0.375 0.5 0.375 0.75 0.8750001 0.5 0.8750001 0.75 0.625 0.75</float_array>
+          <technique_common>
+            <accessor source="#立方体_023-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="立方体_023-mesh-vertices">
+          <input semantic="POSITION" source="#立方体_023-mesh-positions"/>
+        </vertices>
+        <triangles count="12">
+          <input semantic="VERTEX" source="#立方体_023-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#立方体_023-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#立方体_023-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 2 1 3 7 1 4 6 1 5 6 2 6 5 2 7 4 2 8 5 3 9 0 3 10 4 3 11 2 4 12 4 4 13 0 4 14 3 5 15 5 5 16 7 5 17 1 6 18 3 6 19 2 6 20 2 7 21 3 7 22 7 7 23 6 8 24 7 8 25 5 8 26 5 9 27 1 9 28 0 9 29 2 10 30 6 10 31 4 10 32 3 11 33 1 11 34 5 11 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="円柱_027-mesh" name="円柱.027">
+      <mesh>
+        <source id="円柱_027-mesh-positions">
+          <float_array id="円柱_027-mesh-positions-array" count="96">0 0.00999999 -0.6 0 0.00999999 0.6 0.003826797 0.009238779 -0.6 0.003826797 0.009238779 0.6 0.007071018 0.007071018 -0.6 0.007071018 0.007071018 0.6 0.009238779 0.003826797 -0.6 0.009238779 0.003826797 0.6 0.00999999 0 -0.6 0.00999999 0 0.6 0.009238779 -0.003826797 -0.6 0.009238779 -0.003826797 0.6 0.007071018 -0.007071018 -0.6 0.007071018 -0.007071018 0.6 0.003826797 -0.009238779 -0.6 0.003826797 -0.009238779 0.6 0 -0.00999999 -0.6 0 -0.00999999 0.6 -0.003826797 -0.009238779 -0.6 -0.003826797 -0.009238779 0.6 -0.007071018 -0.007071018 -0.6 -0.007071018 -0.007071018 0.6 -0.009238779 -0.003826797 -0.6 -0.009238779 -0.003826797 0.6 -0.00999999 0 -0.6 -0.00999999 0 0.6 -0.009238779 0.003826797 -0.6 -0.009238779 0.003826797 0.6 -0.007071018 0.007071018 -0.6 -0.007071018 0.007071018 0.6 -0.003826797 0.009238779 -0.6 -0.003826797 0.009238779 0.6</float_array>
+          <technique_common>
+            <accessor source="#円柱_027-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="円柱_027-mesh-normals">
+          <float_array id="円柱_027-mesh-normals-array" count="117">0.1950937 0.9807847 0 0.5555778 0.8314647 0 0.8314648 0.5555776 0 0.9807847 0.1950935 0 0.9807846 -0.1950939 0 0.8314647 -0.5555779 0 0.5555776 -0.8314647 0 0.1950937 -0.9807847 0 -0.1950937 -0.9807847 0 -0.5555778 -0.8314647 0 -0.8314648 -0.5555776 0 -0.9807847 -0.1950935 0 -0.9807846 0.1950939 0 -0.8314647 0.5555779 0 0 0 1 -0.5555776 0.8314647 0 -0.1950937 0.9807847 0 1.12421e-5 0 -1 0.5555776 0.8314647 0 0.8314647 0.5555779 0 0.9807846 0.1950939 0 0.9807847 -0.1950935 0 0.8314648 -0.5555776 0 0.5555778 -0.8314647 0 -0.5555776 -0.8314647 0 -0.8314647 -0.5555779 0 -0.9807846 -0.1950939 0 -0.9807847 0.1950935 0 -0.8314648 0.5555776 0 -9.99095e-6 0 1 5.61338e-5 0 1 7.99275e-5 0 1 -7.99275e-5 0 1 -5.61338e-5 0 1 -0.5555778 0.8314647 0 0 0 -1 -3.99655e-5 0 -1 3.99655e-5 0 -1 -1.12421e-5 0 -1</float_array>
+          <technique_common>
+            <accessor source="#円柱_027-mesh-normals-array" count="39" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="円柱_027-mesh-vertices">
+          <input semantic="POSITION" source="#円柱_027-mesh-positions"/>
+        </vertices>
+        <triangles count="60">
+          <input semantic="VERTEX" source="#円柱_027-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#円柱_027-mesh-normals" offset="1"/>
+          <p>1 0 2 0 0 0 3 1 4 1 2 1 5 2 6 2 4 2 7 3 8 3 6 3 9 4 10 4 8 4 11 5 12 5 10 5 13 6 14 6 12 6 15 7 16 7 14 7 17 8 18 8 16 8 19 9 20 9 18 9 21 10 22 10 20 10 23 11 24 11 22 11 25 12 26 12 24 12 27 13 28 13 26 13 21 14 13 14 5 14 29 15 30 15 28 15 31 16 0 16 30 16 22 17 26 17 30 17 1 0 3 0 2 0 3 18 5 18 4 18 5 19 7 19 6 19 7 20 9 20 8 20 9 21 11 21 10 21 11 22 13 22 12 22 13 23 15 23 14 23 15 7 17 7 16 7 17 8 19 8 18 8 19 24 21 24 20 24 21 25 23 25 22 25 23 26 25 26 24 26 25 27 27 27 26 27 27 28 29 28 28 28 5 29 3 29 1 29 1 14 31 14 5 14 31 14 29 14 5 14 29 14 27 14 21 14 27 30 25 30 21 30 25 31 23 31 21 31 21 14 19 14 13 14 19 14 17 14 13 14 17 14 15 14 13 14 13 32 11 32 9 32 9 33 7 33 13 33 7 14 5 14 13 14 5 14 29 14 21 14 29 34 31 34 30 34 31 16 1 16 0 16 30 35 0 35 2 35 2 36 4 36 6 36 6 35 8 35 10 35 10 36 12 36 14 36 14 35 16 35 18 35 18 37 20 37 22 37 22 35 24 35 26 35 26 37 28 37 30 37 30 35 2 35 14 35 2 35 6 35 14 35 6 38 10 38 14 38 14 35 18 35 30 35 18 35 22 35 30 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="立方体_002-mesh" name="立方体.002">
+      <mesh>
+        <source id="立方体_002-mesh-positions">
+          <float_array id="立方体_002-mesh-positions-array" count="24">-0.0289244 0.05905312 -0.02816689 -0.03690505 -0.0577811 -0.08334267 -0.03328979 0.05802083 -0.02535015 -0.04127073 -0.05881345 -0.08052563 0.04127073 0.05881345 0.08052563 0.03328979 -0.05802083 0.02535015 0.03690505 0.0577811 0.08334267 0.0289244 -0.05905312 0.02816689</float_array>
+          <technique_common>
+            <accessor source="#立方体_002-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_002-mesh-normals">
+          <float_array id="立方体_002-mesh-normals-array" count="36">-0.5630056 0.3840537 -0.7317975 -0.8241423 -0.1948555 0.531809 0.5630177 -0.384051 0.7317895 0.8241409 0.1948534 -0.531812 -0.1627303 0.9808237 0.107256 0.1627302 -0.9808238 -0.1072554 -0.5630177 0.384051 -0.7317895 -0.8241409 -0.1948534 0.531812 0.5630056 -0.3840537 0.7317975 0.8241423 0.1948555 -0.531809 -0.1627269 0.9808243 0.1072552 0.162727 -0.9808244 -0.1072552</float_array>
+          <technique_common>
+            <accessor source="#立方体_002-mesh-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_002-mesh-map-0">
+          <float_array id="立方体_002-mesh-map-0-array" count="72">0.625 0 0.375 0.25 0.375 0 0.375 0.25 0.625 0.5 0.375 0.5 0.375 0.5 0.625 0.75 0.375 0.75 0.625 0.75 0.375 1 0.375 0.75 0.375 0.5 0.125 0.75 0.125 0.5 0.8750001 0.5 0.625 0.75 0.625 0.5 0.625 0 0.625 0.25 0.375 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.375 0.5 0.625 0.5 0.625 0.75 0.625 0.75 0.625 1 0.375 1 0.375 0.5 0.375 0.75 0.125 0.75 0.8750001 0.5 0.8750001 0.75 0.625 0.75</float_array>
+          <technique_common>
+            <accessor source="#立方体_002-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="立方体_002-mesh-vertices">
+          <input semantic="POSITION" source="#立方体_002-mesh-positions"/>
+        </vertices>
+        <triangles count="12">
+          <input semantic="VERTEX" source="#立方体_002-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#立方体_002-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#立方体_002-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 2 1 3 7 1 4 6 1 5 6 2 6 5 2 7 4 2 8 5 3 9 0 3 10 4 3 11 6 4 12 0 4 13 2 4 14 3 5 15 5 5 16 7 5 17 1 6 18 3 6 19 2 6 20 2 7 21 3 7 22 7 7 23 6 8 24 7 8 25 5 8 26 5 9 27 1 9 28 0 9 29 6 10 30 4 10 31 0 10 32 3 11 33 1 11 34 5 11 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="円柱_003-mesh" name="円柱.003">
+      <mesh>
+        <source id="円柱_003-mesh-positions">
+          <float_array id="円柱_003-mesh-positions-array" count="96">-0.1109008 -0.07091355 -0.04825443 0.101127 0.08089506 0.05371755 -0.1104 -0.06982088 -0.05092287 0.1016278 0.08198773 0.05104947 -0.1092314 -0.06965434 -0.05360049 0.1027964 0.08215427 0.04837173 -0.107573 -0.07043927 -0.05588001 0.1044548 0.08136934 0.04609203 -0.1056773 -0.07205623 -0.05741477 0.1063506 0.07975238 0.04455739 -0.1038327 -0.07425898 -0.05797082 0.1081951 0.07754957 0.04400146 -0.1023203 -0.07671225 -0.05746299 0.1097075 0.0750963 0.04450893 -0.1013701 -0.07904255 -0.05596983 0.1106576 0.07276606 0.04600203 -0.101127 -0.08089506 -0.05371755 0.1109008 0.07091355 0.04825443 -0.1016278 -0.08198773 -0.05104947 0.1104 0.06982088 0.05092287 -0.1027964 -0.08215427 -0.04837173 0.1092314 0.06965434 0.05360049 -0.1044548 -0.08136934 -0.04609203 0.107573 0.07043927 0.05588001 -0.1063506 -0.07975238 -0.04455739 0.1056773 0.07205623 0.05741477 -0.1081951 -0.07754957 -0.04400146 0.1038327 0.07425898 0.05797082 -0.1097075 -0.0750963 -0.04450893 0.1023203 0.07671225 0.05746299 -0.1106576 -0.07276606 -0.04600203 0.1013701 0.07904255 0.05596983</float_array>
+          <technique_common>
+            <accessor source="#円柱_003-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="円柱_003-mesh-normals">
+          <float_array id="円柱_003-mesh-normals-array" count="180">-0.630308 0.7527511 0.1899415 -0.516833 0.8383376 -0.1734183 -0.3246652 0.7962949 -0.5103988 -0.08311778 0.6330592 -0.7696282 0.1711102 0.3734409 -0.9117364 0.3993923 0.05680972 -0.9150183 0.5666769 -0.2681414 -0.7790877 0.6478276 -0.5525564 -0.5244053 0.630312 -0.7527422 -0.1899632 0.5168351 -0.8383373 0.1734138 0.3246837 -0.7963041 0.5103728 0.08309417 -0.6330398 0.7696468 -0.1711422 -0.373404 0.9117455 -0.3993346 -0.05690342 0.9150378 0.7572449 0.5421717 0.3641842 -0.5666794 0.2681477 0.7790838 -0.6478276 0.5525573 0.5244044 -0.7572539 -0.542156 -0.364189 -0.6303122 0.7527422 0.1899631 -0.516835 0.8383372 -0.1734139 -0.3246837 0.7963041 -0.5103728 -0.08309417 0.6330398 -0.7696468 0.1711422 0.373404 -0.9117455 0.3993337 0.05690294 -0.9150381 0.5666794 -0.2681477 -0.7790838 0.6478278 -0.5525572 -0.5244042 0.6303083 -0.7527509 -0.1899414 0.516833 -0.8383376 0.1734183 0.3246652 -0.7962949 0.5103988 0.08311778 -0.6330592 0.7696282 -0.1711102 -0.3734409 0.9117364 -0.3993914 -0.05680918 0.9150187 0.7572565 0.5421503 0.3641921 0.7572807 0.5421359 0.3641629 0.7572748 0.5421396 0.3641698 0.7572508 0.5422002 0.3641297 0.7572683 0.5420711 0.3642854 0.7572191 0.5421983 0.3641983 0.7573218 0.5421107 0.3641151 0.7573867 0.5420667 0.3640458 0.7572439 0.5421675 0.3641926 0.7572478 0.5421547 0.3642036 0.7572342 0.5421839 0.3641882 0.7572218 0.5421888 0.3642067 0.7572464 0.5421708 0.3641824 -0.5666769 0.2681414 0.7790877 -0.6478277 0.5525564 0.5244052 -0.7572804 -0.5421656 -0.3641193 -0.7571889 -0.5422481 -0.3641869 -0.7572045 -0.5422341 -0.3641751 -0.7572609 -0.5421804 -0.3641381 -0.757235 -0.5421758 -0.3641987 -0.7571491 -0.5421931 -0.3643516 -0.7572769 -0.5421403 -0.3641644 -0.7572436 -0.5421722 -0.3641862 -0.7572368 -0.5421806 -0.3641879 -0.7572411 -0.54216 -0.3642093 -0.7572423 -0.5421637 -0.3642013 -0.7572336 -0.5421402 -0.3642546 -0.7572508 -0.5421687 -0.3641762</float_array>
+          <technique_common>
+            <accessor source="#円柱_003-mesh-normals-array" count="60" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="円柱_003-mesh-vertices">
+          <input semantic="POSITION" source="#円柱_003-mesh-positions"/>
+        </vertices>
+        <triangles count="60">
+          <input semantic="VERTEX" source="#円柱_003-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#円柱_003-mesh-normals" offset="1"/>
+          <p>1 0 2 0 0 0 3 1 4 1 2 1 4 2 7 2 6 2 7 3 8 3 6 3 9 4 10 4 8 4 11 5 12 5 10 5 12 6 15 6 14 6 15 7 16 7 14 7 17 8 18 8 16 8 19 9 20 9 18 9 21 10 22 10 20 10 22 11 25 11 24 11 24 12 27 12 26 12 27 13 28 13 26 13 21 14 13 14 5 14 29 15 30 15 28 15 31 16 0 16 30 16 14 17 22 17 30 17 1 18 3 18 2 18 3 19 5 19 4 19 4 20 5 20 7 20 7 21 9 21 8 21 9 22 11 22 10 22 11 23 13 23 12 23 12 24 13 24 15 24 15 25 17 25 16 25 17 26 19 26 18 26 19 27 21 27 20 27 21 28 23 28 22 28 22 29 23 29 25 29 24 30 25 30 27 30 27 31 29 31 28 31 5 32 3 32 29 32 3 33 1 33 29 33 1 34 31 34 29 34 29 35 27 35 25 35 25 36 23 36 21 36 21 37 19 37 13 37 19 38 17 38 13 38 17 39 15 39 13 39 13 40 11 40 5 40 11 41 9 41 5 41 9 42 7 42 5 42 29 43 25 43 5 43 25 44 21 44 5 44 29 45 31 45 30 45 31 46 1 46 0 46 30 47 0 47 2 47 2 48 4 48 30 48 4 49 6 49 30 49 6 50 8 50 14 50 8 51 10 51 14 51 10 52 12 52 14 52 14 53 16 53 18 53 18 54 20 54 14 54 20 55 22 55 14 55 22 56 24 56 26 56 26 57 28 57 22 57 28 58 30 58 22 58 30 59 6 59 14 59</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="立方体_007-mesh" name="立方体.007">
+      <mesh>
+        <source id="立方体_007-mesh-positions">
+          <float_array id="立方体_007-mesh-positions-array" count="24">-0.06816118 0.07324963 -0.003679156 -0.07566583 -0.06580847 0.08667594 -0.06301409 0.07772392 0.003634095 -0.07051873 -0.06133419 0.09398949 0.07051873 0.06133419 -0.09398949 0.06301409 -0.07772392 -0.003634095 0.07566583 0.06580847 -0.08667594 0.06816118 -0.07324963 0.003679156</float_array>
+          <technique_common>
+            <accessor source="#立方体_007-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_007-mesh-normals">
+          <float_array id="立方体_007-mesh-normals-array" count="36">-0.8561656 0.3132214 0.4109417 0.5147102 0.4474308 0.7313544 0.8561712 -0.3132165 -0.4109334 -0.5147112 -0.4474315 -0.7313532 -0.1910178 0.8914262 -0.41094 0.1910183 -0.8914258 0.4109405 -0.8561712 0.3132165 0.4109334 0.5147112 0.4474315 0.7313532 0.8561656 -0.3132214 -0.4109417 -0.5147102 -0.4474308 -0.7313544 -0.1910114 0.8914318 -0.4109307 0.1910108 -0.8914322 0.4109302</float_array>
+          <technique_common>
+            <accessor source="#立方体_007-mesh-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_007-mesh-map-0">
+          <float_array id="立方体_007-mesh-map-0-array" count="72">0.625 0 0.375 0.25 0.375 0 0.375 0.25 0.625 0.5 0.375 0.5 0.375 0.5 0.625 0.75 0.375 0.75 0.625 0.75 0.375 1 0.375 0.75 0.375 0.5 0.125 0.75 0.125 0.5 0.8750001 0.5 0.625 0.75 0.625 0.5 0.625 0 0.625 0.25 0.375 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.375 0.5 0.625 0.5 0.625 0.75 0.625 0.75 0.625 1 0.375 1 0.375 0.5 0.375 0.75 0.125 0.75 0.8750001 0.5 0.8750001 0.75 0.625 0.75</float_array>
+          <technique_common>
+            <accessor source="#立方体_007-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="立方体_007-mesh-vertices">
+          <input semantic="POSITION" source="#立方体_007-mesh-positions"/>
+        </vertices>
+        <triangles count="12">
+          <input semantic="VERTEX" source="#立方体_007-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#立方体_007-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#立方体_007-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 2 1 3 7 1 4 6 1 5 6 2 6 5 2 7 4 2 8 5 3 9 0 3 10 4 3 11 6 4 12 0 4 13 2 4 14 3 5 15 5 5 16 7 5 17 1 6 18 3 6 19 2 6 20 2 7 21 3 7 22 7 7 23 6 8 24 7 8 25 5 8 26 5 9 27 1 9 28 0 9 29 6 10 30 4 10 31 0 10 32 3 11 33 1 11 34 5 11 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="円柱_012-mesh" name="円柱.012">
+      <mesh>
+        <source id="円柱_012-mesh-positions">
+          <float_array id="円柱_012-mesh-positions-array" count="96">0.0855605 0.002157688 0.03456825 -0.08410674 -0.0170753 -0.03398132 0.08658033 0.002725422 0.03188467 -0.0830869 -0.01650774 -0.03666478 0.08733427 0.004342377 0.02956551 -0.08233302 -0.01489073 -0.03898406 0.08770745 0.006762087 0.02796286 -0.08195978 -0.01247102 -0.04058665 0.0876432 0.009616613 0.0273211 -0.08202409 -0.009616613 -0.04122889 0.08715116 0.01247102 0.02773809 -0.08251613 -0.006762087 -0.0408113 0.08630633 0.01489073 0.02914983 -0.08336097 -0.004342377 -0.0393998 0.08523726 0.01650774 0.03134191 -0.08443003 -0.002725422 -0.03720748 0.08410674 0.0170753 0.03398132 -0.0855605 -0.002157688 -0.03456825 0.0830869 0.01650774 0.03666478 -0.08658033 -0.002725422 -0.03188467 0.08233302 0.01489073 0.03898406 -0.08733427 -0.004342377 -0.02956551 0.08195978 0.01247102 0.04058665 -0.08770745 -0.006762087 -0.02796286 0.08202409 0.009616613 0.04122889 -0.0876432 -0.009616613 -0.0273211 0.08251613 0.006762087 0.0408113 -0.08715116 -0.01247102 -0.02773809 0.08336097 0.004342377 0.0393998 -0.08630633 -0.01489073 -0.02914983 0.08443003 0.002725422 0.03720748 -0.08523726 -0.01650774 -0.03134191</float_array>
+          <technique_common>
+            <accessor source="#円柱_012-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="円柱_012-mesh-normals">
+          <float_array id="円柱_012-mesh-normals-array" count="180">0.1681292 -0.975416 -0.1424645 0.2887277 -0.8268602 -0.4826371 0.3653146 -0.5525369 -0.7491651 0.3863142 -0.1940323 -0.9017278 0.3484985 0.1940354 -0.9170055 0.2576522 0.5524581 -0.7927202 0.127566 0.8268697 -0.5477349 -0.02201783 0.9754356 -0.2191819 -0.1681118 0.9754262 0.1424159 -0.2887282 0.8268596 0.4826378 -0.3653154 0.5525305 0.7491694 -0.3863195 0.1941764 0.9016944 -0.3484655 -0.1942108 0.9169809 -0.25767 -0.5524052 0.7927514 -0.9221036 -0.104544 -0.3725528 -0.1275441 -0.8269026 0.5476901 0.02199161 -0.9754216 0.2192466 0.9220898 0.1045598 0.3725826 0.1681118 -0.9754262 -0.1424159 0.2887282 -0.8268596 -0.4826378 0.3653154 -0.5525305 -0.7491694 0.3863195 -0.1941764 -0.9016944 0.3484655 0.1942108 -0.9169809 0.25767 0.5524052 -0.7927514 0.1275432 0.8269026 -0.5476905 -0.02199161 0.9754216 -0.2192466 -0.1681292 0.975416 0.1424645 -0.2887277 0.8268602 0.4826371 -0.3653146 0.5525369 0.7491651 -0.3863142 0.1940323 0.9017278 -0.3484985 -0.1940354 0.9170055 -0.2576522 -0.5524581 0.7927202 -0.9221116 -0.1044516 -0.3725587 -0.9221093 -0.1045109 -0.3725479 -0.9221246 -0.1047644 -0.3724388 -0.9220558 -0.1044946 -0.372685 -0.9221287 -0.1045013 -0.3725026 -0.9221182 -0.1043944 -0.3725587 -0.9221161 -0.1044942 -0.3725358 -0.9221253 -0.1046907 -0.3724579 -0.9220547 -0.1045458 -0.3726733 -0.9221801 -0.1044777 -0.372382 -0.9220204 -0.1046401 -0.3727317 -0.922102 -0.1045508 -0.3725549 -0.9221003 -0.1045315 -0.3725643 -0.1275651 -0.8268696 0.5477354 0.02201783 -0.9754356 0.2191819 0.9221315 0.1044127 0.3725205 0.9220258 0.1046625 0.3727119 0.9220957 0.1045189 0.3725794 0.9220994 0.1045788 0.3725532 0.9221323 0.1043814 0.3725274 0.9220756 0.1045609 0.3726174 0.9222528 0.1045228 0.3721893 0.92213 0.1047058 0.372442 0.9221287 0.1044425 0.3725193 0.9221086 0.1045215 0.3725468 0.9220904 0.1045593 0.3725813 0.9221258 0.1044521 0.3725239 0.922108 0.104521 0.3725485</float_array>
+          <technique_common>
+            <accessor source="#円柱_012-mesh-normals-array" count="60" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="円柱_012-mesh-vertices">
+          <input semantic="POSITION" source="#円柱_012-mesh-positions"/>
+        </vertices>
+        <triangles count="60">
+          <input semantic="VERTEX" source="#円柱_012-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#円柱_012-mesh-normals" offset="1"/>
+          <p>1 0 2 0 0 0 3 1 4 1 2 1 5 2 6 2 4 2 7 3 8 3 6 3 9 4 10 4 8 4 10 5 13 5 12 5 13 6 14 6 12 6 14 7 17 7 16 7 16 8 19 8 18 8 18 9 21 9 20 9 20 10 23 10 22 10 22 11 25 11 24 11 24 12 27 12 26 12 27 13 28 13 26 13 21 14 13 14 5 14 29 15 30 15 28 15 31 16 0 16 30 16 26 17 30 17 14 17 1 18 3 18 2 18 3 19 5 19 4 19 5 20 7 20 6 20 7 21 9 21 8 21 9 22 11 22 10 22 10 23 11 23 13 23 13 24 15 24 14 24 14 25 15 25 17 25 16 26 17 26 19 26 18 27 19 27 21 27 20 28 21 28 23 28 22 29 23 29 25 29 24 30 25 30 27 30 27 31 29 31 28 31 5 32 3 32 29 32 3 33 1 33 29 33 1 34 31 34 29 34 29 35 27 35 25 35 25 36 23 36 21 36 21 37 19 37 13 37 19 38 17 38 13 38 17 39 15 39 13 39 13 40 11 40 5 40 11 41 9 41 5 41 9 42 7 42 5 42 29 43 25 43 5 43 25 44 21 44 5 44 29 45 31 45 30 45 31 46 1 46 0 46 30 47 0 47 2 47 2 48 4 48 6 48 6 49 8 49 10 49 10 50 12 50 14 50 14 51 16 51 18 51 18 52 20 52 22 52 22 53 24 53 26 53 26 54 28 54 30 54 30 55 2 55 6 55 6 56 10 56 30 56 10 57 14 57 30 57 14 58 18 58 22 58 22 59 26 59 14 59</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="立方体_001-mesh" name="立方体.001">
+      <mesh>
+        <source id="立方体_001-mesh-positions">
+          <float_array id="立方体_001-mesh-positions-array" count="24">-0.0289244 0.05905312 -0.02816689 -0.03690505 -0.0577811 -0.08334267 -0.03328979 0.05802083 -0.02535015 -0.04127073 -0.05881345 -0.08052563 0.04127073 0.05881345 0.08052563 0.03328979 -0.05802083 0.02535015 0.03690505 0.0577811 0.08334267 0.0289244 -0.05905312 0.02816689</float_array>
+          <technique_common>
+            <accessor source="#立方体_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_001-mesh-normals">
+          <float_array id="立方体_001-mesh-normals-array" count="36">-0.5630056 0.3840537 -0.7317975 -0.8241423 -0.1948555 0.531809 0.5630177 -0.384051 0.7317895 0.8241409 0.1948534 -0.531812 -0.1627303 0.9808237 0.107256 0.1627302 -0.9808238 -0.1072554 -0.5630177 0.384051 -0.7317895 -0.8241409 -0.1948534 0.531812 0.5630056 -0.3840537 0.7317975 0.8241423 0.1948555 -0.531809 -0.1627269 0.9808243 0.1072552 0.162727 -0.9808244 -0.1072552</float_array>
+          <technique_common>
+            <accessor source="#立方体_001-mesh-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="立方体_001-mesh-map-0">
+          <float_array id="立方体_001-mesh-map-0-array" count="72">0.625 0 0.375 0.25 0.375 0 0.375 0.25 0.625 0.5 0.375 0.5 0.375 0.5 0.625 0.75 0.375 0.75 0.625 0.75 0.375 1 0.375 0.75 0.375 0.5 0.125 0.75 0.125 0.5 0.8750001 0.5 0.625 0.75 0.625 0.5 0.625 0 0.625 0.25 0.375 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.375 0.5 0.625 0.5 0.625 0.75 0.625 0.75 0.625 1 0.375 1 0.375 0.5 0.375 0.75 0.125 0.75 0.8750001 0.5 0.8750001 0.75 0.625 0.75</float_array>
+          <technique_common>
+            <accessor source="#立方体_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="立方体_001-mesh-vertices">
+          <input semantic="POSITION" source="#立方体_001-mesh-positions"/>
+        </vertices>
+        <triangles count="12">
+          <input semantic="VERTEX" source="#立方体_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#立方体_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#立方体_001-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 2 1 3 7 1 4 6 1 5 6 2 6 5 2 7 4 2 8 5 3 9 0 3 10 4 3 11 6 4 12 0 4 13 2 4 14 3 5 15 5 5 16 7 5 17 1 6 18 3 6 19 2 6 20 2 7 21 3 7 22 7 7 23 6 8 24 7 8 25 5 8 26 5 9 27 1 9 28 0 9 29 6 10 30 4 10 31 0 10 32 3 11 33 1 11 34 5 11 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="plant_base_014" name="plant_base.014" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="立方体_006" name="立方体.006" type="NODE">
+          <matrix sid="transform">1 0 0 -0.2292868 0 1 0 -0.229482 0 0 1 0.5654669 0 0 0 1</matrix>
+          <instance_geometry url="#立方体_003-mesh" name="立方体.006"/>
+        </node>
+      </node>
+      <node id="plant_base_013" name="plant_base.013" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="pole_R_005" name="pole_R.005" type="NODE">
+          <matrix sid="transform">-0.1340485 0.2950239 -0.94604 -0.2326783 -0.760735 -0.6424301 -0.09255088 0.2292477 -0.6350694 0.7072795 0.3105519 0.8409514 0 0 0 1</matrix>
+          <instance_geometry url="#円柱_008-mesh" name="pole_R.005"/>
+        </node>
+      </node>
+      <node id="Light_012" name="Light.012" type="NODE">
+        <matrix sid="transform">-0.2908646 -0.7711008 0.5663933 4.076245 0.9551712 -0.1998833 0.2183913 1.005454 -0.05518912 0.6045247 0.7946723 5.903862 0 0 0 1</matrix>
+        <instance_light url="#Light_012-light"/>
+      </node>
+      <node id="Camera_012" name="Camera.012" type="NODE">
+        <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.358891 0.7276763 0.3054209 -0.6141704 -6.925791 -4.01133e-9 0.8953956 0.4452714 4.958309 0 0 0 1</matrix>
+        <instance_camera url="#Camera_012-camera"/>
+      </node>
+      <node id="Light_010" name="Light.010" type="NODE">
+        <matrix sid="transform">-0.2908646 -0.7711006 0.5663934 4.076245 0.9551712 -0.1998832 0.2183914 1.005454 -0.0551892 0.6045249 0.7946722 5.903862 0 0 0 1</matrix>
+        <instance_light url="#Light_010-light"/>
+      </node>
+      <node id="Camera_010" name="Camera.010" type="NODE">
+        <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.358891 0.7276763 0.3054209 -0.6141704 -6.925791 -4.01133e-9 0.8953956 0.4452714 4.958309 0 0 0 1</matrix>
+        <instance_camera url="#Camera_010-camera"/>
+      </node>
+      <node id="Light_008" name="Light.008" type="NODE">
+        <matrix sid="transform">-0.2908646 -0.7711005 0.5663935 4.076245 0.9551712 -0.1998832 0.2183914 1.005454 -0.05518918 0.604525 0.7946722 5.903862 0 0 0 1</matrix>
+        <instance_light url="#Light_008-light"/>
+      </node>
+      <node id="Camera_008" name="Camera.008" type="NODE">
+        <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.358891 0.7276763 0.3054209 -0.6141704 -6.925791 -4.01133e-9 0.8953956 0.4452714 4.958309 0 0 0 1</matrix>
+        <instance_camera url="#Camera_008-camera"/>
+      </node>
+      <node id="plant_base_009" name="plant_base.009" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="pole_R_013" name="pole_R.013" type="NODE">
+          <matrix sid="transform">0.3125329 -0.9499068 0 -0.1882023 0.9499068 0.3125329 0 0.295463 0 0 1 0.3335523 0 0 0 1</matrix>
+          <instance_geometry url="#円柱_010-mesh" name="pole_R.013"/>
+        </node>
+      </node>
+      <node id="plant_base_008" name="plant_base.008" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+      </node>
+      <node id="plant_base_007" name="plant_base.007" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="pole_R_012" name="pole_R.012" type="NODE">
+          <matrix sid="transform">-0.7527755 -0.6568416 -0.04345164 -0.02724549 0.173251 -0.2613707 0.9495627 0.04441088 -0.6350693 0.7072795 0.3105519 0.3082272 0 0 0 1</matrix>
+          <instance_geometry url="#円柱_009-mesh" name="pole_R.012"/>
+        </node>
+      </node>
+      <node id="plant_base_006" name="plant_base.006" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+      </node>
+      <node id="Light_006" name="Light.006" type="NODE">
+        <matrix sid="transform">-0.2908646 -0.7711005 0.5663935 4.076245 0.9551712 -0.1998832 0.2183914 1.005454 -0.05518918 0.604525 0.7946722 5.903862 0 0 0 1</matrix>
+        <instance_light url="#Light_006-light"/>
+      </node>
+      <node id="Camera_006" name="Camera.006" type="NODE">
+        <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.358891 0.7276763 0.3054209 -0.6141704 -6.925791 -4.01133e-9 0.8953956 0.4452714 4.958309 0 0 0 1</matrix>
+        <instance_camera url="#Camera_006-camera"/>
+      </node>
+      <node id="plant_base_002" name="plant_base.002" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="pole_R_008" name="pole_R.008" type="NODE">
+          <matrix sid="transform">0.9551339 0.08059312 -0.2849977 -0.1147558 -0.2364848 0.7868472 -0.5700405 -0.07168244 0.1783083 0.6118627 0.7706037 0.8079403 0 0 0 1</matrix>
+          <instance_geometry url="#円柱_006-mesh" name="pole_R.008"/>
+        </node>
+      </node>
+      <node id="plant_base_001" name="plant_base.001" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="pole_R_002" name="pole_R.002" type="NODE">
+          <matrix sid="transform">0.9408122 -0.330329 -0.07586145 -0.08163629 0.228438 0.4526726 0.8619185 0.4505756 -0.2503763 -0.8282331 0.5013396 0.4231392 0 0 0 1</matrix>
+          <instance_geometry url="#円柱_001-mesh" name="pole_R.002"/>
+        </node>
+      </node>
+      <node id="Light_004" name="Light.004" type="NODE">
+        <matrix sid="transform">-0.2908646 -0.7711005 0.5663935 4.076245 0.9551712 -0.1998832 0.2183914 1.005454 -0.05518918 0.604525 0.7946722 5.903862 0 0 0 1</matrix>
+        <instance_light url="#Light_004-light"/>
+      </node>
+      <node id="Camera_004" name="Camera.004" type="NODE">
+        <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.358891 0.7276763 0.3054209 -0.6141704 -6.925791 -4.01133e-9 0.8953956 0.4452714 4.958309 0 0 0 1</matrix>
+        <instance_camera url="#Camera_004-camera"/>
+      </node>
+      <node id="Light_002" name="Light.002" type="NODE">
+        <matrix sid="transform">-0.2908646 -0.7711005 0.5663935 4.076245 0.9551712 -0.1998832 0.2183914 1.005454 -0.05518918 0.604525 0.7946722 5.903862 0 0 0 1</matrix>
+        <instance_light url="#Light_002-light"/>
+      </node>
+      <node id="Camera_002" name="Camera.002" type="NODE">
+        <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.358891 0.7276763 0.3054209 -0.6141704 -6.925791 -4.01133e-9 0.8953956 0.4452714 4.958309 0 0 0 1</matrix>
+        <instance_camera url="#Camera_002-camera"/>
+      </node>
+      <node id="Light_001" name="Light.001" type="NODE">
+        <matrix sid="transform">-0.2908646 -0.7711005 0.5663935 4.076245 0.9551712 -0.1998832 0.2183914 1.005454 -0.05518918 0.604525 0.7946722 5.903862 0 0 0 1</matrix>
+        <instance_light url="#Light_001-light"/>
+      </node>
+      <node id="Camera_001" name="Camera.001" type="NODE">
+        <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.358891 0.7276763 0.3054209 -0.6141704 -6.925791 -4.01133e-9 0.8953956 0.4452714 4.958309 0 0 0 1</matrix>
+        <instance_camera url="#Camera_001-camera"/>
+      </node>
+      <node id="plant_base" name="plant_base" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="pole_T" name="pole_T" type="NODE">
+          <matrix sid="transform">1 0 0 0.08989526 0 1 0 0 0 0 1 0.6 0 0 0 1</matrix>
+          <instance_geometry url="#円柱_027-mesh" name="pole_T"/>
+        </node>
+        <node id="立方体" name="立方体" type="NODE">
+          <matrix sid="transform">0.7639292 -0.6453 0 -0.2165159 0.6453 0.7639292 0 -0.07040574 0 0 1 0.7544974 0 0 0 1</matrix>
+          <instance_geometry url="#立方体_023-mesh" name="立方体"/>
+        </node>
+        <node id="立方体_005" name="立方体.005" type="NODE">
+          <matrix sid="transform">0.1330304 -0.106533 -0.9853696 -0.3106992 0.5694234 -0.8055264 0.1639646 0.1705129 -0.8112091 -0.5829048 -0.04649713 0.7723159 0 0 0 1</matrix>
+          <instance_geometry url="#立方体_022-mesh" name="立方体.005"/>
+        </node>
+        <node id="pole_R_001" name="pole_R.001" type="NODE">
+          <matrix sid="transform">0.8150277 -0.4929121 0.3045778 -0.03255197 0.4971874 0.8648766 0.0692324 0.05021174 -0.2975477 0.09500592 0.949968 0.6806908 0 0 0 1</matrix>
+          <instance_geometry url="#円柱_026-mesh" name="pole_R.001"/>
+        </node>
+        <node id="pole_R_003" name="pole_R.003" type="NODE">
+          <matrix sid="transform">1 0 0 0.00916221 0 1 0 -0.06819171 0 0 1 0.8506212 0 0 0 1</matrix>
+          <instance_geometry url="#円柱_025-mesh" name="pole_R.003"/>
+        </node>
+        <node id="立方体_009" name="立方体.009" type="NODE">
+          <matrix sid="transform">1 0 0 -0.207363 0 1 0 0.03192361 0 0 1 0.638397 0 0 0 1</matrix>
+          <instance_geometry url="#立方体_021-mesh" name="立方体.009"/>
+        </node>
+        <node id="立方体_010" name="立方体.010" type="NODE">
+          <matrix sid="transform">1 0 0 0.05542427 0 1 0 0.1078032 0 0 1 0.5890673 0 0 0 1</matrix>
+          <instance_geometry url="#立方体_010-mesh" name="立方体.010"/>
+        </node>
+        <node id="pole_R_004" name="pole_R.004" type="NODE">
+          <matrix sid="transform">0.9999993 -6.44514e-4 -0.001024136 -0.2331116 0.001082003 0.8551927 0.518309 -0.35249 5.41776e-4 -0.5183097 0.8551928 0.4131278 0 0 0 1</matrix>
+          <instance_geometry url="#円柱_024-mesh" name="pole_R.004"/>
+        </node>
+        <node id="立方体_011" name="立方体.011" type="NODE">
+          <matrix sid="transform">0.9012017 0.4333999 0 -0.1339887 -0.4333999 0.9012017 0 0.4515148 0 0 1 0.3516857 0 0 0 1</matrix>
+          <instance_geometry url="#立方体_009-mesh" name="立方体.011"/>
+        </node>
+        <node id="pole_T_001" name="pole_T.001" type="NODE">
+          <matrix sid="transform">1 0 0 -0.1513532 0 1 0 -0.331631 0 0 1 0.6 0 0 0 1</matrix>
+          <instance_geometry url="#円柱_023-mesh" name="pole_T.001"/>
+        </node>
+        <node id="立方体_001" name="立方体.001" type="NODE">
+          <matrix sid="transform">1 0 0 -0.2663819 0 1 0 -0.3937683 0 0 1 0.3402639 0 0 0 1</matrix>
+          <instance_geometry url="#立方体_008-mesh" name="立方体.001"/>
+        </node>
+        <node id="pole_R_006" name="pole_R.006" type="NODE">
+          <matrix sid="transform">1 0 0 -0.2363532 0 1 0 -0.411631 0 0 1 0.786423 0 0 0 1</matrix>
+          <instance_geometry url="#円柱_021-mesh" name="pole_R.006"/>
+        </node>
+        <node id="立方体_012" name="立方体.012" type="NODE">
+          <matrix sid="transform">0.5146933 0 0 -0.4013594 0 0.5146933 0 -0.1854252 0 0 0.5146933 0.7408935 0 0 0 1</matrix>
+          <instance_geometry url="#立方体_006-mesh" name="立方体.012"/>
+        </node>
+        <node id="立方体_013" name="立方体.013" type="NODE">
+          <matrix sid="transform">0.9413487 -0.2792698 -0.189396 -0.2968858 0.310579 0.9365115 0.1627477 -0.3643653 0.131921 -0.2120248 0.9683194 0.6673953 0 0 0 1</matrix>
+          <instance_geometry url="#立方体_005-mesh" name="立方体.013"/>
+        </node>
+        <node id="pole_R_007" name="pole_R.007" type="NODE">
+          <matrix sid="transform">1 0 0 -0.14944 0 1 0 -0.25195 0 0 1 0.618204 0 0 0 1</matrix>
+          <instance_geometry url="#円柱_020-mesh" name="pole_R.007"/>
+        </node>
+        <node id="pole_T_002" name="pole_T.002" type="NODE">
+          <matrix sid="transform">1 0 0 -0.1513532 0 1 0 -0.331631 0 0 1 0.6 0 0 0 1</matrix>
+          <instance_geometry url="#円柱_007-mesh" name="pole_T.002"/>
+        </node>
+        <node id="pole_T_003" name="pole_T.003" type="NODE">
+          <matrix sid="transform">1 0 0 -0.1513532 0 1 0 -0.331631 0 0 1 0.6 0 0 0 1</matrix>
+          <instance_geometry url="#円柱_005-mesh" name="pole_T.003"/>
+        </node>
+        <node id="pole_T_004" name="pole_T.004" type="NODE">
+          <matrix sid="transform">1 0 0 -0.1513532 0 1 0 0.3536184 0 0 1 0.6 0 0 0 1</matrix>
+          <instance_geometry url="#円柱_004-mesh" name="pole_T.004"/>
+        </node>
+        <node id="pole_R_009" name="pole_R.009" type="NODE">
+          <matrix sid="transform">-0.5738462 0.1540401 -0.8043457 -0.2156252 -0.2893232 -0.9569515 0.02314694 0.3519846 -0.7661542 0.2459987 0.5937105 0.8298687 0 0 0 1</matrix>
+          <instance_geometry url="#円柱_002-mesh" name="pole_R.009"/>
+        </node>
+      </node>
+      <node id="leaf_target_marker" name="leaf_target_marker" type="NODE">
+        <matrix sid="transform">1 0 0 -0.2086373 0 1 0 0.03212516 0 0 1 0.6365126 0 0 0 1</matrix>
+      </node>
+      <node id="Camera_003" name="Camera.003" type="NODE">
+        <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.358891 0.7276763 0.3054209 -0.6141704 -6.925791 -4.01133e-9 0.8953956 0.4452714 4.958309 0 0 0 1</matrix>
+        <instance_camera url="#Camera_003-camera"/>
+      </node>
+      <node id="Light_003" name="Light.003" type="NODE">
+        <matrix sid="transform">-0.2908646 -0.7711005 0.5663935 4.076245 0.9551712 -0.1998832 0.2183914 1.005454 -0.05518918 0.604525 0.7946722 5.903862 0 0 0 1</matrix>
+        <instance_light url="#Light_003-light"/>
+      </node>
+      <node id="Camera_005" name="Camera.005" type="NODE">
+        <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.358891 0.7276763 0.3054209 -0.6141704 -6.925791 -4.01133e-9 0.8953956 0.4452714 4.958309 0 0 0 1</matrix>
+        <instance_camera url="#Camera_005-camera"/>
+      </node>
+      <node id="Light_005" name="Light.005" type="NODE">
+        <matrix sid="transform">-0.2908646 -0.7711005 0.5663935 4.076245 0.9551712 -0.1998832 0.2183914 1.005454 -0.05518918 0.604525 0.7946722 5.903862 0 0 0 1</matrix>
+        <instance_light url="#Light_005-light"/>
+      </node>
+      <node id="plant_base_003" name="plant_base.003" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="立方体_002" name="立方体.002" type="NODE">
+          <matrix sid="transform">1 0 0 -0.1288506 0 1 0 0.02103496 0 0 1 0.2437725 0 0 0 1</matrix>
+          <instance_geometry url="#立方体_002-mesh" name="立方体.002"/>
+        </node>
+      </node>
+      <node id="plant_base_004" name="plant_base.004" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="pole_R_010" name="pole_R.010" type="NODE">
+          <matrix sid="transform">-0.01638288 -0.9942389 -0.1059253 -0.3171053 0.7993836 -0.07665978 0.5959102 -0.2563067 -0.6005974 -0.07491221 0.7960345 0.8064634 0 0 0 1</matrix>
+          <instance_geometry url="#円柱_003-mesh" name="pole_R.010"/>
+        </node>
+      </node>
+      <node id="plant_base_005" name="plant_base.005" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="立方体_003" name="立方体.003" type="NODE">
+          <matrix sid="transform">0.06833889 0.9963924 -0.05031588 0.008749634 -0.9788994 0.05723318 -0.1961642 0.4484205 -0.1925768 0.06265982 0.9792793 0.3324371 0 0 0 1</matrix>
+          <instance_geometry url="#立方体_007-mesh" name="立方体.003"/>
+        </node>
+      </node>
+      <node id="Camera_007" name="Camera.007" type="NODE">
+        <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.358891 0.7276763 0.3054209 -0.6141704 -6.925791 -4.01133e-9 0.8953956 0.4452714 4.958309 0 0 0 1</matrix>
+        <instance_camera url="#Camera_007-camera"/>
+      </node>
+      <node id="Light_007" name="Light.007" type="NODE">
+        <matrix sid="transform">-0.2908646 -0.7711005 0.5663935 4.076245 0.9551712 -0.1998832 0.2183914 1.005454 -0.05518918 0.604525 0.7946722 5.903862 0 0 0 1</matrix>
+        <instance_light url="#Light_007-light"/>
+      </node>
+      <node id="plant_base_010" name="plant_base.010" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+      </node>
+      <node id="plant_base_011" name="plant_base.011" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="pole_R_014" name="pole_R.014" type="NODE">
+          <matrix sid="transform">0.7441456 0.6346459 -0.2084993 -0.2150427 -0.5609682 0.4242089 -0.7108877 -0.2580187 -0.3627147 0.6459656 0.6716893 0.3080416 0 0 0 1</matrix>
+          <instance_geometry url="#円柱_012-mesh" name="pole_R.014"/>
+        </node>
+      </node>
+      <node id="Camera_009" name="Camera.009" type="NODE">
+        <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.358891 0.7276763 0.3054209 -0.6141704 -6.925791 -4.01133e-9 0.8953956 0.4452714 4.958309 0 0 0 1</matrix>
+        <instance_camera url="#Camera_009-camera"/>
+      </node>
+      <node id="Light_009" name="Light.009" type="NODE">
+        <matrix sid="transform">-0.2908646 -0.7711005 0.5663935 4.076245 0.9551712 -0.1998832 0.2183914 1.005454 -0.05518921 0.604525 0.7946722 5.903862 0 0 0 1</matrix>
+        <instance_light url="#Light_009-light"/>
+      </node>
+      <node id="plant_base_012" name="plant_base.012" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="立方体_004" name="立方体.004" type="NODE">
+          <matrix sid="transform">-0.1527798 -0.9877309 -0.03233502 -0.1442642 0.9663256 -0.1561641 0.2045177 0.2261128 -0.2070581 2.21971e-8 0.9783285 0.2640745 0 0 0 1</matrix>
+          <instance_geometry url="#立方体_001-mesh" name="立方体.004"/>
+        </node>
+      </node>
+      <node id="Camera_011" name="Camera.011" type="NODE">
+        <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.358891 0.7276763 0.3054209 -0.6141704 -6.925791 -4.01133e-9 0.8953956 0.4452714 4.958309 0 0 0 1</matrix>
+        <instance_camera url="#Camera_011-camera"/>
+      </node>
+      <node id="Light_011" name="Light.011" type="NODE">
+        <matrix sid="transform">-0.2908646 -0.7711007 0.5663934 4.076245 0.9551712 -0.1998832 0.2183914 1.005454 -0.05518918 0.6045248 0.7946723 5.903862 0 0 0 1</matrix>
+        <instance_light url="#Light_011-light"/>
+      </node>
+      <node id="Camera" name="Camera" type="NODE">
+        <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.358891 0.7276763 0.3054208 -0.6141704 -6.925791 0 0.8953956 0.4452714 4.958309 0 0 0 1</matrix>
+        <instance_camera url="#Camera-camera"/>
+      </node>
+      <node id="Light" name="Light" type="NODE">
+        <matrix sid="transform">-0.2908646 -0.7711008 0.5663932 4.076245 0.9551712 -0.1998834 0.2183912 1.005454 -0.05518906 0.6045247 0.7946723 5.903862 0 0 0 1</matrix>
+        <instance_light url="#Light-light"/>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
