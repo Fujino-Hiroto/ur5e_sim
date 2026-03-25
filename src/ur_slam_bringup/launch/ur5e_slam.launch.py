@@ -8,6 +8,7 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
+from launch.actions import OpaqueFunction
 
 
 def generate_launch_description():
@@ -75,6 +76,24 @@ def generate_launch_description():
         # Viz
         DeclareLaunchArgument("launch_rtabmap_viz", default_value="false"),
     ]
+
+    def _maybe_delete_db(context, *args, **kwargs):
+        # LaunchConfiguration を実パスに評価
+        path = LaunchConfiguration("db_path").perform(context)
+        flag = LaunchConfiguration("delete_db_on_start").perform(context).strip().lower()
+        if flag in ("true", "1", "yes", "y", "on"):
+            try:
+                if os.path.exists(path):
+                    os.remove(path)
+                    print(f"[launch] Deleted RTAB-Map DB: {path}")
+                else:
+                    print(f"[launch] RTAB-Map DB not found (skip): {path}")
+            except Exception as e:
+                print(f"[launch] Failed to delete DB '{path}': {e}")
+        return []
+
+    delete_db_action = OpaqueFunction(function=_maybe_delete_db)
+
 
     # -------------------------
     # Gazebo bringup (optional)
@@ -197,6 +216,7 @@ def generate_launch_description():
     return LaunchDescription(
         declared_arguments
         + [
+            delete_db_action,
             gazebo_launch,
             rgbd_sync_node,
             rtabmap_node,

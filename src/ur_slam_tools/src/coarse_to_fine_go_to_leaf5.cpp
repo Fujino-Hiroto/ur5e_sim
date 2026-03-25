@@ -1,9 +1,13 @@
+// CSV logging patch: no behavior change (best-effort; failure does not stop motion)
 // (patch) add COARSE retry + FINE orientation mode + eef_step fallback
 // (patch) add FINE orientation blend mode (fixed <-> lookat)
+// (patch) add planning_mode: hybrid / ompl_two_stage / ompl_direct
 // NOTE: FINE is changed to Cartesian straight approach using computeCartesianPath.
 // coarse_to_fine_go_to_leaf5.cpp
 //
 // Minimal Coarse->Fine->View for noise impact experiments.
+// (patch) add timing + reach error + joint-travel metrics to CSV detail (best-effort)
+// (patch) fix hybrid Cartesian frame mismatch by transforming poses into MoveIt ref frame.
 // Policy: Option B -> COARSE goal is a PoseTarget (position + orientation).
 //
 // - No segmented motion
@@ -41,8 +45,157 @@
 #include <algorithm>
 #include <chrono>
 #include <cmath>
+#include <cstddef>
+#include <ctime>
+#include <fstream>
+#include <iomanip>
+#include <mutex>
+#include <sstream>
 #include <memory>
 #include <string>
+
+// -------------------------
+// CSV Logger (best-effort)
+// -------------------------
+static std::string iso8601_utc_now()
+{
+  using namespace std::chrono;
+  const auto now = system_clock::now();
+  const std::time_t t = system_clock::to_time_t(now);
+  std::tm tm{};
+#if defined(_WIN32)
+  gmtime_s(&tm, &t);
+#else
+  gmtime_r(&t, &tm);
+#endif
+  std::ostringstream oss;
+  oss << std::put_time(&tm, "%Y-%m-%dT%H:%M:%SZ");
+  return oss.str();
+}
+
+static int64_t unix_ms_now()
+{
+  using namespace std::chrono;
+  return duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count();
+}
+
+// -------------------------
+// CSV field escape helper (best-effort, no throw)
+// - Replace CR/LF with spaces to keep 1 row = 1 record (robust for tooling).
+// - Escape double quotes by doubling them (" -> "") per RFC4180-style CSV.
+// -------------------------
+static std::string csv_escape_field(std::string s)
+{
+  // normalize newlines
+  for (char &c : s)
+  {
+    if (c == '\r' || c == '\n') c = ' ';
+  }
+
+  // escape double quotes
+  std::string out;
+  out.reserve(s.size() + 8);
+  for (char c : s)
+  {
+    if (c == '"') out += "\"\"";
+    else out += c;
+  }
+  return out;
+}
+
+struct CsvLogger
+{
+  std::mutex mu;
+  std::ofstream ofs;
+  bool enabled{false};
+  bool flush_each{false};
+  bool header_written{false};
+  std::string path;
+  std::string run_id;
+
+  void open_best_effort(const rclcpp::Logger& logger,
+                        const std::string& csv_path,
+                        const std::string& run)
+  {
+    std::lock_guard<std::mutex> lk(mu);
+    path = csv_path;
+    run_id = run;
+
+    try
+    {
+      // header decision: if file doesn't exist or empty -> write header once
+      bool need_header = true;
+      {
+        std::ifstream ifs(path, std::ios::in | std::ios::binary);
+        if (ifs.good())
+        {
+          ifs.seekg(0, std::ios::end);
+          const auto sz = ifs.tellg();
+          need_header = (sz <= 0);
+        }
+      }
+
+      ofs.open(path, std::ios::out | std::ios::app);
+      if (!ofs.is_open())
+      {
+        RCLCPP_WARN(logger, "CSV logger: failed to open '%s' (logging disabled).", path.c_str());
+        enabled = false;
+        return;
+      }
+      enabled = true;
+
+      if (need_header)
+      {
+        ofs << "iso8601_utc,unix_ms,ros_time_sec,run_id,phase,event,status,"
+               "eef_step,fraction,points,last_t_sec,detail\n";
+        header_written = true;
+        if (flush_each) ofs.flush();
+      }
+    }
+    catch (const std::exception& e)
+    {
+      RCLCPP_WARN(logger, "CSV logger: exception on open (%s). Logging disabled.", e.what());
+      enabled = false;
+    }
+  }
+
+  void row(const rclcpp::Time& ros_now,
+           const std::string& phase,
+           const std::string& event,
+           const std::string& status,
+           double eef_step,
+           double fraction,
+           int points,
+           double last_t_sec,
+           const std::string& detail)
+  {
+    std::lock_guard<std::mutex> lk(mu);
+    if (!enabled || !ofs.is_open()) return;
+    // CSV is best-effort; never throw to affect motion
+    try
+    {
+      const std::string safe_detail = csv_escape_field(detail);
+
+      ofs << iso8601_utc_now() << ","
+          << unix_ms_now() << ","
+          << std::fixed << std::setprecision(6) << ros_now.seconds() << ","
+          << run_id << ","
+          << phase << ","
+          << event << ","
+          << status << ","
+          << std::fixed << std::setprecision(6) << eef_step << ","
+          << std::fixed << std::setprecision(6) << fraction << ","
+          << points << ","
+          << std::fixed << std::setprecision(6) << last_t_sec << ","
+          << "\"" << safe_detail << "\""
+          << "\n";
+      if (flush_each) ofs.flush();
+    }
+    catch (...) { /* swallow */ }
+  }
+};
+
+static std::shared_ptr<CsvLogger> g_csv;
 
 static geometry_msgs::msg::Vector3 v3(double x, double y, double z)
 {
@@ -118,6 +271,118 @@ static bool lookup_tf_blocking(
 static geometry_msgs::msg::Vector3 pos_from_tf(const geometry_msgs::msg::TransformStamped &T)
 {
   return v3(T.transform.translation.x, T.transform.translation.y, T.transform.translation.z);
+}
+
+// -------------------------
+// Lightweight metrics helpers (best-effort)
+// -------------------------
+static double quat_angle_deg(const geometry_msgs::msg::Quaternion& a_msg,
+                             const geometry_msgs::msg::Quaternion& b_msg)
+{
+  tf2::Quaternion a, b;
+  tf2::fromMsg(a_msg, a);
+  tf2::fromMsg(b_msg, b);
+  a.normalize();
+  b.normalize();
+  // shortest angle between orientations: 2*acos(|dot|)
+  const double dot = std::abs(a.dot(b));
+  const double d = std::min(1.0, std::max(-1.0, dot));
+  const double ang = 2.0 * std::acos(d);
+  return ang * 180.0 / M_PI;
+}
+
+static double pos_err_m(const geometry_msgs::msg::Point& p,
+                        const geometry_msgs::msg::Point& q)
+{
+  const double dx = p.x - q.x;
+  const double dy = p.y - q.y;
+  const double dz = p.z - q.z;
+  return std::sqrt(dx*dx + dy*dy + dz*dz);
+}
+
+// -------------------------
+// TF pose transform helper (best-effort)
+// - Transform PoseStamped into target_frame using tf_buffer
+// - Returns false on TF failure (caller decides fallback)
+// -------------------------
+static bool transform_pose_stamped(
+    tf2_ros::Buffer &tf_buffer,
+    const rclcpp::Logger &logger,
+    const geometry_msgs::msg::PoseStamped &in,
+    const std::string &target_frame,
+    geometry_msgs::msg::PoseStamped &out,
+    double timeout_sec)
+{
+  if (target_frame.empty() || in.header.frame_id.empty() || in.header.frame_id == target_frame)
+  {
+    out = in;
+    if (!target_frame.empty()) out.header.frame_id = target_frame;
+    return true;
+  }
+
+  try
+  {
+    // Use latest available transform.
+    const auto tf = tf_buffer.lookupTransform(
+        target_frame, in.header.frame_id, tf2::TimePointZero,
+        tf2::durationFromSec(timeout_sec));
+    tf2::doTransform(in, out, tf);
+    out.header.frame_id = target_frame;
+    return true;
+  }
+  catch (const std::exception &e)
+  {
+    RCLCPP_WARN(logger, "Failed to transform pose %s -> %s: %s",
+                in.header.frame_id.c_str(), target_frame.c_str(), e.what());
+    return false;
+  }
+}
+
+static void traj_joint_travel_metrics(const trajectory_msgs::msg::JointTrajectory& jt,
+                                      double& travel_sum_rad,
+                                      double& max_step_rad)
+{
+  travel_sum_rad = 0.0;
+  max_step_rad = 0.0;
+  if (jt.points.size() < 2) return;
+
+  const size_t nj = jt.joint_names.size();
+  if (nj == 0) return;
+
+  for (size_t k = 1; k < jt.points.size(); ++k)
+  {
+    const auto& p0 = jt.points[k - 1].positions;
+    const auto& p1 = jt.points[k].positions;
+    if (p0.size() != nj || p1.size() != nj) continue;
+
+    for (size_t j = 0; j < nj; ++j)
+    {
+      const double d = std::abs(p1[j] - p0[j]);
+      travel_sum_rad += d;
+      if (d > max_step_rad) max_step_rad = d;
+    }
+  }
+}
+
+static std::string fmt_kv_metrics(double plan_t_sec,
+                                  double exec_t_sec,
+                                  double travel_sum_rad,
+                                  double max_step_rad,
+                                  double pos_err,
+                                  double ang_err_deg,
+                                  const std::string& extra = std::string())
+{
+  std::ostringstream oss;
+  oss << std::fixed << std::setprecision(6)
+      << "plan_t=" << plan_t_sec
+      << " exec_t=" << exec_t_sec
+      << " joint_travel=" << travel_sum_rad
+      << " max_joint_step=" << max_step_rad
+      << " pos_err_m=" << pos_err
+      << " ang_err_deg=" << ang_err_deg;
+  if (!extra.empty())
+    oss << " " << extra;
+  return oss.str();
 }
 
 // Look-at pose builder: +Z points to target
@@ -408,8 +673,10 @@ static bool plan_and_execute_pose_with_retry(
     moveit::planning_interface::MoveGroupInterface &move_group,
     const geometry_msgs::msg::PoseStamped &goal_ee,
     const std::string &ee_link_for_target,
+    const std::string &phase,
     int max_tries,
-    double sleep_sec)
+    double sleep_sec,
+    const rclcpp::Time& stamp)
 {
   if (max_tries < 1) max_tries = 1;
   if (sleep_sec < 0.0) sleep_sec = 0.0;
@@ -418,31 +685,69 @@ static bool plan_and_execute_pose_with_retry(
   {
     if (i > 1)
     {
-      RCLCPP_WARN(logger, "COARSE retry %d/%d ...", i, max_tries);
+      RCLCPP_WARN(logger, "%s retry %d/%d ...", phase.c_str(), i, max_tries);
       if (sleep_sec > 0.0)
         std::this_thread::sleep_for(std::chrono::duration<double>(sleep_sec));
     }
 
     moveit::planning_interface::MoveGroupInterface::Plan plan;
 
+    if (g_csv)
+      g_csv->row(stamp, phase, "TRY", "BEGIN",
+                 0.0, 0.0, 0, 0.0, "try=" + std::to_string(i));
+
     move_group.clearPoseTargets();
     move_group.setStartStateToCurrentState();
     move_group.setPoseTarget(goal_ee, ee_link_for_target);
 
+    const auto t_plan0 = std::chrono::steady_clock::now();
     auto ret = move_group.plan(plan);
+    const auto t_plan1 = std::chrono::steady_clock::now();
+    const double plan_t_sec =
+        std::chrono::duration_cast<std::chrono::duration<double>>(t_plan1 - t_plan0).count();
     if (ret != moveit::core::MoveItErrorCode::SUCCESS)
     {
-      RCLCPP_WARN(logger, "COARSE PLAN failed (MoveItErrorCode=%d).", ret.val);
+      RCLCPP_WARN(logger, "%s PLAN failed (MoveItErrorCode=%d).", phase.c_str(), ret.val);
+      if (g_csv)
+        g_csv->row(stamp, phase, "TRY", "PLAN_FAIL",
+                   0.0, 0.0, 0, 0.0, "try=" + std::to_string(i) + " code=" + std::to_string(ret.val));
       continue;
     }
 
+    double travel_sum_rad = 0.0, max_step_rad = 0.0;
+    traj_joint_travel_metrics(plan.trajectory_.joint_trajectory, travel_sum_rad, max_step_rad);
+
+    const auto t_exec0 = std::chrono::steady_clock::now();
     ret = move_group.execute(plan);
+    const auto t_exec1 = std::chrono::steady_clock::now();
+    const double exec_t_sec =
+        std::chrono::duration_cast<std::chrono::duration<double>>(t_exec1 - t_exec0).count();
     if (ret != moveit::core::MoveItErrorCode::SUCCESS)
     {
-      RCLCPP_WARN(logger, "COARSE EXEC failed (MoveItErrorCode=%d).", ret.val);
+      RCLCPP_WARN(logger, "%s EXEC failed (MoveItErrorCode=%d).", phase.c_str(), ret.val);
+      if (g_csv)
+        g_csv->row(stamp, phase, "TRY", "EXEC_FAIL",
+                   0.0, 0.0, 0, 0.0,
+                   "try=" + std::to_string(i) + " code=" + std::to_string(ret.val) +
+                   " " + fmt_kv_metrics(plan_t_sec, exec_t_sec, travel_sum_rad, max_step_rad, 0.0, 0.0));
       continue;
     }
 
+    // Reach error (best-effort; one pose query)
+    double perr = 0.0, aerr = 0.0;
+    try
+    {
+      const auto now_ps = move_group.getCurrentPose(ee_link_for_target);
+      perr = pos_err_m(now_ps.pose.position, goal_ee.pose.position);
+      aerr = quat_angle_deg(now_ps.pose.orientation, goal_ee.pose.orientation);
+    }
+    catch (...) { /* swallow */ }
+
+    if (g_csv)
+      g_csv->row(stamp, phase, "TRY", "SUCCESS",
+                 0.0, 0.0, 0, 0.0,
+                 "try=" + std::to_string(i) + " " +
+                 fmt_kv_metrics(plan_t_sec, exec_t_sec, travel_sum_rad, max_step_rad, perr, aerr));
     return true;
   }
   return false;
@@ -451,43 +756,66 @@ static bool plan_and_execute_pose_with_retry(
 // Cartesian straight-line motion (EEF) from current pose to goal pose.
 static bool execute_cartesian_to_pose(
     const rclcpp::Logger &logger,
+    tf2_ros::Buffer &tf_buffer,
     moveit::planning_interface::MoveGroupInterface &move_group,
     const geometry_msgs::msg::PoseStamped &goal_ee,
     const std::string &ee_link,
+    double tf_timeout_sec,
     double eef_step,
     double jump_threshold,
     double min_fraction,
     bool avoid_collisions,
     double vel_scale,
     double acc_scale,
-    double p0_warn_rad)
+    double p0_warn_rad,
+    const rclcpp::Time& stamp)
 {
   move_group.setStartStateToCurrentState();
   move_group.clearPoseTargets();
 
-  const auto start_ps = move_group.getCurrentPose(ee_link);
-
-  RCLCPP_INFO(logger, "EEF start frame=%s goal frame=%s",
-              start_ps.header.frame_id.c_str(),
-              goal_ee.header.frame_id.c_str());
-
   const auto ref = move_group.getPoseReferenceFrame();
-  if (start_ps.header.frame_id != ref || goal_ee.header.frame_id != ref)
+  const auto start_ps_raw = move_group.getCurrentPose(ee_link);
+
+  // Transform start/goal into MoveIt reference frame (ref) for Cartesian planning.
+  geometry_msgs::msg::PoseStamped start_ps;
+  geometry_msgs::msg::PoseStamped goal_ps;
+
+  // start pose: best-effort (used for logging only)
+  if (!transform_pose_stamped(tf_buffer, logger, start_ps_raw, ref, start_ps, tf_timeout_sec))
   {
-    RCLCPP_ERROR(logger, "Frame mismatch: ref=%s start=%s goal=%s",
-                 ref.c_str(),
-                 start_ps.header.frame_id.c_str(),
-                 goal_ee.header.frame_id.c_str());
+    start_ps = start_ps_raw;  // fallback
+  }
+
+  // goal pose: must be in ref frame for computeCartesianPath waypoints
+  if (!transform_pose_stamped(tf_buffer, logger, goal_ee, ref, goal_ps, tf_timeout_sec))
+  {
+    RCLCPP_ERROR(logger, "Goal pose TF transform failed: goal=%s -> ref=%s",
+                 goal_ee.header.frame_id.c_str(), ref.c_str());
     return false;
   }
 
+  RCLCPP_INFO(logger, "EEF frames: ref=%s start=%s goal=%s",
+              ref.c_str(),
+              start_ps.header.frame_id.c_str(),
+              goal_ps.header.frame_id.c_str());
+
   std::vector<geometry_msgs::msg::Pose> waypoints;
   waypoints.reserve(1);
-  waypoints.push_back(goal_ee.pose);
+  waypoints.push_back(goal_ps.pose);
 
   moveit_msgs::msg::RobotTrajectory traj_msg;
+  const auto t_cart0 = std::chrono::steady_clock::now();
   const double fraction =
       move_group.computeCartesianPath(waypoints, eef_step, jump_threshold, traj_msg, avoid_collisions);
+  const auto t_cart1 = std::chrono::steady_clock::now();
+  const double cart_t_sec =
+      std::chrono::duration_cast<std::chrono::duration<double>>(t_cart1 - t_cart0).count();
+
+  if (g_csv)
+    g_csv->row(stamp, "FINE", "CARTESIAN", "COMPUTED",
+               eef_step, fraction,
+               static_cast<int>(traj_msg.joint_trajectory.points.size()),
+               0.0, "jump=" + std::to_string(jump_threshold) + " cart_t=" + std::to_string(cart_t_sec));
 
   auto &jt = traj_msg.joint_trajectory;
 
@@ -525,9 +853,18 @@ static bool execute_cartesian_to_pose(
   RCLCPP_INFO(logger, "traj(before retime): joints=%zu points=%zu last_t=%.6f",
               jt.joint_names.size(), jt.points.size(), last_t_before);
 
+  if (g_csv)
+    g_csv->row(stamp, "FINE", "TRAJ", "BEFORE_RETIME",
+               eef_step, fraction, static_cast<int>(jt.points.size()),
+               last_t_before, "joints=" + std::to_string(jt.joint_names.size()));
+
   if (fraction < min_fraction)
   {
     RCLCPP_ERROR(logger, "Cartesian path fraction too low: %.3f < %.3f", fraction, min_fraction);
+    if (g_csv)
+      g_csv->row(stamp, "FINE", "CARTESIAN", "FRACTION_LOW",
+                 eef_step, fraction, static_cast<int>(jt.points.size()), last_t_before,
+                 "min_fraction=" + std::to_string(min_fraction));
     return false;
   }
 
@@ -602,21 +939,55 @@ static bool execute_cartesian_to_pose(
       jt_after.points.empty() ? -1.0 : rclcpp::Duration(jt_after.points.back().time_from_start).seconds();
   RCLCPP_INFO(logger, "traj(after retime): joints=%zu points=%zu last_t=%.6f",
               jt_after.joint_names.size(), jt_after.points.size(), last_t_after);
+
+  if (g_csv)
+    g_csv->row(stamp, "FINE", "TRAJ", "AFTER_RETIME",
+               eef_step, fraction, static_cast<int>(jt_after.points.size()),
+               last_t_after, "vel_scale=" + std::to_string(vel_scale) + " acc_scale=" + std::to_string(acc_scale));
+
   if (last_t_after <= 1e-3)
   {
     RCLCPP_ERROR(logger, "Trajectory duration too small after retime (%.6f).", last_t_after);
+    if (g_csv)
+      g_csv->row(stamp, "FINE", "TRAJ", "DURATION_TOO_SMALL",
+                 eef_step, fraction, static_cast<int>(jt_after.points.size()), last_t_after, "");
     return false;
   }
 
   moveit::planning_interface::MoveGroupInterface::Plan plan;
   plan.trajectory_ = traj_msg;
 
+  double travel_sum_rad = 0.0, max_step_rad = 0.0;
+  traj_joint_travel_metrics(plan.trajectory_.joint_trajectory, travel_sum_rad, max_step_rad);
+
+  const auto t_exec0 = std::chrono::steady_clock::now();
   auto ret = move_group.execute(plan);
+  const auto t_exec1 = std::chrono::steady_clock::now();
+  const double exec_t_sec =
+      std::chrono::duration_cast<std::chrono::duration<double>>(t_exec1 - t_exec0).count();
   if (ret != moveit::core::MoveItErrorCode::SUCCESS)
   {
     RCLCPP_ERROR(logger, "Cartesian EXEC failed (MoveItErrorCode=%d).", ret.val);
+    if (g_csv)
+      g_csv->row(stamp, "FINE", "EXECUTE", "FAIL",
+                 eef_step, fraction, static_cast<int>(jt_after.points.size()), last_t_after,
+                 "code=" + std::to_string(ret.val) + " " +
+                 fmt_kv_metrics(cart_t_sec, exec_t_sec, travel_sum_rad, max_step_rad, 0.0, 0.0));
     return false;
   }
+  // Reach error (best-effort)
+  double perr = 0.0, aerr = 0.0;
+  try
+  {
+    const auto now_ps = move_group.getCurrentPose(ee_link);
+    perr = pos_err_m(now_ps.pose.position, goal_ee.pose.position);
+    aerr = quat_angle_deg(now_ps.pose.orientation, goal_ee.pose.orientation);
+  }
+  catch (...) { /* swallow */ }
+  if (g_csv)
+    g_csv->row(stamp, "FINE", "EXECUTE", "SUCCESS",
+               eef_step, fraction, static_cast<int>(jt_after.points.size()), last_t_after,
+               fmt_kv_metrics(cart_t_sec, exec_t_sec, travel_sum_rad, max_step_rad, perr, aerr));
   return true;
 }
 
@@ -743,6 +1114,13 @@ int main(int argc, char **argv)
 
   auto cleanup_and_exit = [&](int code) -> int
   {
+    // best-effort final row (do not block motion; called after exec.cancel anyway)
+    if (g_csv && app_node)
+    {
+      const auto t = app_node->get_clock()->now();
+      g_csv->row(t, "END", "EXIT", (code == 0) ? "SUCCESS" : "FAIL",
+                 0.0, 0.0, 0, 0.0, "code=" + std::to_string(code));
+    }
     exec.cancel();
     if (spin_thread.joinable()) spin_thread.join();
     rclcpp::shutdown();
@@ -779,6 +1157,13 @@ int main(int argc, char **argv)
   const std::string fine_goal_frame   = app_node->declare_parameter<std::string>("fine_goal_frame", "leaf_target_shot");
   const std::string view_goal_frame   = app_node->declare_parameter<std::string>("view_goal_frame", "leaf_target_view");
 
+  // planning_mode:
+  //  - hybrid        : COARSE=OMPL, FINE=Cartesian (current behavior)
+  //  - ompl_two_stage: COARSE=OMPL, FINE=OMPL
+  //  - ompl_direct   : DIRECT(OMPL) to fine_goal_frame (skip COARSE)
+  const std::string planning_mode =
+      app_node->declare_parameter<std::string>("planning_mode", "hybrid");
+
   const bool exit_after_coarse = app_node->declare_parameter<bool>("exit_after_coarse", false);
 
   const double tf_timeout_sec   = app_node->declare_parameter<double>("tf_timeout_sec", 10.0);
@@ -812,7 +1197,7 @@ int main(int argc, char **argv)
   const bool   fine_cart_avoid_coll   = app_node->declare_parameter<bool>("fine_cartesian_avoid_collisions", true);
 
   const double view_cart_eef_step     = app_node->declare_parameter<double>("view_cartesian_eef_step", 0.001);
-  const double view_cart_min_fraction = app_node->declare_parameter<double>("view_cartesian_min_fraction", 0.90);
+  const double view_cart_min_fraction = app_node->declare_parameter<double>("view_cartesian_min_fraction", 0.30);
   const bool   view_cart_avoid_coll   = app_node->declare_parameter<bool>("view_cartesian_avoid_collisions", false);
 
   const int    state_sync_sleep_ms = app_node->declare_parameter<int>("state_sync_sleep_ms", 200);
@@ -821,6 +1206,26 @@ int main(int argc, char **argv)
       app_node->declare_parameter<std::vector<double>>(
           "fine_cartesian_eef_step_candidates",
           std::vector<double>{});
+
+  // CSV params (best-effort)
+  const bool csv_enable = app_node->declare_parameter<bool>("csv_enable", true);
+  const std::string csv_path = app_node->declare_parameter<std::string>("csv_path", "results/leaf5_log.csv");
+  const bool csv_flush_each = app_node->declare_parameter<bool>("csv_flush_each_row", false);
+  const std::string csv_run_id = app_node->declare_parameter<std::string>("csv_run_id", "");
+
+  if (csv_enable)
+  {
+    g_csv = std::make_shared<CsvLogger>();
+    g_csv->flush_each = csv_flush_each;
+    const std::string run_id = csv_run_id.empty() ? iso8601_utc_now() : csv_run_id;
+    g_csv->open_best_effort(logger, csv_path, run_id);
+    if (g_csv->enabled)
+    {
+      g_csv->row(app_node->get_clock()->now(), "START", "BOOT", "OK", 0.0, 0.0, 0, 0.0,
+                 "planning_mode=" + planning_mode +
+                 " world_frame=" + world_frame + " ee_link=" + ee_link + " camera_frame=" + camera_frame);
+    }
+  }
 
   RCLCPP_INFO(logger, "use_sim_time=%s world_frame=%s ee_link=%s camera_frame=%s",
               use_sim_time ? "true" : "false",
@@ -838,57 +1243,88 @@ int main(int argc, char **argv)
   RCLCPP_INFO(logger, "Planning frame: %s", move_group.getPlanningFrame().c_str());
   RCLCPP_INFO(logger, "Pose reference frame: %s", move_group.getPoseReferenceFrame().c_str());
   RCLCPP_INFO(logger, "End effector link: %s", move_group.getEndEffectorLink().c_str());
+  RCLCPP_INFO(logger, "planning_mode=%s", planning_mode.c_str());
 
   const geometry_msgs::msg::Vector3 world_up = v3(0, 0, 1);
 
-  RCLCPP_INFO(logger, "=== COARSE (PoseTarget): pre approach ===");
-  move_group.setPlanningTime(coarse_planning_time);
-  move_group.setMaxVelocityScalingFactor(coarse_vel);
-  move_group.setMaxAccelerationScalingFactor(coarse_acc);
-
+  // Always lookup leaf center (used for lookat)
   geometry_msgs::msg::TransformStamped Tw_leaf;
   if (!lookup_tf_blocking(tf_buffer, app_node, world_frame, leaf_center_frame, Tw_leaf, tf_timeout_sec))
   {
     RCLCPP_ERROR(logger, "TF timeout: %s <- %s", world_frame.c_str(), leaf_center_frame.c_str());
+    if (g_csv && g_csv->enabled)
+      g_csv->row(app_node->get_clock()->now(), "COARSE", "TF", "FAIL", 0.0, 0.0, 0, 0.0, "frame=" + leaf_center_frame);
     return cleanup_and_exit(1);
   }
   const auto leaf_pos_world = pos_from_tf(Tw_leaf);
 
+  const bool do_coarse = (planning_mode != "ompl_direct");
+  const bool fine_use_ompl = (planning_mode == "ompl_two_stage" || planning_mode == "ompl_direct");
+
+  if (planning_mode != "hybrid" && planning_mode != "ompl_two_stage" && planning_mode != "ompl_direct")
+  {
+    RCLCPP_WARN(logger, "Unknown planning_mode='%s' -> fallback to 'hybrid'.", planning_mode.c_str());
+  }
+
   const auto cur_cam_ps = move_group.getCurrentPose(camera_frame.empty() ? ee_link : camera_frame);
   const auto cam_pos_world = v3(cur_cam_ps.pose.position.x, cur_cam_ps.pose.position.y, cur_cam_ps.pose.position.z);
 
-  const auto pre_pos_world = compute_leaf_pre_position(cam_pos_world, leaf_pos_world, pre_back_m, pre_down_m);
-
-  const auto coarse_goal_cam = make_lookat_pose(world_frame, leaf_pos_world, world_up, pre_pos_world);
-
-  geometry_msgs::msg::PoseStamped coarse_goal_ee;
-  if (!convert_goal_pose_for_ee(tf_buffer, logger, camera_frame, ee_link, coarse_goal_cam, coarse_goal_ee))
+  if (do_coarse)
   {
-    RCLCPP_ERROR(logger, "COARSE: convert_goal_pose_for_ee failed (camera_frame=%s ee_link=%s).",
-                camera_frame.c_str(), ee_link.c_str());
-    return cleanup_and_exit(1);
+    RCLCPP_INFO(logger, "=== COARSE (PoseTarget): pre approach ===");
+    if (g_csv && g_csv->enabled)
+      g_csv->row(app_node->get_clock()->now(), "COARSE", "BEGIN", "OK", 0.0, 0.0, 0, 0.0, "");
+    move_group.setPlanningTime(coarse_planning_time);
+    move_group.setMaxVelocityScalingFactor(coarse_vel);
+    move_group.setMaxAccelerationScalingFactor(coarse_acc);
+
+    const auto pre_pos_world = compute_leaf_pre_position(cam_pos_world, leaf_pos_world, pre_back_m, pre_down_m);
+    const auto coarse_goal_cam = make_lookat_pose(world_frame, leaf_pos_world, world_up, pre_pos_world);
+
+    geometry_msgs::msg::PoseStamped coarse_goal_ee;
+    if (!convert_goal_pose_for_ee(tf_buffer, logger, camera_frame, ee_link, coarse_goal_cam, coarse_goal_ee))
+    {
+      RCLCPP_ERROR(logger, "COARSE: convert_goal_pose_for_ee failed (camera_frame=%s ee_link=%s).",
+                  camera_frame.c_str(), ee_link.c_str());
+      return cleanup_and_exit(1);
+    }
+
+    if (!plan_and_execute_pose_with_retry(logger, move_group, coarse_goal_ee, ee_link,
+                                          "COARSE",
+                                          coarse_max_tries, coarse_retry_sleep_sec,
+                                          app_node->get_clock()->now()))
+    {
+      RCLCPP_ERROR(logger, "COARSE failed.");
+      if (g_csv && g_csv->enabled)
+        g_csv->row(app_node->get_clock()->now(), "COARSE", "END", "FAIL", 0.0, 0.0, 0, 0.0, "");
+      return cleanup_and_exit(1);
+    }
+
+    RCLCPP_INFO(logger, "COARSE success.");
+    if (g_csv && g_csv->enabled)
+      g_csv->row(app_node->get_clock()->now(), "COARSE", "END", "SUCCESS", 0.0, 0.0, 0, 0.0, "");
+
+    if (state_sync_sleep_ms > 0)
+      rclcpp::sleep_for(std::chrono::milliseconds(state_sync_sleep_ms));
+    move_group.setStartStateToCurrentState();
+
+    if (exit_after_coarse)
+    {
+      RCLCPP_INFO(logger, "exit_after_coarse=true -> stop after COARSE.");
+      return cleanup_and_exit(0);
+    }
   }
-
-  if (!plan_and_execute_pose_with_retry(logger, move_group, coarse_goal_ee, ee_link,
-                                        coarse_max_tries, coarse_retry_sleep_sec))
+  else
   {
-    RCLCPP_ERROR(logger, "COARSE failed.");
-    return cleanup_and_exit(1);
-  }
-
-  RCLCPP_INFO(logger, "COARSE success.");
-
-  if (state_sync_sleep_ms > 0)
-    rclcpp::sleep_for(std::chrono::milliseconds(state_sync_sleep_ms));
-  move_group.setStartStateToCurrentState();
-
-  if (exit_after_coarse)
-  {
-    RCLCPP_INFO(logger, "exit_after_coarse=true -> stop after COARSE.");
-    return cleanup_and_exit(0);
+    RCLCPP_INFO(logger, "=== DIRECT (OMPL): start -> %s ===", fine_goal_frame.c_str());
+    if (g_csv && g_csv->enabled)
+      g_csv->row(app_node->get_clock()->now(), "DIRECT", "BEGIN", "OK", 0.0, 0.0, 0, 0.0, "");
   }
 
   RCLCPP_INFO(logger, "=== FINE (Cartesian): go to %s ===", fine_goal_frame.c_str());
+  if (g_csv && g_csv->enabled)
+    g_csv->row(app_node->get_clock()->now(), fine_use_ompl ? (do_coarse ? "FINE" : "DIRECT") : "FINE",
+               "BEGIN", "OK", fine_cart_eef_step, 0.0, 0, 0.0, "mode=" + fine_orient_mode);
   move_group.setPlanningTime(fine_planning_time);
   move_group.setMaxVelocityScalingFactor(fine_vel);
   move_group.setMaxAccelerationScalingFactor(fine_acc);
@@ -897,11 +1333,34 @@ int main(int argc, char **argv)
   if (!lookup_tf_blocking(tf_buffer, app_node, world_frame, fine_goal_frame, Tw_shot, tf_timeout_sec))
   {
     RCLCPP_ERROR(logger, "TF timeout: %s <- %s", world_frame.c_str(), fine_goal_frame.c_str());
+    if (g_csv && g_csv->enabled)
+      g_csv->row(app_node->get_clock()->now(), "FINE", "TF", "FAIL", fine_cart_eef_step, 0.0, 0, 0.0, "frame=" + fine_goal_frame);
     return cleanup_and_exit(1);
   }
   const auto shot_pos_world = pos_from_tf(Tw_shot);
 
-  const auto fine_goal_cam = make_lookat_pose(world_frame, leaf_pos_world, world_up, shot_pos_world);
+  auto fine_goal_cam = make_lookat_pose(world_frame, leaf_pos_world, world_up, shot_pos_world);
+
+  // Orientation mode should be applied in CAMERA pose space,
+  // then converted to EE pose to keep camera-at-shot consistency.
+  const auto cur_cam_ps_for_mode =
+      move_group.getCurrentPose(camera_frame.empty() ? ee_link : camera_frame);
+  const auto q_cam_cur   = cur_cam_ps_for_mode.pose.orientation;
+  const auto q_cam_look  = fine_goal_cam.pose.orientation;
+
+  if (fine_orient_mode == "fixed")
+  {
+    fine_goal_cam.pose.orientation = q_cam_cur;
+    RCLCPP_INFO(logger, "FINE orient_mode=fixed: camera orientation copied from current camera.");
+  }
+  else if (fine_orient_mode == "blend")
+  {
+    double a = fine_orient_blend_alpha;
+    if (a < 0.0) a = 0.0;
+    if (a > 1.0) a = 1.0;
+    fine_goal_cam.pose.orientation = slerp_quat_msg(q_cam_cur, q_cam_look, a);
+    RCLCPP_INFO(logger, "FINE orient_mode=blend: camera slerp(current->lookat, alpha=%.3f).", a);
+  }
 
   geometry_msgs::msg::PoseStamped fine_goal_ee;
   if (!convert_goal_pose_for_ee(tf_buffer, logger, camera_frame, ee_link, fine_goal_cam, fine_goal_ee))
@@ -910,70 +1369,74 @@ int main(int argc, char **argv)
                 camera_frame.c_str(), ee_link.c_str());
     return cleanup_and_exit(1);
   }
-
-  const auto cur_ee_ps = move_group.getCurrentPose(ee_link);
-  const auto q_cur = cur_ee_ps.pose.orientation;
-  const auto q_lookat = fine_goal_ee.pose.orientation;
-
-  if (fine_orient_mode == "fixed")
-  {
-    fine_goal_ee.pose.orientation = q_cur;
-    RCLCPP_INFO(logger, "FINE orient_mode=fixed: orientation copied from current EE.");
-  }
-  else if (fine_orient_mode == "blend")
-  {
-    double a = fine_orient_blend_alpha;
-    if (a < 0.0) a = 0.0;
-    if (a > 1.0) a = 1.0;
-    fine_goal_ee.pose.orientation = slerp_quat_msg(q_cur, q_lookat, a);
-    RCLCPP_INFO(logger, "FINE orient_mode=blend: slerp(current->lookat, alpha=%.3f).", a);
-  }
-
-  std::vector<double> steps;
-  if (!fine_cart_eef_step_candidates.empty())
-    steps = fine_cart_eef_step_candidates;
-  else
-    steps = {fine_cart_eef_step};
+  // NOTE: Do NOT overwrite fine_goal_ee orientation here.
 
   bool fine_ok = false;
-  for (size_t i = 0; i < steps.size(); ++i)
+  if (fine_use_ompl)
   {
-    const double step = steps[i];
-    if (step <= 0.0)
-    {
-      RCLCPP_WARN(logger, "Skip invalid eef_step=%.6f", step);
-      continue;
-    }
+    const std::string phase = do_coarse ? "FINE" : "DIRECT";
+    fine_ok = plan_and_execute_pose_with_retry(logger, move_group, fine_goal_ee, ee_link,
+                                               phase,
+                                               1, 0.0,
+                                               app_node->get_clock()->now());
+  }
+  else
+  {
+    std::vector<double> steps;
+    if (!fine_cart_eef_step_candidates.empty())
+      steps = fine_cart_eef_step_candidates;
+    else
+      steps = {fine_cart_eef_step};
 
-    if (steps.size() > 1)
+    for (size_t i = 0; i < steps.size(); ++i)
     {
-      RCLCPP_INFO(logger, "FINE attempt with eef_step=%.6f (%zu/%zu)",
-                  step, i + 1, steps.size());
-    }
+      const double step = steps[i];
+      if (step <= 0.0)
+      {
+        RCLCPP_WARN(logger, "Skip invalid eef_step=%.6f", step);
+        continue;
+      }
 
-    if (execute_cartesian_to_pose(logger, move_group, fine_goal_ee, ee_link,
-                                  step,
-                                  fine_cart_jump_thresh,
-                                  fine_cart_min_fraction,
-                                  fine_cart_avoid_coll,
-                                  fine_vel,
-                                  fine_acc,
-                                  p0_warn_rad))
-    {
-      fine_ok = true;
-      break;
+      if (steps.size() > 1)
+      {
+        RCLCPP_INFO(logger, "FINE attempt with eef_step=%.6f (%zu/%zu)",
+                    step, i + 1, steps.size());
+      }
+
+      if (execute_cartesian_to_pose(logger, tf_buffer, move_group, fine_goal_ee, ee_link,
+                                    tf_timeout_sec,
+                                    step,
+                                    fine_cart_jump_thresh,
+                                    fine_cart_min_fraction,
+                                    fine_cart_avoid_coll,
+                                    fine_vel,
+                                    fine_acc,
+                                    p0_warn_rad,
+                                    app_node->get_clock()->now()))
+      {
+        fine_ok = true;
+        break;
+      }
     }
   }
 
   if (!fine_ok)
   {
-    RCLCPP_ERROR(logger, "FINE failed (all eef_step attempts exhausted).\n");
+    RCLCPP_ERROR(logger, "FINE/DIRECT failed.\n");
+    if (g_csv && g_csv->enabled)
+      g_csv->row(app_node->get_clock()->now(), fine_use_ompl ? (do_coarse ? "FINE" : "DIRECT") : "FINE",
+                 "END", "FAIL", 0.0, 0.0, 0, 0.0, "");
     return cleanup_and_exit(1);
   }
 
-  RCLCPP_INFO(logger, "FINE success.");
+  RCLCPP_INFO(logger, "FINE/DIRECT success.");
+  if (g_csv && g_csv->enabled)
+    g_csv->row(app_node->get_clock()->now(), fine_use_ompl ? (do_coarse ? "FINE" : "DIRECT") : "FINE",
+               "END", "SUCCESS", 0.0, 0.0, 0, 0.0, "");
 
   RCLCPP_INFO(logger, "=== VIEW: orientation-only align to %s ===", view_goal_frame.c_str());
+  if (g_csv && g_csv->enabled)
+    g_csv->row(app_node->get_clock()->now(), "VIEW", "BEGIN", "OK", view_cart_eef_step, 0.0, 0, 0.0, "");
   move_group.setPlanningTime(view_planning_time);
   move_group.setMaxVelocityScalingFactor(view_vel);
   move_group.setMaxAccelerationScalingFactor(view_acc);
@@ -983,6 +1446,8 @@ int main(int argc, char **argv)
   {
     RCLCPP_WARN(logger, "TF timeout: %s <- %s. Skip VIEW.",
                 world_frame.c_str(), view_goal_frame.c_str());
+    if (g_csv && g_csv->enabled)
+      g_csv->row(app_node->get_clock()->now(), "VIEW", "TF", "SKIP", 0.0, 0.0, 0, 0.0, "frame=" + view_goal_frame);
   }
   else
   {
@@ -1021,14 +1486,22 @@ int main(int argc, char **argv)
                                        p0_warn_rad))
       {
         RCLCPP_WARN(logger, "VIEW failed (best-effort).\n");
+        if (g_csv && g_csv->enabled)
+          g_csv->row(app_node->get_clock()->now(), "VIEW", "END", "FAIL",
+                     view_cart_eef_step, 0.0, static_cast<int>(wps.size()), 0.0, "");
       }
       else
       {
         RCLCPP_INFO(logger, "VIEW success.");
+        if (g_csv && g_csv->enabled)
+          g_csv->row(app_node->get_clock()->now(), "VIEW", "END", "SUCCESS",
+                     view_cart_eef_step, 0.0, static_cast<int>(wps.size()), 0.0, "");
       }
     }
   }
 
   RCLCPP_INFO(logger, "DONE: leaf5 coarse->fine->view finished.");
+  if (g_csv && g_csv->enabled)
+    g_csv->row(app_node->get_clock()->now(), "DONE", "FINISH", "OK", 0.0, 0.0, 0, 0.0, "");
   return cleanup_and_exit(0);
 }
