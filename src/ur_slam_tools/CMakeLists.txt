@@ -30,23 +30,22 @@ ament_target_dependencies(go_to_leaf
   rclcpp tf2 tf2_ros tf2_geometry_msgs geometry_msgs moveit_ros_planning_interface
 )
 
-add_executable(coarse_to_fine_go_to_leaf src/coarse_to_fine_go_to_leaf.cpp)
+add_executable(coarse_to_fine_go_to_leaf src/_archive/coarse_to_fine_go_to_leaf.cpp)
 ament_target_dependencies(coarse_to_fine_go_to_leaf
   rclcpp tf2 tf2_ros tf2_geometry_msgs geometry_msgs moveit_ros_planning_interface
 )
 
-# ★ 2 / 3 は「別ターゲット名」にする
-add_executable(coarse_to_fine_go_to_leaf2 src/coarse_to_fine_go_to_leaf2.cpp)
+add_executable(coarse_to_fine_go_to_leaf2 src/_archive/coarse_to_fine_go_to_leaf2.cpp)
 ament_target_dependencies(coarse_to_fine_go_to_leaf2
   rclcpp tf2 tf2_ros tf2_geometry_msgs geometry_msgs moveit_ros_planning_interface sensor_msgs
 )
 
-add_executable(coarse_to_fine_go_to_leaf3 src/coarse_to_fine_go_to_leaf3.cpp)
+add_executable(coarse_to_fine_go_to_leaf3 src/_archive/coarse_to_fine_go_to_leaf3.cpp)
 ament_target_dependencies(coarse_to_fine_go_to_leaf3
   rclcpp tf2 tf2_ros tf2_geometry_msgs geometry_msgs moveit_ros_planning_interface sensor_msgs
 )
 
-add_executable(coarse_to_fine_go_to_leaf4 src/coarse_to_fine_go_to_leaf4.cpp)
+add_executable(coarse_to_fine_go_to_leaf4 src/_archive/coarse_to_fine_go_to_leaf4.cpp)
 ament_target_dependencies(coarse_to_fine_go_to_leaf4
   rclcpp tf2 tf2_ros tf2_geometry_msgs geometry_msgs moveit_ros_planning_interface sensor_msgs
 )
