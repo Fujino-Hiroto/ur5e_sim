@@ -7,6 +7,7 @@
 - [x] 問題の原因分析（IK ブランチ跳び・345度問題）
 - [x] moveit_kinematics.yaml を正しい場所に配置
 - [x] CMakeLists.txt を実際のファイル配置に合わせて修正・ビルド確認済み
+- [x] leaf1〜4 を `src/ur_slam_tools/src/_archive/` に移動済み（削除ではなくアーカイブ）
 - [ ] 不要ファイルの git rm とプッシュ（下記参照）
 - [ ] TODO-1: run_bench.sh
 - [ ] TODO-2: leaf5 条件C実装（seed_joints モード）
