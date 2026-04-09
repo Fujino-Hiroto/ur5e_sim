@@ -8,28 +8,10 @@
 - [x] moveit_kinematics.yaml を正しい場所に配置
 - [x] CMakeLists.txt を実際のファイル配置に合わせて修正・ビルド確認済み
 - [x] leaf1〜4 を `src/ur_slam_tools/src/_archive/` に移動済み（削除ではなくアーカイブ）
-- [ ] 不要ファイルの git rm とプッシュ（下記参照）
+- [x] 不要ファイルの削除（go_to_leaf.cpp / pointcloud_noiser.py / scripts/ / leaf4_moveit_kinematics.yaml）
 - [ ] TODO-1: run_bench.sh
 - [ ] TODO-2: leaf5 条件C実装（seed_joints モード）
 - [ ] TODO-3: analyze_bench.py
-
----
-
-## 不要ファイルの削除（ローカルで git rm してプッシュすること）
-
-```bash
-cd ~/ur5e_sim
-
-git rm src/ur_slam_tools/src/go_to_leaf.cpp
-git rm src/ur_slam_tools/src/pointcloud_noiser.py
-git rm scripts/run_experiment.sh
-git rm scripts/run_all.sh
-git rm scripts/scan_pan_no_bag.sh
-git rm leaf4_moveit_kinematics.yaml
-
-git commit -m "chore: remove deprecated files"
-git push
-```
 
 ---
 
