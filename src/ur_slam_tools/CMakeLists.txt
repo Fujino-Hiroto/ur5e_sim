@@ -13,7 +13,8 @@ find_package(tf2_ros REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
-find_package(sensor_msgs REQUIRED)  # ★ PointCloud2 を使うなら必須
+find_package(sensor_msgs REQUIRED)
+find_package(trajectory_msgs REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -25,53 +26,24 @@ endif()
 # ----------------------------
 # Executables
 # ----------------------------
-add_executable(go_to_leaf src/go_to_leaf.cpp)
-ament_target_dependencies(go_to_leaf
-  rclcpp tf2 tf2_ros tf2_geometry_msgs geometry_msgs moveit_ros_planning_interface
-)
 
-add_executable(coarse_to_fine_go_to_leaf src/_archive/coarse_to_fine_go_to_leaf.cpp)
-ament_target_dependencies(coarse_to_fine_go_to_leaf
-  rclcpp tf2 tf2_ros tf2_geometry_msgs geometry_msgs moveit_ros_planning_interface
-)
-
-add_executable(coarse_to_fine_go_to_leaf2 src/_archive/coarse_to_fine_go_to_leaf2.cpp)
-ament_target_dependencies(coarse_to_fine_go_to_leaf2
-  rclcpp tf2 tf2_ros tf2_geometry_msgs geometry_msgs moveit_ros_planning_interface sensor_msgs
-)
-
-add_executable(coarse_to_fine_go_to_leaf3 src/_archive/coarse_to_fine_go_to_leaf3.cpp)
-ament_target_dependencies(coarse_to_fine_go_to_leaf3
-  rclcpp tf2 tf2_ros tf2_geometry_msgs geometry_msgs moveit_ros_planning_interface sensor_msgs
-)
-
-add_executable(coarse_to_fine_go_to_leaf4 src/_archive/coarse_to_fine_go_to_leaf4.cpp)
-ament_target_dependencies(coarse_to_fine_go_to_leaf4
-  rclcpp tf2 tf2_ros tf2_geometry_msgs geometry_msgs moveit_ros_planning_interface sensor_msgs
-)
-
+# ★ メインノード（研究で使用）
 add_executable(coarse_to_fine_go_to_leaf5 src/coarse_to_fine_go_to_leaf5.cpp)
 ament_target_dependencies(coarse_to_fine_go_to_leaf5
-  rclcpp tf2 tf2_ros tf2_geometry_msgs geometry_msgs moveit_ros_planning_interface sensor_msgs
+  rclcpp tf2 tf2_ros tf2_geometry_msgs geometry_msgs
+  moveit_ros_planning_interface sensor_msgs trajectory_msgs
 )
 
 # ----------------------------
 # Install
 # ----------------------------
 install(TARGETS
-  go_to_leaf
-  coarse_to_fine_go_to_leaf
-  coarse_to_fine_go_to_leaf2
-  coarse_to_fine_go_to_leaf3
-  coarse_to_fine_go_to_leaf4
   coarse_to_fine_go_to_leaf5
-
   DESTINATION lib/${PROJECT_NAME}
 )
 
-# Install python executable scripts
+# Python スクリプト
 install(PROGRAMS
-  src/pointcloud_noiser.py
   src/pointcloud_metrics_csv.py
   src/depth_image_noiser.py
   src/arc_sweep_jointtraj.py
@@ -82,7 +54,5 @@ install(PROGRAMS
 install(DIRECTORY config
   DESTINATION share/${PROJECT_NAME}
 )
-
-
 
 ament_package()
