@@ -36,7 +36,7 @@ fi
 WS_SETUP="/home/fujino/ur5e_sim/install/setup.bash"
 RESULTS_DIR="/home/fujino/ur5e_sim/results"
 WAIT_TIMEOUT=60   # トピック待機タイムアウト(秒)
-CLEANUP_WAIT=5    # cleanup後の待機時間(秒)
+CLEANUP_WAIT=10   # cleanup後の待機時間(秒)
 
 # ---------- ワークスペース source ----------
 if [ -f "$WS_SETUP" ]; then
