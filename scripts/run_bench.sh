@@ -149,11 +149,12 @@ wait_for_topic() {
   echo "[INFO] Waiting for topic: $topic (timeout: ${timeout}s)"
   local deadline=$((SECONDS + timeout))
   while [ $SECONDS -lt $deadline ]; do
-    if ros2 topic hz "$topic" --window 1 2>/dev/null | grep -q "average rate"; then
+    if timeout 10 ros2 topic hz "$topic" --window 1 2>/dev/null \
+         | grep -q "average rate"; then
       echo "[INFO] Topic $topic is active."
       return 0
     fi
-    sleep 2
+    sleep 1
   done
   echo "[WARN] Timeout waiting for topic: $topic" >&2
   return 1
