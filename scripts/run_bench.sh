@@ -44,16 +44,25 @@ RESULTS_DIR="/home/fujino/ur5e_sim/results"
 WAIT_TIMEOUT=60   # トピック待機タイムアウト(秒)
 CLEANUP_WAIT=10   # cleanup後の待機時間(秒)
 
+# ---------- ログ関数 ----------
+log() { echo "[$(date '+%H:%M:%S')] $*"; }
+
 # ---------- ワークスペース source ----------
 if [ -f "$WS_SETUP" ]; then
   # shellcheck disable=SC1090
+  set +u
   source "$WS_SETUP"
+  set -u
 else
   echo "[ERROR] Workspace setup not found: $WS_SETUP" >&2; exit 1
 fi
 
 # ---------- results/ 自動作成 ----------
 mkdir -p "$RESULTS_DIR"
+
+# ---------- ログファイル出力 (tee) ----------
+LOG_FILE="$RESULTS_DIR/run_bench_$(date '+%Y%m%d_%H%M%S').log"
+exec > >(tee -a "$LOG_FILE") 2>&1
 
 # ---------- CONDITION → planning_mode / fine_orient_mode ----------
 case "$CONDITION" in
@@ -125,7 +134,7 @@ noise_args() {
 CHILD_PIDS=()
 
 cleanup() {
-  echo "[INFO] Cleaning up child processes..."
+  log "[INFO] Cleaning up child processes..."
   for pid in "${CHILD_PIDS[@]:-}"; do
     if kill -0 "$pid" 2>/dev/null; then
       kill -INT "$pid" 2>/dev/null || true
@@ -135,6 +144,7 @@ cleanup() {
   sleep 3
   for pid in "${CHILD_PIDS[@]:-}"; do
     if kill -0 "$pid" 2>/dev/null; then
+      log "[WARN] PID=$pid did not exit on SIGINT, sending SIGKILL"
       kill -9 "$pid" 2>/dev/null || true
     fi
   done
@@ -143,7 +153,7 @@ cleanup() {
   done
   CHILD_PIDS=()
   # 次の試行前にプロセスが完全に終了するのを待つ
-  echo "[INFO] Waiting ${CLEANUP_WAIT}s for processes to fully terminate..."
+  log "[INFO] Waiting ${CLEANUP_WAIT}s for processes to fully terminate..."
   sleep "$CLEANUP_WAIT"
 }
 
@@ -152,19 +162,24 @@ trap cleanup EXIT
 wait_for_topic() {
   local topic="$1"
   local timeout="$2"
-  echo "[INFO] Waiting for topic: $topic (timeout: ${timeout}s)"
+  log "[INFO] Waiting for topic: $topic (timeout: ${timeout}s)"
   local deadline=$((SECONDS + timeout))
   while [ $SECONDS -lt $deadline ]; do
     if timeout 10 ros2 topic hz "$topic" --window 1 2>/dev/null \
          | grep -q "average rate"; then
-      echo "[INFO] Topic $topic is active."
+      log "[INFO] Topic $topic is active."
       return 0
     fi
     sleep 1
   done
-  echo "[WARN] Timeout waiting for topic: $topic" >&2
+  log "[WARN] Timeout waiting for topic: $topic" >&2
   return 1
 }
+
+# ---------- サマリーカウンター ----------
+N_SUCCESS=0
+N_FAIL=0
+N_SKIP=0
 
 # ---------- dry-run ----------
 if $DRY_RUN; then
@@ -172,6 +187,7 @@ if $DRY_RUN; then
   cat <<EOM
 [DRY-RUN] CONDITION=$CONDITION ($PLANNING_MODE + $FINE_ORIENT_MODE)
 [DRY-RUN] NOISE=$NOISE  N_TRIALS=$N_TRIALS  run_id=$RUN_ID
+[DRY-RUN] LOG_FILE=$LOG_FILE
 
 # 1. Gazebo
 ros2 launch ur_slam_bringup ur5e_gazebo.launch.py
@@ -226,88 +242,103 @@ EOM
   exit 0
 fi
 
-# ---------- メインループ ----------
-echo "========================================"
-echo " run_bench.sh"
-echo " CONDITION=$CONDITION ($PLANNING_MODE + $FINE_ORIENT_MODE)"
-echo " NOISE=$NOISE  N_TRIALS=$N_TRIALS"
-echo "========================================"
+# ---------- 環境情報ヘッダー ----------
+log "========================================"
+log " run_bench.sh"
+log " CONDITION=$CONDITION ($PLANNING_MODE + $FINE_ORIENT_MODE)"
+log " NOISE=$NOISE  N_TRIALS=$N_TRIALS"
+log " ROS_DISTRO=${ROS_DISTRO:-unknown}"
+log " WS=$WS_SETUP"
+log " LOG=$LOG_FILE"
+log "========================================"
 
+# ---------- メインループ ----------
 for i in $(seq 1 "$N_TRIALS"); do
   RUN_ID=$(printf "%s_%s_%03d" "$CONDITION" "$NOISE" "$i")
-  echo ""
-  echo "[TRIAL $i/$N_TRIALS] START  run_id=$RUN_ID"
-  echo "----------------------------------------"
+  TRIAL_START=$SECONDS
+  log ""
+  log "[TRIAL $i/$N_TRIALS] START  run_id=$RUN_ID"
+  log "----------------------------------------"
   TRIAL_OK=true
 
   # --- 1. Gazebo ---
-  echo "[INFO] Launching Gazebo..."
+  log "[INFO] Launching Gazebo..."
   ros2 launch ur_slam_bringup ur5e_gazebo.launch.py &
   CHILD_PIDS+=($!)
+  log "[INFO] Gazebo PID=$!"
   if ! wait_for_topic /clock "$WAIT_TIMEOUT"; then
-    echo "[ERROR] Gazebo did not start. Skipping trial $i." >&2
+    log "[ERROR] Gazebo did not start. Skipping trial $i." >&2
     TRIAL_OK=false
   fi
 
   # --- 2. MoveIt2 ---
   if $TRIAL_OK; then
-    echo "[INFO] Launching MoveIt2..."
+    log "[INFO] Launching MoveIt2..."
     ros2 launch ur_slam_bringup ur5e_moveit.launch.py &
     CHILD_PIDS+=($!)
+    log "[INFO] MoveIt2 PID=$!"
     if ! wait_for_topic /move_group/status "$WAIT_TIMEOUT"; then
-      echo "[ERROR] MoveIt2 did not start. Skipping trial $i." >&2
+      log "[ERROR] MoveIt2 did not start. Skipping trial $i." >&2
       TRIAL_OK=false
     fi
   fi
 
   # --- 3. RTAB-Map ---
   if $TRIAL_OK; then
-    echo "[INFO] Launching RTAB-Map..."
+    log "[INFO] Launching RTAB-Map..."
     ros2 launch ur_slam_bringup ur5e_slam.launch.py &
     CHILD_PIDS+=($!)
+    log "[INFO] RTAB-Map PID=$!"
     if ! wait_for_topic /rtabmap/mapData "$WAIT_TIMEOUT"; then
-      echo "[ERROR] RTAB-Map did not start. Skipping trial $i." >&2
+      log "[ERROR] RTAB-Map did not start. Skipping trial $i." >&2
       TRIAL_OK=false
     fi
   fi
 
   # --- 4. cloud_gate ---
   if $TRIAL_OK; then
-    echo "[INFO] Launching cloud_gate..."
+    log "[INFO] Launching cloud_gate..."
     ros2 run ur_slam_tools cloud_gate.py --ros-args -p use_sim_time:=true &
     CHILD_PIDS+=($!)
+    log "[INFO] cloud_gate PID=$!"
     if ! wait_for_topic /cloud_gate/status "$WAIT_TIMEOUT"; then
-      echo "[WARN] cloud_gate topic not confirmed, continuing anyway."
+      log "[WARN] cloud_gate topic not confirmed, continuing anyway."
     fi
   fi
 
   # --- 5. depth_image_noiser ---
   if $TRIAL_OK; then
-    echo "[INFO] Launching depth_image_noiser (NOISE=$NOISE)..."
+    log "[INFO] Launching depth_image_noiser (NOISE=$NOISE)..."
     # shellcheck disable=SC2046
     ros2 run ur_slam_tools depth_image_noiser.py --ros-args \
       -p use_sim_time:=true \
       $(noise_args) &
     CHILD_PIDS+=($!)
+    log "[INFO] depth_image_noiser PID=$!"
     if ! wait_for_topic /camera/depth/depth/image_raw_noisy "$WAIT_TIMEOUT"; then
-      echo "[WARN] depth_image_noiser topic not confirmed, continuing anyway."
+      log "[WARN] depth_image_noiser topic not confirmed, continuing anyway."
     fi
   fi
 
   # --- 6. arc_sweep_jointtraj ---
   if $TRIAL_OK; then
-    echo "[INFO] Launching arc_sweep_jointtraj..."
+    log "[INFO] Launching arc_sweep_jointtraj..."
     ros2 run ur_slam_tools arc_sweep_jointtraj.py --ros-args \
       -p use_sim_time:=true &
     ARC_PID=$!
     CHILD_PIDS+=($ARC_PID)
-    echo "[INFO] Waiting for arc_sweep_jointtraj to finish..."
-    wait "$ARC_PID" 2>/dev/null || true
+    log "[INFO] arc_sweep PID=$ARC_PID — waiting for exit..."
+    wait "$ARC_PID" 2>/dev/null; ARC_EXIT=$?
+    log "[INFO] arc_sweep exited with code $ARC_EXIT"
+    if [ "$ARC_EXIT" -ne 0 ]; then
+      log "[ERROR] arc_sweep failed (exit=$ARC_EXIT). Marking trial as FAIL."
+      TRIAL_OK=false
+    fi
   fi
 
   # --- 7. coarse_to_fine_go_to_leaf5 ---
   if $TRIAL_OK; then
-    echo "[INFO] Launching coarse_to_fine_go_to_leaf5 (CONDITION=$CONDITION, run_id=$RUN_ID)..."
+    log "[INFO] Launching coarse_to_fine_go_to_leaf5 (CONDITION=$CONDITION, run_id=$RUN_ID)..."
     ros2 run ur_slam_tools coarse_to_fine_go_to_leaf5 --ros-args \
       -p use_sim_time:=true \
       -p world_frame:=base_link \
@@ -338,18 +369,35 @@ for i in $(seq 1 "$N_TRIALS"); do
       -p planning_mode:="$PLANNING_MODE" &
     LEAF_PID=$!
     CHILD_PIDS+=($LEAF_PID)
-    echo "[INFO] Waiting for coarse_to_fine_go_to_leaf5 to finish..."
-    wait "$LEAF_PID" 2>/dev/null || true
+    log "[INFO] leaf5 PID=$LEAF_PID — waiting for exit..."
+    wait "$LEAF_PID" 2>/dev/null; LEAF_EXIT=$?
+    log "[INFO] leaf5 exited with code $LEAF_EXIT"
+    if [ "$LEAF_EXIT" -ne 0 ]; then
+      log "[ERROR] leaf5 failed (exit=$LEAF_EXIT). Marking trial as FAIL."
+      TRIAL_OK=false
+    fi
   fi
 
   # --- 試行終了 → cleanup して次へ ---
-  STATUS=$( $TRIAL_OK && echo "SUCCESS" || echo "SKIPPED" )
-  echo "[TRIAL $i/$N_TRIALS] DONE  run_id=$RUN_ID  status=$STATUS"
+  TRIAL_DURATION=$((SECONDS - TRIAL_START))
+  if ! $TRIAL_OK; then
+    # SKIP = 起動失敗で実験未実施, FAIL = 実験実施したが非ゼロ終了
+    if [ "${ARC_EXIT:-0}" -ne 0 ] || [ "${LEAF_EXIT:-0}" -ne 0 ]; then
+      STATUS="FAIL"; ((N_FAIL++))
+    else
+      STATUS="SKIP"; ((N_SKIP++))
+    fi
+  else
+    STATUS="SUCCESS"; ((N_SUCCESS++))
+  fi
+  log "[TRIAL $i/$N_TRIALS] DONE  run_id=$RUN_ID  status=$STATUS  duration=${TRIAL_DURATION}s"
   cleanup
 done
 
-echo ""
-echo "========================================"
-echo " All $N_TRIALS trials complete."
-echo " Results: $RESULTS_DIR/leaf5_log.csv"
-echo "========================================"
+log ""
+log "========================================"
+log " All $N_TRIALS trials complete."
+log " SUCCESS=$N_SUCCESS  FAIL=$N_FAIL  SKIP=$N_SKIP"
+log " CSV:  $RESULTS_DIR/leaf5_log.csv"
+log " LOG:  $LOG_FILE"
+log "========================================"
