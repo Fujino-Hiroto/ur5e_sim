@@ -39,10 +39,16 @@ if ! [[ "$N_TRIALS" =~ ^[0-9]+$ ]] || [ "$N_TRIALS" -lt 1 ]; then
 fi
 
 # ---------- 定数 ----------
-WS_SETUP="/home/fujino/ur5e_sim/install/setup.bash"
-RESULTS_DIR="/home/fujino/ur5e_sim/results"
-WAIT_TIMEOUT=60   # トピック待機タイムアウト(秒)
+WS_ROOT="/home/fujino/ur5e_sim"
+WS_SETUP="$WS_ROOT/install/setup.bash"
+RESULTS_DIR="$WS_ROOT/results"
 CLEANUP_WAIT=10   # cleanup後の待機時間(秒)
+
+# 起動待機時間 (PC性能に合わせてチューニング)
+GAZEBO_STARTUP_SEC=15
+MOVEIT_STARTUP_SEC=15
+SLAM_STARTUP_SEC=20
+TOOL_STARTUP_SEC=5
 
 # ---------- ログ関数 ----------
 log() { echo "[$(date '+%H:%M:%S')] $*"; }
@@ -57,10 +63,44 @@ else
   echo "[ERROR] Workspace setup not found: $WS_SETUP" >&2; exit 1
 fi
 
+# ---------- GAZEBO_MODEL_PATH (run_gazebo.sh と同等) ----------
+export GAZEBO_MODEL_PATH="${GAZEBO_MODEL_PATH:-}:/usr/share/gazebo-11/models:$WS_ROOT/src/ur_slam_bringup/models"
+
 # ---------- results/ 自動作成 ----------
 mkdir -p "$RESULTS_DIR"
 
+# ---------- Plant pose / leaf targets TF (run_gazebo.sh と同等) ----------
+PLANT_X=0.0; PLANT_Y=0.83; PLANT_Z=0.0
+PLANT_QX=0; PLANT_QY=0; PLANT_QZ=0.7071068; PLANT_QW=0.7071068
+SHOT_OFFSET=0.07
 
+start_tf_publishers() {
+  setsid ros2 run tf2_ros static_transform_publisher \
+    "$PLANT_X" "$PLANT_Y" "$PLANT_Z" \
+    "$PLANT_QX" "$PLANT_QY" "$PLANT_QZ" "$PLANT_QW" \
+    world plant_base &
+  GROUP_PIDS+=($!)
+
+  setsid ros2 run tf2_ros static_transform_publisher \
+    -0.14212 0.032125 0.63595 \
+    0.245305 -0.946771 0.031645 -0.206033 \
+    plant_base leaf_target &
+  GROUP_PIDS+=($!)
+
+  setsid ros2 run tf2_ros static_transform_publisher \
+    0 0 "$SHOT_OFFSET" \
+    0 0 0 1 \
+    leaf_target leaf_target_shot &
+  GROUP_PIDS+=($!)
+
+  setsid ros2 run tf2_ros static_transform_publisher \
+    0 0 0 \
+    1 0 0 0 \
+    leaf_target_shot leaf_target_view &
+  GROUP_PIDS+=($!)
+
+  log "[INFO] TF publishers started (4 nodes)"
+}
 
 # ---------- CONDITION → planning_mode / fine_orient_mode ----------
 case "$CONDITION" in
@@ -128,50 +168,49 @@ noise_args() {
   esac
 }
 
-# ---------- ユーティリティ ----------
-CHILD_PIDS=()
+# ============================================================
+# プロセス管理 — setsid + プロセスグループ kill
+# ============================================================
+GROUP_PIDS=()
 
 cleanup() {
-  log "[INFO] Cleaning up child processes..."
-  for pid in "${CHILD_PIDS[@]:-}"; do
-    if kill -0 "$pid" 2>/dev/null; then
-      kill -INT "$pid" 2>/dev/null || true
-    fi
+  log "[INFO] Cleaning up (killing ${#GROUP_PIDS[@]} process groups)..."
+  # SIGINT でグループごと終了
+  for gpid in "${GROUP_PIDS[@]:-}"; do
+    kill -- -"$gpid" 2>/dev/null || true
   done
-  # SIGINT で終わらないプロセスを SIGKILL
   sleep 3
-  for pid in "${CHILD_PIDS[@]:-}"; do
-    if kill -0 "$pid" 2>/dev/null; then
-      log "[WARN] PID=$pid did not exit on SIGINT, sending SIGKILL"
-      kill -9 "$pid" 2>/dev/null || true
-    fi
+  # 残っていれば SIGKILL
+  for gpid in "${GROUP_PIDS[@]:-}"; do
+    kill -9 -- -"$gpid" 2>/dev/null || true
   done
-  for pid in "${CHILD_PIDS[@]:-}"; do
-    wait "$pid" 2>/dev/null || true
-  done
-  CHILD_PIDS=()
-  # 次の試行前にプロセスが完全に終了するのを待つ
+  GROUP_PIDS=()
   log "[INFO] Waiting ${CLEANUP_WAIT}s for processes to fully terminate..."
   sleep "$CLEANUP_WAIT"
 }
 
 trap cleanup EXIT
 
-wait_for_topic() {
-  local topic="$1"
-  local timeout="$2"
-  log "[INFO] Waiting for topic: $topic (timeout: ${timeout}s)"
-  local deadline=$((SECONDS + timeout))
-  while [ $SECONDS -lt $deadline ]; do
-    if timeout 10 ros2 topic hz "$topic" --window 1 2>/dev/null \
-         | grep -q "average rate"; then
-      log "[INFO] Topic $topic is active."
-      return 0
+# ============================================================
+# readiness 検出 — 固定sleep + topic 検証
+# ============================================================
+wait_ready() {
+  local name="$1"
+  local sleep_sec="$2"
+  local check_topic="${3:-}"
+
+  log "[INFO] Waiting ${sleep_sec}s for $name to start..."
+  sleep "$sleep_sec"
+
+  if [ -n "$check_topic" ]; then
+    if timeout 10 ros2 topic echo "$check_topic" --once > /dev/null 2>&1; then
+      log "[INFO] $name ready (topic $check_topic confirmed)."
+    else
+      log "[WARN] $name: topic $check_topic not detected after ${sleep_sec}s wait."
+      return 1
     fi
-    sleep 1
-  done
-  log "[WARN] Timeout waiting for topic: $topic" >&2
-  return 1
+  fi
+  return 0
 }
 
 # ---------- サマリーカウンター ----------
@@ -187,27 +226,28 @@ if $DRY_RUN; then
 [DRY-RUN] NOISE=$NOISE  N_TRIALS=$N_TRIALS  run_id=$RUN_ID
 [DRY-RUN] LOG_FILE: dry-run mode, no log file created
 
-# 1. Gazebo
+# 0. TF publishers (4 nodes)
+# 1. Gazebo  (wait ${GAZEBO_STARTUP_SEC}s + /clock check)
 ros2 launch ur_slam_bringup ur5e_gazebo.launch.py
 
-# 2. MoveIt2
+# 2. MoveIt2 (wait ${MOVEIT_STARTUP_SEC}s + /move_group/monitored_planning_scene check)
 ros2 launch ur_slam_bringup ur5e_moveit.launch.py
 
-# 3. RTAB-Map
+# 3. RTAB-Map (wait ${SLAM_STARTUP_SEC}s + /rtabmap/mapData check)
 ros2 launch ur_slam_bringup ur5e_slam.launch.py
 
-# 4. cloud_gate
+# 4. cloud_gate (wait ${TOOL_STARTUP_SEC}s)
 ros2 run ur_slam_tools cloud_gate.py --ros-args -p use_sim_time:=true
 
-# 5. depth_image_noiser
+# 5. depth_image_noiser (wait ${TOOL_STARTUP_SEC}s)
 ros2 run ur_slam_tools depth_image_noiser.py --ros-args \\
   -p use_sim_time:=true \\
   $(noise_args)
 
-# 6. arc_sweep_jointtraj
+# 6. arc_sweep_jointtraj (wait for exit)
 ros2 run ur_slam_tools arc_sweep_jointtraj.py --ros-args -p use_sim_time:=true
 
-# 7. coarse_to_fine_go_to_leaf5
+# 7. coarse_to_fine_go_to_leaf5 (wait for exit)
 ros2 run ur_slam_tools coarse_to_fine_go_to_leaf5 --ros-args \\
   -p use_sim_time:=true \\
   -p world_frame:=base_link \\
@@ -254,7 +294,9 @@ log " WS=$WS_SETUP"
 log " LOG=$LOG_FILE"
 log "========================================"
 
-# ---------- メインループ ----------
+# ============================================================
+# メインループ
+# ============================================================
 for i in $(seq 1 "$N_TRIALS"); do
   RUN_ID=$(printf "%s_%s_%03d" "$CONDITION" "$NOISE" "$i")
   TRIAL_START=$SECONDS
@@ -265,12 +307,15 @@ for i in $(seq 1 "$N_TRIALS"); do
   ARC_EXIT=0
   LEAF_EXIT=0
 
+  # --- 0. TF publishers ---
+  start_tf_publishers
+
   # --- 1. Gazebo ---
   log "[INFO] Launching Gazebo..."
-  ros2 launch ur_slam_bringup ur5e_gazebo.launch.py &
-  CHILD_PIDS+=($!)
-  log "[INFO] Gazebo PID=$!"
-  if ! wait_for_topic /clock "$WAIT_TIMEOUT"; then
+  setsid ros2 launch ur_slam_bringup ur5e_gazebo.launch.py &
+  GROUP_PIDS+=($!)
+  log "[INFO] Gazebo PGID=$!"
+  if ! wait_ready "Gazebo" "$GAZEBO_STARTUP_SEC" /clock; then
     log "[ERROR] Gazebo did not start. Skipping trial $i." >&2
     TRIAL_OK=false
   fi
@@ -278,50 +323,64 @@ for i in $(seq 1 "$N_TRIALS"); do
   # --- 2. MoveIt2 ---
   if $TRIAL_OK; then
     log "[INFO] Launching MoveIt2..."
-    ros2 launch ur_slam_bringup ur5e_moveit.launch.py &
-    CHILD_PIDS+=($!)
-    log "[INFO] MoveIt2 PID=$!"
-    if ! wait_for_topic /move_group/status "$WAIT_TIMEOUT"; then
+    setsid ros2 launch ur_slam_bringup ur5e_moveit.launch.py &
+    GROUP_PIDS+=($!)
+    log "[INFO] MoveIt2 PGID=$!"
+    if ! wait_ready "MoveIt2" "$MOVEIT_STARTUP_SEC" /monitored_planning_scene; then
       log "[ERROR] MoveIt2 did not start. Skipping trial $i." >&2
       TRIAL_OK=false
     fi
   fi
 
+  # --- 2.5. Collision object (floor) ---
+  if $TRIAL_OK; then
+    log "[INFO] Loading floor collision from Rviz_floor.scene..."
+    ros2 service call /apply_planning_scene moveit_msgs/srv/ApplyPlanningScene "{
+      scene: {
+        is_diff: true,
+        world: {
+          collision_objects: [{
+            id: 'Box_0',
+            header: {frame_id: 'world'},
+            primitives: [{type: 1, dimensions: [4.0, 4.0, 0.02]}],
+            primitive_poses: [{position: {x: 0.0, y: 0.0, z: -0.1}}],
+            operation: 0
+          }]
+        }
+      }
+    }" > /dev/null 2>&1
+    log "[INFO] Floor collision added."
+  fi
+
   # --- 3. RTAB-Map ---
   if $TRIAL_OK; then
     log "[INFO] Launching RTAB-Map..."
-    ros2 launch ur_slam_bringup ur5e_slam.launch.py &
-    CHILD_PIDS+=($!)
-    log "[INFO] RTAB-Map PID=$!"
-    if ! wait_for_topic /rtabmap/mapData "$WAIT_TIMEOUT"; then
-      log "[ERROR] RTAB-Map did not start. Skipping trial $i." >&2
-      TRIAL_OK=false
-    fi
+    setsid ros2 launch ur_slam_bringup ur5e_slam.launch.py &
+    GROUP_PIDS+=($!)
+    log "[INFO] RTAB-Map PGID=$!"
+    # mapData の publish は入力データ蓄積後なので検証スキップ
+    wait_ready "RTAB-Map" "$SLAM_STARTUP_SEC"
   fi
 
-  # --- 4. cloud_gate ---
-  if $TRIAL_OK; then
-    log "[INFO] Launching cloud_gate..."
-    ros2 run ur_slam_tools cloud_gate.py --ros-args -p use_sim_time:=true &
-    CHILD_PIDS+=($!)
-    log "[INFO] cloud_gate PID=$!"
-    if ! wait_for_topic /cloud_gate/status "$WAIT_TIMEOUT"; then
-      log "[WARN] cloud_gate topic not confirmed, continuing anyway."
-    fi
-  fi
-
-  # --- 5. depth_image_noiser ---
+  # --- 4. depth_image_noiser ---
   if $TRIAL_OK; then
     log "[INFO] Launching depth_image_noiser (NOISE=$NOISE)..."
     # shellcheck disable=SC2046
-    ros2 run ur_slam_tools depth_image_noiser.py --ros-args \
+    setsid ros2 run ur_slam_tools depth_image_noiser.py --ros-args \
       -p use_sim_time:=true \
       $(noise_args) &
-    CHILD_PIDS+=($!)
-    log "[INFO] depth_image_noiser PID=$!"
-    if ! wait_for_topic /camera/depth/depth/image_raw_noisy "$WAIT_TIMEOUT"; then
-      log "[WARN] depth_image_noiser topic not confirmed, continuing anyway."
-    fi
+    GROUP_PIDS+=($!)
+    log "[INFO] depth_image_noiser PGID=$!"
+    wait_ready "depth_image_noiser" "$TOOL_STARTUP_SEC" || true
+  fi
+
+  # --- 5. cloud_gate ---
+  if $TRIAL_OK; then
+    log "[INFO] Launching cloud_gate..."
+    setsid ros2 run ur_slam_tools cloud_gate.py --ros-args -p use_sim_time:=true &
+    GROUP_PIDS+=($!)
+    log "[INFO] cloud_gate PGID=$!"
+    wait_ready "cloud_gate" "$TOOL_STARTUP_SEC" || true
   fi
 
   # --- 6. arc_sweep_jointtraj ---
@@ -330,7 +389,6 @@ for i in $(seq 1 "$N_TRIALS"); do
     ros2 run ur_slam_tools arc_sweep_jointtraj.py --ros-args \
       -p use_sim_time:=true &
     ARC_PID=$!
-    CHILD_PIDS+=($ARC_PID)
     log "[INFO] arc_sweep PID=$ARC_PID — waiting for exit..."
     wait "$ARC_PID" 2>/dev/null; ARC_EXIT=$?
     log "[INFO] arc_sweep exited with code $ARC_EXIT"
@@ -372,7 +430,6 @@ for i in $(seq 1 "$N_TRIALS"); do
       -p csv_run_id:="$RUN_ID" \
       -p planning_mode:="$PLANNING_MODE" &
     LEAF_PID=$!
-    CHILD_PIDS+=($LEAF_PID)
     log "[INFO] leaf5 PID=$LEAF_PID — waiting for exit..."
     wait "$LEAF_PID" 2>/dev/null; LEAF_EXIT=$?
     log "[INFO] leaf5 exited with code $LEAF_EXIT"
@@ -385,7 +442,6 @@ for i in $(seq 1 "$N_TRIALS"); do
   # --- 試行終了 → cleanup して次へ ---
   TRIAL_DURATION=$((SECONDS - TRIAL_START))
   if ! $TRIAL_OK; then
-    # SKIP = 起動失敗で実験未実施, FAIL = 実験実施したが非ゼロ終了
     if [ "${ARC_EXIT:-0}" -ne 0 ] || [ "${LEAF_EXIT:-0}" -ne 0 ]; then
       STATUS="FAIL"; N_FAIL=$((N_FAIL + 1))
     else
