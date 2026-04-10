@@ -60,9 +60,7 @@ fi
 # ---------- results/ 自動作成 ----------
 mkdir -p "$RESULTS_DIR"
 
-# ---------- ログファイル出力 (tee) ----------
-LOG_FILE="$RESULTS_DIR/run_bench_$(date '+%Y%m%d_%H%M%S').log"
-exec > >(tee -a "$LOG_FILE") 2>&1
+
 
 # ---------- CONDITION → planning_mode / fine_orient_mode ----------
 case "$CONDITION" in
@@ -187,7 +185,7 @@ if $DRY_RUN; then
   cat <<EOM
 [DRY-RUN] CONDITION=$CONDITION ($PLANNING_MODE + $FINE_ORIENT_MODE)
 [DRY-RUN] NOISE=$NOISE  N_TRIALS=$N_TRIALS  run_id=$RUN_ID
-[DRY-RUN] LOG_FILE=$LOG_FILE
+[DRY-RUN] LOG_FILE: dry-run mode, no log file created
 
 # 1. Gazebo
 ros2 launch ur_slam_bringup ur5e_gazebo.launch.py
@@ -242,6 +240,10 @@ EOM
   exit 0
 fi
 
+# ---------- ログファイル出力 (tee) ----------
+LOG_FILE="$RESULTS_DIR/run_bench_$(date '+%Y%m%d_%H%M%S').log"
+exec > >(tee -a "$LOG_FILE") 2>&1
+
 # ---------- 環境情報ヘッダー ----------
 log "========================================"
 log " run_bench.sh"
@@ -260,6 +262,8 @@ for i in $(seq 1 "$N_TRIALS"); do
   log "[TRIAL $i/$N_TRIALS] START  run_id=$RUN_ID"
   log "----------------------------------------"
   TRIAL_OK=true
+  ARC_EXIT=0
+  LEAF_EXIT=0
 
   # --- 1. Gazebo ---
   log "[INFO] Launching Gazebo..."
@@ -383,12 +387,12 @@ for i in $(seq 1 "$N_TRIALS"); do
   if ! $TRIAL_OK; then
     # SKIP = 起動失敗で実験未実施, FAIL = 実験実施したが非ゼロ終了
     if [ "${ARC_EXIT:-0}" -ne 0 ] || [ "${LEAF_EXIT:-0}" -ne 0 ]; then
-      STATUS="FAIL"; ((N_FAIL++))
+      STATUS="FAIL"; N_FAIL=$((N_FAIL + 1))
     else
-      STATUS="SKIP"; ((N_SKIP++))
+      STATUS="SKIP"; N_SKIP=$((N_SKIP + 1))
     fi
   else
-    STATUS="SUCCESS"; ((N_SUCCESS++))
+    STATUS="SUCCESS"; N_SUCCESS=$((N_SUCCESS + 1))
   fi
   log "[TRIAL $i/$N_TRIALS] DONE  run_id=$RUN_ID  status=$STATUS  duration=${TRIAL_DURATION}s"
   cleanup
