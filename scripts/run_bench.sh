@@ -1,9 +1,15 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -uo pipefail
 
 # ============================================================
 # run_bench.sh — 指定条件の実験をN回連続自動実行
 # Usage: ./scripts/run_bench.sh <CONDITION> <NOISE> [N_TRIALS]
+#
+# CONDITION:
+#   A = ompl_two_stage + blend alpha=0.7  (卒論ベースライン)
+#   B = ompl_two_stage + fixed            (問題①を抑制)
+#   C = hybrid + blend alpha=0.7          (問題①②を解決)
+# NOISE: clean | weak | medium | strong
 # ============================================================
 
 # ---------- 引数パース ----------
@@ -30,6 +36,7 @@ fi
 WS_SETUP="/home/fujino/ur5e_sim/install/setup.bash"
 RESULTS_DIR="/home/fujino/ur5e_sim/results"
 WAIT_TIMEOUT=60   # トピック待機タイムアウト(秒)
+CLEANUP_WAIT=5    # cleanup後の待機時間(秒)
 
 # ---------- ワークスペース source ----------
 if [ -f "$WS_SETUP" ]; then
@@ -42,11 +49,23 @@ fi
 # ---------- results/ 自動作成 ----------
 mkdir -p "$RESULTS_DIR"
 
-# ---------- CONDITION → planning_mode ----------
+# ---------- CONDITION → planning_mode / fine_orient_mode ----------
 case "$CONDITION" in
-  A) PLANNING_MODE="hybrid" ;;
-  B) PLANNING_MODE="ompl_two_stage" ;;
-  C) PLANNING_MODE="ompl_direct" ;;
+  A)
+    PLANNING_MODE="ompl_two_stage"
+    FINE_ORIENT_MODE="blend"
+    FINE_ORIENT_ALPHA="0.7"
+    ;;
+  B)
+    PLANNING_MODE="ompl_two_stage"
+    FINE_ORIENT_MODE="fixed"
+    FINE_ORIENT_ALPHA="0.7"  # fixed モードでは使われないが一応設定
+    ;;
+  C)
+    PLANNING_MODE="hybrid"
+    FINE_ORIENT_MODE="blend"
+    FINE_ORIENT_ALPHA="0.7"
+    ;;
 esac
 
 # ---------- NOISE パラメータ ----------
@@ -101,23 +120,25 @@ CHILD_PIDS=()
 
 cleanup() {
   echo "[INFO] Cleaning up child processes..."
-  for pid in "${CHILD_PIDS[@]}"; do
+  for pid in "${CHILD_PIDS[@]:-}"; do
     if kill -0 "$pid" 2>/dev/null; then
-      kill -TERM "$pid" 2>/dev/null || true
+      kill -INT "$pid" 2>/dev/null || true
     fi
   done
-  # SIGTERM で終わらないプロセスを SIGKILL
-  sleep 2
-  for pid in "${CHILD_PIDS[@]}"; do
+  # SIGINT で終わらないプロセスを SIGKILL
+  sleep 3
+  for pid in "${CHILD_PIDS[@]:-}"; do
     if kill -0 "$pid" 2>/dev/null; then
       kill -9 "$pid" 2>/dev/null || true
     fi
   done
-  # 全子プロセスの終了を待つ
-  for pid in "${CHILD_PIDS[@]}"; do
+  for pid in "${CHILD_PIDS[@]:-}"; do
     wait "$pid" 2>/dev/null || true
   done
   CHILD_PIDS=()
+  # 次の試行前にプロセスが完全に終了するのを待つ
+  echo "[INFO] Waiting ${CLEANUP_WAIT}s for processes to fully terminate..."
+  sleep "$CLEANUP_WAIT"
 }
 
 trap cleanup EXIT
@@ -141,7 +162,8 @@ wait_for_topic() {
 # ---------- メインループ ----------
 echo "========================================"
 echo " run_bench.sh"
-echo " CONDITION=$CONDITION  NOISE=$NOISE  N_TRIALS=$N_TRIALS"
+echo " CONDITION=$CONDITION ($PLANNING_MODE + $FINE_ORIENT_MODE)"
+echo " NOISE=$NOISE  N_TRIALS=$N_TRIALS"
 echo "========================================"
 
 for i in $(seq 1 "$N_TRIALS"); do
@@ -185,7 +207,7 @@ for i in $(seq 1 "$N_TRIALS"); do
   # --- 4. cloud_gate ---
   if $TRIAL_OK; then
     echo "[INFO] Launching cloud_gate..."
-    ros2 run ur_slam_tools cloud_gate.py &
+    ros2 run ur_slam_tools cloud_gate.py --ros-args -p use_sim_time:=true &
     CHILD_PIDS+=($!)
     if ! wait_for_topic /cloud_gate/status "$WAIT_TIMEOUT"; then
       echo "[WARN] cloud_gate topic not confirmed, continuing anyway."
@@ -197,6 +219,7 @@ for i in $(seq 1 "$N_TRIALS"); do
     echo "[INFO] Launching depth_image_noiser (NOISE=$NOISE)..."
     # shellcheck disable=SC2046
     ros2 run ur_slam_tools depth_image_noiser.py --ros-args \
+      -p use_sim_time:=true \
       $(noise_args) &
     CHILD_PIDS+=($!)
     if ! wait_for_topic /camera/depth/depth/image_raw_noisy "$WAIT_TIMEOUT"; then
@@ -207,7 +230,8 @@ for i in $(seq 1 "$N_TRIALS"); do
   # --- 6. arc_sweep_jointtraj ---
   if $TRIAL_OK; then
     echo "[INFO] Launching arc_sweep_jointtraj..."
-    ros2 run ur_slam_tools arc_sweep_jointtraj.py &
+    ros2 run ur_slam_tools arc_sweep_jointtraj.py --ros-args \
+      -p use_sim_time:=true &
     ARC_PID=$!
     CHILD_PIDS+=($ARC_PID)
     echo "[INFO] Waiting for arc_sweep_jointtraj to finish..."
@@ -232,8 +256,8 @@ for i in $(seq 1 "$N_TRIALS"); do
       -p coarse_vel_scale:=0.05 -p coarse_acc_scale:=0.05 \
       -p fine_vel_scale:=0.05 -p fine_acc_scale:=0.05 \
       -p view_vel_scale:=0.05 -p view_acc_scale:=0.05 \
-      -p fine_orient_mode:=blend \
-      -p fine_orient_blend_alpha:=0.6 \
+      -p fine_orient_mode:="$FINE_ORIENT_MODE" \
+      -p fine_orient_blend_alpha:="$FINE_ORIENT_ALPHA" \
       -p fine_cartesian_eef_step:=0.002 \
       -p fine_cartesian_jump_threshold:=0.0 \
       -p fine_cartesian_min_fraction:=0.60 \
@@ -251,8 +275,9 @@ for i in $(seq 1 "$N_TRIALS"); do
     wait "$LEAF_PID" 2>/dev/null || true
   fi
 
-  # --- 試行終了 --- cleanup して次へ ---
-  echo "[TRIAL $i/$N_TRIALS] END  run_id=$RUN_ID  ok=$TRIAL_OK"
+  # --- 試行終了 → cleanup して次へ ---
+  STATUS=$( $TRIAL_OK && echo "SUCCESS" || echo "SKIPPED" )
+  echo "[TRIAL $i/$N_TRIALS] DONE  run_id=$RUN_ID  status=$STATUS"
   cleanup
 done
 
