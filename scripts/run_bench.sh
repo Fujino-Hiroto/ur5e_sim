@@ -3,7 +3,7 @@ set -uo pipefail
 
 # ============================================================
 # run_bench.sh — 指定条件の実験をN回連続自動実行
-# Usage: ./scripts/run_bench.sh <CONDITION> <NOISE> [N_TRIALS]
+# Usage: ./scripts/run_bench.sh [--dry-run] <CONDITION> <NOISE> [N_TRIALS]
 #
 # CONDITION:
 #   A = ompl_two_stage + blend alpha=0.7  (卒論ベースライン)
@@ -13,8 +13,14 @@ set -uo pipefail
 # ============================================================
 
 # ---------- 引数パース ----------
-CONDITION="${1:?Usage: $0 <CONDITION: A|B|C> <NOISE: clean|weak|medium|strong> [N_TRIALS]}"
-NOISE="${2:?Usage: $0 <CONDITION: A|B|C> <NOISE: clean|weak|medium|strong> [N_TRIALS]}"
+DRY_RUN=false
+if [ "${1:-}" = "--dry-run" ]; then
+  DRY_RUN=true
+  shift
+fi
+
+CONDITION="${1:?Usage: $0 [--dry-run] <CONDITION: A|B|C> <NOISE: clean|weak|medium|strong> [N_TRIALS]}"
+NOISE="${2:?Usage: $0 [--dry-run] <CONDITION: A|B|C> <NOISE: clean|weak|medium|strong> [N_TRIALS]}"
 N_TRIALS="${3:-10}"
 
 # ---------- バリデーション ----------
@@ -159,6 +165,66 @@ wait_for_topic() {
   echo "[WARN] Timeout waiting for topic: $topic" >&2
   return 1
 }
+
+# ---------- dry-run ----------
+if $DRY_RUN; then
+  RUN_ID=$(printf "%s_%s_%03d" "$CONDITION" "$NOISE" 1)
+  cat <<EOM
+[DRY-RUN] CONDITION=$CONDITION ($PLANNING_MODE + $FINE_ORIENT_MODE)
+[DRY-RUN] NOISE=$NOISE  N_TRIALS=$N_TRIALS  run_id=$RUN_ID
+
+# 1. Gazebo
+ros2 launch ur_slam_bringup ur5e_gazebo.launch.py
+
+# 2. MoveIt2
+ros2 launch ur_slam_bringup ur5e_moveit.launch.py
+
+# 3. RTAB-Map
+ros2 launch ur_slam_bringup ur5e_slam.launch.py
+
+# 4. cloud_gate
+ros2 run ur_slam_tools cloud_gate.py --ros-args -p use_sim_time:=true
+
+# 5. depth_image_noiser
+ros2 run ur_slam_tools depth_image_noiser.py --ros-args \\
+  -p use_sim_time:=true \\
+  $(noise_args)
+
+# 6. arc_sweep_jointtraj
+ros2 run ur_slam_tools arc_sweep_jointtraj.py --ros-args -p use_sim_time:=true
+
+# 7. coarse_to_fine_go_to_leaf5
+ros2 run ur_slam_tools coarse_to_fine_go_to_leaf5 --ros-args \\
+  -p use_sim_time:=true \\
+  -p world_frame:=base_link \\
+  -p ee_link:=tool0 \\
+  -p camera_frame:=camera_color_optical_frame \\
+  -p leaf_center_frame:=leaf_target \\
+  -p fine_goal_frame:=leaf_target_shot \\
+  -p view_goal_frame:=leaf_target_view \\
+  -p tf_timeout_sec:=10.0 \\
+  -p pre_back_m:=0.20 -p pre_down_m:=0.20 \\
+  -p coarse_max_tries:=5 -p coarse_retry_sleep_sec:=0.2 \\
+  -p coarse_planning_time:=15.0 -p fine_planning_time:=10.0 -p view_planning_time:=5.0 \\
+  -p coarse_vel_scale:=0.05 -p coarse_acc_scale:=0.05 \\
+  -p fine_vel_scale:=0.05 -p fine_acc_scale:=0.05 \\
+  -p view_vel_scale:=0.05 -p view_acc_scale:=0.05 \\
+  -p fine_orient_mode:=$FINE_ORIENT_MODE \\
+  -p fine_orient_blend_alpha:=$FINE_ORIENT_ALPHA \\
+  -p fine_cartesian_eef_step:=0.002 \\
+  -p fine_cartesian_jump_threshold:=0.0 \\
+  -p fine_cartesian_min_fraction:=0.60 \\
+  -p fine_cartesian_avoid_collisions:=true \\
+  -p "fine_cartesian_eef_step_candidates:=[0.002, 0.005, 0.01]" \\
+  -p state_sync_sleep_ms:=300 \\
+  -p p0_warn_rad:=0.02 \\
+  -p csv_enable:=true \\
+  -p csv_path:=$RESULTS_DIR/leaf5_log.csv \\
+  -p csv_run_id:=$RUN_ID \\
+  -p planning_mode:=$PLANNING_MODE
+EOM
+  exit 0
+fi
 
 # ---------- メインループ ----------
 echo "========================================"
